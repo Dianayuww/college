@@ -1,30 +1,20 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/src/index.css b/src/index.css
-new file mode 100644
-index 0000000000000000000000000000000000000000..f12bc97a6d7edcc4bdd640dc18459e09225db0ad
---- /dev/null
-+++ b/src/index.css
-@@ -0,0 +1,20 @@
-+@tailwind base;
-+@tailwind components;
-+@tailwind utilities;
-+
-+:root {
-+  color: #3b2b22;
-+  background-color: #efe4d1;
-+}
-+
-+html {
-+  scroll-behavior: smooth;
-+}
-+
-+body {
-+  @apply font-sans bg-background text-darkBrown;
-+}
-+
-+.scrapbook-card {
-+  @apply rounded-3xl border border-[#e3d0b5] shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
-+}
- 
-EOF
-)
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #3b2b22;
+  background-color: #efe4d1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans bg-background text-darkBrown;
+}
+
+.scrapbook-card {
+  @apply rounded-3xl border border-[#e3d0b5] shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+}
