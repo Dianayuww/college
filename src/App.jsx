@@ -10,15 +10,64 @@ const navItems = [
   { label: 'Contact', href: '#contact' },
 ]
 
+// const dataProjects = [
+//   'Development of a Classification Model for Diabetes Prediction Using Decision Tree Algorithm',
+//   'Hotel Management System Using Microsoft Access',
+//   'Recommendation Wishlist to Buy Skincare Using Selection Sort',
+//   'Analysis of Life Expectancy Between Males and Females for the Years 2020–2022 in Indonesia',
+//   'Sentiment Analysis through Twitter Data Collection on the Palestine-Israel Conflict',
+//   'Sentiment Analysis of Kartu Indonesia Pintar Kuliah (KIPK) from Tweets on Platform X',
+//   'Analysis of Customer Shopping Behavior Segmentation Using K-Means Clustering Algorithm',
+//   'Social Media Addiction Classification using Random Forest and XGBoost',
+// ]
 const dataProjects = [
-  'Development of a Classification Model for Diabetes Prediction Using Decision Tree Algorithm',
-  'Hotel Management System Using Microsoft Access',
-  'Recommendation Wishlist to Buy Skincare Using Selection Sort',
-  'Analysis of Life Expectancy Between Males and Females for the Years 2020–2022 in Indonesia',
-  'Sentiment Analysis through Twitter Data Collection on the Palestine-Israel Conflict',
-  'Sentiment Analysis of Kartu Indonesia Pintar Kuliah (KIPK) from Tweets on Platform X',
-  'Analysis of Customer Shopping Behavior Segmentation Using K-Means Clustering Algorithm',
-  'Social Media Addiction Classification using Random Forest and XGBoost',
+  {
+    title: 'Social Media Addiction Classification',
+    category: 'Skripsi/Thesis',
+    description:
+      'Classification model using Random Forest vs XGBoost with 10-fold Cross Validation to predict social media addiction patterns.',
+    tags: ['Python', 'Machine Learning', 'Random Forest', 'XGBoost'],
+  },
+
+  {
+    title: 'Life Expectancy Analysis Indonesia 2020-2022',
+    category: 'Data Visualization',
+    description:
+      'Visualization and analysis of life expectancy using Tableau based on BPS Indonesia data.',
+    tags: ['Tableau', 'Data Visualization', 'BPS Data'],
+  },
+
+  {
+    title: 'Maxim UX Analysis',
+    category: 'UX Research',
+    description:
+      'Usability evaluation and interaction analysis to identify pain points and improve user experience.',
+    tags: ['UX', 'Figma', 'UI Analysis'],
+  },
+
+  {
+    title: 'Hotel Management System',
+    category: 'Database Design',
+    description:
+      'Designed relational database schema including CDM and PDM for hotel operational systems.',
+    tags: ['Database', 'SQL', 'Microsoft Access'],
+  },
+
+  {
+    title: 'Customer Segmentation using K-Means',
+    category: 'Machine Learning',
+    description:
+      'Clustering customer shopping behavior patterns using K-Means algorithm.',
+    tags: ['Python', 'Clustering', 'Data Mining'],
+  },
+
+  {
+    title: 'Sentiment Analysis on Social Media',
+    category: 'Natural Language Processing',
+    description:
+      'Sentiment classification from social media data collected from platform X/Twitter.',
+    tags: ['Python', 'NLP', 'Sentiment Analysis'],
+  },
 ]
 
 const experiences = [
@@ -142,8 +191,12 @@ export default function App() {
           </motion.div>
         </section>
 
-        <section id="data-projects" className="px-6 py-20">
+        {/* <section id="data-projects" className="px-6 py-20">
           <div className="mx-auto max-w-6xl"><h2 className="font-serif text-4xl mb-10">Data Science & Tech</h2><div className="grid gap-6 md:grid-cols-2">{dataProjects.map((p) => <motion.article {...fadeUp} key={p} className="scrapbook-card bg-[#fffaf2] p-6"><h3 className="font-serif text-xl mb-3">{p}</h3><p className="text-mediumBrown">Meaningful problem-solving project across analytics, machine learning, data engineering, or insight communication.</p></motion.article>)}</div></div>
+        </section> */}
+
+        <section id="data-projects" className="px-6 py-20">
+          <div className="mx-auto max-w-6xl"><h2 className="font-serif text-4xl mb-10">Data Science & Tech Projects</h2><div className="grid gap-6 md:grid-cols-2">{dataProjects.map((p) => ( <motion.article {...fadeUp} key={p.title} className="overflow-hidden rounded-3xl border border-[#eadbc8] bg-[#fffaf2] shadow-soft transition hover:-translate-y-1">...</motion.article>))}</div></div>
         </section>
 
         <section id="creative-pr" className="px-6 py-20 bg-[#fffaf2]">
