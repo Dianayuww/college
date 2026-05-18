@@ -196,8 +196,47 @@ export default function App() {
         </section> */}
 
         <section id="data-projects" className="px-6 py-20">
-          <div className="mx-auto max-w-6xl"><h2 className="font-serif text-4xl mb-10">Data Science & Tech Projects</h2><div className="grid gap-6 md:grid-cols-2">{dataProjects.map((p) => ( <motion.article {...fadeUp} key={p.title} className="overflow-hidden rounded-3xl border border-[#eadbc8] bg-[#fffaf2] shadow-soft transition hover:-translate-y-1">...</motion.article>))}</div></div>
-        </section>
+  <div className="mx-auto max-w-6xl">
+    <h2 className="font-serif text-4xl mb-10">Data Science & Tech Projects</h2>
+
+    <div className="grid gap-6 md:grid-cols-2">
+      {dataProjects.map((p) => (
+        <motion.article
+          {...fadeUp}
+          key={p.title}
+          className="overflow-hidden rounded-3xl border border-[#eadbc8] bg-[#fffaf2] shadow-soft transition hover:-translate-y-1"
+        >
+          <div className="h-40 bg-[#f3e6d3] flex items-center justify-center">
+            <span className="text-[#ceb18c] text-sm">Project Preview</span>
+          </div>
+
+          <div className="p-6">
+            <span className="rounded-full border border-[#ceb18c] px-3 py-1 text-xs text-mediumBrown">
+              {p.category}
+            </span>
+
+            <h3 className="mt-4 font-serif text-2xl">{p.title}</h3>
+
+            <p className="mt-3 text-mediumBrown leading-relaxed">
+              {p.description}
+            </p>
+
+            <div className="mt-5 flex flex-wrap gap-2">
+              {p.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full bg-[#f4e7d5] px-3 py-1 text-xs text-darkBrown"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </motion.article>
+      ))}
+    </div>
+  </div>
+</section>
 
         <section id="creative-pr" className="px-6 py-20 bg-[#fffaf2]">
           <div className="mx-auto max-w-6xl"><h2 className="font-serif text-4xl mb-10">Creative & PR</h2><div className="grid gap-6 md:grid-cols-3">{organizationProjects.map((p) => <motion.article {...fadeUp} key={p.title} className="scrapbook-card bg-[#fff3e5] p-6"><h3 className="font-serif text-2xl mb-2">{p.title}</h3><p className="text-sm font-semibold text-accent mb-2">{p.role}</p><p className="text-mediumBrown leading-relaxed">{p.description}</p></motion.article>)}</div></div>
