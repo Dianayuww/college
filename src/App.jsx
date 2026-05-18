@@ -77,8 +77,12 @@ const certifications = [
   { title: 'BISA AI Certification', issuer: 'BISA AI', year: '2025' },
 ]
 
-const fadeUp = { hidden: { opacity: 0, y: 24 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: 0.2 }, transition: { duration: 0.55 } }
-
+const fadeUp = {
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.2 },
+  transition: { duration: 0.55 },
+}
 const Pill = ({ children, filled = false }) => (
   <span className={`rounded-full px-4 py-2 text-sm font-medium ${filled ? 'bg-accent text-cream' : 'bg-white/70 border border-accent text-mediumBrown'}`}>
     {children}
