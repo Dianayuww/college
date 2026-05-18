@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #4c392c;
+  background-color: #f8f2e8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans bg-cream text-mocha;
+}
+
+.scrapbook-card {
+  @apply bg-white/70 backdrop-blur-sm border border-white/50 rounded-3xl shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+}
