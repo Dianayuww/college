@@ -43,7 +43,7 @@ export default function App() {
       </header>
 
       <main className="pt-20">
-        <section className="min-h-[calc(100vh-5rem)] px-6 py-16 flex items-center" id="about">
+        <section className="min-h-[calc(100vh-5rem)] px-6 py-16 flex items-center" id="home">
           <div className="mx-auto max-w-4xl text-center">
             <div className="inline-flex items-center rounded-full border border-beige bg-white/70 px-4 py-2 text-sm text-mocha shadow-soft">
               ✨ Welcome to my portfolio
@@ -72,6 +72,58 @@ export default function App() {
             </div>
           </div>
         </section>
+
+        <section id="about" className="px-6 py-20 bg-[#fffdf9]">
+          <div className="mx-auto max-w-6xl">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-sans font-bold text-mocha">About Me</h2>
+              <div className="mx-auto mt-4 h-1.5 w-24 rounded-full bg-gradient-to-r from-clay to-[#b48462]" />
+            </div>
+
+            <div className="grid gap-8 lg:grid-cols-2">
+              <div className="space-y-6">
+                <div className="rounded-3xl bg-[#fff8ef] p-7 shadow-soft border border-beige/50">
+                  <p className="text-mocha/85 leading-relaxed">
+                    I am an adaptable undergraduate student majoring in Data Science, eager to contribute meaningfully as a Data Analyst. I possess the ability to collaborate effectively in teams and have a strong desire to continuously learn and develop both hard and soft skills.
+                  </p>
+                </div>
+
+                <article className="rounded-3xl bg-[#fff3e5] p-7 shadow-soft border border-beige/60">
+                  <p className="text-2xl mb-3">🎓</p>
+                  <h3 className="text-2xl font-serif mb-3">Education</h3>
+                  <div className="space-y-2 text-mocha/85">
+                    <p><span className="font-semibold">Major:</span> Data Science</p>
+                    <p><span className="font-semibold">University:</span> Universitas Negeri Surabaya</p>
+                    <p><span className="font-semibold">GPA:</span> 3.75</p>
+                  </div>
+                </article>
+
+                <article className="rounded-3xl bg-[#fff3e5] p-7 shadow-soft border border-beige/60">
+                  <p className="text-2xl mb-3">💡</p>
+                  <h3 className="text-2xl font-serif mb-3">My Approach</h3>
+                  <p className="text-mocha/85 leading-relaxed">Combining analytical thinking with creative problem-solving to deliver impactful solutions.</p>
+                </article>
+              </div>
+
+              <div className="rounded-3xl bg-[#fff8ef] p-7 shadow-soft border border-beige/50 h-fit">
+                <h3 className="text-2xl font-serif mb-5">Technical Skills</h3>
+                <div className="flex flex-wrap gap-3 mb-10">
+                  {['Python', 'R', 'SQL', 'Tableau', 'Looker Studio', 'Microsoft Office', 'Canva', 'Figma'].map((skill) => (
+                    <span key={skill} className="rounded-full bg-[#b48462] px-4 py-2 text-sm font-medium text-cream shadow-sm">{skill}</span>
+                  ))}
+                </div>
+
+                <h3 className="text-2xl font-serif mb-5">Soft Skills</h3>
+                <div className="flex flex-wrap gap-3">
+                  {['Leadership', 'Public Speaking', 'Teamwork', 'Adaptability', 'Communication', 'Problem Solving', 'Critical Thinking'].map((skill) => (
+                    <span key={skill} className="rounded-full border border-[#b48462] px-4 py-2 text-sm font-medium text-[#8a6448] bg-white/60">{skill}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
         <section id="data-projects" className="px-6 py-16">
           <div className="mx-auto max-w-6xl">
