@@ -106,7 +106,7 @@ export default function App() {
             <p className="mt-2 text-sm md:text-base text-accent">Data Science • State University of Surabaya</p>
             <div className="mt-8 flex justify-center">
               <div className="rounded-[2rem] bg-[#f2e2ca] p-2 shadow-soft">
-                <img src={dianPortrait} alt="Dian Ayu Fauziah"className="w-64 md:w-80 drop-shadow-2xl"/>
+                <img src={dianPortrait} alt="Portrait of Dian Ayu Fauziah" className="h-56 w-44 md:h-64 md:w-52 rounded-[1.6rem] object-cover shadow-lg" />
               </div>
             </div>
             <p className="mt-6 max-w-2xl mx-auto text-mediumBrown">Data Science undergraduate with strong skills in data processing, machine learning, and data visualization. Passionate about using data to generate actionable insights and solve real-world problems.</p>
