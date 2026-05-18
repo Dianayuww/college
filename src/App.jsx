@@ -22,52 +22,60 @@ const navItems = [
 // ]
 const dataProjects = [
   {
-    title: 'Social Media Addiction Classification',
-    category: 'Skripsi/Thesis',
-    description:
-      'Classification model using Random Forest vs XGBoost with 10-fold Cross Validation to predict social media addiction patterns.',
-    tags: ['Python', 'Machine Learning', 'Random Forest', 'XGBoost'],
+    id: 1,
+    title: "Social Media Addiction Classification",
+    category: "Skripsi/Thesis",
+    description: "Classification model using Random Forest vs XGBoost with 10-fold Cross Validation to predict social media addiction patterns.",
+    tags: ["Python", "Machine Learning", "Random Forest", "XGBoost", "Cross Validation"],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    details: "Multiclass classification project for social media addiction level prediction.",
+    status: "In Progress"
   },
-
   {
-    title: 'Life Expectancy Analysis Indonesia 2020-2022',
-    category: 'Data Visualization',
-    description:
-      'Visualization and analysis of life expectancy using Tableau based on BPS Indonesia data.',
-    tags: ['Tableau', 'Data Visualization', 'BPS Data'],
+    id: 2,
+    title: "Life Expectancy Analysis Indonesia 2020-2022",
+    category: "Data Visualization",
+    description: "Visualization and analysis of life expectancy between males and females in Indonesia using Tableau based on BPS data.",
+    tags: ["Tableau", "Data Visualization", "Statistical Analysis", "BPS Data"],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    details: "Key finding: female life expectancy is higher than male life expectancy across the analyzed period."
   },
-
   {
-    title: 'Maxim UX Analysis',
-    category: 'UX Research',
-    description:
-      'Usability evaluation and interaction analysis to identify pain points and improve user experience.',
-    tags: ['UX', 'Figma', 'UI Analysis'],
+    id: 3,
+    title: "Maxim Application UI/UX Optimization",
+    category: "UI/UX Analysis",
+    description: "Analysis of Maxim application reviews to improve user satisfaction through payment feature optimization using Figma.",
+    tags: ["Figma", "UI/UX Design", "User Research", "Payment Systems"],
+    image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&q=80",
+    details: "Focused on improving the payment feature user experience."
   },
-
   {
-    title: 'Hotel Management System',
-    category: 'Database Design',
-    description:
-      'Designed relational database schema including CDM and PDM for hotel operational systems.',
-    tags: ['Database', 'SQL', 'Microsoft Access'],
+    id: 4,
+    title: "Hotel Management System",
+    category: "Database Design",
+    description: "Hotel management system database design using Microsoft Access, including CDM and PDM.",
+    tags: ["MS Access", "Database Design", "CDM", "PDM", "Data Modeling"],
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
+    details: "Database architecture for hotel operational management."
   },
-
   {
-    title: 'Customer Segmentation using K-Means',
-    category: 'Machine Learning',
-    description:
-      'Clustering customer shopping behavior patterns using K-Means algorithm.',
-    tags: ['Python', 'Clustering', 'Data Mining'],
+    id: 5,
+    title: "Customer Segmentation using K-Means",
+    category: "Machine Learning",
+    description: "Analysis of customer shopping behavior segmentation using the K-Means clustering algorithm.",
+    tags: ["Python", "Clustering", "K-Means", "Data Mining"],
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
+    details: "Grouped customers based on shopping behavior patterns."
   },
-
   {
-    title: 'Sentiment Analysis on Social Media',
-    category: 'Natural Language Processing',
-    description:
-      'Sentiment classification from social media data collected from platform X/Twitter.',
-    tags: ['Python', 'NLP', 'Sentiment Analysis'],
-  },
+    id: 6,
+    title: "Sentiment Analysis on Social Media",
+    category: "Natural Language Processing",
+    description: "Sentiment analysis using social media data collected from Twitter/X.",
+    tags: ["Python", "NLP", "Sentiment Analysis", "Twitter/X"],
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
+    details: "Analyzed public sentiment from social media text data."
+  }
 ]
 
 const experiences = [
@@ -197,17 +205,29 @@ export default function App() {
 
         <section id="data-projects" className="px-6 py-20">
   <div className="mx-auto max-w-6xl">
-    <h2 className="font-serif text-4xl mb-10">Data Science & Tech Projects</h2>
+    <h2 className="font-serif text-4xl mb-10">
+      Data Science & Tech Projects
+    </h2>
 
-    <div className="grid gap-6 md:grid-cols-2">
+    <div className="grid gap-8 md:grid-cols-2">
       {dataProjects.map((p) => (
         <motion.article
           {...fadeUp}
-          key={p.title}
+          key={p.id}
           className="overflow-hidden rounded-3xl border border-[#eadbc8] bg-[#fffaf2] shadow-soft transition hover:-translate-y-1"
         >
-          <div className="h-40 bg-[#f3e6d3] flex items-center justify-center">
-            <span className="text-[#ceb18c] text-sm">Project Preview</span>
+          <div className="relative h-52 overflow-hidden">
+            <img
+              src={p.image}
+              alt={p.title}
+              className="h-full w-full object-cover"
+            />
+
+            {p.status && (
+              <span className="absolute right-4 top-4 rounded-full bg-[#c7a879] px-3 py-1 text-xs text-white">
+                {p.status}
+              </span>
+            )}
           </div>
 
           <div className="p-6">
@@ -215,7 +235,9 @@ export default function App() {
               {p.category}
             </span>
 
-            <h3 className="mt-4 font-serif text-2xl">{p.title}</h3>
+            <h3 className="mt-4 font-serif text-2xl text-darkBrown">
+              {p.title}
+            </h3>
 
             <p className="mt-3 text-mediumBrown leading-relaxed">
               {p.description}
@@ -231,6 +253,10 @@ export default function App() {
                 </span>
               ))}
             </div>
+
+            <p className="mt-5 border-t border-[#eadbc8] pt-4 text-sm italic text-mediumBrown">
+              {p.details}
+            </p>
           </div>
         </motion.article>
       ))}
