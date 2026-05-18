@@ -192,6 +192,5 @@ export default function App() {
       <footer className="bg-darkBrown/95 py-6 text-center text-xs text-cream/85">© 2026 Dian Ayu Fauziah — Multidisciplinary Portfolio</footer>
     </div>
   )
-}
  
 
