@@ -1,12 +1,13 @@
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 diff --git a/src/App.jsx b/src/App.jsx
 new file mode 100644
-index 0000000000000000000000000000000000000000..aeca5187380651ebd5b9d774587a225bb4831c3f
+index 0000000000000000000000000000000000000000..7a574aeec42103afaa816be82c53d72ff514b5f7
 --- /dev/null
 +++ b/src/App.jsx
-@@ -0,0 +1,191 @@
+@@ -0,0 +1,195 @@
 +import { motion } from 'framer-motion'
 +import { ArrowDown, BookOpen, Lightbulb, Mail, Linkedin, Github, Instagram, Award, MapPin, Calendar } from 'lucide-react'
++import dianPortrait from './assets/dian-portrait.jpeg'
 +
 +const navItems = [
 +  { label: 'About', href: '#about' },
@@ -104,14 +105,17 @@ index 0000000000000000000000000000000000000000..aeca5187380651ebd5b9d774587a225b
 +      </header>
 +
 +      <main>
-+        <section id="home" className="relative min-h-[calc(100vh-4.5rem)] flex items-center px-6 py-20 overflow-hidden bg-gradient-to-b from-[#fffaf2] via-[#f7ecd9] to-background">
-+          <div className="absolute -top-16 -left-12 h-64 w-64 rounded-full bg-[#f0d9b8]/45 blur-3xl" />
-+          <div className="absolute -bottom-10 right-0 h-60 w-60 rounded-full bg-[#e2c5a9]/35 blur-3xl" />
-+          <motion.div {...fadeUp} className="relative mx-auto max-w-4xl text-center">
++        <section id="home" className="min-h-[calc(100vh-4.5rem)] flex items-center px-6 py-20 bg-gradient-to-b from-[#fffaf2] via-[#f7ecd9] to-background">
++          <motion.div {...fadeUp} className="mx-auto max-w-4xl text-center">
 +            <span className="inline-flex rounded-full border border-[#d9c4a6] bg-white/70 px-4 py-2 text-sm text-mediumBrown shadow-soft">✨ Welcome to my portfolio</span>
 +            <h1 className="mt-6 font-serif text-5xl md:text-7xl text-darkBrown">Dian Ayu Fauziah</h1>
 +            <p className="mt-4 text-lg md:text-xl text-mediumBrown">Data Science Student | Public Relations Enthusiast | Creative Problem Solver</p>
 +            <p className="mt-2 text-sm md:text-base text-accent">Data Science • State University of Surabaya</p>
++            <div className="mt-8 flex justify-center">
++              <div className="rounded-[2rem] bg-[#f2e2ca] p-2 shadow-soft">
++                <img src={dianPortrait} alt="Portrait of Dian Ayu Fauziah" className="h-56 w-44 md:h-64 md:w-52 rounded-[1.6rem] object-cover shadow-lg" />
++              </div>
++            </div>
 +            <p className="mt-6 max-w-2xl mx-auto text-mediumBrown">Data Science undergraduate with strong skills in data processing, machine learning, and data visualization. Passionate about using data to generate actionable insights and solve real-world problems.</p>
 +            <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
 +              <a href="#data-projects" className="rounded-full bg-darkBrown px-7 py-3 text-sm text-cream shadow-soft transition hover:-translate-y-0.5">View Data Projects</a>
