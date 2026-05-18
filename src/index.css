@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  color: #4c392c;
-  background-color: #f8f2e8;
+  color: #3b2b22;
+  background-color: #efe4d1;
 }
 
 html {
@@ -12,9 +12,9 @@ html {
 }
 
 body {
-  @apply font-sans bg-cream text-mocha;
+  @apply font-sans bg-background text-darkBrown;
 }
 
 .scrapbook-card {
-  @apply bg-white/70 backdrop-blur-sm border border-white/50 rounded-3xl shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  @apply rounded-3xl border border-[#e3d0b5] shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
 }
