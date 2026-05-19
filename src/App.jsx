@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowDown, BookOpen, Lightbulb, Mail, Linkedin, Github, Instagram, Award, MapPin, Calendar } from 'lucide-react'
-import dianPortrait from './assets/dian-portrait.jpeg'
+import dianPortrait from './assets/aku.png'
 
 const navItems = [
   { label: 'About', href: '#about' },
