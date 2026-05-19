@@ -159,15 +159,18 @@ export default function App() {
       </header>
 
       <main>
-        <section id="home" className="min-h-[calc(100vh-4.5rem)] flex items-center px-6 py-20 bg-gradient-to-b from-[#fffaf2] via-[#f7ecd9] to-background">
+        <section id="home" className="min-h-[calc(100vh-4.5rem)] flex items-center px-6 py-20 bg-gradient-to-br from-[#fff6f3] via-[#fff3c9] to-[#ffe5ec]">
           <motion.div {...fadeUp} className="mx-auto max-w-4xl text-center">
             <span className="inline-flex rounded-full border border-[#d9c4a6] bg-white/70 px-4 py-2 text-sm text-mediumBrown shadow-soft">✨ Welcome to my portfolio</span>
             <h1 className="mt-6 font-serif text-5xl md:text-7xl text-darkBrown">Dian Ayu Fauziah</h1>
             <p className="mt-4 text-lg md:text-xl text-mediumBrown">Data Science Student | Public Relations Enthusiast | Creative Problem Solver</p>
             <p className="mt-2 text-sm md:text-base text-accent">Data Science • State University of Surabaya</p>
             <div className="mt-8 flex justify-center">
-              <div className="rounded-[2rem] bg-[#f2e2ca] p-2 shadow-soft">
+               {/* <div className="rounded-[2rem] bg-[#f2e2ca] p-2 shadow-soft">
                 <img src={dianPortrait} alt="Portrait of Dian Ayu Fauziah" className="h-56 w-44 md:h-64 md:w-52 rounded-[1.6rem] object-cover shadow-lg" />
+              </div>  */}
+              <div className="mt-10 flex justify-center">
+                <img src={dianPortrait} alt="Portrait of Dian Ayu Fauziah" className="h-72 md:h-[28rem] object-contain drop-shadow-[0_25px_45px_rgba(0,0,0,0.18)]"/>
               </div>
             </div>
             <p className="mt-6 max-w-2xl mx-auto text-mediumBrown">Data Science undergraduate with strong skills in data processing, machine learning, and data visualization. Passionate about using data to generate actionable insights and solve real-world problems.</p>
