@@ -703,8 +703,21 @@ export default function App() {
               <p className="mt-8 text-lg leading-relaxed text-mediumBrown">
                 {work.description}
               </p>
+              <p className="mt-8 text-lg leading-relaxed text-mediumBrown">
+  {work.description}
+</p>
 
-              <div className="mt-8">
+<div className="mt-6 flex flex-wrap gap-3 text-sm">
+  {work.tags.map((tag, idx) => (
+    <span
+      key={idx}
+      className="rounded-full bg-[#f7edf0] px-4 py-2 text-[#7b1e3a]"
+    >
+      {tag}
+    </span>
+  ))}
+</div>
+              {/* <div className="mt-8">
                 <h4 className="mb-4 text-lg font-semibold text-[#1f2a44]">
                   Key Contributions
                 </h4>
@@ -714,7 +727,7 @@ export default function App() {
                     <li key={item}>• {item}</li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
 
               <div className="mt-8 flex flex-wrap gap-3">
                 {work.tags.map((tag) => (
