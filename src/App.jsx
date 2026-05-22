@@ -61,7 +61,7 @@ const dataProjects = [
     category: 'Data Mining',
     description:
       'Collected data from X platforms and used various sentiment analysis methods to gain deep insight into public opinion.',
-    tags: ['Sentiment analysis', 'NLP', 'Data Mining', 'KIPK"],
+    tags: ['Sentiment analysis', 'NLP', 'Data Mining', 'KIPK'],
     image:
       'https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=1200&auto=format&fit=crop',
     details:
