@@ -338,7 +338,9 @@ export default function App() {
     <div className="mb-16 text-center">
       <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-[#c7a879]/10 px-4 py-2">
         <Sparkles className="text-[#c7a879]" size={18} />
-        <span className="font-semibold text-[#c7a879]">Creative Portfolio</span>
+        <span className="font-semibold text-[#c7a879]">
+          Creative Portfolio
+        </span>
       </div>
 
       <h2 className="text-4xl font-bold text-darkBrown md:text-5xl">
@@ -351,98 +353,23 @@ export default function App() {
     </div>
 
     <div className="space-y-8">
-      {organizationProjects.map((work, index) => (
-  <motion.article
-    {...fadeUp}
-    key={work.id}
-    className={`group overflow-hidden rounded-3xl border border-[#eadbc8] bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-xl ${
-      work.highlight ? 'ring-2 ring-[#c7a879]' : ''
-    }`}
-  >
-    <div className="grid gap-6 md:grid-cols-3">
-      <div className="relative overflow-hidden md:h-[420px]">
-        <img
-          src={work.image}
-          alt={work.title}
-          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
-
-        {work.highlight && (
-          <div className="absolute left-4 top-4 rounded-full bg-[#c7a879] px-3 py-1 text-xs font-semibold text-white">
-            ✨ Featured Project
-          </div>
-        )}
-      </div>
-
-      <div className="p-6 md:col-span-2">
-        <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
-          <div>
-            <h3 className="font-serif text-2xl text-darkBrown">
-              {work.title}
-            </h3>
-            <p className="mt-2 text-lg font-semibold text-[#c7a879]">
-              {work.organization}
-            </p>
-          </div>
-
-          <span className="rounded-full border border-[#c7a879] px-3 py-1 text-xs text-[#c7a879]">
-            {work.period}
-          </span>
-        </div>
-
-        <p className="leading-relaxed text-mediumBrown">
-          {work.description}
-        </p>
-
-        <div className="mt-5">
-          <h4 className="mb-2 font-semibold text-darkBrown">
-            Key Responsibilities:
-          </h4>
-
-          <ul className="space-y-1">
-            {work.responsibilities.map((resp) => (
-              <li key={resp} className="flex items-start text-sm text-mediumBrown">
-                <span className="mr-2 text-[#c7a879]">•</span>
-                <span>{resp}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="mt-5 flex flex-wrap gap-2">
-          {work.tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full bg-[#f5efe7] px-3 py-1 text-xs text-darkBrown"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
-  </motion.article>
-))}
-      {/* /* {organizationProjects.map((work, index) => (
+      {organizationProjects.map((work) => (
         <motion.article
           {...fadeUp}
           key={work.id}
-          className={`overflow-hidden rounded-3xl border border-[#eadbc8] bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-xl ${
+          className={`group overflow-hidden rounded-3xl border border-[#eadbc8] bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-xl ${
             work.highlight ? 'ring-2 ring-[#c7a879]' : ''
           }`}
         >
           <div className="grid gap-6 md:grid-cols-3">
-            <div className="relative overflow-hidden rounded-l-3xl md:h-[420px]">
+            <div className="relative overflow-hidden md:h-[420px]">
               <img
                 src={work.image}
                 alt={work.title}
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-              /> */ */}
+              />
 
-              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
 
               {work.highlight && (
                 <div className="absolute left-4 top-4 rounded-full bg-[#c7a879] px-3 py-1 text-xs font-semibold text-white">
@@ -457,6 +384,7 @@ export default function App() {
                   <h3 className="font-serif text-2xl text-darkBrown">
                     {work.title}
                   </h3>
+
                   <p className="mt-2 text-lg font-semibold text-[#c7a879]">
                     {work.organization}
                   </p>
@@ -478,12 +406,15 @@ export default function App() {
 
                 <ul className="space-y-1">
                   {work.responsibilities.map((resp) => (
-                    <li key={resp} className="flex items-start text-sm text-mediumBrown">
+                    <li
+                      key={resp}
+                      className="flex items-start text-sm text-mediumBrown"
+                    >
                       <span className="mr-2 text-[#c7a879]">•</span>
                       <span>{resp}</span>
                     </li>
-                  ))} */}
-                {/* </ul>
+                  ))}
+                </ul>
               </div>
 
               <div className="mt-5 flex flex-wrap gap-2">
@@ -499,7 +430,7 @@ export default function App() {
             </div>
           </div>
         </motion.article>
-      ))} */}
+      ))}
     </div>
   </div>
 </section>
