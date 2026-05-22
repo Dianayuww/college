@@ -1,3 +1,6 @@
+import hmpImage from './assets/humas.jpg'
+import wmImage from './assets/wmk.jpg'
+import banacleImage from './assets/banacle.jpg'
 import { motion } from 'framer-motion'
 import { ArrowDown, BookOpen, Lightbulb, Mail, Linkedin, Github, Instagram, Award, MapPin, Calendar, Sparkles, Users } from 'lucide-react'
 import dianPortrait from './assets/aku.png'
@@ -123,6 +126,7 @@ const organizationProjects = [
     id: 1,
     title: 'Head of Public Relations Division',
     organization: 'HMP Sains Data Unesa',
+    image: hmpImage,
     period: 'Mar 2024 – Feb 2025',
     description:
       'Led public relations initiatives, managed organizational communication, created compelling copy, and coordinated publication needs for student association programs.',
@@ -138,6 +142,7 @@ const organizationProjects = [
     id: 2,
     title: 'Wirausaha Merdeka Batch 3',
     organization: 'Entrepreneurship Program',
+    image: wmImage,
     period: 'Sep 2024 – Dec 2024',
     description:
       'Participated in an entrepreneurial development program focused on sustainable business models, eco-friendly product development, and practical business implementation.',
@@ -153,6 +158,7 @@ const organizationProjects = [
     id: 3,
     title: 'Banacle - Eco-Friendly Soap Innovation',
     organization: 'Sustainability Project',
+    image: banacleImage,
     period: '2024',
     description:
       'Developed Banacle, an innovative eco-friendly soap product made from banana peel waste as part of circular economy implementation.',
@@ -355,11 +361,11 @@ export default function App() {
         >
           <div className="grid gap-6 md:grid-cols-3">
             <div className="relative min-h-64 overflow-hidden bg-gradient-to-br from-[#e8dcc6] to-[#c7a879]/30">
-              <div className="absolute inset-0 flex items-center justify-center">
-                {index === 0 && <Users className="text-[#c7a879]/30" size={86} />}
-                {index === 1 && <Lightbulb className="text-[#c7a879]/30" size={86} />}
-                {index === 2 && <Sparkles className="text-[#c7a879]/30" size={86} />}
-              </div>
+              <img
+                src={work.image}
+                alt={work.title}
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              />
 
               {work.highlight && (
                 <div className="absolute left-4 top-4 rounded-full bg-[#c7a879] px-3 py-1 text-xs font-semibold text-white">
