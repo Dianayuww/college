@@ -634,104 +634,178 @@ export default function App() {
         {/* <section id="creative-pr" className="px-6 py-20 bg-[#fffaf2]">
           <div className="mx-auto max-w-6xl"><h2 className="font-serif text-4xl mb-10">Creative & PR</h2><div className="grid gap-6 md:grid-cols-3">{organizationProjects.map((p) => <motion.article {...fadeUp} key={p.title} className="scrapbook-card bg-[#fff3e5] p-6"><h3 className="font-serif text-2xl mb-2">{p.title}</h3><p className="text-sm font-semibold text-accent mb-2">{p.role}</p><p className="text-mediumBrown leading-relaxed">{p.description}</p></motion.article>)}</div></div>
         </section> */}
-        <section id="creative-pr" className="px-6 py-20 bg-[#fffaf2]">
-  <div className="mx-auto max-w-7xl">
-    <div className="mb-16 text-center">
-      <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-[#c7a879]/10 px-4 py-2">
-        <Sparkles className="text-[#c7a879]" size={18} />
-        <span className="font-semibold text-[#c7a879]">
-          Creative Portfolio
-        </span>
-      </div>
+        <section
+  id="creative-pr"
+  className="px-6 py-24 bg-gradient-to-b from-[#f8f5f2] to-[#efe4d1]"
+>
+  <div className="mx-auto max-w-6xl">
 
-      <h2 className="text-4xl font-bold text-darkBrown md:text-5xl">
+    {/* HEADER */}
+    <motion.div
+      {...fadeUp}
+      className="mb-20 text-center"
+    >
+      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
+        ✨ Creative Portfolio
+      </span>
+
+      <h2 className="mt-6 font-serif text-5xl text-[#1f2a44]">
         Public Relations & Creative Work
       </h2>
 
-      <p className="mx-auto mt-4 max-w-2xl text-lg text-mediumBrown">
-        Leading initiatives in communication, sustainability, and innovation
+      <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-mediumBrown">
+        Combining communication, leadership, creativity, and strategic thinking
+        through organizational and innovation-driven experiences.
       </p>
-    </div>
+    </motion.div>
 
-    <div className="space-y-8">
-      {organizationProjects.map((work) => (
+    <div className="space-y-10">
+
+      {organizationProjects.map((work, index) => (
         <motion.article
           {...fadeUp}
-          key={work.id}
-          className={`group overflow-hidden rounded-3xl border border-[#eadbc8] bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-xl ${
-            work.highlight ? 'ring-2 ring-[#c7a879]' : ''
-          }`}
+          key={work.title}
+          className="group overflow-hidden rounded-[2rem] border border-[#d7c2b0] bg-white/70 shadow-soft backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
         >
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="relative overflow-hidden md:h-[420px]">
+          <div className="grid md:grid-cols-3">
+
+            {/* IMAGE */}
+            <div className="relative h-[320px] overflow-hidden">
+
               <img
-                src={work.image}
+                src={
+                  index === 0
+                    ? hmpsains
+                    : index === 1
+                    ? pkkmb
+                    : wm
+                }
                 alt={work.title}
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
 
-              {work.highlight && (
-                <div className="absolute left-4 top-4 rounded-full bg-[#c7a879] px-3 py-1 text-xs font-semibold text-white">
-                  ✨ Featured Project
+              {index === 0 && (
+                <div className="absolute left-4 top-4 rounded-full bg-[#7b1e3a] px-4 py-1 text-xs font-semibold text-white">
+                  Featured
                 </div>
               )}
             </div>
 
-            <div className="p-6 md:col-span-2">
-              <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
+            {/* CONTENT */}
+            <div className="md:col-span-2 p-8 md:p-10">
+
+              <div className="flex flex-wrap items-start justify-between gap-4">
+
                 <div>
-                  <h3 className="font-serif text-2xl text-darkBrown">
+                  <h3 className="font-serif text-4xl text-[#1f2a44] transition group-hover:text-[#7b1e3a]">
                     {work.title}
                   </h3>
 
-                  <p className="mt-2 text-lg font-semibold text-[#c7a879]">
-                    {work.organization}
+                  <p className="mt-3 text-lg font-semibold text-[#7b1e3a]">
+                    {work.role}
                   </p>
                 </div>
 
-                <span className="rounded-full border border-[#c7a879] px-3 py-1 text-xs text-[#c7a879]">
-                  {work.period}
+                <span className="rounded-full border border-[#7b1e3a]/30 px-4 py-2 text-sm text-[#7b1e3a]">
+                  {index === 0
+                    ? "Mar 2024 – Feb 2025"
+                    : index === 1
+                    ? "Aug 2023 – Sep 2023"
+                    : "Sep 2024 – Dec 2024"}
                 </span>
+
               </div>
 
-              <p className="leading-relaxed text-mediumBrown">
+              <p className="mt-8 text-lg leading-relaxed text-mediumBrown">
                 {work.description}
               </p>
 
-              <div className="mt-5">
-                <h4 className="mb-2 font-semibold text-darkBrown">
-                  Key Responsibilities:
+              {/* RESPONSIBILITIES */}
+              <div className="mt-8">
+                <h4 className="mb-4 text-lg font-semibold text-[#1f2a44]">
+                  Key Contributions
                 </h4>
 
-                <ul className="space-y-1">
-                  {work.responsibilities.map((resp) => (
-                    <li
-                      key={resp}
-                      className="flex items-start text-sm text-mediumBrown"
-                    >
-                      <span className="mr-2 text-[#c7a879]">•</span>
-                      <span>{resp}</span>
-                    </li>
-                  ))}
+                <ul className="space-y-3 text-mediumBrown">
+
+                  {index === 0 && (
+                    <>
+                      <li>• Managed publication and communication strategies</li>
+                      <li>• Led a 7-member Public Relations team</li>
+                      <li>• Developed copywriting for digital platforms</li>
+                      <li>• Coordinated organizational media partnerships</li>
+                    </>
+                  )}
+
+                  {index === 1 && (
+                    <>
+                      <li>• Assisted orientation event coordination</li>
+                      <li>• Evaluated student assignments and activities</li>
+                      <li>• Collaborated with committees and facilitators</li>
+                      <li>• Supported communication during events</li>
+                    </>
+                  )}
+
+                  {index === 2 && (
+                    <>
+                      <li>• Developed sustainable business ideas</li>
+                      <li>• Explored eco-friendly product innovation</li>
+                      <li>• Built branding and communication concepts</li>
+                      <li>• Applied entrepreneurial thinking in projects</li>
+                    </>
+                  )}
+
                 </ul>
               </div>
 
-              <div className="mt-5 flex flex-wrap gap-2">
-                {work.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full bg-[#f5efe7] px-3 py-1 text-xs text-darkBrown"
-                  >
-                    {tag}
-                  </span>
-                ))}
+              {/* TAGS */}
+              <div className="mt-8 flex flex-wrap gap-3">
+
+                {index === 0 &&
+                  ["Leadership", "Communication", "Copywriting", "PR"].map(
+                    (tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-[#f3e6e0] px-4 py-2 text-sm text-[#7b1e3a]"
+                      >
+                        {tag}
+                      </span>
+                    )
+                  )}
+
+                {index === 1 &&
+                  ["Teamwork", "Event", "Facilitator", "Communication"].map(
+                    (tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-[#eef2ff] px-4 py-2 text-sm text-[#1f2a44]"
+                      >
+                        {tag}
+                      </span>
+                    )
+                  )}
+
+                {index === 2 &&
+                  ["Innovation", "Business", "Sustainability", "Creative"].map(
+                    (tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-[#1f2a44] px-4 py-2 text-sm text-white"
+                      >
+                        {tag}
+                      </span>
+                    )
+                  )}
+
               </div>
+
             </div>
           </div>
         </motion.article>
       ))}
+
     </div>
   </div>
 </section>
