@@ -652,11 +652,11 @@ export default function App() {
           }`}
         >
           <div className="grid md:grid-cols-3">
-            <div className="relative h-full min-h-[320px] overflow-hidden">
+            <div className="relative overflow-hidden">
               <img
                 src={work.image}
                 alt={work.title}
-                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                className="h-full w-full object-cover object-center"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
