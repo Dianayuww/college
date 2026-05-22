@@ -713,9 +713,196 @@ export default function App() {
   </div>
 </section>
 
-        <section id="skills" className="px-6 py-20 bg-[#fffaf2]">
-          <div className="mx-auto max-w-6xl"><h2 className="font-serif text-4xl mb-10">Skills</h2><div className="grid md:grid-cols-2 gap-6">{Object.entries(skillGroups).map(([g, items]) => <motion.div {...fadeUp} key={g} className="scrapbook-card bg-[#fff3e5] p-6"><h3 className="font-semibold text-xl mb-4">{g}</h3><div className="flex flex-wrap gap-2">{items.map((i) => <Pill key={i}>{i}</Pill>)}</div></motion.div>)}</div></div>
-        </section>
+        <section
+  id="skills"
+  className="px-6 py-24 bg-gradient-to-b from-[#f8f5f2] to-[#efe4d1]"
+>
+  <div className="mx-auto max-w-6xl">
+
+    {/* HEADER */}
+    <motion.div
+      {...fadeUp}
+      className="mb-16 text-center"
+    >
+      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
+        ✨ Professional Skills
+      </span>
+
+      <h2 className="mt-6 font-serif text-5xl text-[#1f2a44]">
+        Skills & Tools
+      </h2>
+
+      <p className="mx-auto mt-5 max-w-2xl text-lg text-mediumBrown">
+        Combining analytical, technical, and creative capabilities to build impactful projects.
+      </p>
+    </motion.div>
+
+    {/* GRID */}
+    <div className="grid gap-8 md:grid-cols-2">
+
+      {/* Programming */}
+      <motion.div
+        {...fadeUp}
+        className="rounded-[2rem] border border-[#d7c2b0] bg-white/70 p-8 shadow-soft backdrop-blur-sm transition hover:-translate-y-1"
+      >
+        <div className="mb-6 flex items-center gap-4">
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#1f2a44]/10 text-3xl">
+            💻
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-semibold text-[#1f2a44]">
+              Programming
+            </h3>
+
+            <p className="text-mediumBrown">
+              Data processing & machine learning
+            </p>
+          </div>
+        </div>
+
+        <div className="space-y-5">
+
+          {[
+            { name: "Python", level: "90%" },
+            { name: "SQL", level: "85%" },
+            { name: "R", level: "70%" },
+          ].map((skill) => (
+            <div key={skill.name}>
+              <div className="mb-2 flex justify-between text-sm">
+                <span className="font-medium text-[#1f2a44]">
+                  {skill.name}
+                </span>
+
+                <span className="text-[#7b1e3a]">
+                  {skill.level}
+                </span>
+              </div>
+
+              <div className="h-3 rounded-full bg-[#efe4d1]">
+                <div
+                  className="h-3 rounded-full bg-gradient-to-r from-[#1f2a44] to-[#7b1e3a]"
+                  style={{ width: skill.level }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Visualization */}
+      <motion.div
+        {...fadeUp}
+        className="rounded-[2rem] border border-[#d7c2b0] bg-white/70 p-8 shadow-soft"
+      >
+        <div className="mb-6 flex items-center gap-4">
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#7b1e3a]/10 text-3xl">
+            📊
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-semibold text-[#1f2a44]">
+              Data Visualization
+            </h3>
+
+            <p className="text-mediumBrown">
+              Dashboard & reporting tools
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-3">
+          {[
+            "Tableau",
+            "Power BI",
+            "Looker Studio",
+            "Google Colab",
+          ].map((tool) => (
+            <span
+              key={tool}
+              className="rounded-full bg-[#f3e6e0] px-5 py-3 text-sm font-medium text-[#7b1e3a] transition hover:scale-105"
+            >
+              {tool}
+            </span>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Design */}
+      <motion.div
+        {...fadeUp}
+        className="rounded-[2rem] border border-[#d7c2b0] bg-white/70 p-8 shadow-soft"
+      >
+        <div className="mb-6 flex items-center gap-4">
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-pink-100 text-3xl">
+            🎨
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-semibold text-[#1f2a44]">
+              Design & Creativity
+            </h3>
+
+            <p className="text-mediumBrown">
+              Visual communication & branding
+            </p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          {["Canva", "Figma"].map((tool) => (
+            <span
+              key={tool}
+              className="rounded-full border border-[#7b1e3a]/20 px-5 py-3 text-sm font-medium text-[#1f2a44]"
+            >
+              {tool}
+            </span>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Productivity */}
+      <motion.div
+        {...fadeUp}
+        className="rounded-[2rem] border border-[#d7c2b0] bg-white/70 p-8 shadow-soft"
+      >
+        <div className="mb-6 flex items-center gap-4">
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#1f2a44]/10 text-3xl">
+            ⚡
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-semibold text-[#1f2a44]">
+              Productivity Tools
+            </h3>
+
+            <p className="text-mediumBrown">
+              Daily workflow & collaboration
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-3">
+          {[
+            "Excel",
+            "Word",
+            "Access",
+            "Google Sheets",
+            "Google Docs",
+          ].map((tool) => (
+            <span
+              key={tool}
+              className="rounded-full bg-[#eef2ff] px-5 py-3 text-sm font-medium text-[#1f2a44]"
+            >
+              {tool}
+            </span>
+          ))}
+        </div>
+      </motion.div>
+
+    </div>
+  </div>
+</section>
 
         <section id="learning" className="px-6 py-20">
           <div className="mx-auto max-w-6xl">
