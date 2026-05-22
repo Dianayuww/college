@@ -20,54 +20,67 @@ const dataProjects = [
     title: 'Social Media Addiction Classification',
     category: 'Machine Learning Research',
     description:
-      'Classification model comparing Random Forest and XGBoost using 10-fold Cross Validation to predict social media addiction patterns.',
-    tags: ['Python', 'Machine Learning', 'Random Forest', 'XGBoost'],
+      'Classification model comparing Random Forest and XGBoost using three train-test split scenarios and 10-fold Cross Validation to predict social media addiction patterns.',
+    tags: ['Python', 'Machine Learning', 'Random Forest', 'XGBoost', 'Social Media', 'Addiction'],
     image:
-      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop',
+      'https://media.istockphoto.com/id/1292258619/id/foto/pemuda-memiliki-mata-yang-sakit-dan-lelah-saat-menggunakan-smartphone-saat-berbaring-di-tempat.webp?a=1&b=1&s=612x612&w=0&k=20&c=YevtZ0y1KXkMdNDxq9Lkqk7ASdmOZ8dnMQp2B8gVoUM=',
     details:
       'Focused on multiclass classification and behavioral pattern analysis using mental health and user activity indicators.',
-    status: 'Research Project',
+    status: 'In Progres',
   },
 
   {
     id: 2,
-    title: 'Life Expectancy Analysis Indonesia 2020–2022',
-    category: 'Data Visualization',
+    title: 'Sentiment Analysis through Twitter Data Collection on the Palestine-Israel Conflict',
+    category: 'Sentiment Analysis',
     description:
-      'Interactive Tableau dashboard analyzing life expectancy differences between males and females in Indonesia using BPS datasets.',
-    tags: ['Tableau', 'Dashboard', 'Visualization', 'Statistical Analysis'],
+      'Sentiment analysis surrounding the Palestine-Israel conflict by leveraging the Support Vector Machine (SVM) algorithm',
+    tags: ['Sentiment Analysis', 'SVM', 'Israel', 'Palestine'],
     image:
       'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
     details:
       'Analyzed relationships between life expectancy, smoking rates, and unmet health needs.',
   },
+  
+  // {
+  //   id: 2,
+  //   title: 'Life Expectancy Analysis Indonesia 2020–2022',
+  //   category: 'Data Visualization',
+  //   description:
+  //     'Interactive Tableau dashboard analyzing life expectancy differences between males and females in Indonesia using BPS datasets.',
+  //   tags: ['Tableau', 'Dashboard', 'Visualization', 'Statistical Analysis'],
+  //   image:
+  //     'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
+  //   details:
+  //     'Analyzed relationships between life expectancy, smoking rates, and unmet health needs.',
+  // },
 
   {
     id: 3,
-    title: 'Customer Segmentation using K-Means',
+    title: 'Sentiment Analysis of Kartu Indonesia Pintar Kuliah (KIPK) Recipients from Tweets on Platform X',
     category: 'Data Mining',
     description:
-      'Cluster analysis project for identifying customer shopping behavior patterns using K-Means clustering algorithm.',
-    tags: ['Python', 'Clustering', 'Data Mining', 'K-Means'],
+      'Collected data from X platforms and used various sentiment analysis methods to gain deep insight into public opinion.',
+    tags: ['Sentiment analysis', 'NLP', 'Data Mining', 'KIPK"],
     image:
       'https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=1200&auto=format&fit=crop',
     details:
-      'Used customer transaction indicators to group behavioral segments for marketing strategy insights.',
+      'The analysis process includes exploring positive, negative, and neutral sentiments, as well as identifying the main topic that are often discussed related to the program.',
   },
 
-  {
-    id: 4,
-    title: 'Hotel Management Database System',
-    category: 'Database Design',
-    description:
-      'Designed relational database architecture for hotel management operations using Microsoft Access.',
-    tags: ['Database', 'MS Access', 'CDM', 'PDM'],
-    image:
-      'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop',
-    details:
-      'Developed conceptual and physical data models for operational efficiency and reservation management.',
-  },
-]
+//   {
+//     id: 4,
+//     title: 'Hotel Management Database System',
+//     category: 'Database Design',
+//     description:
+//       'Designed relational database architecture for hotel management operations using Microsoft Access.',
+//     tags: ['Database', 'MS Access', 'CDM', 'PDM'],
+//     image:
+//       'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop',
+//     details:
+//       'Developed conceptual and physical data models for operational efficiency and reservation management.',
+//   },
+// ]
 
 // const dataProjects = [
 //   {
