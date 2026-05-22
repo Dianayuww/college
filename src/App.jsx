@@ -260,28 +260,62 @@ export default function App() {
       </header>
 
       <main>
-        <section id="home" className="min-h-[calc(100vh-4.5rem)] flex items-center px-6 py-20 bg-gradient-to-br from-[#f8f4ef] via-[#f3e6e0] to-[#ece6dc]">
-          <motion.div {...fadeUp} className="mx-auto max-w-4xl text-center">
-            <span className="inline-flex rounded-full border border-[#a04747] text-[#a04747] bg-white/70 px-4 py-2 text-sm text-mediumBrown shadow-soft">✨ Welcome to my portfolio</span>
-            <h1 className="mt-6 font-serif text-5xl md:text-7xl text-darkBrown">Dian Ayu Fauziah</h1>
-            <p className="mt-4 text-lg md:text-xl text-mediumBrown">Data Science Student | Public Relations Enthusiast | Creative Problem Solver</p>
-            <p className="mt-2 text-sm md:text-base text-accent">Data Science • State University of Surabaya</p>
-            <div className="mt-8 flex justify-center">
-               {/* <div className="rounded-[2rem] bg-[#f2e2ca] p-2 shadow-soft">
-                <img src={dianPortrait} alt="Portrait of Dian Ayu Fauziah" className="h-56 w-44 md:h-64 md:w-52 rounded-[1.6rem] object-cover shadow-lg" />
-              </div>  */}
-              <div className="mt-10 flex justify-center">
-                <img src={dianPortrait} alt="Portrait of Dian Ayu Fauziah" className="h-72 md:h-[28rem] object-contain drop-shadow-[0_25px_45px_rgba(0,0,0,0.18)]"/>
-              </div>
-            </div>
-            <p className="mt-6 max-w-2xl mx-auto text-mediumBrown">Data Science undergraduate with strong skills in data processing, machine learning, and data visualization. Passionate about using data to generate actionable insights and solve real-world problems.</p>
-            <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-              <a href="#data-projects" className="rounded-full bg-darkBrown px-7 py-3 text-sm text-cream shadow-soft transition hover:-translate-y-0.5">View Data Projects</a>
-              <a href="#creative-pr" className="rounded-full border border-[#ceb18c] bg-white/80 px-7 py-3 text-sm text-darkBrown shadow-soft transition hover:-translate-y-0.5">View Creative & PR Works</a>
-            </div>
-            <div className="mt-10 flex flex-col items-center text-mediumBrown/70"><ArrowDown size={20} className="animate-bounce" /></div>
-          </motion.div>
-        </section>
+        <section
+  id="home"
+  className="relative min-h-[calc(100vh-4.5rem)] overflow-hidden px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
+>
+  <div className="absolute left-10 top-24 h-64 w-64 rounded-full bg-[#7b1e3a]/10 blur-3xl" />
+  <div className="absolute bottom-10 right-10 h-72 w-72 rounded-full bg-[#1f2a44]/10 blur-3xl" />
+
+  <motion.div
+    {...fadeUp}
+    className="relative z-10 mx-auto flex min-h-[75vh] max-w-5xl flex-col items-center justify-center text-center"
+  >
+    <span className="inline-flex items-center gap-2 rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
+      ✨ Welcome to my portfolio
+    </span>
+
+    <h1 className="mt-8 max-w-4xl text-5xl font-bold tracking-tight text-[#1f2a44] md:text-7xl">
+      Dian Ayu Fauziah
+    </h1>
+
+    <p className="mt-6 max-w-3xl text-xl leading-relaxed text-mediumBrown md:text-2xl">
+      Data Science Student | Public Relations Enthusiast | Creative Problem Solver
+    </p>
+
+    <p className="mt-5 text-base font-medium text-[#7b1e3a]">
+      Data Science • State University of Surabaya
+    </p>
+
+    <p className="mt-6 max-w-2xl text-mediumBrown">
+      I combine analytical thinking, public communication, and creative strategy to turn ideas into meaningful digital and data-driven projects.
+    </p>
+
+    <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+      <a
+        href="#data-projects"
+        className="rounded-full bg-[#1f2a44] px-8 py-3 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-1 hover:bg-[#283a5f]"
+      >
+        View Data Projects →
+      </a>
+
+      <a
+        href="#creative-pr"
+        className="rounded-full border border-[#7b1e3a]/40 bg-white/70 px-8 py-3 text-sm font-semibold text-[#7b1e3a] shadow-soft transition hover:-translate-y-1 hover:bg-white"
+      >
+        View Creative & PR Works →
+      </a>
+    </div>
+
+    <a
+      href="#about"
+      className="mt-12 flex h-10 w-6 items-start justify-center rounded-full border-2 border-[#7b1e3a]/30 p-1"
+      aria-label="Scroll to about section"
+    >
+      <span className="h-2 w-2 animate-bounce rounded-full bg-[#7b1e3a]" />
+    </a>
+  </motion.div>
+</section>
 
         <section
   id="about"
