@@ -23,11 +23,11 @@ const navItems = [
 const dataProjects = [
   {
     id: 1,
-    title: "Social Media Addiction Classification",
+    title: "COMPARATIVE ANALYSIS OF RANDOM FOREST AND XGBOOST MODELS FOR SOCIAL MEDIA ADDICTION LEVEL CLASSIFICATION",
     category: "Skripsi/Thesis",
-    description: "Classification model using Random Forest vs XGBoost with 10-fold Cross Validation to predict social media addiction patterns.",
-    tags: ["Python", "Machine Learning", "Random Forest", "XGBoost", "Cross Validation"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    description: "A comparative machine learning study using Random Forest and XGBoost with three train-test split scenarios and 10-fold cross-validation to classify social media addiction levels.",
+    tags: ["Python", "Machine Learning", "Random Forest", "XGBoost", "Cross Validation", "Social Media Addiction"],
+    image: "https://images.pexels.com/photos/8088493/pexels-photo-8088493.jpeg",
     details: "Multiclass classification project for social media addiction level prediction.",
     status: "In Progress"
   },
