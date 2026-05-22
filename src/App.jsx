@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import hmpsains from './assets/humas.jpg'
-import pkkmb from './assets/banacle.jpg'
-import wm from './assets/wmk.jpg'
-// import hmpImage from './assets/humas.jpg'
-// import wmImage from './assets/wmk.jpg'
-// import banacleImage from './assets/banacle.jpg'
+// import hmpsains from './assets/humas.jpg'
+// import pkkmb from './assets/banacle.jpg'
+// import wm from './assets/wmk.jpg'
+import hmpImage from './assets/humas.jpg'
+import wmImage from './assets/wmk.jpg'
+import banacleImage from './assets/banacle.jpg'
 import { motion } from 'framer-motion'
 import { ArrowDown, BookOpen, Lightbulb, Mail, Linkedin, Github, Instagram, Award, MapPin, Calendar, Sparkles, Users } from 'lucide-react'
 import dianPortrait from './assets/aku.png'
@@ -642,12 +642,7 @@ export default function App() {
   className="px-6 py-24 bg-gradient-to-b from-[#f8f5f2] to-[#efe4d1]"
 >
   <div className="mx-auto max-w-6xl">
-
-    {/* HEADER */}
-    <motion.div
-      {...fadeUp}
-      className="mb-20 text-center"
-    >
+    <motion.div {...fadeUp} className="mb-20 text-center">
       <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
         ✨ Creative Portfolio
       </span>
@@ -663,152 +658,78 @@ export default function App() {
     </motion.div>
 
     <div className="space-y-10">
-
-      {organizationProjects.map((work, index) => (
+      {organizationProjects.map((work) => (
         <motion.article
           {...fadeUp}
-          key={work.title}
-          className="group overflow-hidden rounded-[2rem] border border-[#d7c2b0] bg-white/70 shadow-soft backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+          key={work.id}
+          className={`group overflow-hidden rounded-[2rem] border border-[#d7c2b0] bg-white/70 shadow-soft backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl ${
+            work.highlight ? 'ring-2 ring-[#7b1e3a]/30' : ''
+          }`}
         >
           <div className="grid md:grid-cols-3">
-
-            {/* IMAGE */}
             <div className="relative h-[320px] overflow-hidden">
-
               <img
-                src={
-                  index === 0
-                    ? hmpsains
-                    : index === 1
-                    ? pkkmb
-                    : wm
-                }
+                src={work.image}
                 alt={work.title}
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
 
-              {index === 0 && (
+              {work.highlight && (
                 <div className="absolute left-4 top-4 rounded-full bg-[#7b1e3a] px-4 py-1 text-xs font-semibold text-white">
-                  Featured
+                  Featured Project
                 </div>
               )}
             </div>
 
-            {/* CONTENT */}
-            <div className="md:col-span-2 p-8 md:p-10">
-
+            <div className="p-8 md:col-span-2 md:p-10">
               <div className="flex flex-wrap items-start justify-between gap-4">
-
                 <div>
                   <h3 className="font-serif text-4xl text-[#1f2a44] transition group-hover:text-[#7b1e3a]">
                     {work.title}
                   </h3>
 
                   <p className="mt-3 text-lg font-semibold text-[#7b1e3a]">
-                    {work.role}
+                    {work.organization}
                   </p>
                 </div>
 
                 <span className="rounded-full border border-[#7b1e3a]/30 px-4 py-2 text-sm text-[#7b1e3a]">
-                  {index === 0
-                    ? "Mar 2024 – Feb 2025"
-                    : index === 1
-                    ? "Aug 2023 – Sep 2023"
-                    : "Sep 2024 – Dec 2024"}
+                  {work.period}
                 </span>
-
               </div>
 
               <p className="mt-8 text-lg leading-relaxed text-mediumBrown">
                 {work.description}
               </p>
 
-              {/* RESPONSIBILITIES */}
               <div className="mt-8">
                 <h4 className="mb-4 text-lg font-semibold text-[#1f2a44]">
                   Key Contributions
                 </h4>
 
                 <ul className="space-y-3 text-mediumBrown">
-
-                  {index === 0 && (
-                    <>
-                      <li>• Managed publication and communication strategies</li>
-                      <li>• Led a 7-member Public Relations team</li>
-                      <li>• Developed copywriting for digital platforms</li>
-                      <li>• Coordinated organizational media partnerships</li>
-                    </>
-                  )}
-
-                  {index === 1 && (
-                    <>
-                      <li>• Assisted orientation event coordination</li>
-                      <li>• Evaluated student assignments and activities</li>
-                      <li>• Collaborated with committees and facilitators</li>
-                      <li>• Supported communication during events</li>
-                    </>
-                  )}
-
-                  {index === 2 && (
-                    <>
-                      <li>• Developed sustainable business ideas</li>
-                      <li>• Explored eco-friendly product innovation</li>
-                      <li>• Built branding and communication concepts</li>
-                      <li>• Applied entrepreneurial thinking in projects</li>
-                    </>
-                  )}
-
+                  {work.responsibilities.map((item) => (
+                    <li key={item}>• {item}</li>
+                  ))}
                 </ul>
               </div>
 
-              {/* TAGS */}
               <div className="mt-8 flex flex-wrap gap-3">
-
-                {index === 0 &&
-                  ["Leadership", "Communication", "Copywriting", "PR"].map(
-                    (tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full bg-[#f3e6e0] px-4 py-2 text-sm text-[#7b1e3a]"
-                      >
-                        {tag}
-                      </span>
-                    )
-                  )}
-
-                {index === 1 &&
-                  ["Teamwork", "Event", "Facilitator", "Communication"].map(
-                    (tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full bg-[#eef2ff] px-4 py-2 text-sm text-[#1f2a44]"
-                      >
-                        {tag}
-                      </span>
-                    )
-                  )}
-
-                {index === 2 &&
-                  ["Innovation", "Business", "Sustainability", "Creative"].map(
-                    (tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full bg-[#1f2a44] px-4 py-2 text-sm text-white"
-                      >
-                        {tag}
-                      </span>
-                    )
-                  )}
-
+                {work.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full bg-[#f3e6e0] px-4 py-2 text-sm text-[#7b1e3a]"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
-
             </div>
           </div>
         </motion.article>
       ))}
-
     </div>
   </div>
 </section>
