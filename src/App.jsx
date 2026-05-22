@@ -68,19 +68,19 @@ const dataProjects = [
       'The analysis process includes exploring positive, negative, and neutral sentiments, as well as identifying the main topic that are often discussed related to the program.',
   },
 
-//   {
-//     id: 4,
-//     title: 'Hotel Management Database System',
-//     category: 'Database Design',
-//     description:
-//       'Designed relational database architecture for hotel management operations using Microsoft Access.',
-//     tags: ['Database', 'MS Access', 'CDM', 'PDM'],
-//     image:
-//       'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop',
-//     details:
-//       'Developed conceptual and physical data models for operational efficiency and reservation management.',
-//   },
-// ]
+  // {
+  //   id: 4,
+  //   title: 'Hotel Management Database System',
+  //   category: 'Database Design',
+  //   description:
+  //     'Designed relational database architecture for hotel management operations using Microsoft Access.',
+  //   tags: ['Database', 'MS Access', 'CDM', 'PDM'],
+  //   image:
+  //     'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop',
+  //   details:
+  //     'Developed conceptual and physical data models for operational efficiency and reservation management.',
+  // },
+]
 
 // const dataProjects = [
 //   {
