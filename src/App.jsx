@@ -360,12 +360,15 @@ export default function App() {
           }`}
         >
           <div className="grid gap-6 md:grid-cols-3">
-            <div className="relative min-h-64 overflow-hidden bg-gradient-to-br from-[#e8dcc6] to-[#c7a879]/30">
+            <div className="relative overflow-hidden rounded-l-3xl md:h-[420px]">
               <img
                 src={work.image}
                 alt={work.title}
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
               />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+            </div>
 
               {work.highlight && (
                 <div className="absolute left-4 top-4 rounded-full bg-[#c7a879] px-3 py-1 text-xs font-semibold text-white">
