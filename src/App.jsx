@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import hmpImage from './assets/humas.jpg'
 import wmImage from './assets/wmk.jpg'
 import banacleImage from './assets/banacle.jpg'
@@ -904,22 +905,29 @@ export default function App() {
   </div>
 </section>
 
-        <section id="learning" className="px-6 py-20">
-          <div className="mx-auto max-w-6xl">
-            <h2 className="font-serif text-4xl mb-10">Learning & Certifications</h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              {certifications.map((cert) => (
-                <motion.article {...fadeUp} key={cert.title} className="scrapbook-card bg-[#fffaf2] p-6">
-                  <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#f4dfc3] text-accent"><Award size={18} /></div>
-                  <h3 className="font-serif text-xl leading-snug">{cert.title}</h3>
-                  <p className="mt-2 text-sm text-mediumBrown">{cert.issuer}</p>
-                  <p className="text-sm text-accent">{cert.year}</p>
-                  <a href="https://bit.ly/40t89Ta" className="mt-4 inline-block rounded-full border border-accent px-4 py-2 text-xs text-mediumBrown hover:bg-[#f9efdf] transition">View Credential</a>
-                </motion.article>
-              ))}
-            </div>
-          </div>
-        </section>
+        <section
+  id="learning"
+  className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
+>
+  <div className="mx-auto max-w-6xl">
+    <motion.div {...fadeUp} className="mb-16 text-center">
+      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
+        ✨ Continuous Learning
+      </span>
+
+      <h2 className="mt-6 font-serif text-5xl text-[#1f2a44]">
+        Learning & Certifications
+      </h2>
+
+      <p className="mx-auto mt-5 max-w-2xl text-lg text-mediumBrown">
+        A curated stack of certifications that support my growth in data,
+        technology, and digital problem-solving.
+      </p>
+    </motion.div>
+
+    <CertificationStack />
+  </div>
+</section>
 
         <section id="contact" className="px-6 py-20 bg-darkBrown text-cream">
           <div className="mx-auto max-w-4xl text-center">
