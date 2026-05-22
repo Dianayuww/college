@@ -192,9 +192,18 @@ export default function App() {
                 <article className="scrapbook-card bg-[#fff3e5] p-7"><BookOpen className="mb-3 text-accent"/><h3 className="font-serif text-2xl mb-2">Education</h3><p><b>University:</b> State University of Surabaya</p><p><b>Major:</b> Data Science (2022 - Present)</p><p><b>GPA:</b> 3.66 / 4.00</p></article>
                 <article className="scrapbook-card bg-[#fff3e5] p-7"><Lightbulb className="mb-3 text-accent"/><h3 className="font-serif text-2xl mb-2">My Approach</h3><p>Combining analytical thinking with creative problem-solving to deliver impactful solutions.</p></article>
               </div>
-              <div className="scrapbook-card bg-[#fff3e5] p-7">
-                <h3 className="font-serif text-2xl mb-4">Technical Skills</h3>
-                <div className="mb-8 flex flex-wrap gap-3">{['Python', 'R', 'SQL', 'Tableau', 'Looker Studio', 'Microsoft Office', 'Canva', 'Figma', 'Power BI'].map((s) => <Pill key={s} filled>{s}</Pill>)}</div>
+              <div className="bg-transparent p-2">
+                <h3 className="font-serif text-2xl mb-6">Technical Skills</h3>
+                <div className="flex flex-wrap items-center gap-6">
+                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" className="h-12" />
+                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" className="h-12" />
+                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" className="h-12" />
+                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" className="h-12" />
+                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" className="h-12" />
+                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" className="h-12" />
+                </div>
+                {/* <h3 className="font-serif text-2xl mb-4">Technical Skills</h3>
+                <div className="mb-8 flex flex-wrap gap-3">{['Python', 'R', 'SQL', 'Tableau', 'Looker Studio', 'Microsoft Office', 'Canva', 'Figma', 'Power BI'].map((s) => <Pill key={s} filled>{s}</Pill>)}</div> */}
                 <h3 className="font-serif text-2xl mb-4">Soft Skills</h3>
                 <div className="flex flex-wrap gap-3">{['Leadership', 'Public Speaking', 'Teamwork', 'Adaptability', 'Communication', 'Problem Solving', 'Critical Thinking'].map((s) => <Pill key={s}>{s}</Pill>)}</div>
               </div>
