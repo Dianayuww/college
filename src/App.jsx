@@ -13,73 +13,118 @@ const navItems = [
   { label: 'Contact', href: '#contact' },
 ]
 
-// const dataProjects = [
-//   'Development of a Classification Model for Diabetes Prediction Using Decision Tree Algorithm',
-//   'Hotel Management System Using Microsoft Access',
-//   'Recommendation Wishlist to Buy Skincare Using Selection Sort',
-//   'Analysis of Life Expectancy Between Males and Females for the Years 2020–2022 in Indonesia',
-//   'Sentiment Analysis through Twitter Data Collection on the Palestine-Israel Conflict',
-//   'Sentiment Analysis of Kartu Indonesia Pintar Kuliah (KIPK) from Tweets on Platform X',
-//   'Analysis of Customer Shopping Behavior Segmentation Using K-Means Clustering Algorithm',
-//   'Social Media Addiction Classification using Random Forest and XGBoost',
-// ]
 const dataProjects = [
   {
     id: 1,
-    title: "COMPARATIVE ANALYSIS OF RANDOM FOREST AND XGBOOST MODELS FOR SOCIAL MEDIA ADDICTION LEVEL CLASSIFICATION",
-    category: "Skripsi/Thesis",
-    description: "A comparative machine learning study using Random Forest and XGBoost with three train-test split scenarios and 10-fold cross-validation to classify social media addiction levels.",
-    tags: ["Python", "Machine Learning", "Random Forest", "XGBoost", "Cross Validation", "Social Media Addiction"],
-    image: "https://images.pexels.com/photos/8088493/pexels-photo-8088493.jpeg",
-    details: "Multiclass classification project for social media addiction level prediction.",
-    status: "In Progress"
+    title: 'Social Media Addiction Classification',
+    category: 'Machine Learning Research',
+    description:
+      'Classification model comparing Random Forest and XGBoost using 10-fold Cross Validation to predict social media addiction patterns.',
+    tags: ['Python', 'Machine Learning', 'Random Forest', 'XGBoost'],
+    image:
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop',
+    details:
+      'Focused on multiclass classification and behavioral pattern analysis using mental health and user activity indicators.',
+    status: 'Research Project',
   },
+
   {
     id: 2,
-    title: "Life Expectancy Analysis Indonesia 2020-2022",
-    category: "Data Visualization",
-    description: "Visualization and analysis of life expectancy between males and females in Indonesia using Tableau based on BPS data.",
-    tags: ["Tableau", "Data Visualization", "Statistical Analysis", "BPS Data"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-    details: "Key finding: female life expectancy is higher than male life expectancy across the analyzed period."
+    title: 'Life Expectancy Analysis Indonesia 2020–2022',
+    category: 'Data Visualization',
+    description:
+      'Interactive Tableau dashboard analyzing life expectancy differences between males and females in Indonesia using BPS datasets.',
+    tags: ['Tableau', 'Dashboard', 'Visualization', 'Statistical Analysis'],
+    image:
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
+    details:
+      'Analyzed relationships between life expectancy, smoking rates, and unmet health needs.',
   },
+
   {
     id: 3,
-    title: "Maxim Application UI/UX Optimization",
-    category: "UI/UX Analysis",
-    description: "Analysis of Maxim application reviews to improve user satisfaction through payment feature optimization using Figma.",
-    tags: ["Figma", "UI/UX Design", "User Research", "Payment Systems"],
-    image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&q=80",
-    details: "Focused on improving the payment feature user experience."
+    title: 'Customer Segmentation using K-Means',
+    category: 'Data Mining',
+    description:
+      'Cluster analysis project for identifying customer shopping behavior patterns using K-Means clustering algorithm.',
+    tags: ['Python', 'Clustering', 'Data Mining', 'K-Means'],
+    image:
+      'https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=1200&auto=format&fit=crop',
+    details:
+      'Used customer transaction indicators to group behavioral segments for marketing strategy insights.',
   },
+
   {
     id: 4,
-    title: "Hotel Management System",
-    category: "Database Design",
-    description: "Hotel management system database design using Microsoft Access, including CDM and PDM.",
-    tags: ["MS Access", "Database Design", "CDM", "PDM", "Data Modeling"],
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
-    details: "Database architecture for hotel operational management."
+    title: 'Hotel Management Database System',
+    category: 'Database Design',
+    description:
+      'Designed relational database architecture for hotel management operations using Microsoft Access.',
+    tags: ['Database', 'MS Access', 'CDM', 'PDM'],
+    image:
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop',
+    details:
+      'Developed conceptual and physical data models for operational efficiency and reservation management.',
   },
-  {
-    id: 5,
-    title: "Customer Segmentation using K-Means",
-    category: "Machine Learning",
-    description: "Analysis of customer shopping behavior segmentation using the K-Means clustering algorithm.",
-    tags: ["Python", "Clustering", "K-Means", "Data Mining"],
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
-    details: "Grouped customers based on shopping behavior patterns."
-  },
-  {
-    id: 6,
-    title: "Sentiment Analysis on Social Media",
-    category: "Natural Language Processing",
-    description: "Sentiment analysis using social media data collected from Twitter/X.",
-    tags: ["Python", "NLP", "Sentiment Analysis", "Twitter/X"],
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
-    details: "Analyzed public sentiment from social media text data."
-  }
 ]
+
+// const dataProjects = [
+//   {
+//     id: 1,
+//     title: "COMPARATIVE ANALYSIS OF RANDOM FOREST AND XGBOOST MODELS FOR SOCIAL MEDIA ADDICTION LEVEL CLASSIFICATION",
+//     category: "Skripsi/Thesis",
+//     description: "A comparative machine learning study using Random Forest and XGBoost with three train-test split scenarios and 10-fold cross-validation to classify social media addiction levels.",
+//     tags: ["Python", "Machine Learning", "Random Forest", "XGBoost", "Cross Validation", "Social Media Addiction"],
+//     image: "https://images.pexels.com/photos/8088493/pexels-photo-8088493.jpeg",
+//     details: "Multiclass classification project for social media addiction level prediction.",
+//     status: "In Progress"
+//   },
+//   {
+//     id: 2,
+//     title: "Life Expectancy Analysis Indonesia 2020-2022",
+//     category: "Data Visualization",
+//     description: "Visualization and analysis of life expectancy between males and females in Indonesia using Tableau based on BPS data.",
+//     tags: ["Tableau", "Data Visualization", "Statistical Analysis", "BPS Data"],
+//     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+//     details: "Key finding: female life expectancy is higher than male life expectancy across the analyzed period."
+//   },
+//   {
+//     id: 3,
+//     title: "Maxim Application UI/UX Optimization",
+//     category: "UI/UX Analysis",
+//     description: "Analysis of Maxim application reviews to improve user satisfaction through payment feature optimization using Figma.",
+//     tags: ["Figma", "UI/UX Design", "User Research", "Payment Systems"],
+//     image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&q=80",
+//     details: "Focused on improving the payment feature user experience."
+//   },
+//   {
+//     id: 4,
+//     title: "Hotel Management System",
+//     category: "Database Design",
+//     description: "Hotel management system database design using Microsoft Access, including CDM and PDM.",
+//     tags: ["MS Access", "Database Design", "CDM", "PDM", "Data Modeling"],
+//     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
+//     details: "Database architecture for hotel operational management."
+//   },
+//   {
+//     id: 5,
+//     title: "Customer Segmentation using K-Means",
+//     category: "Machine Learning",
+//     description: "Analysis of customer shopping behavior segmentation using the K-Means clustering algorithm.",
+//     tags: ["Python", "Clustering", "K-Means", "Data Mining"],
+//     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
+//     details: "Grouped customers based on shopping behavior patterns."
+//   },
+//   {
+//     id: 6,
+//     title: "Sentiment Analysis on Social Media",
+//     category: "Natural Language Processing",
+//     description: "Sentiment analysis using social media data collected from Twitter/X.",
+//     tags: ["Python", "NLP", "Sentiment Analysis", "Twitter/X"],
+//     image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
+//     details: "Analyzed public sentiment from social media text data."
+//   }
+// ]
 
 const experiences = [
   {
@@ -371,60 +416,77 @@ export default function App() {
   </div>
 </section>
 
-        <section id="data-projects" className="px-6 py-20">
-  <div className="mx-auto max-w-6xl">
-    <h2 className="font-serif text-4xl mb-10">
-      Data Science & Tech Projects
-    </h2>
+        <section
+  id="data-projects"
+  className="px-6 py-24 bg-[#f8f5f2]"
+>
+  <div className="mx-auto max-w-7xl">
+    <div className="mb-16 text-center">
+      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-[#fff] px-4 py-2 text-sm font-medium text-[#7b1e3a]">
+        Technical Portfolio
+      </span>
+
+      <h2 className="mt-5 font-serif text-4xl md:text-5xl text-[#1f2a44]">
+        Data Science & Tech Projects
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
+        Exploring analytics, visualization, machine learning, and digital product development through meaningful projects.
+      </p>
+    </div>
 
     <div className="grid gap-8 md:grid-cols-2">
-      {dataProjects.map((p) => (
+      {dataProjects.map((project, index) => (
         <motion.article
           {...fadeUp}
-          key={p.id}
-          className="overflow-hidden rounded-3xl border border-[#eadbc8] bg-[#fffaf2] shadow-soft transition hover:-translate-y-1"
+          key={project.id}
+          className="group overflow-hidden rounded-3xl border border-[#eadbc8] bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
         >
-          <div className="relative h-52 overflow-hidden">
+          <div className="relative overflow-hidden">
             <img
-              src={p.image}
-              alt={p.title}
-              className="h-full w-full object-cover"
+              src={project.image}
+              alt={project.title}
+              className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
             />
 
-            {p.status && (
-              <span className="absolute right-4 top-4 rounded-full bg-[#c7a879] px-3 py-1 text-xs text-white">
-                {p.status}
-              </span>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+
+            {project.status && (
+              <div className="absolute right-4 top-4 rounded-full bg-[#7b1e3a] px-3 py-1 text-xs font-semibold text-white">
+                {project.status}
+              </div>
             )}
           </div>
 
-          <div className="p-6">
-            <span className="rounded-full border border-[#ceb18c] px-3 py-1 text-xs text-mediumBrown">
-              {p.category}
+          <div className="p-7">
+            <span className="rounded-full border border-[#7b1e3a]/20 px-3 py-1 text-xs text-[#7b1e3a]">
+              {project.category}
             </span>
 
-            <h3 className="mt-4 font-serif text-2xl text-darkBrown">
-              {p.title}
+            <h3 className="mt-4 font-serif text-3xl text-[#1f2a44]">
+              {project.title}
             </h3>
 
-            <p className="mt-3 text-mediumBrown leading-relaxed">
-              {p.description}
+            <p className="mt-4 leading-relaxed text-mediumBrown">
+              {project.description}
             </p>
 
-            <div className="mt-5 flex flex-wrap gap-2">
-              {p.tags.map((tag) => (
+            <div className="mt-6 flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full bg-[#f4e7d5] px-3 py-1 text-xs text-darkBrown"
+                  className="rounded-full bg-[#f4e7d5] px-3 py-1 text-xs font-medium text-[#1f2a44]"
                 >
                   {tag}
                 </span>
               ))}
             </div>
 
-            <p className="mt-5 border-t border-[#eadbc8] pt-4 text-sm italic text-mediumBrown">
-              {p.details}
-            </p>
+            <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
+              <p className="text-sm italic text-mediumBrown">
+                {project.details}
+              </p>
+            </div>
           </div>
         </motion.article>
       ))}
