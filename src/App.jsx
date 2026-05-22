@@ -280,16 +280,13 @@ export default function App() {
     </h1>
 
     <p className="mt-6 max-w-3xl text-xl leading-relaxed text-mediumBrown md:text-2xl">
-      Data Science Student | Public Relations Enthusiast | Creative Problem Solver
+      Data Science Student | Public Relations Enthusiast
     </p>
 
     <p className="mt-5 text-base font-medium text-[#7b1e3a]">
       Data Science • State University of Surabaya
     </p>
 
-    <p className="mt-6 max-w-2xl text-mediumBrown">
-      I combine analytical thinking, public communication, and creative strategy to turn ideas into meaningful digital and data-driven projects.
-    </p>
 
     <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
       <a
