@@ -688,9 +688,6 @@ export default function App() {
               <p className="mt-8 text-lg leading-relaxed text-mediumBrown">
                 {work.description}
               </p>
-              <p className="mt-8 text-lg leading-relaxed text-mediumBrown">
-  {work.description}
-</p>
 
 <div className="mt-6 flex flex-wrap gap-3 text-sm">
   {work.tags.map((tag, idx) => (
@@ -714,7 +711,7 @@ export default function App() {
                 </ul>
               </div> */}
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              {/* <div className="mt-8 flex flex-wrap gap-3">
                 {work.tags.map((tag) => (
                   <span
                     key={tag}
@@ -723,7 +720,7 @@ export default function App() {
                     {tag}
                   </span>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
         </motion.article>
