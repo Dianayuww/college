@@ -238,38 +238,138 @@ export default function App() {
           </motion.div>
         </section>
 
-        <section id="about" className="bg-[#fffaf2] px-6 py-20">
-          <motion.div {...fadeUp} className="mx-auto max-w-6xl">
-            <h2 className="text-center text-4xl font-bold">About Me</h2>
-            <div className="mx-auto mt-3 h-1.5 w-20 rounded-full bg-[#7b6252]" />
-            <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              <div className="space-y-6">
-                <div className="scrapbook-card bg-[#fff3e5] p-7"><p className="text-mediumBrown leading-relaxed">I am an adaptable undergraduate student majoring in Data Science, eager to contribute meaningfully as a Data Analyst. I possess the ability to collaborate effectively in teams and possess a strong desire to continuously learn and develop both hard and soft skills.</p></div>
-                <article className="scrapbook-card bg-[#fff3e5] p-7"><BookOpen className="mb-3 text-accent"/><h3 className="font-serif text-2xl mb-2">Education</h3><p><b>University:</b> State University of Surabaya</p><p><b>Major:</b> Data Science (2022 - Present)</p><p><b>GPA:</b> 3.66 / 4.00</p></article>
-                <article className="scrapbook-card bg-[#fff3e5] p-7"><Lightbulb className="mb-3 text-accent"/><h3 className="font-serif text-2xl mb-2">My Approach</h3><p>Combining analytical thinking with creative problem-solving to deliver impactful solutions.</p></article>
+        <section
+  id="about"
+  className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
+>
+  <div className="mx-auto max-w-7xl">
+    <div className="mb-14 text-center">
+      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/60 px-4 py-2 text-sm font-medium text-[#7b1e3a]">
+        About Me
+      </span>
+
+      <h2 className="mt-5 font-serif text-4xl md:text-5xl text-[#1f2a44]">
+        Analytical Mind, Creative Communication.
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
+        I combine data, storytelling, and communication strategy to turn complex information into meaningful insights.
+      </p>
+    </div>
+
+    <div className="grid gap-8 lg:grid-cols-5">
+      <motion.article
+        {...fadeUp}
+        className="overflow-hidden rounded-3xl border border-[#eadbc8] bg-white/85 shadow-soft lg:col-span-3"
+      >
+        <div className="grid gap-0 md:grid-cols-5">
+          <div className="flex min-h-[300px] items-center justify-center bg-gradient-to-br from-[#1f2a44] via-[#7b1e3a] to-[#d9c7b8] p-8 text-white md:col-span-2">
+            <div className="text-center">
+              <p className="font-serif text-5xl">D</p>
+              <p className="mt-3 text-sm uppercase tracking-[0.25em] text-white/80">
+                Data & PR
+              </p>
+            </div>
+          </div>
+
+          <div className="p-7 md:col-span-3 md:p-9">
+            <h3 className="font-serif text-3xl text-[#1f2a44]">
+              Who I Am
+            </h3>
+
+            <p className="mt-4 leading-relaxed text-mediumBrown">
+              I am an undergraduate Data Science student at State University of Surabaya with interests in data processing, machine learning, visualization, and public communication.
+            </p>
+
+            <p className="mt-4 leading-relaxed text-mediumBrown">
+              My portfolio reflects two connected paths: technical problem-solving through data projects and creative communication through public relations, branding, and sustainability-based initiatives.
+            </p>
+
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              <div className="rounded-2xl bg-[#f8efe3] px-4 py-3">
+                <p className="text-xs font-semibold uppercase tracking-wide text-[#7b1e3a]">
+                  Major
+                </p>
+                <p className="mt-1 font-medium text-[#1f2a44]">
+                  Data Science
+                </p>
               </div>
-              <div className="bg-transparent p-2">
-                <h3 className="font-serif text-2xl mb-6">Technical Skills</h3>
-                <div className="flex flex-wrap items-center gap-6">
-                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" className="h-12" />
-                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" className="h-12" />
-                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" className="h-12" />
-                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" className="h-12" />
-                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" className="h-12" />
-                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" className="h-12" />
-                </div>
-                {/* <h3 className="font-serif text-2xl mb-4">Technical Skills</h3>
-                <div className="mb-8 flex flex-wrap gap-3">{['Python', 'R', 'SQL', 'Tableau', 'Looker Studio', 'Microsoft Office', 'Canva', 'Figma', 'Power BI'].map((s) => <Pill key={s} filled>{s}</Pill>)}</div> */}
-                <h3 className="font-serif text-2xl mb-4">Soft Skills</h3>
-                <div className="flex flex-wrap gap-3">{['Leadership', 'Public Speaking', 'Teamwork', 'Adaptability', 'Communication', 'Problem Solving', 'Critical Thinking'].map((s) => <Pill key={s}>{s}</Pill>)}</div>
+
+              <div className="rounded-2xl bg-[#f8efe3] px-4 py-3">
+                <p className="text-xs font-semibold uppercase tracking-wide text-[#7b1e3a]">
+                  University
+                </p>
+                <p className="mt-1 font-medium text-[#1f2a44]">
+                  State University of Surabaya
+                </p>
+              </div>
+
+              <div className="rounded-2xl bg-[#f8efe3] px-4 py-3">
+                <p className="text-xs font-semibold uppercase tracking-wide text-[#7b1e3a]">
+                  GPA
+                </p>
+                <p className="mt-1 font-medium text-[#1f2a44]">
+                  3.66 / 4.00
+                </p>
+              </div>
+
+              <div className="rounded-2xl bg-[#f8efe3] px-4 py-3">
+                <p className="text-xs font-semibold uppercase tracking-wide text-[#7b1e3a]">
+                  Focus
+                </p>
+                <p className="mt-1 font-medium text-[#1f2a44]">
+                  Data • PR • Digital Product
+                </p>
               </div>
             </div>
-          </motion.div>
-        </section>
+          </div>
+        </div>
+      </motion.article>
 
-        {/* <section id="data-projects" className="px-6 py-20">
-          <div className="mx-auto max-w-6xl"><h2 className="font-serif text-4xl mb-10">Data Science & Tech</h2><div className="grid gap-6 md:grid-cols-2">{dataProjects.map((p) => <motion.article {...fadeUp} key={p} className="scrapbook-card bg-[#fffaf2] p-6"><h3 className="font-serif text-xl mb-3">{p}</h3><p className="text-mediumBrown">Meaningful problem-solving project across analytics, machine learning, data engineering, or insight communication.</p></motion.article>)}</div></div>
-        </section> */}
+      <motion.aside
+        {...fadeUp}
+        className="rounded-3xl border border-[#eadbc8] bg-white/85 p-7 shadow-soft lg:col-span-2"
+      >
+        <h3 className="font-serif text-3xl text-[#1f2a44]">
+          My Approach
+        </h3>
+
+        <p className="mt-4 italic text-[#7b1e3a]">
+          “Turning data into insight, and insight into communication that people can understand.”
+        </p>
+
+        <div className="mt-7 space-y-4">
+          <div className="rounded-2xl bg-[#f8efe3] p-4">
+            <p className="font-semibold text-[#1f2a44]">
+              Data Thinking
+            </p>
+            <p className="mt-1 text-sm leading-relaxed text-mediumBrown">
+              I use data processing, visualization, and machine learning to understand patterns and support decision-making.
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-[#f8efe3] p-4">
+            <p className="font-semibold text-[#1f2a44]">
+              Communication Clarity
+            </p>
+            <p className="mt-1 text-sm leading-relaxed text-mediumBrown">
+              I enjoy translating ideas into clear messages through copywriting, public relations, and visual storytelling.
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-[#f8efe3] p-4">
+            <p className="font-semibold text-[#1f2a44]">
+              Creative Impact
+            </p>
+            <p className="mt-1 text-sm leading-relaxed text-mediumBrown">
+              I am interested in projects that connect technology, sustainability, and human-centered solutions.
+            </p>
+          </div>
+        </div>
+      </motion.aside>
+    </div>
+  </div>
+</section>
 
         <section id="data-projects" className="px-6 py-20">
   <div className="mx-auto max-w-6xl">
