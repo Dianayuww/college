@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowDown, BookOpen, Lightbulb, Mail, Linkedin, Github, Instagram, Award, MapPin, Calendar } from 'lucide-react'
+import { ArrowDown, BookOpen, Lightbulb, Mail, Linkedin, Github, Instagram, Award, MapPin, Calendar, Sparkles, Users } from 'lucide-react'
 import dianPortrait from './assets/aku.png'
 
 const navItems = [
@@ -101,21 +101,69 @@ const experiences = [
   },
 ]
 
+// const organizationProjects = [
+//   {
+//     title: 'HMP Sains Data Unesa',
+//     role: 'Head of Public Relations Division (Mar 2024 – Feb 2025)',
+//     description: 'Created copywriting for website/social media and led 7 PR team members to meet publication targets.',
+//   },
+//   {
+//     title: 'PKKMB UNESA 2023',
+//     role: 'Member of Facilitator Committee (Aug 2023 – Sep 2023)',
+//     description: 'Evaluated assignments for new students and coordinated orientation event support.',
+//   },
+//   {
+//     title: 'Wirausaha Merdeka Batch 3 — Ciputra University',
+//     role: 'Participant (Sep 2024 – Dec 2024)',
+//     description: 'Developed circular economy-oriented business ideas and eco-friendly product innovation concepts.',
+//   },
+// ]
 const organizationProjects = [
   {
-    title: 'HMP Sains Data Unesa',
-    role: 'Head of Public Relations Division (Mar 2024 – Feb 2025)',
-    description: 'Created copywriting for website/social media and led 7 PR team members to meet publication targets.',
+    id: 1,
+    title: 'Head of Public Relations Division',
+    organization: 'HMP Sains Data Unesa',
+    period: 'Mar 2024 – Feb 2025',
+    description:
+      'Led public relations initiatives, managed organizational communication, created compelling copy, and coordinated publication needs for student association programs.',
+    responsibilities: [
+      'Created copywriting for organizational communication',
+      'Managed media publication and public engagement',
+      'Led 7 PR division members',
+      'Supported community service and study visit programs',
+    ],
+    tags: ['Leadership', 'Communication', 'Event Management', 'Copywriting'],
   },
   {
-    title: 'PKKMB UNESA 2023',
-    role: 'Member of Facilitator Committee (Aug 2023 – Sep 2023)',
-    description: 'Evaluated assignments for new students and coordinated orientation event support.',
+    id: 2,
+    title: 'Wirausaha Merdeka Batch 3',
+    organization: 'Entrepreneurship Program',
+    period: 'Sep 2024 – Dec 2024',
+    description:
+      'Participated in an entrepreneurial development program focused on sustainable business models, eco-friendly product development, and practical business implementation.',
+    responsibilities: [
+      'Developed sustainable business models',
+      'Researched eco-friendly product innovation',
+      'Completed entrepreneurial internships',
+      'Applied business principles to real-world scenarios',
+    ],
+    tags: ['Entrepreneurship', 'Sustainability', 'Business Development', 'Innovation'],
   },
   {
-    title: 'Wirausaha Merdeka Batch 3 — Ciputra University',
-    role: 'Participant (Sep 2024 – Dec 2024)',
-    description: 'Developed circular economy-oriented business ideas and eco-friendly product innovation concepts.',
+    id: 3,
+    title: 'Banacle - Eco-Friendly Soap Innovation',
+    organization: 'Sustainability Project',
+    period: '2024',
+    description:
+      'Developed Banacle, an innovative eco-friendly soap product made from banana peel waste as part of circular economy implementation.',
+    responsibilities: [
+      'Created product innovation using banana peel waste',
+      'Developed sustainable product concept',
+      'Built brand positioning and communication',
+      'Explored environmental impact value',
+    ],
+    tags: ['Sustainability', 'Product Innovation', 'Branding', 'Eco-Friendly'],
+    highlight: true,
   },
 ]
 
@@ -276,9 +324,102 @@ export default function App() {
   </div>
 </section>
 
-        <section id="creative-pr" className="px-6 py-20 bg-[#fffaf2]">
+        {/* <section id="creative-pr" className="px-6 py-20 bg-[#fffaf2]">
           <div className="mx-auto max-w-6xl"><h2 className="font-serif text-4xl mb-10">Creative & PR</h2><div className="grid gap-6 md:grid-cols-3">{organizationProjects.map((p) => <motion.article {...fadeUp} key={p.title} className="scrapbook-card bg-[#fff3e5] p-6"><h3 className="font-serif text-2xl mb-2">{p.title}</h3><p className="text-sm font-semibold text-accent mb-2">{p.role}</p><p className="text-mediumBrown leading-relaxed">{p.description}</p></motion.article>)}</div></div>
-        </section>
+        </section> */}
+        <section id="creative-pr" className="px-6 py-20 bg-[#fffaf2]">
+  <div className="mx-auto max-w-7xl">
+    <div className="mb-16 text-center">
+      <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-[#c7a879]/10 px-4 py-2">
+        <Sparkles className="text-[#c7a879]" size={18} />
+        <span className="font-semibold text-[#c7a879]">Creative Portfolio</span>
+      </div>
+
+      <h2 className="text-4xl font-bold text-darkBrown md:text-5xl">
+        Public Relations & Creative Work
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-2xl text-lg text-mediumBrown">
+        Leading initiatives in communication, sustainability, and innovation
+      </p>
+    </div>
+
+    <div className="space-y-8">
+      {organizationProjects.map((work, index) => (
+        <motion.article
+          {...fadeUp}
+          key={work.id}
+          className={`overflow-hidden rounded-3xl border border-[#eadbc8] bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-xl ${
+            work.highlight ? 'ring-2 ring-[#c7a879]' : ''
+          }`}
+        >
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="relative min-h-64 overflow-hidden bg-gradient-to-br from-[#e8dcc6] to-[#c7a879]/30">
+              <div className="absolute inset-0 flex items-center justify-center">
+                {index === 0 && <Users className="text-[#c7a879]/30" size={86} />}
+                {index === 1 && <Lightbulb className="text-[#c7a879]/30" size={86} />}
+                {index === 2 && <Sparkles className="text-[#c7a879]/30" size={86} />}
+              </div>
+
+              {work.highlight && (
+                <div className="absolute left-4 top-4 rounded-full bg-[#c7a879] px-3 py-1 text-xs font-semibold text-white">
+                  ✨ Featured Project
+                </div>
+              )}
+            </div>
+
+            <div className="p-6 md:col-span-2">
+              <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 className="font-serif text-2xl text-darkBrown">
+                    {work.title}
+                  </h3>
+                  <p className="mt-2 text-lg font-semibold text-[#c7a879]">
+                    {work.organization}
+                  </p>
+                </div>
+
+                <span className="rounded-full border border-[#c7a879] px-3 py-1 text-xs text-[#c7a879]">
+                  {work.period}
+                </span>
+              </div>
+
+              <p className="leading-relaxed text-mediumBrown">
+                {work.description}
+              </p>
+
+              <div className="mt-5">
+                <h4 className="mb-2 font-semibold text-darkBrown">
+                  Key Responsibilities:
+                </h4>
+
+                <ul className="space-y-1">
+                  {work.responsibilities.map((resp) => (
+                    <li key={resp} className="flex items-start text-sm text-mediumBrown">
+                      <span className="mr-2 text-[#c7a879]">•</span>
+                      <span>{resp}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {work.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full bg-[#f5efe7] px-3 py-1 text-xs text-darkBrown"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.article>
+      ))}
+    </div>
+  </div>
+</section>
 
         <section className="px-6 py-20" id="experience">
           <div className="mx-auto max-w-6xl">
