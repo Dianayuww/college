@@ -159,9 +159,9 @@ export default function App() {
       </header>
 
       <main>
-        <section id="home" className="min-h-[calc(100vh-4.5rem)] flex items-center px-6 py-20 bg-gradient-to-br from-[#fff6f3] via-[#fff3c9] to-[#ffe5ec]">
+        <section id="home" className="min-h-[calc(100vh-4.5rem)] flex items-center px-6 py-20 bg-gradient-to-br from-[#f8f4ef] via-[#f3e6e0] to-[#ece6dc]">
           <motion.div {...fadeUp} className="mx-auto max-w-4xl text-center">
-            <span className="inline-flex rounded-full border border-[#d9c4a6] bg-white/70 px-4 py-2 text-sm text-mediumBrown shadow-soft">✨ Welcome to my portfolio</span>
+            <span className="inline-flex rounded-full border border-[#a04747] text-[#a04747] bg-white/70 px-4 py-2 text-sm text-mediumBrown shadow-soft">✨ Welcome to my portfolio</span>
             <h1 className="mt-6 font-serif text-5xl md:text-7xl text-darkBrown">Dian Ayu Fauziah</h1>
             <p className="mt-4 text-lg md:text-xl text-mediumBrown">Data Science Student | Public Relations Enthusiast | Creative Problem Solver</p>
             <p className="mt-2 text-sm md:text-base text-accent">Data Science • State University of Surabaya</p>
