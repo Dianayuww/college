@@ -652,7 +652,7 @@ export default function App() {
           }`}
         >
           <div className="grid md:grid-cols-3">
-            <div className="relative h-[320px] overflow-hidden">
+            <div className="relative h-full min-h-[320px] overflow-hidden">
               <img
                 src={work.image}
                 alt={work.title}
