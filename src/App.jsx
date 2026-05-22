@@ -83,24 +83,26 @@ const dataProjects = [
 
 const experiences = [
   {
-    title: 'Data Analyst Intern — SEAL (Social Economic Accelerator Lab)',
+    id: 1,
+    title: 'Data Analyst Intern',
+    company: 'SEAL — Social Economic Accelerator Lab',
     location: 'Malang, Indonesia',
     period: 'Feb 2025 – Present',
-    points: [
-      'Contributing to MajaDigi Super App by analyzing and managing public service data.',
-      'Sourcing foundational datasets from BPS Indonesia and BPS East Java for dashboards.',
-      'Performing ETL processes using AWS Glue and building executive-level dashboards.',
-    ],
+    vibe: 'Turning public service data into meaningful dashboard insights.',
+    description:
+      'Supported the development of MajaDigi Super App through data collection, ETL processing, and executive dashboard preparation.',
+    highlights: ['MajaDigi Super App', 'AWS Glue', 'BPS Data', 'Executive Dashboard'],
   },
   {
-    title: 'Statistical Data Analyst Intern — East Java Provincial Department of Communication and Informatics',
+    id: 2,
+    title: 'Statistical Data Analyst Intern',
+    company: 'East Java Provincial Department of Communication and Informatics',
     location: 'Surabaya, Indonesia',
     period: 'Mar 2025 – Jun 2025',
-    points: [
-      'Contributed to public service digital transformation through MajaDigi Super App initiative.',
-      'Designed data-driven solutions for government services and strategic programs.',
-      'Performed statistical analysis and supported AI-powered decision systems.',
-    ],
+    vibe: 'Using data to support digital transformation in public services.',
+    description:
+      'Contributed to statistical analysis and data-driven solutions for government digital service improvement.',
+    highlights: ['Public Service Data', 'Statistical Analysis', 'Digital Policy', 'AI-Powered System'],
   },
 ]
 
@@ -435,12 +437,88 @@ export default function App() {
   </div>
 </section>
 
-        <section className="px-6 py-20" id="experience">
-          <div className="mx-auto max-w-6xl">
-            <h2 className="font-serif text-4xl mb-10">Experience</h2>
-            <div className="space-y-6">{experiences.map((exp) => <motion.article {...fadeUp} key={exp.title} className="scrapbook-card bg-[#fffaf2] p-6"><h3 className="font-serif text-2xl mb-3">{exp.title}</h3><div className="mb-3 flex flex-wrap gap-4 text-sm text-mediumBrown"><span className="inline-flex items-center gap-1"><MapPin size={14}/>{exp.location}</span><span className="inline-flex items-center gap-1"><Calendar size={14}/>{exp.period}</span></div><ul className="list-disc list-inside text-mediumBrown space-y-1">{exp.points.map((pt) => <li key={pt}>{pt}</li>)}</ul></motion.article>)}</div>
+        <section className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]" id="experience">
+  <div className="mx-auto max-w-7xl">
+    <div className="mb-14 text-center">
+      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/60 px-4 py-2 text-sm font-medium text-[#7b1e3a]">
+        Professional Journey
+      </span>
+
+      <h2 className="mt-5 font-serif text-4xl md:text-5xl text-[#1f2a44]">
+        What I’ve Been Building
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
+        Data, public service, and digital transformation experiences shaped through real projects.
+      </p>
+    </div>
+
+    <div className="space-y-8">
+      {experiences.map((exp, index) => (
+        <motion.article
+          {...fadeUp}
+          key={exp.id}
+          className="overflow-hidden rounded-3xl border border-[#eadbc8] bg-white/85 shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div className={`grid gap-0 md:grid-cols-5 ${index % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''}`}>
+            <div className="flex min-h-[260px] items-center justify-center bg-gradient-to-br from-[#1f2a44] via-[#7b1e3a] to-[#d9c7b8] p-8 text-white md:col-span-2">
+              <div className="text-center">
+                <p className="text-5xl font-bold">{index + 1}</p>
+                <p className="mt-3 text-sm uppercase tracking-[0.25em] text-white/80">
+                  Experience
+                </p>
+              </div>
+            </div>
+
+            <div className="p-7 md:col-span-3 md:p-9">
+              <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 className="font-serif text-2xl md:text-3xl text-[#1f2a44]">
+                    {exp.title}
+                  </h3>
+
+                  <p className="mt-2 font-semibold text-[#7b1e3a]">
+                    {exp.company}
+                  </p>
+                </div>
+
+                <span className="rounded-full border border-[#7b1e3a]/25 px-3 py-1 text-xs text-[#7b1e3a]">
+                  {exp.period}
+                </span>
+              </div>
+
+              <div className="mb-4 flex flex-wrap gap-4 text-sm text-mediumBrown">
+                <span className="inline-flex items-center gap-1">
+                  <MapPin size={14} />
+                  {exp.location}
+                </span>
+              </div>
+
+              <p className="mb-4 italic text-[#7b1e3a]">
+                “{exp.vibe}”
+              </p>
+
+              <p className="leading-relaxed text-mediumBrown">
+                {exp.description}
+              </p>
+
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {exp.highlights.map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-2xl bg-[#f8efe3] px-4 py-3 text-sm font-medium text-[#1f2a44]"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-        </section>
+        </motion.article>
+      ))}
+    </div>
+  </div>
+</section>
 
         <section id="skills" className="px-6 py-20 bg-[#fffaf2]">
           <div className="mx-auto max-w-6xl"><h2 className="font-serif text-4xl mb-10">Skills</h2><div className="grid md:grid-cols-2 gap-6">{Object.entries(skillGroups).map(([g, items]) => <motion.div {...fadeUp} key={g} className="scrapbook-card bg-[#fff3e5] p-6"><h3 className="font-semibold text-xl mb-4">{g}</h3><div className="flex flex-wrap gap-2">{items.map((i) => <Pill key={i}>{i}</Pill>)}</div></motion.div>)}</div></div>
