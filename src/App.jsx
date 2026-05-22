@@ -178,12 +178,7 @@ const organizationProjects = [
     period: 'Mar 2024 – Feb 2025',
     description:
       'Led public relations initiatives, managed organizational communication, created compelling copy, and coordinated publication needs for student association programs.',
-    responsibilities: [
-      'Created copywriting for organizational communication',
-      'Managed media publication and public engagement',
-      'Led 7 PR division members',
-      'Supported community service and study visit programs',
-    ],
+
     tags: ['Leadership', 'Communication', 'Event Management', 'Copywriting'],
   },
   {
@@ -194,12 +189,7 @@ const organizationProjects = [
     period: 'Sep 2024 – Dec 2024',
     description:
       'Participated in an entrepreneurial development program focused on sustainable business models, eco-friendly product development, and practical business implementation.',
-    responsibilities: [
-      'Developed sustainable business models',
-      'Researched eco-friendly product innovation',
-      'Completed entrepreneurial internships',
-      'Applied business principles to real-world scenarios',
-    ],
+
     tags: ['Entrepreneurship', 'Sustainability', 'Business Development', 'Innovation'],
   },
   {
@@ -210,12 +200,7 @@ const organizationProjects = [
     period: '2024',
     description:
       'Developed Banacle, an innovative eco-friendly soap product made from banana peel waste as part of circular economy implementation.',
-    responsibilities: [
-      'Created product innovation using banana peel waste',
-      'Developed sustainable product concept',
-      'Built brand positioning and communication',
-      'Explored environmental impact value',
-    ],
+
     tags: ['Sustainability', 'Product Innovation', 'Branding', 'Eco-Friendly'],
     highlight: true,
   },
