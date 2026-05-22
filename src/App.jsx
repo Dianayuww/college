@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import hmpsains from './assets/humas.jpg'
-import pkkmb from './assets/wmk.jpg'
+import pkkmb from './assets/banacle.jpg'
 import wm from './assets/wmk.jpg'
 // import hmpImage from './assets/humas.jpg'
 // import wmImage from './assets/wmk.jpg'
