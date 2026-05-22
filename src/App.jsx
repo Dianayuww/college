@@ -651,12 +651,12 @@ export default function App() {
             work.highlight ? 'ring-2 ring-[#7b1e3a]/30' : ''
           }`}
         >
-          <div className="grid md:grid-cols-3">
-            <div className="relative overflow-hidden">
+          <div className="flex flex-col md:flex-row items-start">
+            <div className="relative overflow-hidden md:w-[380px] flex-shrink-0">
               <img
                 src={work.image}
                 alt={work.title}
-                className="h-full w-full object-cover object-center"
+                className="w-full rounded-l-[2rem] object-cover"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
