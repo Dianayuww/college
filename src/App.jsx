@@ -482,10 +482,6 @@ export default function App() {
       <h2 className="mt-5 font-serif text-4xl md:text-5xl text-[#1f2a44]">
         Analytical Mind, Creative Communication.
       </h2>
-
-      <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
-        I combine data, storytelling, and communication strategy to turn complex information into meaningful insights.
-      </p>
     </div>
 
     <div className="grid gap-8 lg:grid-cols-5">
