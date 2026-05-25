@@ -144,26 +144,13 @@ const experiences = [
   vibe: 'Supporting public data transformation through the MajaDigi Super App initiative.',
   description:
     'Contributed to the 99 Days Acceleration Program initiated by the Governor of East Java through the MajaDigi Super App project. Responsible for sourcing and preparing public datasets from Open Data Jatim, Satu Data Jatim, and national data portals to support executive and public dashboards across multiple government sectors. Assisted data scientists in data cleaning and preprocessing workflows for digital public service analytics.',
+  projectLink: 'https://majadigi.jatimprov.go.id/',
   highlights: [
     'MajaDigi Super App',
     'Public Data Dashboard',
     'Open Data Jatim',
     'Data Cleaning'
   ],
-  <p className="leading-relaxed text-mediumBrown">
-  {exp.description}
-</p>
-
-<a
-  href="https://majadigi.jatimprov.go.id/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mt-6 inline-flex items-center rounded-full border border-[#7b1e3a]/20 px-4 py-2 text-sm text-[#7b1e3a] transition hover:bg-[#7b1e3a] hover:text-white"
->
-  Visit Project ↗
-</a>
-
-<div className="mt-6 grid gap-3 sm:grid-cols-2">
 }
 ]
 
@@ -822,6 +809,14 @@ export default function App() {
               <p className="leading-relaxed text-mediumBrown">
                 {exp.description}
               </p>
+              <a
+                href={exp.projectLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center rounded-full border border-[#7b1e3a]/20 px-4 py-2 text-sm text-[#7b1e3a] transition hover:bg-[#7b1e3a] hover:text-white"
+              >
+                Visit Project ↗
+              </a>
 
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
                 {exp.highlights.map((item) => (
