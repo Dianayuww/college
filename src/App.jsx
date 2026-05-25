@@ -35,6 +35,7 @@ const dataProjects = [
   {
     id: 2,
     title: 'Sentiment Analysis through Twitter Data Collection on the Palestine-Israel Conflict',
+    linkGithub: 'https://github.com/Dianayuww/israel-palestine-sentiment-analysis',
     category: 'Sentiment Analysis',
     description:
       'Sentiment analysis surrounding the Palestine-Israel conflict by leveraging the Support Vector Machine (SVM) algorithm',
