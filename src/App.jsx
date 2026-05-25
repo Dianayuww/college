@@ -173,7 +173,6 @@ const organizationProjects = [
   {
     id: 1,
     title: 'Head of Public Relations Division',
-    link: 'https://id.shp.ee/mreSoTB3',
     organization: 'HMP Sains Data Unesa',
     image: hmpImage,
     period: 'Mar 2024 – Feb 2025',
@@ -196,6 +195,7 @@ const organizationProjects = [
   {
     id: 3,
     title: 'Banacle - Eco-Friendly Soap Innovation',
+    link: 'https://id.shp.ee/mreSoTB3',
     organization: 'Sustainability Project',
     image: banacleImage,
     period: '2024',
