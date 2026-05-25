@@ -61,6 +61,7 @@ const dataProjects = [
   {
     id: 3,
     title: 'Sentiment Analysis of Kartu Indonesia Pintar Kuliah (KIPK) Recipients from Tweets on Platform X',
+    linkGithub: 'https://github.com/Dianayuww/Sentiment-Analysis-KIPK-Recipients-based-Tweets-from-X',
     category: 'Data Mining',
     description:
       'Collected data from X platforms and used various sentiment analysis methods to gain deep insight into public opinion.',
@@ -615,13 +616,26 @@ export default function App() {
             <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
               <p className="text-sm italic text-mediumBrown">
                 {project.details}
-                  <button
-                    type="button"
-                    onClick={() => setSelectedProject(project)}
-                    className="mt-6 rounded-full bg-[#1f2a44] px-5 py-2 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-[#7b1e3a]"
-                  >
-                    View Details →
-                  </button>
+                  <div className="mt-6 flex gap-3">
+  <button
+    type="button"
+    onClick={() => setSelectedProject(project)}
+    className="rounded-full bg-[#1f2a44] px-5 py-2 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-[#7b1e3a]"
+  >
+    View Details →
+  </button>
+
+  {project.linkGithub && (
+    <a
+      href={project.linkGithub}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="rounded-full border border-[#1f2a44]/20 bg-white px-5 py-2 text-sm font-semibold text-[#1f2a44] transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
+    >
+      GitHub ↗
+    </a>
+  )}
+</div>
               </p>
             </div>
           </div>
