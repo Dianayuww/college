@@ -463,13 +463,13 @@ export default function App() {
     </div>
 
     <div className="relative flex justify-center md:justify-end">
-      <div className="relative h-[590px] w-[470px]">
-        <div className="absolute inset-x-8 bottom-16 h-[430px] rounded-t-full bg-[#e8cbc8]/80" />
+      <div className="relative h-[720px] w-[560px]">
+        <div className="absolute inset-x-6 bottom-20 h-[520px] rounded-t-full bg-[#e8cbc8]/80" />
 
         <img
           src={aku2}
           alt="Dian Ayu Fauziah"
-          className="absolute bottom-0 right-0 z-20 h-[610px] w-auto object-contain drop-shadow-2xl"
+          className="absolute bottom-[-20px] right-[-20px] z-20 h-[760px] w-auto object-contain drop-shadow-2xl"
         />
 
         <div className="absolute bottom-9 left-3 z-10 h-80 w-80 rounded-full border border-[#d6a778]" />
