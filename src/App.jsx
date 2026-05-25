@@ -935,6 +935,7 @@ export default function App() {
             { name: 'Tableau', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tableau.svg' },
             { name: 'Power BI', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/powerbi.svg' },
             { name: 'Looker Studio', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/looker.svg' },
+            { name: 'Metabase', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/metabase.svg' },
             { name: 'Google Colab', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecolab/googlecolab-original.svg' },
           ],
         },
