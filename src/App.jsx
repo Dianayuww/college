@@ -139,8 +139,8 @@ const experiences = [
   id: 1,
   title: 'Data Analyst Intern',
   company: 'SEAL — Social Economic Accelerator Lab x East Java Provincial Government',
-  location: 'Malang, Indonesia',
-  period: 'Feb 2025 – Present',
+  location: 'Surabaya, Indonesia',
+  period: 'Feb – Dec 2025',
   vibe: 'Supporting public data transformation through the MajaDigi Super App initiative.',
   description:
     'Contributed to the 99 Days Acceleration Program initiated by the Governor of East Java through the MajaDigi Super App project. Responsible for sourcing and preparing public datasets from Open Data Jatim, Satu Data Jatim, and national data portals to support executive and public dashboards across multiple government sectors. Assisted data scientists in data cleaning and preprocessing workflows for digital public service analytics.',
