@@ -136,27 +136,21 @@ const dataProjects = [
 
 const experiences = [
   {
-    id: 1,
-    title: 'Data Analyst Intern',
-    company: 'SEAL — Social Economic Accelerator Lab',
-    location: 'Malang, Indonesia',
-    period: 'Feb 2025 – Present',
-    vibe: 'Turning public service data into meaningful dashboard insights.',
-    description:
-      'Supported the development of MajaDigi Super App through data collection, ETL processing, and executive dashboard preparation.',
-    highlights: ['MajaDigi Super App', 'AWS Glue', 'BPS Data', 'Executive Dashboard'],
-  },
-  {
-    id: 2,
-    title: 'Statistical Data Analyst Intern',
-    company: 'East Java Provincial Department of Communication and Informatics',
-    location: 'Surabaya, Indonesia',
-    period: 'Mar 2025 – Jun 2025',
-    vibe: 'Using data to support digital transformation in public services.',
-    description:
-      'Contributed to statistical analysis and data-driven solutions for government digital service improvement.',
-    highlights: ['Public Service Data', 'Statistical Analysis', 'Digital Policy', 'AI-Powered System'],
-  },
+  id: 1,
+  title: 'Data Analyst Intern',
+  company: 'SEAL — Social Economic Accelerator Lab x East Java Provincial Government',
+  location: 'Malang, Indonesia',
+  period: 'Feb 2025 – Present',
+  vibe: 'Supporting public data transformation through the MajaDigi Super App initiative.',
+  description:
+    'Contributed to the 99 Days Acceleration Program initiated by the Governor of East Java through the MajaDigi Super App project. Responsible for sourcing and preparing public datasets from Open Data Jatim, Satu Data Jatim, and national data portals to support executive and public dashboards across multiple government sectors. Assisted data scientists in data cleaning and preprocessing workflows for digital public service analytics.',
+  highlights: [
+    'MajaDigi Super App',
+    'Public Data Dashboard',
+    'Open Data Jatim',
+    'Data Cleaning'
+  ],
+}
 ]
 
 
