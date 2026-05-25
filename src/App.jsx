@@ -400,54 +400,45 @@ export default function App() {
 </section>  */}
         <section
   id="home"
-  className="relative min-h-screen overflow-hidden bg-[#fffaf7] px-6 pt-32 text-[#101b33]"
+  className="relative min-h-screen overflow-hidden bg-[#fffaf7] px-6 pt-28 text-[#101b33]"
 >
-  {/* Background shape */}
-  <div className="absolute bottom-0 right-0 h-[45%] w-[55%] rounded-tl-[100%] bg-[#101b33]" />
-  <div className="absolute right-[8%] top-[34%] h-[360px] w-[360px] rounded-full bg-[#e8cbc8]/70 blur-sm" />
-  <div className="absolute right-[7%] top-[30%] h-[430px] w-[430px] rounded-full border border-[#d6a778]" />
+  <div className="absolute bottom-0 right-0 h-[42%] w-[58%] rounded-tl-[100%] bg-[#101b33]" />
+  <div className="absolute right-[7%] top-[32%] h-[390px] w-[390px] rounded-full bg-[#e8cbc8]/75 blur-sm" />
+  <div className="absolute right-[6%] top-[29%] h-[450px] w-[450px] rounded-full border border-[#d6a778]" />
 
-  {/* Decorative dots */}
   <div className="absolute right-10 top-36 grid grid-cols-8 gap-3 opacity-50">
     {Array.from({ length: 48 }).map((_, i) => (
       <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
     ))}
   </div>
 
-  {/* Decorative stars */}
   <span className="absolute left-[28%] top-[23%] text-4xl text-[#d6a778]">✦</span>
   <span className="absolute right-[12%] top-[38%] text-5xl text-[#7b1e3a]">✦</span>
   <span className="absolute right-[8%] top-[45%] text-4xl text-[#7b1e3a]">✦</span>
 
-  <div className="relative z-10 mx-auto grid min-h-[calc(100vh-8rem)] max-w-7xl items-center gap-12 md:grid-cols-2">
-    {/* Left text */}
+  <div className="relative z-10 mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-10 md:grid-cols-2">
     <div>
       <div className="mb-8 flex items-center gap-4">
-        <p className="text-sm font-semibold uppercase tracking-[0.45em] text-[#101b33]">
+        <p className="text-sm font-semibold uppercase tracking-[0.45em]">
           Hello, I’m
         </p>
         <span className="h-px w-32 bg-[#d6a778]" />
       </div>
 
-      <h1 className="font-serif text-6xl leading-[0.95] tracking-tight text-[#101b33] md:text-8xl">
+      <h1 className="font-serif text-6xl leading-[0.95] tracking-tight md:text-8xl">
         Dian Ayu <br />
         <span className="text-[#7b1e3a]">Fauziah</span>
       </h1>
 
-      <p className="mt-8 text-sm font-bold uppercase tracking-[0.22em] text-[#101b33] md:text-base">
+      <p className="mt-8 text-sm font-bold uppercase tracking-[0.22em] md:text-base">
         Data Science Student
         <span className="mx-3 text-[#d6a778]">|</span>
         Public Relations Enthusiast
       </p>
 
-      <p className="mt-7 max-w-xl text-lg leading-relaxed text-[#3f4658]">
-        I combine data, communication, and creative strategy to build meaningful
-        digital projects and transform ideas into clear, impactful stories.
-      </p>
+      <div className="mt-8 h-px w-24 bg-[#d6a778]" />
 
-      <div className="mt-10 h-px w-24 bg-[#d6a778]" />
-
-      <div className="mt-10 flex flex-wrap gap-5">
+      <div className="mt-8 flex flex-wrap gap-5">
         <a
           href="#data-projects"
           className="inline-flex items-center gap-4 rounded-lg bg-[#7b1e3a] px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition hover:-translate-y-1 hover:bg-[#101b33]"
@@ -462,149 +453,27 @@ export default function App() {
           Creative Works <span>→</span>
         </a>
       </div>
+
+      <div className="mt-14 flex items-center gap-3 text-sm text-[#101b33]/70">
+        <div className="relative h-10 w-6 rounded-full border border-[#7b1e3a]">
+          <span className="absolute left-1/2 top-2 h-2 w-1 -translate-x-1/2 animate-bounce rounded-full bg-[#7b1e3a]" />
+        </div>
+        <span>Scroll to explore</span>
+      </div>
     </div>
 
-    {/* Right image */}
     <div className="relative flex justify-center md:justify-end">
-      <div className="relative h-[560px] w-[430px]">
-        <div className="absolute inset-x-10 bottom-16 h-[390px] rounded-t-full bg-[#e8cbc8]/80" />
+      <div className="relative h-[590px] w-[470px]">
+        <div className="absolute inset-x-8 bottom-16 h-[430px] rounded-t-full bg-[#e8cbc8]/80" />
 
         <img
           src={aku2}
           alt="Dian Ayu Fauziah"
-          className="absolute bottom-0 right-0 z-20 h-[540px] w-auto object-contain drop-shadow-2xl"
+          className="absolute bottom-0 right-0 z-20 h-[610px] w-auto object-contain drop-shadow-2xl"
         />
 
-        <div className="absolute bottom-8 left-4 z-10 h-72 w-72 rounded-full border border-[#d6a778]" />
+        <div className="absolute bottom-9 left-3 z-10 h-80 w-80 rounded-full border border-[#d6a778]" />
       </div>
-    </div>
-  </div>
-</section>
-        <section
-  id="about"
-  className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
->
-  <div className="mx-auto max-w-7xl">
-    <div className="mb-14 text-center">
-      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/60 px-4 py-2 text-sm font-medium text-[#7b1e3a]">
-        About Me
-      </span>
-
-      <h2 className="mt-5 font-serif text-4xl md:text-5xl text-[#1f2a44]">
-        Analytical Mind, Creative Communication.
-      </h2>
-    </div>
-
-    <div className="grid gap-8 lg:grid-cols-5">
-      <motion.article
-        {...fadeUp}
-        className="overflow-hidden rounded-3xl border border-[#eadbc8] bg-white/85 shadow-soft lg:col-span-3"
-      >
-        <div className="grid gap-0 md:grid-cols-5">
-          <div className="flex min-h-[300px] items-center justify-center bg-gradient-to-br from-[#1f2a44] via-[#7b1e3a] to-[#d9c7b8] p-8 text-white md:col-span-2">
-            <div className="text-center">
-              <p className="font-serif text-5xl">D</p>
-              <p className="mt-3 text-sm uppercase tracking-[0.25em] text-white/80">
-                Data & PR
-              </p>
-            </div>
-          </div>
-
-          <div className="p-7 md:col-span-3 md:p-9">
-            <h3 className="font-serif text-3xl text-[#1f2a44]">
-              Who I Am
-            </h3>
-
-            <p className="mt-4 leading-relaxed text-mediumBrown">
-              I am an undergraduate Data Science student at State University of Surabaya with interests in data processing, machine learning, visualization, and public communication.
-            </p>
-
-            <p className="mt-4 leading-relaxed text-mediumBrown">
-              My portfolio reflects two connected paths: technical problem-solving through data projects and creative communication through public relations, branding, and sustainability-based initiatives.
-            </p>
-
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
-              <div className="rounded-2xl bg-[#f8efe3] px-4 py-3">
-                <p className="text-xs font-semibold uppercase tracking-wide text-[#7b1e3a]">
-                  Major
-                </p>
-                <p className="mt-1 font-medium text-[#1f2a44]">
-                  Data Science
-                </p>
-              </div>
-
-              <div className="rounded-2xl bg-[#f8efe3] px-4 py-3">
-                <p className="text-xs font-semibold uppercase tracking-wide text-[#7b1e3a]">
-                  University
-                </p>
-                <p className="mt-1 font-medium text-[#1f2a44]">
-                  State University of Surabaya
-                </p>
-              </div>
-
-              <div className="rounded-2xl bg-[#f8efe3] px-4 py-3">
-                <p className="text-xs font-semibold uppercase tracking-wide text-[#7b1e3a]">
-                  GPA
-                </p>
-                <p className="mt-1 font-medium text-[#1f2a44]">
-                  3.66 / 4.00
-                </p>
-              </div>
-
-              <div className="rounded-2xl bg-[#f8efe3] px-4 py-3">
-                <p className="text-xs font-semibold uppercase tracking-wide text-[#7b1e3a]">
-                  Focus
-                </p>
-                <p className="mt-1 font-medium text-[#1f2a44]">
-                  Data • PR • Digital Product
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.article>
-
-      <motion.aside
-        {...fadeUp}
-        className="rounded-3xl border border-[#eadbc8] bg-white/85 p-7 shadow-soft lg:col-span-2"
-      >
-        <h3 className="font-serif text-3xl text-[#1f2a44]">
-          My Approach
-        </h3>
-
-        <p className="mt-4 italic text-[#7b1e3a]">
-          “Turning data into insight, and insight into communication that people can understand.”
-        </p>
-
-        <div className="mt-7 space-y-4">
-          <div className="rounded-2xl bg-[#f8efe3] p-4">
-            <p className="font-semibold text-[#1f2a44]">
-              Data Thinking
-            </p>
-            <p className="mt-1 text-sm leading-relaxed text-mediumBrown">
-              I use data processing, visualization, and machine learning to understand patterns and support decision-making.
-            </p>
-          </div>
-
-          <div className="rounded-2xl bg-[#f8efe3] p-4">
-            <p className="font-semibold text-[#1f2a44]">
-              Communication Clarity
-            </p>
-            <p className="mt-1 text-sm leading-relaxed text-mediumBrown">
-              I enjoy translating ideas into clear messages through copywriting, public relations, and visual storytelling.
-            </p>
-          </div>
-
-          <div className="rounded-2xl bg-[#f8efe3] p-4">
-            <p className="font-semibold text-[#1f2a44]">
-              Creative Impact
-            </p>
-            <p className="mt-1 text-sm leading-relaxed text-mediumBrown">
-              I am interested in projects that connect technology, sustainability, and human-centered solutions.
-            </p>
-          </div>
-        </div>
-      </motion.aside>
     </div>
   </div>
 </section>
