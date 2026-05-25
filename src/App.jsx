@@ -150,6 +150,20 @@ const experiences = [
     'Open Data Jatim',
     'Data Cleaning'
   ],
+  <p className="leading-relaxed text-mediumBrown">
+  {exp.description}
+</p>
+
+<a
+  href="https://majadigi.jatimprov.go.id/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-6 inline-flex items-center rounded-full border border-[#7b1e3a]/20 px-4 py-2 text-sm text-[#7b1e3a] transition hover:bg-[#7b1e3a] hover:text-white"
+>
+  Visit Project ↗
+</a>
+
+<div className="mt-6 grid gap-3 sm:grid-cols-2">
 }
 ]
 
