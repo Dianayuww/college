@@ -1,7 +1,7 @@
 import { useState } from 'react'
-// import hmpsains from './assets/humas.jpg'
-// import pkkmb from './assets/banacle.jpg'
-// import wm from './assets/wmk.jpg'
+import sealLogo from './assets/seal.png'
+import kominfoLogo from './assets/kominfo.jpg'
+import majadigiLogo from './assets/majadigi.png'
 import hmpImage from './assets/humas2.jpeg'
 import wmImage from './assets/wmk all.jpeg'
 import banacleImage from './assets/banacle2.jpeg'
@@ -769,13 +769,29 @@ export default function App() {
           className="overflow-hidden rounded-3xl border border-[#eadbc8] bg-white/85 shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
         >
           <div className={`grid gap-0 md:grid-cols-5 ${index % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''}`}>
-            <div className="flex min-h-[260px] items-center justify-center bg-gradient-to-br from-[#1f2a44] via-[#7b1e3a] to-[#d9c7b8] p-8 text-white md:col-span-2">
-              <div className="text-center">
-                <p className="text-5xl font-bold">{index + 1}</p>
-                <p className="mt-3 text-sm uppercase tracking-[0.25em] text-white/80">
-                  Experience
-                </p>
-              </div>
+            <div className="flex flex-col items-center justify-center gap-6 bg-[#f8efe3] p-10 md:col-span-2">
+  <img
+    src={sealLogo}
+    alt="SEAL"
+    className="h-14 object-contain"
+  />
+
+  <span className="text-2xl text-[#7b1e3a]/60">×</span>
+
+  <img
+    src={kominfoLogo}
+    alt="Kominfo Jatim"
+    className="h-20 object-contain"
+  />
+
+  <span className="text-2xl text-[#7b1e3a]/60">×</span>
+
+  <img
+    src={majadigiLogo}
+    alt="MajaDigi"
+    className="h-16 object-contain"
+  />
+</div>
             </div>
 
             <div className="p-7 md:col-span-3 md:p-9">
