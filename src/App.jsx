@@ -745,7 +745,10 @@ export default function App() {
   </div>
 </section>
 
-        <section className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]" id="experience">
+        <section
+  className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
+  id="experience"
+>
   <div className="mx-auto max-w-7xl">
     <div className="mb-14 text-center">
       <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/60 px-4 py-2 text-sm font-medium text-[#7b1e3a]">
@@ -762,36 +765,19 @@ export default function App() {
     </div>
 
     <div className="space-y-8">
-      {experiences.map((exp, index) => (
+      {experiences.map((exp) => (
         <motion.article
           {...fadeUp}
           key={exp.id}
           className="overflow-hidden rounded-3xl border border-[#eadbc8] bg-white/85 shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
         >
-          <div className={`grid gap-0 md:grid-cols-5 ${index % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''}`}>
+          <div className="grid gap-0 md:grid-cols-5">
             <div className="flex flex-col items-center justify-center gap-6 bg-[#f8efe3] p-10 md:col-span-2">
-  <img
-    src={sealLogo}
-    alt="SEAL"
-    className="h-14 object-contain"
-  />
-
-  <span className="text-2xl text-[#7b1e3a]/60">×</span>
-
-  <img
-    src={kominfoLogo}
-    alt="Kominfo Jatim"
-    className="h-20 object-contain"
-  />
-
-  <span className="text-2xl text-[#7b1e3a]/60">×</span>
-
-  <img
-    src={majadigiLogo}
-    alt="MajaDigi"
-    className="h-16 object-contain"
-  />
-</div>
+              <img src={sealLogo} alt="SEAL" className="h-14 object-contain" />
+              <span className="text-2xl text-[#7b1e3a]/60">×</span>
+              <img src={kominfoLogo} alt="Kominfo Jatim" className="h-20 object-contain" />
+              <span className="text-2xl text-[#7b1e3a]/60">×</span>
+              <img src={majadigiLogo} alt="MajaDigi" className="h-16 object-contain" />
             </div>
 
             <div className="p-7 md:col-span-3 md:p-9">
@@ -825,14 +811,17 @@ export default function App() {
               <p className="leading-relaxed text-mediumBrown">
                 {exp.description}
               </p>
-              <a
-                href={exp.projectLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center rounded-full border border-[#7b1e3a]/20 px-4 py-2 text-sm text-[#7b1e3a] transition hover:bg-[#7b1e3a] hover:text-white"
-              >
-                Visit Project ↗
-              </a>
+
+              {exp.projectLink && (
+                <a
+                  href={exp.projectLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center rounded-full border border-[#7b1e3a]/20 px-4 py-2 text-sm text-[#7b1e3a] transition hover:bg-[#7b1e3a] hover:text-white"
+                >
+                  Visit Project ↗
+                </a>
+              )}
 
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
                 {exp.highlights.map((item) => (
