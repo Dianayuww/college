@@ -939,7 +939,7 @@ export default function App() {
 
         <section
   id="learning"
-  className="relative overflow-hidden bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1] px-6 py-24"
+  className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
 >
   <div className="mx-auto max-w-6xl">
     <motion.div {...fadeUp} className="mb-16 text-center">
@@ -952,73 +952,78 @@ export default function App() {
       </h2>
 
       <p className="mx-auto mt-5 max-w-2xl text-lg text-mediumBrown">
-        Certifications and learning experiences that support my journey in
-        data, AI, and digital innovation.
+        A curated stack of certifications that support my growth in data,
+        technology, and digital problem-solving.
       </p>
     </motion.div>
 
-    <div className="relative mx-auto h-[520px] max-w-5xl">
-  {certificates.map((cert, index) => (
-    <motion.div
-      key={cert.title}
-      whileHover={{
-        y: -8,
-        rotate: 0,
-        scale: 1.02,
-      }}
-      transition={{ duration: 0.25 }}
-      className="absolute left-1/2 top-0 w-[340px] -translate-x-1/2 overflow-hidden rounded-[2rem] border border-[#eadbc8] bg-white shadow-2xl"
-      style={{
-        zIndex: certificates.length - index,
-        transform: `translateX(-50%) translateY(${index * 22}px) rotate(${index % 2 === 0 ? -4 : 4}deg)`,
-      }}
-    >
-      {/* image */}
-      <div className="relative h-[230px] overflow-hidden bg-[#f8efe3]">
-        <img
-          src={cert.image}
-          alt={cert.title}
-          className="h-full w-full object-cover object-top"
-        />
+    <div className="grid items-center gap-10 lg:grid-cols-2">
+      <div className="relative mx-auto h-[390px] w-full max-w-md">
+        {certificates.map((cert, index) => {
+          const offset = index
+          const isFirst = index === 0
 
-        <div className="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#7b1e3a] shadow">
-          {cert.year}
-        </div>
+          return (
+            <motion.div
+              key={cert.title}
+              className="absolute inset-0 overflow-hidden rounded-[2rem] border border-[#d7c2b0] bg-white shadow-soft"
+              style={{
+                zIndex: certificates.length - index,
+                transform: `translate(${offset * 16}px, ${offset * 14}px) rotate(${offset * 2.5}deg)`,
+                opacity: isFirst ? 1 : 0.45,
+              }}
+            >
+              <img
+                src={cert.image}
+                alt={cert.title}
+                className="h-full w-full object-cover object-top"
+              />
+
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#101b33]/90 to-transparent p-6">
+                <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#7b1e3a]">
+                  {cert.year}
+                </span>
+
+                <h3 className="mt-3 font-serif text-2xl text-white">
+                  {cert.title}
+                </h3>
+
+                <p className="mt-1 text-sm font-semibold text-white/80">
+                  {cert.issuer}
+                </p>
+              </div>
+            </motion.div>
+          )
+        })}
       </div>
 
-      {/* content */}
-      <div className="p-6">
-        <span className="rounded-full bg-[#f8efe3] px-4 py-1 text-xs font-semibold text-[#7b1e3a]">
-          {cert.issuer}
-        </span>
-
-        <h3 className="mt-4 font-serif text-2xl leading-snug text-[#1f2a44]">
-          {cert.title}
+      <div>
+        <h3 className="font-serif text-4xl text-[#1f2a44]">
+          Highlighted Certifications
         </h3>
 
-        <div className="mt-5 flex flex-wrap gap-2">
-          {cert.skills.map((skill) => (
+        <p className="mt-3 text-xl font-semibold text-[#7b1e3a]">
+          Data, AI, and Digital Learning
+        </p>
+
+        <p className="mt-5 leading-relaxed text-mediumBrown">
+          A visual collection of certifications that represent my learning
+          journey in data analysis, data science, artificial intelligence, and
+          professional digital skills.
+        </p>
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          {certificates.map((cert) => (
             <span
-              key={skill}
-              className="rounded-full bg-[#f3e6e0] px-3 py-1 text-xs font-medium text-[#7b1e3a]"
+              key={cert.title}
+              className="rounded-full bg-white/70 px-4 py-2 text-sm font-medium text-[#7b1e3a]"
             >
-              {skill}
+              {cert.issuer}
             </span>
           ))}
         </div>
-
-        <a
-          href={cert.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#7b1e3a]/20 px-5 py-2 text-sm font-semibold text-[#7b1e3a] transition hover:bg-[#7b1e3a] hover:text-white"
-        >
-          View Credential ↗
-        </a>
       </div>
-    </motion.div>
-  ))}
-</div>
+    </div>
   </div>
 </section>
       </main>
