@@ -607,15 +607,7 @@ export default function App() {
               <p className="text-sm italic text-mediumBrown">
                 {project.details}
                   <div className="mt-6 flex gap-3">
-  <button
-    type="button"
-    href={project.linkGithub}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="rounded-full bg-[#1f2a44] px-5 py-2 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-[#7b1e3a]"
-  >
-    View Details →
-  </button>
+ 
 
   {project.linkGithub && (
     <a
@@ -624,7 +616,7 @@ export default function App() {
       rel="noopener noreferrer"
       className="rounded-full border border-[#1f2a44]/20 bg-white px-5 py-2 text-sm font-semibold text-[#1f2a44] transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
     >
-      GitHub ↗
+      View Project ↗
     </a>
   )}
 </div>
@@ -1069,14 +1061,6 @@ export default function App() {
             <a href="https://bit.ly/40t89Ta" className="mt-8 inline-block rounded-full bg-[#fffaf2] px-7 py-3 text-darkBrown shadow-soft transition hover:-translate-y-0.5">Download CV</a>
           </div>
         </section>
-        <a
-  href={project.linkGithub}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex rounded-full bg-[#1f2a44] px-5 py-2 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-[#7b1e3a]"
->
-  View Project ↗
-</a>
       </main>
 
       <footer className="bg-darkBrown/95 py-6 text-center text-xs text-cream/85">© 2026 Dian Ayu Fauziah — Multidisciplinary Portfolio</footer>
