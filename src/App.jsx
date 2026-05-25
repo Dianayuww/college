@@ -7,7 +7,7 @@ import wmImage from './assets/wmk all.jpeg'
 import banacleImage from './assets/banacle2.jpeg'
 import { motion } from 'framer-motion'
 import { ArrowDown, BookOpen, Lightbulb, Mail, Linkedin, Github, Instagram, Award, MapPin, Calendar, Sparkles, Users, ShoppingBag } from 'lucide-react'
-import dianPortrait from './assets/aku2.jpeg'
+import aku2 from './assets/aku2.jpeg'
 
 const navItems = [
   { label: 'About', href: '#about' },
