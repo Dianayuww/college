@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import sealLogo from './assets/seal.png'
-import kominfoLogo from './assets/kominfo.jpg'
+import kominfoLogo from './assets/kominfo.png'
 import majadigiLogo from './assets/majadigi.png'
 import hmpImage from './assets/humas2.jpeg'
 import wmImage from './assets/wmk all.jpeg'
@@ -773,12 +773,28 @@ export default function App() {
         >
           <div className="grid gap-0 md:grid-cols-5">
             <div className="flex flex-col items-center justify-center gap-6 bg-[#f8efe3] p-10 md:col-span-2">
-              <img src={sealLogo} alt="SEAL" className="h-14 object-contain" />
-              <span className="text-2xl text-[#7b1e3a]/60">×</span>
-              <img src={kominfoLogo} alt="Kominfo Jatim" className="h-20 object-contain" />
-              <span className="text-2xl text-[#7b1e3a]/60">×</span>
-              <img src={majadigiLogo} alt="MajaDigi" className="h-16 object-contain" />
-            </div>
+  <img
+    src={sealLogo}
+    alt="SEAL"
+    className="h-14 object-contain opacity-90 transition hover:opacity-100"
+  />
+
+  <span className="text-2xl text-[#7b1e3a]/40">×</span>
+
+  <img
+    src={kominfoLogo}
+    alt="Kominfo Jatim"
+    className="h-20 object-contain opacity-90 transition hover:opacity-100"
+  />
+
+  <span className="text-2xl text-[#7b1e3a]/40">×</span>
+
+  <img
+    src={majadigiLogo}
+    alt="MajaDigi"
+    className="h-16 object-contain opacity-90 transition hover:opacity-100"
+  />
+</div>
 
             <div className="p-7 md:col-span-3 md:p-9">
               <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
