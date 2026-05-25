@@ -939,42 +939,58 @@ export default function App() {
 
         <section
   id="learning"
-  className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
+  className="relative overflow-hidden bg-[#fffaf7] px-6 py-24 text-[#101b33]"
 >
-  <div className="mx-auto max-w-6xl">
-    <motion.div {...fadeUp} className="mb-16 text-center">
-      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
-        ✨ Continuous Learning
-      </span>
+  <div className="mx-auto max-w-7xl">
+    <div className="mb-14 text-center">
+      <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#7b1e3a]">
+        Continuous Learning
+      </p>
 
-      <h2 className="mt-6 font-serif text-5xl text-[#1f2a44]">
+      <h2 className="mt-4 font-serif text-4xl md:text-6xl">
         Learning & Certifications
       </h2>
+    </div>
 
-      <p className="mx-auto mt-5 max-w-2xl text-lg text-mediumBrown">
-        A curated stack of certifications that support my growth in data,
-        technology, and digital problem-solving.
-      </p>
-    </motion.div>
-
-    <CertificationStack />
-  </div>
-</section>
-
-        <section id="contact" className="px-6 py-20 bg-darkBrown text-cream">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="font-serif text-4xl md:text-5xl">Let’s Build Meaningful Projects Together.</h2>
-            <div className="mt-8 flex flex-wrap justify-center gap-5 text-sm">
-              <a className="inline-flex items-center gap-2 hover:opacity-80" href="mailto:dianayufauziahh@gmail.com"><Mail size={16}/>dianayufauziahh@gmail.com</a>
-              <a className="inline-flex items-center gap-2 hover:opacity-80" href="https://linkedin.com/in/dian-fauziah"><Linkedin size={16}/>linkedin.com/in/dian-fauziah</a>
-              <a className="inline-flex items-center gap-2 hover:opacity-80" href="#"><Github size={16}/>GitHub</a>
-              <a className="inline-flex items-center gap-2 hover:opacity-80" href="#"><Instagram size={16}/>Instagram</a>
-            </div>
-            <div className="mt-4 text-sm text-cream/85">Phone: +62 85184665784</div>
-            <a href="https://bit.ly/40t89Ta" className="mt-8 inline-block rounded-full bg-[#fffaf2] px-7 py-3 text-darkBrown shadow-soft transition hover:-translate-y-0.5">Download CV</a>
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {certificates.map((cert) => (
+        <article
+          key={cert.title}
+          className="group overflow-hidden rounded-[2rem] border border-[#eadbc8] bg-white/80 shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div className="h-56 overflow-hidden bg-[#f8efe3]">
+            <img
+              src={cert.image}
+              alt={cert.title}
+              className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
+            />
           </div>
-        </section>
-      </main>
+
+          <div className="p-6">
+            <span className="rounded-full bg-[#f8efe3] px-4 py-1 text-xs font-semibold text-[#7b1e3a]">
+              {cert.issuer}
+            </span>
+
+            <h3 className="mt-4 font-serif text-2xl text-[#101b33]">
+              {cert.title}
+            </h3>
+
+            <div className="mt-5 flex flex-wrap gap-2">
+              {cert.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-full bg-[#f3e6e0] px-3 py-1 text-xs font-medium text-[#7b1e3a]"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>      </main>
 
       <footer className="bg-darkBrown/95 py-6 text-center text-xs text-cream/85">© 2026 Dian Ayu Fauziah — Multidisciplinary Portfolio</footer>
     </div>
