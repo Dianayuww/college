@@ -231,6 +231,7 @@ const Pill = ({ children, filled = false }) => (
 //   return (
 export default function App() {
   const [selectedProject, setSelectedProject] = useState(null)
+  const [activeCertificate, setActiveCertificate] = useState(0)
 
   const certificates = [
     {
@@ -960,18 +961,24 @@ export default function App() {
     <div className="grid items-center gap-10 lg:grid-cols-2">
       <div className="relative mx-auto h-[390px] w-full max-w-md">
         {certificates.map((cert, index) => {
-          const offset = index
-          const isFirst = index === 0
+          const position =
+            (index - selectedProject + certificates.length) %
+            certificates.length
 
           return (
             <motion.div
               key={cert.title}
-              className="absolute inset-0 overflow-hidden rounded-[2rem] border border-[#d7c2b0] bg-white shadow-soft"
-              style={{
-                zIndex: certificates.length - index,
-                transform: `translate(${offset * 16}px, ${offset * 14}px) rotate(${offset * 2.5}deg)`,
-                opacity: isFirst ? 1 : 0.45,
+              onClick={() => setSelectedProject(index)}
+              className="absolute inset-0 cursor-pointer overflow-hidden rounded-[2rem] border border-[#d7c2b0] bg-white shadow-soft"
+              animate={{
+                x: position * 18,
+                y: position * 16,
+                rotate: position * 3,
+                scale: position === 0 ? 1 : 0.94,
+                opacity: position === 0 ? 1 : 0.45,
+                zIndex: certificates.length - position,
               }}
+              transition={{ duration: 0.3 }}
             >
               <img
                 src={cert.image}
@@ -999,28 +1006,51 @@ export default function App() {
 
       <div>
         <h3 className="font-serif text-4xl text-[#1f2a44]">
-          Highlighted Certifications
+          {certificates[selectedProject]?.title}
         </h3>
 
         <p className="mt-3 text-xl font-semibold text-[#7b1e3a]">
-          Data, AI, and Digital Learning
+          {certificates[selectedProject]?.issuer}
         </p>
 
         <p className="mt-5 leading-relaxed text-mediumBrown">
-          A visual collection of certifications that represent my learning
-          journey in data analysis, data science, artificial intelligence, and
-          professional digital skills.
+          This certification represents my continuous learning journey in data,
+          technology, AI, and digital problem-solving.
         </p>
 
-        <div className="mt-8 flex flex-wrap gap-3">
-          {certificates.map((cert) => (
+        <div className="mt-6 flex flex-wrap gap-2">
+          {certificates[selectedProject]?.skills.map((skill) => (
             <span
-              key={cert.title}
-              className="rounded-full bg-white/70 px-4 py-2 text-sm font-medium text-[#7b1e3a]"
+              key={skill}
+              className="rounded-full bg-white/70 px-4 py-2 text-sm text-[#7b1e3a]"
             >
-              {cert.issuer}
+              {skill}
             </span>
           ))}
+        </div>
+
+        <div className="mt-8 flex gap-3">
+          <button
+            type="button"
+            onClick={() =>
+              setSelectedProject((prev) =>
+                prev === 0 ? certificates.length - 1 : prev - 1
+              )
+            }
+            className="rounded-full border border-[#7b1e3a]/30 bg-white px-5 py-3 text-sm font-semibold text-[#7b1e3a] transition hover:-translate-y-1"
+          >
+            ← Previous
+          </button>
+
+          <button
+            type="button"
+            onClick={() =>
+              setSelectedProject((prev) => (prev + 1) % certificates.length)
+            }
+            className="rounded-full bg-[#1f2a44] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-1"
+          >
+            Next →
+          </button>
         </div>
       </div>
     </div>
