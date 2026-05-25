@@ -402,10 +402,7 @@ export default function App() {
   id="home"
   className="relative min-h-screen overflow-hidden bg-[#fffaf7] px-6 pt-28 text-[#101b33]"
 >
-  <div className="absolute bottom-0 right-0 h-[42%] w-[58%] rounded-tl-[100%] bg-[#101b33]" />
-  <div className="absolute right-[7%] top-[32%] h-[390px] w-[390px] rounded-full bg-[#e8cbc8]/75 blur-sm" />
-  <div className="absolute right-[6%] top-[29%] h-[450px] w-[450px] rounded-full border border-[#d6a778]" />
-
+  {/* decorative dots */}
   <div className="absolute right-10 top-36 grid grid-cols-8 gap-3 opacity-50">
     {Array.from({ length: 48 }).map((_, i) => (
       <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
@@ -413,10 +410,9 @@ export default function App() {
   </div>
 
   <span className="absolute left-[28%] top-[23%] text-4xl text-[#d6a778]">✦</span>
-  <span className="absolute right-[12%] top-[38%] text-5xl text-[#7b1e3a]">✦</span>
-  <span className="absolute right-[8%] top-[45%] text-4xl text-[#7b1e3a]">✦</span>
 
   <div className="relative z-10 mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-10 md:grid-cols-2">
+    {/* Left text */}
     <div>
       <div className="mb-8 flex items-center gap-4">
         <p className="text-sm font-semibold uppercase tracking-[0.45em]">
@@ -436,9 +432,9 @@ export default function App() {
         Public Relations Enthusiast
       </p>
 
-      <div className="mt-8 h-px w-24 bg-[#d6a778]" />
+      <div className="mt-10 h-px w-24 bg-[#d6a778]" />
 
-      <div className="mt-8 flex flex-wrap gap-5">
+      <div className="mt-10 flex flex-wrap gap-5">
         <a
           href="#data-projects"
           className="inline-flex items-center gap-4 rounded-lg bg-[#7b1e3a] px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition hover:-translate-y-1 hover:bg-[#101b33]"
@@ -462,17 +458,114 @@ export default function App() {
       </div>
     </div>
 
+    {/* Right visual */}
     <div className="relative flex justify-center md:justify-end">
-      <div className="relative h-[720px] w-[560px]">
-        <div className="absolute inset-x-6 bottom-20 h-[520px] rounded-t-full bg-[#e8cbc8]/80" />
+      <div className="relative h-[620px] w-[560px]">
+        {/* soft pink blob */}
+        <div className="absolute bottom-[70px] right-[40px] h-[430px] w-[360px] rounded-t-full rounded-b-[45%] bg-[#e8cbc8]/85 shadow-[0_30px_80px_rgba(123,30,58,0.12)]" />
 
+        {/* gold circle */}
+        <div className="absolute bottom-[120px] right-[15px] h-[430px] w-[430px] rounded-full border border-[#d6a778]/80" />
+
+        {/* navy curve */}
+        <div className="absolute bottom-0 right-[-170px] h-[260px] w-[760px] rounded-tl-[100%] bg-[#101b33]" />
+
+        {/* photo */}
         <img
           src={aku2}
           alt="Dian Ayu Fauziah"
-          className="absolute bottom-[-20px] right-[-20px] z-20 h-[760px] w-auto object-contain drop-shadow-2xl"
+          className="absolute bottom-0 right-[70px] z-30 h-[590px] w-auto object-contain drop-shadow-2xl"
         />
 
-        <div className="absolute bottom-9 left-3 z-10 h-80 w-80 rounded-full border border-[#d6a778]" />
+        {/* stars */}
+        <span className="absolute right-[40px] top-[110px] z-20 text-5xl text-[#7b1e3a]">✦</span>
+        <span className="absolute right-[-10px] top-[160px] z-20 text-4xl text-[#7b1e3a]">✦</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section
+  id="about"
+  className="relative overflow-hidden bg-[#fffaf7] px-6 py-24 text-[#101b33]"
+>
+  <div className="absolute left-10 top-16 text-4xl text-[#d6a778]/80">✦</div>
+  <div className="absolute right-12 top-24 grid grid-cols-7 gap-3 opacity-40">
+    {Array.from({ length: 35 }).map((_, i) => (
+      <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
+    ))}
+  </div>
+
+  <div className="mx-auto max-w-7xl">
+    <div className="mb-14">
+      <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#7b1e3a]">
+        About Me
+      </p>
+
+      <h2 className="mt-4 font-serif text-4xl leading-tight text-[#101b33] md:text-6xl">
+        A data-driven thinker with a creative communication mindset.
+      </h2>
+    </div>
+
+    <div className="grid gap-8 lg:grid-cols-3">
+      <div className="rounded-[2rem] border border-[#eadbc8] bg-white/75 p-8 shadow-soft lg:col-span-2">
+        <p className="text-lg leading-relaxed text-[#3f4658]">
+          I am an undergraduate Data Science student at State University of
+          Surabaya with interests in data analytics, digital public service,
+          public relations, and creative problem-solving.
+        </p>
+
+        <p className="mt-5 text-lg leading-relaxed text-[#3f4658]">
+          My work combines analytical thinking and communication strategy to
+          turn data, ideas, and community-driven initiatives into meaningful
+          insights and impactful stories.
+        </p>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          <div className="rounded-2xl bg-[#f8efe3] p-5">
+            <p className="text-3xl font-serif text-[#7b1e3a]">01</p>
+            <p className="mt-2 text-sm font-semibold uppercase tracking-widest">
+              Data
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-[#f8efe3] p-5">
+            <p className="text-3xl font-serif text-[#7b1e3a]">02</p>
+            <p className="mt-2 text-sm font-semibold uppercase tracking-widest">
+              Communication
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-[#f8efe3] p-5">
+            <p className="text-3xl font-serif text-[#7b1e3a]">03</p>
+            <p className="mt-2 text-sm font-semibold uppercase tracking-widest">
+              Creativity
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="rounded-[2rem] border border-[#eadbc8] bg-[#101b33] p-8 text-white shadow-soft">
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#d6a778]">
+          Focus Areas
+        </p>
+
+        <div className="mt-8 space-y-4">
+          {[
+            'Data Analysis',
+            'Machine Learning',
+            'Public Relations',
+            'Creative Strategy',
+            'Digital Public Service',
+          ].map((item) => (
+            <div
+              key={item}
+              className="rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   </div>
