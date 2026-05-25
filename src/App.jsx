@@ -345,7 +345,7 @@ export default function App() {
       </header>
 
       <main>
-        {/* <section
+        <section
   id="home"
   className="relative min-h-[calc(100vh-4.5rem)] overflow-hidden px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
 >
@@ -397,8 +397,8 @@ export default function App() {
       <span className="h-2 w-2 animate-bounce rounded-full bg-[#7b1e3a]" />
     </a>
   </motion.div>
-</section> */}
-        <section
+</section> 
+        {/* <section
   id="home"
   className="relative min-h-[calc(100vh-4.5rem)] overflow-hidden bg-[#f8f5f2] px-6 py-20"
 >
@@ -468,7 +468,7 @@ export default function App() {
       </div>
     </div>
   </motion.div>
-</section>
+</section> */}
         <section
   id="about"
   className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
