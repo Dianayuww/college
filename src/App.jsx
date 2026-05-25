@@ -86,17 +86,7 @@ const dataProjects = [
   // },
 ]
 
-// const dataProjects = [
-//   {
-//     id: 1,
-//     title: "COMPARATIVE ANALYSIS OF RANDOM FOREST AND XGBOOST MODELS FOR SOCIAL MEDIA ADDICTION LEVEL CLASSIFICATION",
-//     category: "Skripsi/Thesis",
-//     description: "A comparative machine learning study using Random Forest and XGBoost with three train-test split scenarios and 10-fold cross-validation to classify social media addiction levels.",
-//     tags: ["Python", "Machine Learning", "Random Forest", "XGBoost", "Cross Validation", "Social Media Addiction"],
-//     image: "https://images.pexels.com/photos/8088493/pexels-photo-8088493.jpeg",
-//     details: "Multiclass classification project for social media addiction level prediction.",
-//     status: "In Progress"
-//   },
+
 //   {
 //     id: 2,
 //     title: "Life Expectancy Analysis Indonesia 2020-2022",
@@ -1080,13 +1070,14 @@ export default function App() {
         {selectedProject && (
   <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/50 px-6 backdrop-blur-sm">
     <div className="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-[2rem] bg-[#fffaf2] p-8 shadow-2xl">
-      <button
-        type="button"
-        onClick={() => setSelectedProject(null)}
-        className="absolute right-5 top-5 rounded-full bg-[#f3e6e0] px-3 py-1 text-sm text-[#7b1e3a]"
-      >
-        ✕
-      </button>
+      <a
+  href={project.linkGithub}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex rounded-full bg-[#1f2a44] px-5 py-2 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-[#7b1e3a]"
+>
+  View Project ↗
+</a>
 
       <img
         src={selectedProject.image}
