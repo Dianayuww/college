@@ -66,7 +66,7 @@ const dataProjects = [
       'Collected data from X platforms and used various sentiment analysis methods to gain deep insight into public opinion.',
     tags: ['Sentiment analysis', 'NLP', 'Data Mining', 'KIPK'],
     image:
-      'https://i.pinimg.com/736x/57/40/66/574066348ae0823312e3c7079d99fdc4.jpg'
+      'https://i.pinimg.com/736x/57/40/66/574066348ae0823312e3c7079d99fdc4.jpg',
     details:
       'The analysis process includes exploring positive, negative, and neutral sentiments, as well as identifying the main topic that are often discussed related to the program.',
   },
