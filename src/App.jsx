@@ -195,7 +195,7 @@ const organizationProjects = [
 
 const skillGroups = {
   Programming: ['Python (Advanced)', 'SQL (Advanced)', 'R (Intermediate)'],
-  'Data Visualization': ['Tableau', 'Looker Studio', 'Power BI', 'Google Colab'],
+  'Data Visualization': ['Tableau', 'Looker Studio', 'Power BI', 'Google Colab', 'Metabase'],
   Design: ['Canva', 'Figma'],
   Productivity: ['Excel', 'Word', 'Access', 'Google Forms', 'Google Sheets', 'Google Docs'],
   Languages: ['Indonesian (Fluent)', 'English (Intermediate)', 'Arabic (Intermediate)'],
@@ -898,191 +898,98 @@ export default function App() {
 
         <section
   id="skills"
-  className="px-6 py-24 bg-gradient-to-b from-[#f8f5f2] to-[#efe4d1]"
+  className="relative overflow-hidden bg-[#fffaf7] px-6 py-24 text-[#101b33]"
 >
-  <div className="mx-auto max-w-6xl">
+  <div className="absolute right-12 top-24 grid grid-cols-7 gap-3 opacity-40">
+    {Array.from({ length: 35 }).map((_, i) => (
+      <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
+    ))}
+  </div>
 
-    {/* HEADER */}
-    <motion.div
-      {...fadeUp}
-      className="mb-16 text-center"
-    >
-      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
-        ✨ Professional Skills
-      </span>
-
-      <h2 className="mt-6 font-serif text-5xl text-[#1f2a44]">
-        Skills & Tools
-      </h2>
-
-      <p className="mx-auto mt-5 max-w-2xl text-lg text-mediumBrown">
-        Combining analytical, technical, and creative capabilities to build impactful projects.
+  <div className="mx-auto max-w-7xl">
+    <div className="mb-14">
+      <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#7b1e3a]">
+        Skills
       </p>
-    </motion.div>
 
-    {/* GRID */}
+      <h2 className="mt-4 font-serif text-4xl md:text-6xl">
+        Tools I use to turn ideas into meaningful work.
+      </h2>
+    </div>
+
     <div className="grid gap-8 md:grid-cols-2">
+      {[
+        {
+          title: 'Programming',
+          desc: 'Data processing & machine learning',
+          tools: [
+            { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+            { name: 'SQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+            { name: 'R', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg' },
+          ],
+        },
+        {
+          title: 'Data Visualization',
+          desc: 'Dashboard & reporting tools',
+          tools: [
+            { name: 'Tableau', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tableau.svg' },
+            { name: 'Power BI', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/powerbi.svg' },
+            { name: 'Looker Studio', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/looker.svg' },
+            { name: 'Google Colab', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecolab/googlecolab-original.svg' },
+          ],
+        },
+        {
+          title: 'Design & Creativity',
+          desc: 'Visual communication & branding',
+          tools: [
+            { name: 'Canva', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/canva.svg' },
+            { name: 'Figma', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
+          ],
+        },
+        {
+          title: 'Productivity Tools',
+          desc: 'Daily workflow & collaboration',
+          tools: [
+            { name: 'Excel', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftexcel.svg' },
+            { name: 'Word', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftword.svg' },
+            { name: 'Access', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftaccess.svg' },
+            { name: 'Google Sheets', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlesheets.svg' },
+            { name: 'Google Docs', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googledocs.svg' },
+          ],
+        },
+      ].map((group) => (
+        <div
+          key={group.title}
+          className="rounded-[2rem] border border-[#eadbc8] bg-white/75 p-8 shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
+        >
+          <h3 className="font-serif text-3xl text-[#101b33]">
+            {group.title}
+          </h3>
 
-      {/* Programming */}
-      <motion.div
-        {...fadeUp}
-        className="rounded-[2rem] border border-[#d7c2b0] bg-white/70 p-8 shadow-soft backdrop-blur-sm transition hover:-translate-y-1"
-      >
-        <div className="mb-6 flex items-center gap-4">
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#1f2a44]/10 text-3xl">
-            💻
-          </div>
+          <p className="mt-2 text-mediumBrown">
+            {group.desc}
+          </p>
 
-          <div>
-            <h3 className="text-2xl font-semibold text-[#1f2a44]">
-              Programming
-            </h3>
-
-            <p className="text-mediumBrown">
-              Data processing & machine learning
-            </p>
-          </div>
-        </div>
-
-        <div className="space-y-5">
-
-          {[
-            { name: "Python", level: "90%" },
-            { name: "SQL", level: "85%" },
-            { name: "R", level: "70%" },
-          ].map((skill) => (
-            <div key={skill.name}>
-              <div className="mb-2 flex justify-between text-sm">
-                <span className="font-medium text-[#1f2a44]">
-                  {skill.name}
-                </span>
-
-                <span className="text-[#7b1e3a]">
-                  {skill.level}
-                </span>
-              </div>
-
-              <div className="h-3 rounded-full bg-[#efe4d1]">
-                <div
-                  className="h-3 rounded-full bg-gradient-to-r from-[#1f2a44] to-[#7b1e3a]"
-                  style={{ width: skill.level }}
+          <div className="mt-8 grid grid-cols-3 gap-5 sm:grid-cols-4">
+            {group.tools.map((tool) => (
+              <div
+                key={tool.name}
+                className="group flex flex-col items-center justify-center rounded-2xl bg-[#f8efe3] p-5 transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
+              >
+                <img
+                  src={tool.logo}
+                  alt={tool.name}
+                  className="h-10 w-10 object-contain opacity-80 transition group-hover:opacity-100"
                 />
+
+                <p className="mt-3 text-center text-xs font-semibold text-[#7b1e3a]">
+                  {tool.name}
+                </p>
               </div>
-            </div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Visualization */}
-      <motion.div
-        {...fadeUp}
-        className="rounded-[2rem] border border-[#d7c2b0] bg-white/70 p-8 shadow-soft"
-      >
-        <div className="mb-6 flex items-center gap-4">
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#7b1e3a]/10 text-3xl">
-            📊
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-semibold text-[#1f2a44]">
-              Data Visualization
-            </h3>
-
-            <p className="text-mediumBrown">
-              Dashboard & reporting tools
-            </p>
+            ))}
           </div>
         </div>
-
-        <div className="flex flex-wrap gap-3">
-          {[
-            "Tableau",
-            "Power BI",
-            "Looker Studio",
-            "Google Colab",
-          ].map((tool) => (
-            <span
-              key={tool}
-              className="rounded-full bg-[#f3e6e0] px-5 py-3 text-sm font-medium text-[#7b1e3a] transition hover:scale-105"
-            >
-              {tool}
-            </span>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Design */}
-      <motion.div
-        {...fadeUp}
-        className="rounded-[2rem] border border-[#d7c2b0] bg-white/70 p-8 shadow-soft"
-      >
-        <div className="mb-6 flex items-center gap-4">
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-pink-100 text-3xl">
-            🎨
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-semibold text-[#1f2a44]">
-              Design & Creativity
-            </h3>
-
-            <p className="text-mediumBrown">
-              Visual communication & branding
-            </p>
-          </div>
-        </div>
-
-        <div className="flex gap-4">
-          {["Canva", "Figma"].map((tool) => (
-            <span
-              key={tool}
-              className="rounded-full border border-[#7b1e3a]/20 px-5 py-3 text-sm font-medium text-[#1f2a44]"
-            >
-              {tool}
-            </span>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Productivity */}
-      <motion.div
-        {...fadeUp}
-        className="rounded-[2rem] border border-[#d7c2b0] bg-white/70 p-8 shadow-soft"
-      >
-        <div className="mb-6 flex items-center gap-4">
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#1f2a44]/10 text-3xl">
-            ⚡
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-semibold text-[#1f2a44]">
-              Productivity Tools
-            </h3>
-
-            <p className="text-mediumBrown">
-              Daily workflow & collaboration
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-wrap gap-3">
-          {[
-            "Excel",
-            "Word",
-            "Access",
-            "Google Sheets",
-            "Google Docs",
-          ].map((tool) => (
-            <span
-              key={tool}
-              className="rounded-full bg-[#eef2ff] px-5 py-3 text-sm font-medium text-[#1f2a44]"
-            >
-              {tool}
-            </span>
-          ))}
-        </div>
-      </motion.div>
-
+      ))}
     </div>
   </div>
 </section>
