@@ -341,7 +341,11 @@ const CertificationStack = () => {
   )
 }
 
+// export default function App() {
+//   return (
 export default function App() {
+  const [selectedProject, setSelectedProject] = useState(null)
+
   return (
     <div className="min-h-screen bg-background text-darkBrown">
       <header className="sticky top-0 z-50 border-b border-[#d9c4a6]/50 bg-[#fffaf2cc] backdrop-blur-md">
@@ -610,6 +614,13 @@ export default function App() {
             <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
               <p className="text-sm italic text-mediumBrown">
                 {project.details}
+                  <button
+                    type="button"
+                    onClick={() => setSelectedProject(project)}
+                    className="mt-6 rounded-full bg-[#1f2a44] px-5 py-2 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-[#7b1e3a]"
+                  >
+                    View Details →
+                  </button>
               </p>
             </div>
           </div>
@@ -1040,6 +1051,54 @@ export default function App() {
             <a href="https://bit.ly/40t89Ta" className="mt-8 inline-block rounded-full bg-[#fffaf2] px-7 py-3 text-darkBrown shadow-soft transition hover:-translate-y-0.5">Download CV</a>
           </div>
         </section>
+        {selectedProject && (
+  <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/50 px-6 backdrop-blur-sm">
+    <div className="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-[2rem] bg-[#fffaf2] p-8 shadow-2xl">
+      <button
+        type="button"
+        onClick={() => setSelectedProject(null)}
+        className="absolute right-5 top-5 rounded-full bg-[#f3e6e0] px-3 py-1 text-sm text-[#7b1e3a]"
+      >
+        ✕
+      </button>
+
+      <img
+        src={selectedProject.image}
+        alt={selectedProject.title}
+        className="mb-6 h-56 w-full rounded-3xl object-cover"
+      />
+
+      <span className="rounded-full border border-[#7b1e3a]/20 px-3 py-1 text-xs text-[#7b1e3a]">
+        {selectedProject.category}
+      </span>
+
+      <h3 className="mt-4 font-serif text-3xl text-[#1f2a44]">
+        {selectedProject.title}
+      </h3>
+
+      <p className="mt-4 leading-relaxed text-mediumBrown">
+        {selectedProject.description}
+      </p>
+
+      <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
+        <p className="text-sm italic text-mediumBrown">
+          {selectedProject.details}
+        </p>
+      </div>
+
+      <div className="mt-6 flex flex-wrap gap-2">
+        {selectedProject.tags.map((tag) => (
+          <span
+            key={tag}
+            className="rounded-full bg-[#f3e6e0] px-3 py-1 text-xs text-[#7b1e3a]"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+)}
       </main>
 
       <footer className="bg-darkBrown/95 py-6 text-center text-xs text-cream/85">© 2026 Dian Ayu Fauziah — Multidisciplinary Portfolio</footer>
