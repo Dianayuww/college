@@ -6,7 +6,7 @@ import hmpImage from './assets/humas2.jpeg'
 import wmImage from './assets/wmk all.jpeg'
 import banacleImage from './assets/banacle2.jpeg'
 import { motion } from 'framer-motion'
-import { ArrowDown, BookOpen, Lightbulb, Mail, Linkedin, Github, Instagram, Award, MapPin, Calendar, Sparkles, Users } from 'lucide-react'
+import { ArrowDown, BookOpen, Lightbulb, Mail, Linkedin, Github, Instagram, Award, MapPin, Calendar, Sparkles, Users, ShoppingBag } from 'lucide-react'
 import dianPortrait from './assets/aku.png'
 
 const navItems = [
@@ -173,6 +173,7 @@ const organizationProjects = [
   {
     id: 1,
     title: 'Head of Public Relations Division',
+    link: 'https://id.shp.ee/mreSoTB3',
     organization: 'HMP Sains Data Unesa',
     image: hmpImage,
     period: 'Mar 2024 – Feb 2025',
@@ -710,6 +711,17 @@ export default function App() {
     </span>
   ))}
 </div>
+{work.link && (
+  <a
+    href={work.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#7b1e3a] px-5 py-3 text-sm font-medium text-white transition hover:-translate-y-1 hover:bg-[#5e162d]"
+  >
+    <ShoppingBag size={18} />
+    Shop Product
+  </a>
+)}
               {/* <div className="mt-8">
                 <h4 className="mb-4 text-lg font-semibold text-[#1f2a44]">
                   Key Contributions
