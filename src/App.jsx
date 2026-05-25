@@ -338,86 +338,50 @@ const CertificationStack = () => {
 //   return (
 export default function App() {
   const [selectedProject, setSelectedProject] = useState(null)
-  <section
-  id="certificates"
-  className="relative overflow-hidden bg-[#fffaf7] px-6 py-24 text-[#101b33]"
->
-  <div className="absolute right-12 top-24 grid grid-cols-7 gap-3 opacity-40">
-    {Array.from({ length: 35 }).map((_, i) => (
-      <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
-    ))}
-  </div>
 
-  <div className="mx-auto max-w-7xl">
-    <div className="mb-14 text-center">
-      <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#7b1e3a]">
-        Continuous Learning
-      </p>
-
-      <h2 className="mt-4 font-serif text-4xl md:text-6xl">
-        Learning & Certifications
-      </h2>
-
-      <p className="mx-auto mt-5 max-w-2xl text-mediumBrown">
-        A curated collection of certifications that support my growth in data,
-        technology, AI, and digital problem-solving.
-      </p>
-    </div>
-
-    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {certificates.map((cert) => (
-        <article
-          key={cert.title}
-          className="group overflow-hidden rounded-[2rem] border border-[#eadbc8] bg-white/80 shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
-        >
-          <div className="h-56 overflow-hidden bg-[#f8efe3]">
-            <img
-              src={cert.image}
-              alt={cert.title}
-              className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
-            />
-          </div>
-
-          <div className="p-6">
-            <div className="mb-4 flex items-center justify-between gap-3">
-              <span className="rounded-full bg-[#f8efe3] px-4 py-1 text-xs font-semibold text-[#7b1e3a]">
-                {cert.issuer}
-              </span>
-
-              <span className="text-sm text-mediumBrown">
-                {cert.year}
-              </span>
-            </div>
-
-            <h3 className="font-serif text-2xl text-[#101b33]">
-              {cert.title}
-            </h3>
-
-            <div className="mt-5 flex flex-wrap gap-2">
-              {cert.skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="rounded-full bg-[#f3e6e0] px-3 py-1 text-xs font-medium text-[#7b1e3a]"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-
-            <a
-              href={cert.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#7b1e3a]/30 px-5 py-2 text-sm font-semibold text-[#7b1e3a] transition hover:bg-[#7b1e3a] hover:text-white"
-            >
-              View Credential ↗
-            </a>
-          </div>
-        </article>
-      ))}
-    </div>
-  </div>
-</section>
+  const certificates = [
+    {
+      title: 'Data Analysis with Python',
+      issuer: 'freeCodeCamp',
+      year: '2025',
+      image: certFreecodecampPython,
+      skills: ['Python', 'Data Analysis', 'Programming'],
+      link: '#',
+    },
+    {
+      title: 'Belajar Dasar Data Science',
+      issuer: 'Dicoding',
+      year: '2025',
+      image: certDicodingDataScience,
+      skills: ['Data Science', 'Analytics', 'Machine Learning'],
+      link: '#',
+    },
+    {
+      title: 'AI Praktis untuk Produktivitas',
+      issuer: 'Dicoding × AVPN',
+      year: '2025',
+      image: certAIProductivity,
+      skills: ['AI Tools', 'Productivity', 'Prompting'],
+      link: '#',
+    },
+    {
+      title: 'Belajar Penggunaan Generative AI',
+      issuer: 'Dicoding × AVPN',
+      year: '2025',
+      image: certGenerativeAI,
+      skills: ['Generative AI', 'LLM', 'AI Ethics'],
+      link: '#',
+    },
+    {
+      title: 'Career Essentials',
+      issuer: 'IBM SkillsBuild',
+      year: '2025',
+      image: certIBMSkillsBuild,
+      skills: ['Professional Skills', 'Career Readiness'],
+      link: '#',
+    },
+  ]
+  
   return (
     <div className="min-h-screen bg-background text-darkBrown">
       <header className="sticky top-0 z-50 border-b border-[#d9c4a6]/50 bg-[#fffaf2cc] backdrop-blur-md">
