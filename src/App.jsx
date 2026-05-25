@@ -7,7 +7,7 @@ import wmImage from './assets/wmk all.jpeg'
 import banacleImage from './assets/banacle2.jpeg'
 import { motion } from 'framer-motion'
 import { ArrowDown, BookOpen, Lightbulb, Mail, Linkedin, Github, Instagram, Award, MapPin, Calendar, Sparkles, Users, ShoppingBag } from 'lucide-react'
-import dianPortrait from './assets/aku.png'
+import dianPortrait from './assets/aku2.jpeg'
 
 const navItems = [
   { label: 'About', href: '#about' },
@@ -345,7 +345,7 @@ export default function App() {
       </header>
 
       <main>
-        <section
+        {/* <section
   id="home"
   className="relative min-h-[calc(100vh-4.5rem)] overflow-hidden px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
 >
@@ -397,8 +397,78 @@ export default function App() {
       <span className="h-2 w-2 animate-bounce rounded-full bg-[#7b1e3a]" />
     </a>
   </motion.div>
-</section>
+</section> */}
+        <section
+  id="home"
+  className="relative min-h-[calc(100vh-4.5rem)] overflow-hidden bg-[#f8f5f2] px-6 py-20"
+>
+  <div className="absolute inset-0 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]" />
+  <div className="absolute right-0 top-0 h-full w-full bg-[radial-gradient(circle_at_75%_45%,rgba(123,30,58,0.16),transparent_35%)]" />
 
+  <motion.div
+    {...fadeUp}
+    className="relative z-10 mx-auto grid min-h-[75vh] max-w-7xl items-center gap-12 md:grid-cols-2"
+  >
+    <div>
+      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
+        ✨ Multidisciplinary Portfolio
+      </span>
+
+      <h1 className="mt-7 font-serif text-5xl leading-tight text-[#1f2a44] md:text-7xl">
+        Dian Ayu Fauziah
+      </h1>
+
+      <p className="mt-5 text-xl leading-relaxed text-mediumBrown md:text-2xl">
+        Data Science Student with a Public Relations Soul.
+      </p>
+
+      <p className="mt-5 max-w-xl leading-relaxed text-mediumBrown">
+        I combine data, communication, and creative strategy to build meaningful
+        digital projects and transform ideas into clear, impactful stories.
+      </p>
+
+      <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+        <a
+          href="#data-projects"
+          className="rounded-full bg-[#1f2a44] px-8 py-3 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-1 hover:bg-[#7b1e3a]"
+        >
+          View Data Projects →
+        </a>
+
+        <a
+          href="#creative-pr"
+          className="rounded-full border border-[#7b1e3a]/40 bg-white/70 px-8 py-3 text-sm font-semibold text-[#7b1e3a] shadow-soft transition hover:-translate-y-1 hover:bg-white"
+        >
+          View Creative Works →
+        </a>
+      </div>
+    </div>
+
+    <div className="relative flex justify-center md:justify-end">
+      <div className="absolute bottom-8 right-8 h-72 w-72 rounded-full bg-[#7b1e3a]/20 blur-3xl" />
+      <div className="absolute top-10 right-20 h-56 w-56 rounded-full bg-[#1f2a44]/20 blur-3xl" />
+
+      <div className="relative overflow-hidden rounded-[2.5rem] border border-white/40 bg-[#1f2a44] shadow-2xl">
+        <img
+          src={dianPortrait}
+          alt="Dian Ayu Fauziah"
+          className="h-[470px] w-[380px] object-cover object-center md:h-[560px] md:w-[440px]"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1f2a44]/60 via-transparent to-transparent" />
+
+        <div className="absolute bottom-6 left-6 right-6 rounded-3xl bg-white/15 p-5 text-white backdrop-blur-md">
+          <p className="text-sm uppercase tracking-[0.25em] text-white/70">
+            Data • PR • Creative
+          </p>
+          <p className="mt-2 font-serif text-2xl">
+            Building insights with human-centered communication.
+          </p>
+        </div>
+      </div>
+    </div>
+  </motion.div>
+</section>
         <section
   id="about"
   className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
