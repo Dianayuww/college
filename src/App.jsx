@@ -957,66 +957,68 @@ export default function App() {
       </p>
     </motion.div>
 
-    <div className="relative mx-auto flex max-w-5xl flex-wrap justify-center gap-10">
-      {certificates.map((cert, index) => (
-        <motion.div
-          key={cert.title}
-          whileHover={{
-            y: -10,
-            rotate: 0,
-            scale: 1.03,
-          }}
-          transition={{ duration: 0.25 }}
-          className={`relative w-[320px] overflow-hidden rounded-[2rem] border border-[#eadbc8] bg-white shadow-2xl ${
-            index % 2 === 0
-              ? 'rotate-[-3deg]'
-              : 'rotate-[3deg]'
-          }`}
-        >
-          <div className="relative h-[220px] overflow-hidden bg-[#f8efe3]">
-            <img
-              src={cert.image}
-              alt={cert.title}
-              className="h-full w-full object-cover object-top"
-            />
+    <div className="relative mx-auto h-[520px] max-w-5xl">
+  {certificates.map((cert, index) => (
+    <motion.div
+      key={cert.title}
+      whileHover={{
+        y: -8,
+        rotate: 0,
+        scale: 1.02,
+      }}
+      transition={{ duration: 0.25 }}
+      className="absolute left-1/2 top-0 w-[340px] -translate-x-1/2 overflow-hidden rounded-[2rem] border border-[#eadbc8] bg-white shadow-2xl"
+      style={{
+        zIndex: certificates.length - index,
+        transform: `translateX(-50%) translateY(${index * 22}px) rotate(${index % 2 === 0 ? -4 : 4}deg)`,
+      }}
+    >
+      {/* image */}
+      <div className="relative h-[230px] overflow-hidden bg-[#f8efe3]">
+        <img
+          src={cert.image}
+          alt={cert.title}
+          className="h-full w-full object-cover object-top"
+        />
 
-            <div className="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#7b1e3a] shadow">
-              {cert.year}
-            </div>
-          </div>
+        <div className="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#7b1e3a] shadow">
+          {cert.year}
+        </div>
+      </div>
 
-          <div className="p-6">
-            <span className="rounded-full bg-[#f8efe3] px-4 py-1 text-xs font-semibold text-[#7b1e3a]">
-              {cert.issuer}
-            </span>
+      {/* content */}
+      <div className="p-6">
+        <span className="rounded-full bg-[#f8efe3] px-4 py-1 text-xs font-semibold text-[#7b1e3a]">
+          {cert.issuer}
+        </span>
 
-            <h3 className="mt-4 font-serif text-2xl leading-snug text-[#1f2a44]">
-              {cert.title}
-            </h3>
+        <h3 className="mt-4 font-serif text-2xl leading-snug text-[#1f2a44]">
+          {cert.title}
+        </h3>
 
-            <div className="mt-5 flex flex-wrap gap-2">
-              {cert.skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="rounded-full bg-[#f3e6e0] px-3 py-1 text-xs font-medium text-[#7b1e3a]"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-
-            <a
-              href={cert.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#7b1e3a]/20 px-5 py-2 text-sm font-semibold text-[#7b1e3a] transition hover:bg-[#7b1e3a] hover:text-white"
+        <div className="mt-5 flex flex-wrap gap-2">
+          {cert.skills.map((skill) => (
+            <span
+              key={skill}
+              className="rounded-full bg-[#f3e6e0] px-3 py-1 text-xs font-medium text-[#7b1e3a]"
             >
-              View Credential ↗
-            </a>
-          </div>
-        </motion.div>
-      ))}
-    </div>
+              {skill}
+            </span>
+          ))}
+        </div>
+
+        <a
+          href={cert.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#7b1e3a]/20 px-5 py-2 text-sm font-semibold text-[#7b1e3a] transition hover:bg-[#7b1e3a] hover:text-white"
+        >
+          View Credential ↗
+        </a>
+      </div>
+    </motion.div>
+  ))}
+</div>
   </div>
 </section>
       </main>
