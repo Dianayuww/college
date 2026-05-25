@@ -40,7 +40,7 @@ const dataProjects = [
       'Sentiment analysis surrounding the Palestine-Israel conflict by leveraging the Support Vector Machine (SVM) algorithm',
     tags: ['Sentiment Analysis', 'SVM', 'Israel', 'Palestine'],
     image:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
+      'https://plus.unsplash.com/premium_photo-1708038152579-f7d74634faa5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHBhbGVzdGluZSUyMGlzcmFlbHxlbnwwfHwwfHx8MA%3D%3D',
     details:
       'Analyzed relationships between life expectancy, smoking rates, and unmet health needs.',
   },
