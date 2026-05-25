@@ -1071,7 +1071,7 @@ export default function App() {
   <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/50 px-6 backdrop-blur-sm">
     <div className="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-[2rem] bg-[#fffaf2] p-8 shadow-2xl">
       <a
-  href={project.linkGithub}
+  href={selectedProject.linkGithub}
   target="_blank"
   rel="noopener noreferrer"
   className="inline-flex rounded-full bg-[#1f2a44] px-5 py-2 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-[#7b1e3a]"
