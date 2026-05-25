@@ -939,31 +939,50 @@ export default function App() {
 
         <section
   id="learning"
-  className="relative overflow-hidden bg-[#fffaf7] px-6 py-24 text-[#101b33]"
+  className="relative overflow-hidden bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1] px-6 py-24"
 >
-  <div className="mx-auto max-w-7xl">
-    <div className="mb-14 text-center">
-      <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#7b1e3a]">
-        Continuous Learning
-      </p>
+  <div className="mx-auto max-w-6xl">
+    <motion.div {...fadeUp} className="mb-16 text-center">
+      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
+        ✨ Continuous Learning
+      </span>
 
-      <h2 className="mt-4 font-serif text-4xl md:text-6xl">
+      <h2 className="mt-6 font-serif text-5xl text-[#1f2a44]">
         Learning & Certifications
       </h2>
-    </div>
 
-    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {certificates.map((cert) => (
-        <article
+      <p className="mx-auto mt-5 max-w-2xl text-lg text-mediumBrown">
+        Certifications and learning experiences that support my journey in
+        data, AI, and digital innovation.
+      </p>
+    </motion.div>
+
+    <div className="relative mx-auto flex max-w-5xl flex-wrap justify-center gap-10">
+      {certificates.map((cert, index) => (
+        <motion.div
           key={cert.title}
-          className="group overflow-hidden rounded-[2rem] border border-[#eadbc8] bg-white/80 shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
+          whileHover={{
+            y: -10,
+            rotate: 0,
+            scale: 1.03,
+          }}
+          transition={{ duration: 0.25 }}
+          className={`relative w-[320px] overflow-hidden rounded-[2rem] border border-[#eadbc8] bg-white shadow-2xl ${
+            index % 2 === 0
+              ? 'rotate-[-3deg]'
+              : 'rotate-[3deg]'
+          }`}
         >
-          <div className="h-56 overflow-hidden bg-[#f8efe3]">
+          <div className="relative h-[220px] overflow-hidden bg-[#f8efe3]">
             <img
               src={cert.image}
               alt={cert.title}
-              className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
+              className="h-full w-full object-cover object-top"
             />
+
+            <div className="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#7b1e3a] shadow">
+              {cert.year}
+            </div>
           </div>
 
           <div className="p-6">
@@ -971,7 +990,7 @@ export default function App() {
               {cert.issuer}
             </span>
 
-            <h3 className="mt-4 font-serif text-2xl text-[#101b33]">
+            <h3 className="mt-4 font-serif text-2xl leading-snug text-[#1f2a44]">
               {cert.title}
             </h3>
 
@@ -985,12 +1004,22 @@ export default function App() {
                 </span>
               ))}
             </div>
+
+            <a
+              href={cert.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#7b1e3a]/20 px-5 py-2 text-sm font-semibold text-[#7b1e3a] transition hover:bg-[#7b1e3a] hover:text-white"
+            >
+              View Credential ↗
+            </a>
           </div>
-        </article>
+        </motion.div>
       ))}
     </div>
   </div>
-</section>      </main>
+</section>
+      </main>
 
       <footer className="bg-darkBrown/95 py-6 text-center text-xs text-cream/85">© 2026 Dian Ayu Fauziah — Multidisciplinary Portfolio</footer>
     </div>
