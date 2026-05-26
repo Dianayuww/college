@@ -944,7 +944,7 @@ export default function App() {
           diverse teams.
         </p>
 
-        <div className="mt-8 flex flex-wrap gap-3">
+        {/* <div className="mt-8 flex flex-wrap gap-3">
           {[
             'Public Speaking',
             'Moderating',
@@ -960,7 +960,7 @@ export default function App() {
               {item}
             </span>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   </div>
