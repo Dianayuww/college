@@ -869,23 +869,7 @@ export default function App() {
         for people.
       </p>
 
-      <div className="mt-8 flex flex-wrap gap-3">
-        {[
-          'Public Speaking',
-          'Moderating',
-          'MC',
-          'Presentation',
-          'Leadership',
-          'Collaboration',
-        ].map((item) => (
-          <span
-            key={item}
-            className="rounded-full border border-[#7b1e3a]/15 bg-white px-4 py-2 text-sm font-medium text-[#7b1e3a] shadow-sm transition hover:-translate-y-1 hover:bg-[#7b1e3a] hover:text-white"
-          >
-            {item}
-          </span>
-        ))}
-      </div>
+      
     </div>
 
     {/* RIGHT PHOTOS */}
