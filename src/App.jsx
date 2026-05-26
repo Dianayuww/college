@@ -844,123 +844,87 @@ export default function App() {
   </div>
 </section>
 
-
-
         <section
   id="communication"
   className="relative overflow-hidden bg-[#fffaf7] px-6 py-24"
 >
-  <div className="absolute right-16 top-20 hidden h-28 w-28 rounded-full border border-[#d9a86c]/40 lg:block" />
-  <div className="absolute left-10 bottom-20 hidden text-6xl text-[#7b1e3a]/10 lg:block">
-    ✦
-  </div>
+  <div className="absolute -left-24 top-20 h-72 w-72 rounded-full bg-[#f3d9d0]/50 blur-3xl" />
+  <div className="absolute -right-24 bottom-10 h-72 w-72 rounded-full bg-[#e8d8c4]/60 blur-3xl" />
 
-  <div className="mx-auto max-w-7xl">
-    <div className="mb-14 text-center">
-      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
-        ✦ Beyond Data
-      </span>
-
-      <h2 className="mt-6 font-serif text-4xl md:text-6xl text-[#1f2a44]">
-        Speaking, Leading, & Connecting
-      </h2>
-
-      <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-mediumBrown">
-        Public speaking, moderating, and event experiences through academic,
-        organizational, and collaborative activities.
-      </p>
-    </div>
-
-    <div className="grid items-center gap-12 lg:grid-cols-2">
-      {/* LEFT COLLAGE */}
-      <div className="relative mx-auto h-[620px] w-full max-w-xl">
-        <motion.div
-          whileHover={{ rotate: -1, scale: 1.02 }}
-          className="absolute left-0 top-8 z-20 w-[78%] rotate-[-3deg] overflow-hidden rounded-[2rem] border border-[#eadbc8] bg-white p-3 shadow-2xl"
-        >
-          <img
-            src={mcDuduk}
-            alt="Public speaking moment"
-            className="h-[460px] w-full rounded-[1.5rem] object-cover object-[50%_35%]"
-          />
-          <div className="px-3 py-4">
-            <p className="font-serif text-2xl text-[#1f2a44]">
-              Public Speaking
-            </p>
-            <p className="text-sm text-mediumBrown">
-              Candid moment while handling event communication.
-            </p>
-          </div>
-        </motion.div>
-
-        <motion.div
-          whileHover={{ rotate: 3, scale: 1.04 }}
-          className="absolute right-0 top-0 z-30 w-[46%] rotate-[4deg] overflow-hidden rounded-[1.5rem] border border-[#eadbc8] bg-white p-2 shadow-xl"
-        >
-          <img
-            src={mcWmk}
-            alt="Presentation moment"
-            className="h-56 w-full rounded-[1.1rem] object-cover object-center"
-          />
-        </motion.div>
-
-        <motion.div
-          whileHover={{ rotate: -2, scale: 1.04 }}
-          className="absolute bottom-16 right-4 z-30 w-[48%] rotate-[-4deg] overflow-hidden rounded-[1.5rem] border border-[#eadbc8] bg-white p-2 shadow-xl"
-        >
-          <img
-            src={mcStage}
-            alt="MC event moment"
-            className="h-52 w-full rounded-[1.1rem] object-cover object-center"
-          />
-        </motion.div>
-
-        <motion.div
-          whileHover={{ rotate: 2, scale: 1.04 }}
-          className="absolute bottom-0 left-20 z-40 w-[42%] rotate-[3deg] overflow-hidden rounded-[1.5rem] border border-[#eadbc8] bg-white p-2 shadow-xl"
-        >
-          <img
-            src={mcDiskusi}
-            alt="Moderating discussion"
-            className="h-44 w-full rounded-[1.1rem] object-cover object-center"
-          />
-        </motion.div>
+  <div className="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
+    {/* PHOTO BENTO */}
+    <div className="relative grid h-[620px] grid-cols-6 grid-rows-6 gap-4">
+      <div className="group col-span-4 row-span-4 rotate-[-2deg] overflow-hidden rounded-[2rem] border-[10px] border-white bg-white shadow-2xl transition-all duration-300 hover:z-40 hover:rotate-0 hover:scale-[1.03]">
+        <img
+          src={mcDuduk}
+          alt="Public speaking candid"
+          className="h-full w-full object-cover object-[50%_35%] transition duration-500 group-hover:scale-110"
+        />
       </div>
 
-      {/* RIGHT TEXT */}
-      <div>
-        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#7b1e3a]">
-          Communication Experience
-        </p>
+      <div className="group col-span-3 row-span-2 col-start-4 row-start-1 rotate-[3deg] overflow-hidden rounded-[1.5rem] border-[8px] border-white bg-white shadow-xl transition-all duration-300 hover:z-40 hover:rotate-0 hover:scale-[1.05]">
+        <img
+          src={mcWmk}
+          alt="Presentation moment"
+          className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+        />
+      </div>
 
-        <h3 className="mt-4 font-serif text-4xl md:text-5xl text-[#1f2a44]">
-          Turning moments into meaningful interaction.
-        </h3>
+      <div className="group col-span-3 row-span-2 col-start-1 row-start-5 rotate-[2deg] overflow-hidden rounded-[1.5rem] border-[8px] border-white bg-white shadow-xl transition-all duration-300 hover:z-40 hover:rotate-0 hover:scale-[1.05]">
+        <img
+          src={mcDiskusi}
+          alt="Discussion moment"
+          className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-110"
+        />
+      </div>
 
-        <p className="mt-6 leading-relaxed text-mediumBrown">
-          Experienced in supporting events through public speaking, moderating,
-          presentation delivery, and audience engagement. These moments shaped
-          my confidence in communicating ideas clearly and collaborating with
-          diverse teams.
-        </p>
+      <div className="group col-span-3 row-span-3 col-start-4 row-start-4 rotate-[-3deg] overflow-hidden rounded-[1.5rem] border-[8px] border-white bg-white shadow-xl transition-all duration-300 hover:z-40 hover:rotate-0 hover:scale-[1.05]">
+        <img
+          src={mcStage}
+          alt="MC stage moment"
+          className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-110"
+        />
+      </div>
 
-        {/* <div className="mt-8 flex flex-wrap gap-3">
-          {[
-            'Public Speaking',
-            'Moderating',
-            'MC',
-            'Presentation',
-            'Event Handling',
-            'Collaboration',
-          ].map((item) => (
-            <span
-              key={item}
-              className="rounded-full bg-[#f3e6e0] px-4 py-2 text-sm font-medium text-[#7b1e3a]"
-            >
-              {item}
-            </span>
-          ))}
-        </div> */}
+      <div className="absolute left-8 top-8 rounded-full bg-[#7b1e3a] px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-white shadow-lg">
+        Live moments
+      </div>
+    </div>
+
+    {/* TEXT */}
+    <div>
+      <p className="text-sm font-bold uppercase tracking-[0.45em] text-[#7b1e3a]">
+        Beyond The Numbers
+      </p>
+
+      <h2 className="mt-5 font-serif text-5xl leading-tight text-[#1f2a44] md:text-6xl">
+        Speaking, Leading,
+        <br />
+        & Connecting
+      </h2>
+
+      <p className="mt-6 max-w-xl leading-relaxed text-mediumBrown">
+        Through public speaking, moderating, event handling, and team
+        collaboration, I learned how to turn ideas into meaningful experiences
+        for people.
+      </p>
+
+      <div className="mt-8 flex flex-wrap gap-3">
+        {[
+          'Public Speaking',
+          'Moderating',
+          'MC',
+          'Presentation',
+          'Leadership',
+          'Collaboration',
+        ].map((item) => (
+          <span
+            key={item}
+            className="rounded-full border border-[#7b1e3a]/15 bg-white px-4 py-2 text-sm font-medium text-[#7b1e3a] shadow-sm transition hover:-translate-y-1 hover:bg-[#7b1e3a] hover:text-white"
+          >
+            {item}
+          </span>
+        ))}
       </div>
     </div>
   </div>
