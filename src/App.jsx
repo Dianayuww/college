@@ -517,126 +517,7 @@ export default function App() {
     </div>
   </div>
 </section>
-
-        <section
-  id="communication"
-  className="relative overflow-hidden bg-[#fffaf7] px-6 py-24"
->
-  <div className="absolute right-16 top-20 hidden h-28 w-28 rounded-full border border-[#d9a86c]/40 lg:block" />
-  <div className="absolute left-10 bottom-20 hidden text-6xl text-[#7b1e3a]/10 lg:block">
-    ✦
-  </div>
-
-  <div className="mx-auto max-w-7xl">
-    <div className="mb-14 text-center">
-      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
-        ✦ Beyond Data
-      </span>
-
-      <h2 className="mt-6 font-serif text-4xl md:text-6xl text-[#1f2a44]">
-        Speaking, Leading, & Connecting
-      </h2>
-
-      <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-mediumBrown">
-        Public speaking, moderating, and event experiences through academic,
-        organizational, and collaborative activities.
-      </p>
-    </div>
-
-    <div className="grid items-center gap-12 lg:grid-cols-2">
-      {/* LEFT COLLAGE */}
-      <div className="relative mx-auto h-[620px] w-full max-w-xl">
-        <motion.div
-          whileHover={{ rotate: -1, scale: 1.02 }}
-          className="absolute left-0 top-8 z-20 w-[78%] rotate-[-3deg] overflow-hidden rounded-[2rem] border border-[#eadbc8] bg-white p-3 shadow-2xl"
-        >
-          <img
-            src={mcDuduk}
-            alt="Public speaking moment"
-            className="h-[460px] w-full rounded-[1.5rem] object-cover object-[50%_35%]"
-          />
-          <div className="px-3 py-4">
-            <p className="font-serif text-2xl text-[#1f2a44]">
-              Public Speaking
-            </p>
-            <p className="text-sm text-mediumBrown">
-              Candid moment while handling event communication.
-            </p>
-          </div>
-        </motion.div>
-
-        <motion.div
-          whileHover={{ rotate: 3, scale: 1.04 }}
-          className="absolute right-0 top-0 z-30 w-[46%] rotate-[4deg] overflow-hidden rounded-[1.5rem] border border-[#eadbc8] bg-white p-2 shadow-xl"
-        >
-          <img
-            src={mcWmk}
-            alt="Presentation moment"
-            className="h-56 w-full rounded-[1.1rem] object-cover object-center"
-          />
-        </motion.div>
-
-        <motion.div
-          whileHover={{ rotate: -2, scale: 1.04 }}
-          className="absolute bottom-16 right-4 z-30 w-[48%] rotate-[-4deg] overflow-hidden rounded-[1.5rem] border border-[#eadbc8] bg-white p-2 shadow-xl"
-        >
-          <img
-            src={mcStage}
-            alt="MC event moment"
-            className="h-52 w-full rounded-[1.1rem] object-cover object-center"
-          />
-        </motion.div>
-
-        <motion.div
-          whileHover={{ rotate: 2, scale: 1.04 }}
-          className="absolute bottom-0 left-20 z-40 w-[42%] rotate-[3deg] overflow-hidden rounded-[1.5rem] border border-[#eadbc8] bg-white p-2 shadow-xl"
-        >
-          <img
-            src={mcDiskusi}
-            alt="Moderating discussion"
-            className="h-44 w-full rounded-[1.1rem] object-cover object-center"
-          />
-        </motion.div>
-      </div>
-
-      {/* RIGHT TEXT */}
-      <div>
-        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#7b1e3a]">
-          Communication Experience
-        </p>
-
-        <h3 className="mt-4 font-serif text-4xl md:text-5xl text-[#1f2a44]">
-          Turning moments into meaningful interaction.
-        </h3>
-
-        <p className="mt-6 leading-relaxed text-mediumBrown">
-          Experienced in supporting events through public speaking, moderating,
-          presentation delivery, and audience engagement. These moments shaped
-          my confidence in communicating ideas clearly and collaborating with
-          diverse teams.
-        </p>
-
-        <div className="mt-8 flex flex-wrap gap-3">
-          {[
-            'Public Speaking',
-            'Moderating',
-            'MC',
-            'Presentation',
-            'Event Handling',
-            'Collaboration',
-          ].map((item) => (
-            <span
-              key={item}
-              className="rounded-full bg-[#f3e6e0] px-4 py-2 text-sm font-medium text-[#7b1e3a]"
-            >
-              {item}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        
         <section
   id="data-projects"
   className="px-6 py-24 bg-[#f8f5f2]"
@@ -732,6 +613,119 @@ export default function App() {
         {/* <section id="creative-pr" className="px-6 py-20 bg-[#fffaf2]">
           <div className="mx-auto max-w-6xl"><h2 className="font-serif text-4xl mb-10">Creative & PR</h2><div className="grid gap-6 md:grid-cols-3">{organizationProjects.map((p) => <motion.article {...fadeUp} key={p.title} className="scrapbook-card bg-[#fff3e5] p-6"><h3 className="font-serif text-2xl mb-2">{p.title}</h3><p className="text-sm font-semibold text-accent mb-2">{p.role}</p><p className="text-mediumBrown leading-relaxed">{p.description}</p></motion.article>)}</div></div>
         </section> */}
+
+        <section
+  className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
+  id="experience"
+>
+  <div className="mx-auto max-w-7xl">
+    <div className="mb-14 text-center">
+      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/60 px-4 py-2 text-sm font-medium text-[#7b1e3a]">
+        Professional Journey
+      </span>
+
+      <h2 className="mt-5 font-serif text-4xl md:text-5xl text-[#1f2a44]">
+        What I’ve Been Building
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
+        Data, public service, and digital transformation experiences shaped through real projects.
+      </p>
+    </div>
+
+    <div className="space-y-8">
+      {experiences.map((exp) => (
+        <motion.article
+          {...fadeUp}
+          key={exp.id}
+          className="overflow-hidden rounded-3xl border border-[#eadbc8] bg-white/85 shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div className="grid gap-0 md:grid-cols-5">
+            <div className="flex flex-col items-center justify-center gap-6 bg-[#f8efe3] p-10 md:col-span-2">
+  <img
+    src={sealLogo}
+    alt="SEAL"
+    className="h-14 object-contain opacity-90 transition hover:opacity-100"
+  />
+
+  <span className="text-2xl text-[#7b1e3a]/40">×</span>
+
+  <img
+    src={kominfoLogo}
+    alt="Kominfo Jatim"
+    className="h-20 object-contain opacity-90 transition hover:opacity-100"
+  />
+
+  <span className="text-2xl text-[#7b1e3a]/40">×</span>
+
+  <img
+    src={majadigiLogo}
+    alt="MajaDigi"
+    className="h-16 object-contain opacity-90 transition hover:opacity-100"
+  />
+</div>
+
+            <div className="p-7 md:col-span-3 md:p-9">
+              <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 className="font-serif text-2xl md:text-3xl text-[#1f2a44]">
+                    {exp.title}
+                  </h3>
+
+                  <p className="mt-2 font-semibold text-[#7b1e3a]">
+                    {exp.company}
+                  </p>
+                </div>
+
+                <span className="rounded-full border border-[#7b1e3a]/25 px-3 py-1 text-xs text-[#7b1e3a]">
+                  {exp.period}
+                </span>
+              </div>
+
+              <div className="mb-4 flex flex-wrap gap-4 text-sm text-mediumBrown">
+                <span className="inline-flex items-center gap-1">
+                  <MapPin size={14} />
+                  {exp.location}
+                </span>
+              </div>
+
+              <p className="mb-4 italic text-[#7b1e3a]">
+                “{exp.vibe}”
+              </p>
+
+              <p className="leading-relaxed text-mediumBrown">
+                {exp.description}
+              </p>
+
+              {exp.projectLink && (
+                <a
+                  href={exp.projectLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center rounded-full border border-[#7b1e3a]/20 px-4 py-2 text-sm text-[#7b1e3a] transition hover:bg-[#7b1e3a] hover:text-white"
+                >
+                  Visit Project ↗
+                </a>
+              )}
+
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {exp.highlights.map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-2xl bg-[#f8efe3] px-4 py-3 text-sm font-medium text-[#1f2a44]"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.article>
+      ))}
+    </div>
+  </div>
+</section>
+        
         <section
   id="creative-pr"
   className="px-6 py-24 bg-gradient-to-b from-[#f8f5f2] to-[#efe4d1]"
@@ -850,117 +844,6 @@ export default function App() {
   </div>
 </section>
 
-        <section
-  className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
-  id="experience"
->
-  <div className="mx-auto max-w-7xl">
-    <div className="mb-14 text-center">
-      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/60 px-4 py-2 text-sm font-medium text-[#7b1e3a]">
-        Professional Journey
-      </span>
-
-      <h2 className="mt-5 font-serif text-4xl md:text-5xl text-[#1f2a44]">
-        What I’ve Been Building
-      </h2>
-
-      <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
-        Data, public service, and digital transformation experiences shaped through real projects.
-      </p>
-    </div>
-
-    <div className="space-y-8">
-      {experiences.map((exp) => (
-        <motion.article
-          {...fadeUp}
-          key={exp.id}
-          className="overflow-hidden rounded-3xl border border-[#eadbc8] bg-white/85 shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
-        >
-          <div className="grid gap-0 md:grid-cols-5">
-            <div className="flex flex-col items-center justify-center gap-6 bg-[#f8efe3] p-10 md:col-span-2">
-  <img
-    src={sealLogo}
-    alt="SEAL"
-    className="h-14 object-contain opacity-90 transition hover:opacity-100"
-  />
-
-  <span className="text-2xl text-[#7b1e3a]/40">×</span>
-
-  <img
-    src={kominfoLogo}
-    alt="Kominfo Jatim"
-    className="h-20 object-contain opacity-90 transition hover:opacity-100"
-  />
-
-  <span className="text-2xl text-[#7b1e3a]/40">×</span>
-
-  <img
-    src={majadigiLogo}
-    alt="MajaDigi"
-    className="h-16 object-contain opacity-90 transition hover:opacity-100"
-  />
-</div>
-
-            <div className="p-7 md:col-span-3 md:p-9">
-              <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
-                <div>
-                  <h3 className="font-serif text-2xl md:text-3xl text-[#1f2a44]">
-                    {exp.title}
-                  </h3>
-
-                  <p className="mt-2 font-semibold text-[#7b1e3a]">
-                    {exp.company}
-                  </p>
-                </div>
-
-                <span className="rounded-full border border-[#7b1e3a]/25 px-3 py-1 text-xs text-[#7b1e3a]">
-                  {exp.period}
-                </span>
-              </div>
-
-              <div className="mb-4 flex flex-wrap gap-4 text-sm text-mediumBrown">
-                <span className="inline-flex items-center gap-1">
-                  <MapPin size={14} />
-                  {exp.location}
-                </span>
-              </div>
-
-              <p className="mb-4 italic text-[#7b1e3a]">
-                “{exp.vibe}”
-              </p>
-
-              <p className="leading-relaxed text-mediumBrown">
-                {exp.description}
-              </p>
-
-              {exp.projectLink && (
-                <a
-                  href={exp.projectLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center rounded-full border border-[#7b1e3a]/20 px-4 py-2 text-sm text-[#7b1e3a] transition hover:bg-[#7b1e3a] hover:text-white"
-                >
-                  Visit Project ↗
-                </a>
-              )}
-
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                {exp.highlights.map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-2xl bg-[#f8efe3] px-4 py-3 text-sm font-medium text-[#1f2a44]"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </motion.article>
-      ))}
-    </div>
-  </div>
-</section>
 
         <section
   id="skills"
@@ -1174,6 +1057,126 @@ export default function App() {
           >
             Next →
           </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section
+  id="communication"
+  className="relative overflow-hidden bg-[#fffaf7] px-6 py-24"
+>
+  <div className="absolute right-16 top-20 hidden h-28 w-28 rounded-full border border-[#d9a86c]/40 lg:block" />
+  <div className="absolute left-10 bottom-20 hidden text-6xl text-[#7b1e3a]/10 lg:block">
+    ✦
+  </div>
+
+  <div className="mx-auto max-w-7xl">
+    <div className="mb-14 text-center">
+      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
+        ✦ Beyond Data
+      </span>
+
+      <h2 className="mt-6 font-serif text-4xl md:text-6xl text-[#1f2a44]">
+        Speaking, Leading, & Connecting
+      </h2>
+
+      <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-mediumBrown">
+        Public speaking, moderating, and event experiences through academic,
+        organizational, and collaborative activities.
+      </p>
+    </div>
+
+    <div className="grid items-center gap-12 lg:grid-cols-2">
+      {/* LEFT COLLAGE */}
+      <div className="relative mx-auto h-[620px] w-full max-w-xl">
+        <motion.div
+          whileHover={{ rotate: -1, scale: 1.02 }}
+          className="absolute left-0 top-8 z-20 w-[78%] rotate-[-3deg] overflow-hidden rounded-[2rem] border border-[#eadbc8] bg-white p-3 shadow-2xl"
+        >
+          <img
+            src={mcDuduk}
+            alt="Public speaking moment"
+            className="h-[460px] w-full rounded-[1.5rem] object-cover object-[50%_35%]"
+          />
+          <div className="px-3 py-4">
+            <p className="font-serif text-2xl text-[#1f2a44]">
+              Public Speaking
+            </p>
+            <p className="text-sm text-mediumBrown">
+              Candid moment while handling event communication.
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          whileHover={{ rotate: 3, scale: 1.04 }}
+          className="absolute right-0 top-0 z-30 w-[46%] rotate-[4deg] overflow-hidden rounded-[1.5rem] border border-[#eadbc8] bg-white p-2 shadow-xl"
+        >
+          <img
+            src={mcWmk}
+            alt="Presentation moment"
+            className="h-56 w-full rounded-[1.1rem] object-cover object-center"
+          />
+        </motion.div>
+
+        <motion.div
+          whileHover={{ rotate: -2, scale: 1.04 }}
+          className="absolute bottom-16 right-4 z-30 w-[48%] rotate-[-4deg] overflow-hidden rounded-[1.5rem] border border-[#eadbc8] bg-white p-2 shadow-xl"
+        >
+          <img
+            src={mcStage}
+            alt="MC event moment"
+            className="h-52 w-full rounded-[1.1rem] object-cover object-center"
+          />
+        </motion.div>
+
+        <motion.div
+          whileHover={{ rotate: 2, scale: 1.04 }}
+          className="absolute bottom-0 left-20 z-40 w-[42%] rotate-[3deg] overflow-hidden rounded-[1.5rem] border border-[#eadbc8] bg-white p-2 shadow-xl"
+        >
+          <img
+            src={mcDiskusi}
+            alt="Moderating discussion"
+            className="h-44 w-full rounded-[1.1rem] object-cover object-center"
+          />
+        </motion.div>
+      </div>
+
+      {/* RIGHT TEXT */}
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#7b1e3a]">
+          Communication Experience
+        </p>
+
+        <h3 className="mt-4 font-serif text-4xl md:text-5xl text-[#1f2a44]">
+          Turning moments into meaningful interaction.
+        </h3>
+
+        <p className="mt-6 leading-relaxed text-mediumBrown">
+          Experienced in supporting events through public speaking, moderating,
+          presentation delivery, and audience engagement. These moments shaped
+          my confidence in communicating ideas clearly and collaborating with
+          diverse teams.
+        </p>
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          {[
+            'Public Speaking',
+            'Moderating',
+            'MC',
+            'Presentation',
+            'Event Handling',
+            'Collaboration',
+          ].map((item) => (
+            <span
+              key={item}
+              className="rounded-full bg-[#f3e6e0] px-4 py-2 text-sm font-medium text-[#7b1e3a]"
+            >
+              {item}
+            </span>
+          ))}
         </div>
       </div>
     </div>
