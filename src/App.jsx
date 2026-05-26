@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import polaroid from "./assets/polaroid.png";
 import mcDuduk from "./assets/mc_duduk.jpeg";
 import mcDiskusi from "./assets/mc_diskusi.jpeg";
 import mcWmk from "./assets/mc_wmk.jpeg";
@@ -925,6 +926,71 @@ export default function App() {
             {item}
           </span>
         ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section className="bg-[#fffaf7] px-6 py-24">
+  <div className="mx-auto max-w-6xl">
+    
+    <div className="mb-14 text-center">
+      <p className="text-sm uppercase tracking-[0.4em] text-[#7b1e3a]">
+        Beyond The Numbers
+      </p>
+
+      <h2 className="mt-4 font-serif text-5xl text-[#1f2a44]">
+        Speaking, Leading,
+        <br />
+        & Connecting
+      </h2>
+    </div>
+
+    {/* STRING */}
+    <div className="relative mx-auto flex flex-wrap items-start justify-center gap-10 border-t-2 border-[#c8a27a] pt-14">
+
+      {/* PHOTO 1 */}
+      <div className="relative transition duration-300 hover:-translate-y-2 hover:rotate-0">
+        <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+
+        <img
+          src={mcDuduk}
+          alt=""
+          className="h-[260px] w-[220px] rotate-[-4deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
+        />
+      </div>
+
+      {/* PHOTO 2 */}
+      <div className="relative mt-10 transition duration-300 hover:-translate-y-2 hover:rotate-0">
+        <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+
+        <img
+          src={mcWmk}
+          alt=""
+          className="h-[300px] w-[240px] rotate-[5deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
+        />
+      </div>
+
+      {/* PHOTO 3 */}
+      <div className="relative transition duration-300 hover:-translate-y-2 hover:rotate-0">
+        <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+
+        <img
+          src={mcDiskusi}
+          alt=""
+          className="h-[240px] w-[210px] rotate-[-3deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
+        />
+      </div>
+
+      {/* PHOTO 4 */}
+      <div className="relative mt-8 transition duration-300 hover:-translate-y-2 hover:rotate-0">
+        <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+
+        <img
+          src={mcStage}
+          alt=""
+          className="h-[280px] w-[220px] rotate-[4deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
+        />
       </div>
     </div>
   </div>
