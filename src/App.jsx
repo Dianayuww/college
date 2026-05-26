@@ -845,54 +845,13 @@ export default function App() {
   </div>
 </section>
 
-        <section
+      <section
   id="communication"
-  className="relative overflow-hidden bg-[#fffaf7] px-6 py-24"
+  className="bg-[#fffaf7] px-6 py-24"
 >
-  <div className="absolute -left-24 top-20 h-72 w-72 rounded-full bg-[#f3d9d0]/50 blur-3xl" />
-  <div className="absolute -right-24 bottom-10 h-72 w-72 rounded-full bg-[#e8d8c4]/60 blur-3xl" />
+  <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
 
-  <div className="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
-    {/* PHOTO BENTO */}
-    <div className="relative grid h-[620px] grid-cols-6 grid-rows-6 gap-4">
-      <div className="group col-span-4 row-span-4 rotate-[-2deg] overflow-hidden rounded-[2rem] border-[10px] border-white bg-white shadow-2xl transition-all duration-300 hover:z-40 hover:rotate-0 hover:scale-[1.03]">
-        <img
-          src={mcDuduk}
-          alt="Public speaking candid"
-          className="h-full w-full object-cover object-[50%_35%] transition duration-500 group-hover:scale-110"
-        />
-      </div>
-
-      <div className="group col-span-3 row-span-2 col-start-4 row-start-1 rotate-[3deg] overflow-hidden rounded-[1.5rem] border-[8px] border-white bg-white shadow-xl transition-all duration-300 hover:z-40 hover:rotate-0 hover:scale-[1.05]">
-        <img
-          src={mcWmk}
-          alt="Presentation moment"
-          className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
-        />
-      </div>
-
-      <div className="group col-span-3 row-span-2 col-start-1 row-start-5 rotate-[2deg] overflow-hidden rounded-[1.5rem] border-[8px] border-white bg-white shadow-xl transition-all duration-300 hover:z-40 hover:rotate-0 hover:scale-[1.05]">
-        <img
-          src={mcDiskusi}
-          alt="Discussion moment"
-          className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-110"
-        />
-      </div>
-
-      <div className="group col-span-3 row-span-3 col-start-4 row-start-4 rotate-[-3deg] overflow-hidden rounded-[1.5rem] border-[8px] border-white bg-white shadow-xl transition-all duration-300 hover:z-40 hover:rotate-0 hover:scale-[1.05]">
-        <img
-          src={mcStage}
-          alt="MC stage moment"
-          className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-110"
-        />
-      </div>
-
-      <div className="absolute left-8 top-8 rounded-full bg-[#7b1e3a] px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-white shadow-lg">
-        Live moments
-      </div>
-    </div>
-
-    {/* TEXT */}
+    {/* LEFT TEXT */}
     <div>
       <p className="text-sm font-bold uppercase tracking-[0.45em] text-[#7b1e3a]">
         Beyond The Numbers
@@ -928,26 +887,9 @@ export default function App() {
         ))}
       </div>
     </div>
-  </div>
-</section>
 
-        <section className="bg-[#fffaf7] px-6 py-24">
-  <div className="mx-auto max-w-6xl">
-    
-    <div className="mb-14 text-center">
-      <p className="text-sm uppercase tracking-[0.4em] text-[#7b1e3a]">
-        Beyond The Numbers
-      </p>
-
-      <h2 className="mt-4 font-serif text-5xl text-[#1f2a44]">
-        Speaking, Leading,
-        <br />
-        & Connecting
-      </h2>
-    </div>
-
-    {/* STRING */}
-    <div className="relative mx-auto flex flex-wrap items-start justify-center gap-10 border-t-2 border-[#c8a27a] pt-14">
+    {/* RIGHT PHOTOS */}
+    <div className="relative flex flex-wrap items-start justify-center gap-8 border-t-2 border-[#c8a27a] pt-14">
 
       {/* PHOTO 1 */}
       <div className="relative transition duration-300 hover:-translate-y-2 hover:rotate-0">
