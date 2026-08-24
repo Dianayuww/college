@@ -375,9 +375,9 @@ export default function App() {
       </h1>
 
       <p className="mt-8 text-sm font-bold uppercase tracking-[0.22em] md:text-base">
-        Data Science Student
+        Data Analyst
         <span className="mx-3 text-[#d6a778]">|</span>
-        Public Relations Enthusiast
+        Data Science Graduate
       </p>
 
       <div className="mt-10 h-px w-24 bg-[#d6a778]" />
