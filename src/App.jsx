@@ -313,7 +313,7 @@ export default function App() {
     </h1>
 
     <p className="mt-6 max-w-3xl text-xl leading-relaxed text-mediumBrown md:text-2xl">
-      Data Science Student | Public Relations Enthusiast
+      Data Analyst | Data Science Graduate
     </p>
 
     <p className="mt-5 text-base font-medium text-[#7b1e3a]">
