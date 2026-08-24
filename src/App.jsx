@@ -946,12 +946,13 @@ export default function App() {
     <div className="grid gap-8 md:grid-cols-2">
       {[
         {
-          title: 'Programming',
+          title: 'Data Analysis',
           desc: 'Data processing & machine learning',
           tools: [
             { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
             { name: 'SQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
             { name: 'R', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg' },
+            { name: 'Excel', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftexcel.svg' }
           ],
         },
         {
