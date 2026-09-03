@@ -90,14 +90,14 @@ const dataProjects = [
       'Applied deep learning (LSTM & GRU) and statistical models (Facebook Prophet) to forecast weekly prices of strategic food commodities (Rice, Red Chili, Garlic) in Surabaya using PIHPS BI data. Evaluated models using MAE, RMSE, and MAPE metrics.',
     tags: ['Time Series', 'Deep Learning', 'LSTM', 'GRU', 'Prophet', 'Python', 'Data Analysis'],
     image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHLjUlOZoJIQGN8_SadPADyjrdxJ9J2MFp1iYy39NEQA&s=10',
+      'https://id.pinterest.com/pin/339107046925335431/',
     details:
       'Evaluated model performance across commodity volatility levels, with LSTM achieving 0.09% MAPE on stable commodities (Rice) and GRU scoring 13.42% MAPE on volatile items (Red Chili).',
   },
   {
     id: 5,
     title: 'PKM AMLI — Student Innovation & Sustainable Research',
-    linkGithub: 'https://drive.google.com/your-google-drive-link-here', // Ganti dengan link PDF/Drive dokumen/poster PKM kamu
+    linkGithub: 'https://journalmabis.org/mabis/article/view/864/452', // Ganti dengan link PDF/Drive dokumen/poster PKM kamu
     category: 'Academic Research',
     description:
       'Developed an innovative and sustainable research project for the PKM AMLI initiative, integrating problem-solving methodologies, data-driven analysis, and strategic project implementation.',
