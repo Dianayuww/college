@@ -1555,9 +1555,6 @@ export default function App() {
         >
           <div className="mx-auto max-w-7xl">
             <div className="mb-16 text-center">
-              <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-[#fff] px-4 py-2 text-sm font-medium text-[#7b1e3a]">
-                Technical Portfolio
-              </span>
 
               <h2 className="mt-5 font-serif text-4xl md:text-5xl text-[#1f2a44]">
                 Data Science & Tech Projects
