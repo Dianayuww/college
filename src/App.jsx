@@ -5,7 +5,7 @@ import mcDiskusi from "./assets/mc_diskusi.jpeg";
 import mcWmk from "./assets/mc_wmk.jpeg";
 import mcStage from "./assets/mc_stage.jpeg";
 import amli from "./assets/amli.jpeg";
-import psd from "./assets/image (1).png";
+import psd from "./assets/image (2).png";
 import certFreecodecampPython from './assets/fcc_da.jpeg'
 import certDicodingDataScience from './assets/dcd_ds.jpeg'
 import certAIProductivity from './assets/dcd_ai prak.jpeg'
