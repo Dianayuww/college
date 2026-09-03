@@ -34,6 +34,7 @@ const dataProjects = [
     id: 1,
     title: 'Social Media Addiction Classification',
     linkGithub: 'https://github.com/Dianayuww/social-media-addiction-comparative-analysis',
+    buttonText: 'Read on Medium',
     category: 'Machine Learning Research',
     description:
       'Classification model comparing Random Forest and XGBoost using three train-test split scenarios and 10-fold Cross Validation to predict social media addiction patterns.',
@@ -2155,11 +2156,21 @@ export default function App() {
 
               <a
                 className="inline-flex items-center gap-2 hover:opacity-80"
+                href="https://died-iaryyy.medium.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BookOpen size={16} /> {/* Pakai ikon BookOpen dari lucide-react */}
+                Medium
+              </a>
+
+              {/* <a
+                className="inline-flex items-center gap-2 hover:opacity-80"
                 href="#"
               >
                 <Instagram size={16} />
                 Instagram
-              </a>
+              </a> */}
             </div>
 
             <div className="mt-4 text-sm text-cream/85">
