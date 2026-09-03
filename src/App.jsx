@@ -4,6 +4,7 @@ import mcDuduk from "./assets/mc_duduk.jpeg";
 import mcDiskusi from "./assets/mc_diskusi.jpeg";
 import mcWmk from "./assets/mc_wmk.jpeg";
 import mcStage from "./assets/mc_stage.jpeg";
+import amli from "./assets/amli.jpeg";
 import certFreecodecampPython from './assets/fcc_da.jpeg'
 import certDicodingDataScience from './assets/dcd_ds.jpeg'
 import certAIProductivity from './assets/dcd_ai prak.jpeg'
@@ -50,7 +51,7 @@ const dataProjects = [
       'Developed an innovative and sustainable research project for the PKM AMLI initiative, integrating problem-solving methodologies, data-driven analysis, and strategic project implementation.',
     tags: ['Research', 'Data Analysis', 'Project Management', 'Product Innovation', 'Sustainability'],
     image:
-      'https://your-image-url-or-banner-here.png', // Ganti dengan URL foto/dokumentasi PKM kamu
+      'amli";', // Ganti dengan URL foto/dokumentasi PKM kamu
     details:
       'Executed end-to-end project workflows, from initial ideation and feasibility analysis to final presentation and reporting.',
   },
