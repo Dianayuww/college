@@ -5,6 +5,7 @@ import mcDiskusi from "./assets/mc_diskusi.jpeg";
 import mcWmk from "./assets/mc_wmk.jpeg";
 import mcStage from "./assets/mc_stage.jpeg";
 import amli from "./assets/amli.jpeg";
+import psd from "./assets/image.png";
 import certFreecodecampPython from './assets/fcc_da.jpeg'
 import certDicodingDataScience from './assets/dcd_ds.jpeg'
 import certAIProductivity from './assets/dcd_ai prak.jpeg'
@@ -102,8 +103,7 @@ const dataProjects = [
     description:
       'Applied deep learning (LSTM & GRU) and statistical models (Facebook Prophet) to forecast weekly prices of strategic food commodities (Rice, Red Chili, Garlic) in Surabaya using PIHPS BI data. Evaluated models using MAE, RMSE, and MAPE metrics.',
     tags: ['Time Series', 'Deep Learning', 'LSTM', 'GRU', 'Prophet', 'Python', 'Data Analysis'],
-    image:
-      'https://id.pinterest.com/pin/339107046925335431/',
+    image: psd,
     details:
       'Evaluated model performance across commodity volatility levels, with LSTM achieving 0.09% MAPE on stable commodities (Rice) and GRU scoring 13.42% MAPE on volatile items (Red Chili).',
   },
