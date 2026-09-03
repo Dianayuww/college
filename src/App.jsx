@@ -250,6 +250,1086 @@ const Pill = ({ children, filled = false }) => (
 
 // export default function App() {
 //   return (
+// export default function App() {
+//   const [selectedProject, setSelectedProject] = useState(null)
+//   const [activeCertificate, setActiveCertificate] = useState(0)
+
+//   const certificates = [
+//     {
+//       title: 'Data Analysis with Python',
+//       issuer: 'freeCodeCamp',
+//       year: '2025',
+//       image: certFreecodecampPython,
+//       skills: ['Python', 'Data Analysis', 'Programming'],
+//       link: '#',
+//     },
+//     {
+//       title: 'Belajar Dasar Data Science',
+//       issuer: 'Dicoding',
+//       year: '2025',
+//       image: certDicodingDataScience,
+//       skills: ['Data Science', 'Analytics', 'Machine Learning'],
+//       link: '#',
+//     },
+//     {
+//       title: 'AI Praktis untuk Produktivitas',
+//       issuer: 'Dicoding × AVPN',
+//       year: '2025',
+//       image: certAIProductivity,
+//       skills: ['AI Tools', 'Productivity', 'Prompting'],
+//       link: '#',
+//     },
+//     {
+//       title: 'Belajar Penggunaan Generative AI',
+//       issuer: 'Dicoding × AVPN',
+//       year: '2025',
+//       image: certGenerativeAI,
+//       skills: ['Generative AI', 'LLM', 'AI Ethics'],
+//       link: '#',
+//     },
+//     {
+//       title: 'Career Essentials',
+//       issuer: 'IBM SkillsBuild',
+//       year: '2025',
+//       image: certIBMSkillsBuild,
+//       skills: ['Professional Skills', 'Career Readiness'],
+//       link: '#',
+//     },
+//   ]
+  
+//   return (
+//     <div className="min-h-screen bg-background text-darkBrown">
+//       <header className="sticky top-0 z-50 border-b border-[#d9c4a6]/50 bg-[#fffaf2cc] backdrop-blur-md">
+//         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+//           <p className="font-serif text-lg md:text-xl">Dian Ayu Fauziah</p>
+//           <ul className="hidden md:flex gap-6 text-sm text-mediumBrown">
+//             {navItems.map((item) => <li key={item.label}><a href={item.href} className="hover:text-darkBrown transition">{item.label}</a></li>)}
+//           </ul>
+//         </nav>
+//       </header>
+
+//       <main>
+//         {/* <section
+//   id="home"
+//   className="relative min-h-[calc(100vh-4.5rem)] overflow-hidden px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
+// >
+//   <div className="absolute left-10 top-24 h-64 w-64 rounded-full bg-[#7b1e3a]/10 blur-3xl" />
+//   <div className="absolute bottom-10 right-10 h-72 w-72 rounded-full bg-[#1f2a44]/10 blur-3xl" />
+
+//   <motion.div
+//     {...fadeUp}
+//     className="relative z-10 mx-auto flex min-h-[75vh] max-w-5xl flex-col items-center justify-center text-center"
+//   >
+//     <span className="inline-flex items-center gap-2 rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
+//       ✨ Welcome to my portfolio
+//     </span>
+
+//     <h1 className="mt-8 max-w-4xl text-5xl font-bold tracking-tight text-[#1f2a44] md:text-7xl">
+//       Dian Ayu Fauziah
+//     </h1>
+
+//     <p className="mt-6 max-w-3xl text-xl leading-relaxed text-mediumBrown md:text-2xl">
+//       Data Analyst | Data Science Graduate
+//     </p>
+
+//     <p className="mt-5 text-base font-medium text-[#7b1e3a]">
+//       Data Science • State University of Surabaya
+//     </p>
+
+
+//     <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+//       <a
+//         href="#data-projects"
+//         className="rounded-full bg-[#1f2a44] px-8 py-3 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-1 hover:bg-[#283a5f]"
+//       >
+//         View Data Projects →
+//       </a>
+
+//       <a
+//         href="#creative-pr"
+//         className="rounded-full border border-[#7b1e3a]/40 bg-white/70 px-8 py-3 text-sm font-semibold text-[#7b1e3a] shadow-soft transition hover:-translate-y-1 hover:bg-white"
+//       >
+//         View Creative & PR Works →
+//       </a>
+//     </div>
+
+//     <a
+//       href="#about"
+//       className="mt-12 flex h-10 w-6 items-start justify-center rounded-full border-2 border-[#7b1e3a]/30 p-1"
+//       aria-label="Scroll to about section"
+//     >
+//       <span className="h-2 w-2 animate-bounce rounded-full bg-[#7b1e3a]" />
+//     </a>
+//   </motion.div>
+// </section>  */}
+//         <section
+//   id="home"
+//   className="relative min-h-screen overflow-hidden bg-[#fffaf7] px-6 pt-28 text-[#101b33]"
+// >
+//   {/* decorative dots */}
+//   <div className="absolute right-10 top-36 grid grid-cols-8 gap-3 opacity-50">
+//     {Array.from({ length: 48 }).map((_, i) => (
+//       <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
+//     ))}
+//   </div>
+
+//   <span className="absolute left-[28%] top-[23%] text-4xl text-[#d6a778]">✦</span>
+
+//   <div className="relative z-10 mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-10 md:grid-cols-2">
+//     {/* Left text */}
+//     <div>
+//       <div className="mb-8 flex items-center gap-4">
+//         <p className="text-sm font-semibold uppercase tracking-[0.45em]">
+//           Hello, I’m
+//         </p>
+//         <span className="h-px w-32 bg-[#d6a778]" />
+//       </div>
+
+//       <h1 className="font-serif text-6xl leading-[0.95] tracking-tight md:text-8xl">
+//         Dian Ayu <br />
+//         <span className="text-[#7b1e3a]">Fauziah</span>
+//       </h1>
+
+//       <p className="mt-8 text-sm font-bold uppercase tracking-[0.22em] md:text-base">
+//         Data Analyst
+//         <span className="mx-3 text-[#d6a778]">|</span>
+//         Data Science Graduate
+//       </p>
+
+//       <div className="mt-10 h-px w-24 bg-[#d6a778]" />
+
+//       <div className="mt-10 flex flex-wrap gap-5">
+//         <a
+//           href="#data-projects"
+//           className="inline-flex items-center gap-4 rounded-lg bg-[#7b1e3a] px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition hover:-translate-y-1 hover:bg-[#101b33]"
+//         >
+//           View Data Projects <span>→</span>
+//         </a>
+
+//         <a
+//           href="#creative-pr"
+//           className="inline-flex items-center gap-4 rounded-lg border border-[#7b1e3a] px-8 py-4 text-sm font-bold uppercase tracking-widest text-[#7b1e3a] transition hover:-translate-y-1 hover:bg-[#7b1e3a] hover:text-white"
+//         >
+//           Creative Works <span>→</span>
+//         </a>
+//       </div>
+
+//       <div className="mt-14 flex items-center gap-3 text-sm text-[#101b33]/70">
+//         <div className="relative h-10 w-6 rounded-full border border-[#7b1e3a]">
+//           <span className="absolute left-1/2 top-2 h-2 w-1 -translate-x-1/2 animate-bounce rounded-full bg-[#7b1e3a]" />
+//         </div>
+//         <span>Scroll to explore</span>
+//       </div>
+//     </div>
+
+//     {/* Right visual */}
+//     <div className="relative flex justify-center md:justify-end">
+//       <div className="relative h-[620px] w-[560px]">
+//         {/* soft pink blob */}
+//         <div className="absolute bottom-[70px] right-[40px] h-[430px] w-[360px] rounded-t-full rounded-b-[45%] bg-[#e8cbc8]/85 shadow-[0_30px_80px_rgba(123,30,58,0.12)]" />
+
+//         {/* gold circle */}
+//         <div className="absolute bottom-[120px] right-[15px] h-[430px] w-[430px] rounded-full border border-[#d6a778]/80" />
+
+//         {/* navy curve */}
+//         <div className="absolute bottom-0 right-[-170px] h-[260px] w-[760px] rounded-tl-[100%] bg-[#101b33]" />
+
+//         {/* photo */}
+//         <img
+//           src={aku2}
+//           alt="Dian Ayu Fauziah"
+//           className="absolute bottom-0 right-[70px] z-30 h-[590px] w-auto object-contain drop-shadow-2xl"
+//         />
+
+//         {/* stars */}
+//         <span className="absolute right-[40px] top-[110px] z-20 text-5xl text-[#7b1e3a]">✦</span>
+//         <span className="absolute right-[-10px] top-[160px] z-20 text-4xl text-[#7b1e3a]">✦</span>
+//       </div>
+//     </div>
+//   </div>
+// </section>
+
+//         <section
+//   id="about"
+//   className="relative overflow-hidden bg-[#fffaf7] px-6 py-24 text-[#101b33]"
+// >
+//   <div className="absolute left-10 top-16 text-4xl text-[#d6a778]/80">✦</div>
+//   <div className="absolute right-12 top-24 grid grid-cols-7 gap-3 opacity-40">
+//     {Array.from({ length: 35 }).map((_, i) => (
+//       <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
+//     ))}
+//   </div>
+
+//   <div className="mx-auto max-w-7xl">
+//     <div className="mb-14">
+//       <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#7b1e3a]">
+//         About Me
+//       </p>
+
+//       <h2 className="mt-4 font-serif text-4xl leading-tight text-[#101b33] md:text-6xl">
+//         A data-driven thinker with a creative communication mindset.
+//       </h2>
+//     </div>
+
+//     <div className="grid gap-8 lg:grid-cols-3">
+//       <div className="rounded-[2rem] border border-[#eadbc8] bg-white/75 p-8 shadow-soft lg:col-span-2">
+//         <p className="text-lg leading-relaxed text-[#3f4658]">
+//           I am an undergraduate Data Science student at State University of
+//           Surabaya with interests in data analytics, digital public service,
+//           public relations, and creative problem-solving.
+//         </p>
+
+//         <p className="mt-5 text-lg leading-relaxed text-[#3f4658]">
+//           My work combines analytical thinking and communication strategy to
+//           turn data, ideas, and community-driven initiatives into meaningful
+//           insights and impactful stories.
+//         </p>
+
+//         <div className="mt-8 grid gap-4 sm:grid-cols-3">
+//           <div className="rounded-2xl bg-[#f8efe3] p-5">
+//             <p className="text-3xl font-serif text-[#7b1e3a]">01</p>
+//             <p className="mt-2 text-sm font-semibold uppercase tracking-widest">
+//               Data
+//             </p>
+//           </div>
+
+//           <div className="rounded-2xl bg-[#f8efe3] p-5">
+//             <p className="text-3xl font-serif text-[#7b1e3a]">02</p>
+//             <p className="mt-2 text-sm font-semibold uppercase tracking-widest">
+//               Communication
+//             </p>
+//           </div>
+
+//           <div className="rounded-2xl bg-[#f8efe3] p-5">
+//             <p className="text-3xl font-serif text-[#7b1e3a]">03</p>
+//             <p className="mt-2 text-sm font-semibold uppercase tracking-widest">
+//               Creativity
+//             </p>
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className="rounded-[2rem] border border-[#eadbc8] bg-[#101b33] p-8 text-white shadow-soft">
+//         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#d6a778]">
+//           Focus Areas
+//         </p>
+
+//         <div className="mt-8 space-y-4">
+//           {[
+//             'Data Analysis',
+//             'Machine Learning',
+//             'Public Relations',
+//             'Creative Strategy',
+//             'Digital Public Service',
+//           ].map((item) => (
+//             <div
+//               key={item}
+//               className="rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm"
+//             >
+//               {item}
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </section>
+
+//         {/* <section
+//   id="data-projects"
+//   className="px-6 py-24 bg-[#f8f5f2]"
+// >
+//   <div className="mx-auto max-w-7xl">
+//     <div className="mb-16 text-center">
+//       <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-[#fff] px-4 py-2 text-sm font-medium text-[#7b1e3a]">
+//         Technical Portfolio
+//       </span>
+
+//       <h2 className="mt-5 font-serif text-4xl md:text-5xl text-[#1f2a44]">
+//         Data Science & Tech Projects
+//       </h2>
+
+//       <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
+//         Exploring analytics, visualization, machine learning, and digital product development through meaningful projects.
+//       </p>
+//     </div>
+
+//     <div className="grid gap-8 md:grid-cols-2">
+//       {dataProjects.map((project) => (
+//         <motion.article
+//           {...fadeUp}
+//           key={project.id}
+//           className="group overflow-hidden rounded-3xl border border-[#eadbc8] bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
+//         >
+//           <div className="relative overflow-hidden">
+//             <img
+//               src={project.image}
+//               alt={project.title}
+//               className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+//             />
+
+//             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+
+//             {project.status && (
+//               <div className="absolute right-4 top-4 rounded-full bg-[#7b1e3a] px-3 py-1 text-xs font-semibold text-white">
+//                 {project.status}
+//               </div>
+//             )}
+//           </div>
+
+//           <div className="p-7">
+//             <span className="rounded-full border border-[#7b1e3a]/20 px-3 py-1 text-xs text-[#7b1e3a]">
+//               {project.category}
+//             </span>
+
+//             <h3 className="mt-4 font-serif text-3xl text-[#1f2a44]">
+//               {project.title}
+//             </h3>
+
+//             <p className="mt-4 leading-relaxed text-mediumBrown">
+//               {project.description}
+//             </p>
+
+//             <div className="mt-6 flex flex-wrap gap-2">
+//               {project.tags.map((tag) => (
+//                 <span
+//                   key={tag}
+//                   className="rounded-full bg-[#f4e7d5] px-3 py-1 text-xs font-medium text-[#1f2a44]"
+//                 >
+//                   {tag}
+//                 </span>
+//               ))}
+//             </div>
+
+//             <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
+//               <p className="text-sm italic text-mediumBrown">
+//                 {project.details}
+//               </p>
+
+//               {project.linkGithub && (
+//                 <div className="mt-4 flex gap-3">
+//                   <a
+//                     href={project.linkGithub}
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                     className="rounded-full border border-[#1f2a44]/20 bg-white px-5 py-2 text-sm font-semibold text-[#1f2a44] transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
+//                   >
+//                     {project.buttonText || 'View Project'} ↗
+//                   </a>
+//                 </div>
+//               )}
+//             </div>
+//           </div>
+//         </motion.article>
+//       ))}
+//     </div>
+//   </div>
+// </section> */}
+        
+//         <section
+//   id="data-projects"
+//   className="px-6 py-24 bg-[#f8f5f2]"
+// >
+//   <div className="mx-auto max-w-7xl">
+//     <div className="mb-16 text-center">
+//       <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-[#fff] px-4 py-2 text-sm font-medium text-[#7b1e3a]">
+//         Technical Portfolio
+//       </span>
+
+//       <h2 className="mt-5 font-serif text-4xl md:text-5xl text-[#1f2a44]">
+//         Data Science & Tech Projects
+//       </h2>
+
+//       <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
+//         Exploring analytics, visualization, machine learning, and digital product development through meaningful projects.
+//       </p>
+//     </div>
+
+//     <div className="grid gap-8 md:grid-cols-2">
+//       {dataProjects.map((project, index) => (
+//         <motion.article
+//           {...fadeUp}
+//           key={project.id}
+//           className="group overflow-hidden rounded-3xl border border-[#eadbc8] bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
+//         >
+//           <div className="relative overflow-hidden">
+//             <img
+//               src={project.image}
+//               alt={project.title}
+//               className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+//             />
+
+//             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+
+//             {project.status && (
+//               <div className="absolute right-4 top-4 rounded-full bg-[#7b1e3a] px-3 py-1 text-xs font-semibold text-white">
+//                 {project.status}
+//               </div>
+//             )}
+//           </div>
+
+//           <div className="p-7">
+//             <span className="rounded-full border border-[#7b1e3a]/20 px-3 py-1 text-xs text-[#7b1e3a]">
+//               {project.category}
+//             </span>
+
+//             <h3 className="mt-4 font-serif text-3xl text-[#1f2a44]">
+//               {project.title}
+//             </h3>
+
+//             <p className="mt-4 leading-relaxed text-mediumBrown">
+//               {project.description}
+//             </p>
+
+//             <div className="mt-6 flex flex-wrap gap-2">
+//               {project.tags.map((tag) => (
+//                 <span
+//                   key={tag}
+//                   className="rounded-full bg-[#f4e7d5] px-3 py-1 text-xs font-medium text-[#1f2a44]"
+//                 >
+//                   {tag}
+//                 </span>
+//               ))}
+//             {/* </div>
+//             <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
+//               <p className="text-sm italic text-mediumBrown">
+//                 {project.details}
+//               </p>
+  
+//               {project.linkGithub && (
+//                 <div className="mt-4 flex gap-3">
+//                   <a
+//                     href={project.linkGithub}
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                     className="rounded-full border border-[#1f2a44]/20 bg-white px-5 py-2 text-sm font-semibold text-[#1f2a44] transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
+//                   >
+//                     {project.buttonText || 'View Project'} ↗
+//                   </a>
+//                 </div>
+//               )}
+//             </div> */}
+
+//             <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
+//               <p className="text-sm italic text-mediumBrown">
+//                 {project.details}
+//                   <div className="mt-6 flex gap-3">
+ 
+
+//   {project.linkGithub && (
+//     <a
+//       href={project.linkGithub}
+//       target="_blank"
+//       rel="noopener noreferrer"
+//       className="rounded-full border border-[#1f2a44]/20 bg-white px-5 py-2 text-sm font-semibold text-[#1f2a44] transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
+//     >
+//       View Project ↗
+//     </a>
+//   )}
+// </div>  
+//               </p>
+//             </div>
+//           </div>
+//         </motion.article>
+//       ))}
+//     </div>
+//   </div>
+// </section>
+
+//         {/* <section id="creative-pr" className="px-6 py-20 bg-[#fffaf2]">
+//           <div className="mx-auto max-w-6xl"><h2 className="font-serif text-4xl mb-10">Creative & PR</h2><div className="grid gap-6 md:grid-cols-3">{organizationProjects.map((p) => <motion.article {...fadeUp} key={p.title} className="scrapbook-card bg-[#fff3e5] p-6"><h3 className="font-serif text-2xl mb-2">{p.title}</h3><p className="text-sm font-semibold text-accent mb-2">{p.role}</p><p className="text-mediumBrown leading-relaxed">{p.description}</p></motion.article>)}</div></div>
+//         </section> */}
+
+//         <section
+//   className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
+//   id="experience"
+// >
+//   <div className="mx-auto max-w-7xl">
+//     <div className="mb-14 text-center">
+//       <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/60 px-4 py-2 text-sm font-medium text-[#7b1e3a]">
+//         Professional Journey
+//       </span>
+
+//       <h2 className="mt-5 font-serif text-4xl md:text-5xl text-[#1f2a44]">
+//         What I’ve Been Building
+//       </h2>
+
+//       <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
+//         Data, public service, and digital transformation experiences shaped through real projects.
+//       </p>
+//     </div>
+
+//     <div className="space-y-8">
+//       {experiences.map((exp) => (
+//         <motion.article
+//           {...fadeUp}
+//           key={exp.id}
+//           className="overflow-hidden rounded-3xl border border-[#eadbc8] bg-white/85 shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
+//         >
+//           <div className="grid gap-0 md:grid-cols-5">
+//             <div className="flex flex-col items-center justify-center gap-6 bg-[#f8efe3] p-10 md:col-span-2">
+//   <img
+//     src={sealLogo}
+//     alt="SEAL"
+//     className="h-14 object-contain opacity-90 transition hover:opacity-100"
+//   />
+
+//   <span className="text-2xl text-[#7b1e3a]/40">×</span>
+
+//   <img
+//     src={kominfoLogo}
+//     alt="Kominfo Jatim"
+//     className="h-20 object-contain opacity-90 transition hover:opacity-100"
+//   />
+
+//   <span className="text-2xl text-[#7b1e3a]/40">×</span>
+
+//   <img
+//     src={majadigiLogo}
+//     alt="MajaDigi"
+//     className="h-16 object-contain opacity-90 transition hover:opacity-100"
+//   />
+// </div>
+
+//             <div className="p-7 md:col-span-3 md:p-9">
+//               <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
+//                 <div>
+//                   <h3 className="font-serif text-2xl md:text-3xl text-[#1f2a44]">
+//                     {exp.title}
+//                   </h3>
+
+//                   <p className="mt-2 font-semibold text-[#7b1e3a]">
+//                     {exp.company}
+//                   </p>
+//                 </div>
+
+//                 <span className="rounded-full border border-[#7b1e3a]/25 px-3 py-1 text-xs text-[#7b1e3a]">
+//                   {exp.period}
+//                 </span>
+//               </div>
+
+//               <div className="mb-4 flex flex-wrap gap-4 text-sm text-mediumBrown">
+//                 <span className="inline-flex items-center gap-1">
+//                   <MapPin size={14} />
+//                   {exp.location}
+//                 </span>
+//               </div>
+
+//               <p className="mb-4 italic text-[#7b1e3a]">
+//                 “{exp.vibe}”
+//               </p>
+
+//               <p className="leading-relaxed text-mediumBrown">
+//                 {exp.description}
+//               </p>
+
+//               {exp.projectLink && (
+//                 <a
+//                   href={exp.projectLink}
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                   className="mt-6 inline-flex items-center rounded-full border border-[#7b1e3a]/20 px-4 py-2 text-sm text-[#7b1e3a] transition hover:bg-[#7b1e3a] hover:text-white"
+//                 >
+//                   Visit Project ↗
+//                 </a>
+//               )}
+
+//               <div className="mt-6 grid gap-3 sm:grid-cols-2">
+//                 {exp.highlights.map((item) => (
+//                   <div
+//                     key={item}
+//                     className="rounded-2xl bg-[#f8efe3] px-4 py-3 text-sm font-medium text-[#1f2a44]"
+//                   >
+//                     {item}
+//                   </div>
+//                 ))}
+//               </div>
+//             </div>
+//           </div>
+//         </motion.article>
+//       ))}
+//     </div>
+//   </div>
+// </section>
+        
+//         <section
+//   id="creative-pr"
+//   className="px-6 py-24 bg-gradient-to-b from-[#f8f5f2] to-[#efe4d1]"
+// >
+//   <div className="mx-auto max-w-6xl">
+//     <motion.div {...fadeUp} className="mb-20 text-center">
+//       <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
+//         ✨ Creative Portfolio
+//       </span>
+
+//       <h2 className="mt-6 font-serif text-5xl text-[#1f2a44]">
+//         Public Relations & Creative Work
+//       </h2>
+
+//       <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-mediumBrown">
+//         Combining communication, leadership, creativity, and strategic thinking
+//         through organizational and innovation-driven experiences.
+//       </p>
+//     </motion.div>
+
+//     <div className="space-y-10">
+//       {organizationProjects.map((work) => (
+//         <motion.article
+//           {...fadeUp}
+//           key={work.id}
+//           className={`group overflow-hidden rounded-[2rem] border border-[#d7c2b0] bg-white/70 shadow-soft backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl ${
+//             work.highlight ? 'ring-2 ring-[#7b1e3a]/30' : ''
+//           }`}
+//         >
+//           <div className="flex flex-col md:flex-row items-start">
+//             <div className="relative overflow-hidden md:w-[380px] flex-shrink-0">
+//               <img
+//                 src={work.image}
+//                 alt={work.title}
+//                 className="w-full rounded-l-[2rem] object-cover"
+//               />
+
+//               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+
+//               {work.highlight && (
+//                 <div className="absolute left-4 top-4 rounded-full bg-[#7b1e3a] px-4 py-1 text-xs font-semibold text-white">
+//                   Featured Project
+//                 </div>
+//               )}
+//             </div>
+
+//             <div className="p-8 md:col-span-2 md:p-10">
+//               <div className="flex flex-wrap items-start justify-between gap-4">
+//                 <div>
+//                   <h3 className="font-serif text-4xl text-[#1f2a44] transition group-hover:text-[#7b1e3a]">
+//                     {work.title}
+//                   </h3>
+
+//                   <p className="mt-3 text-lg font-semibold text-[#7b1e3a]">
+//                     {work.organization}
+//                   </p>
+//                 </div>
+
+//                 <span className="rounded-full border border-[#7b1e3a]/30 px-4 py-2 text-sm text-[#7b1e3a]">
+//                   {work.period}
+//                 </span>
+//               </div>
+
+//               <p className="mt-8 text-lg leading-relaxed text-mediumBrown">
+//                 {work.description}
+//               </p>
+
+// <div className="mt-6 flex flex-wrap gap-3 text-sm">
+//   {work.tags.map((tag, idx) => (
+//     <span
+//       key={idx}
+//       className="rounded-full bg-[#f7edf0] px-4 py-2 text-[#7b1e3a]"
+//     >
+//       {tag}
+//     </span>
+//   ))}
+// </div>
+// {work.link && (
+//   <a
+//     href={work.link}
+//     target="_blank"
+//     rel="noopener noreferrer"
+//     className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#7b1e3a] px-5 py-3 text-sm font-medium text-white transition hover:-translate-y-1 hover:bg-[#5e162d]"
+//   >
+//     <ShoppingBag size={18} />
+//     Shop Product
+//   </a>
+// )}
+//               {/* <div className="mt-8">
+//                 <h4 className="mb-4 text-lg font-semibold text-[#1f2a44]">
+//                   Key Contributions
+//                 </h4>
+
+//                 <ul className="space-y-3 text-mediumBrown">
+//                   {work.responsibilities.map((item) => (
+//                     <li key={item}>• {item}</li>
+//                   ))}
+//                 </ul>
+//               </div> */}
+
+//               {/* <div className="mt-8 flex flex-wrap gap-3">
+//                 {work.tags.map((tag) => (
+//                   <span
+//                     key={tag}
+//                     className="rounded-full bg-[#f3e6e0] px-4 py-2 text-sm text-[#7b1e3a]"
+//                   >
+//                     {tag}
+//                   </span>
+//                 ))}
+//               </div> */}
+//             </div>
+//           </div>
+//         </motion.article>
+//       ))}
+//     </div>
+//   </div>
+// </section>
+
+//       <section
+//   id="communication"
+//   className="bg-[#fffaf7] px-6 py-24"
+// >
+//   <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
+
+//     {/* LEFT TEXT */}
+//     <div>
+//       <p className="text-sm font-bold uppercase tracking-[0.45em] text-[#7b1e3a]">
+//         Beyond The Numbers
+//       </p>
+
+//       <h2 className="mt-5 font-serif text-5xl leading-tight text-[#1f2a44] md:text-6xl">
+//         Speaking, Leading,
+//         <br />
+//         & Connecting
+//       </h2>
+
+//       <p className="mt-6 max-w-xl leading-relaxed text-mediumBrown">
+//         Through public speaking, moderating, event handling, and team
+//         collaboration, I learned how to turn ideas into meaningful experiences
+//         for people.
+//       </p>
+
+      
+//     </div>
+
+//     {/* RIGHT PHOTOS */}
+//     <div className="relative flex flex-wrap items-start justify-center gap-8 border-t-2 border-[#c8a27a] pt-14">
+
+//       {/* PHOTO 1 */}
+//       <div className="relative transition duration-300 hover:-translate-y-2 hover:rotate-0">
+//         <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+
+//         <img
+//           src={mcDuduk}
+//           alt=""
+//           className="h-[260px] w-[220px] rotate-[-4deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
+//         />
+//       </div>
+
+//       {/* PHOTO 2 */}
+//       <div className="relative mt-10 transition duration-300 hover:-translate-y-2 hover:rotate-0">
+//         <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+
+//         <img
+//           src={mcWmk}
+//           alt=""
+//           className="h-[300px] w-[240px] rotate-[5deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
+//         />
+//       </div>
+
+//       {/* PHOTO 3 */}
+//       <div className="relative transition duration-300 hover:-translate-y-2 hover:rotate-0">
+//         <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+
+//         <img
+//           src={mcDiskusi}
+//           alt=""
+//           className="h-[240px] w-[210px] rotate-[-3deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
+//         />
+//       </div>
+
+//       {/* PHOTO 4 */}
+//       <div className="relative mt-8 transition duration-300 hover:-translate-y-2 hover:rotate-0">
+//         <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+
+//         <img
+//           src={mcStage}
+//           alt=""
+//           className="h-[280px] w-[220px] rotate-[4deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
+//         />
+//       </div>
+//     </div>
+//   </div>
+// </section>
+        
+//         <section
+//   id="skills"
+//   className="relative overflow-hidden bg-[#fffaf7] px-6 py-24 text-[#101b33]"
+// >
+//   <div className="absolute right-12 top-24 grid grid-cols-7 gap-3 opacity-40">
+//     {Array.from({ length: 35 }).map((_, i) => (
+//       <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
+//     ))}
+//   </div>
+
+//   <div className="mx-auto max-w-7xl">
+//     <div className="mb-14">
+//       <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#7b1e3a]">
+//         Skills
+//       </p>
+
+//       <h2 className="mt-4 font-serif text-4xl md:text-6xl">
+//         Tools I use to turn ideas into meaningful work.
+//       </h2>
+//     </div>
+
+//     <div className="grid gap-8 md:grid-cols-2">
+//       {[
+//         {
+//           title: 'Data Analysis',
+//           desc: 'Data processing & machine learning',
+//           tools: [
+//             { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+//             { name: 'SQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+//             { name: 'R', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg' },
+//             { name: 'Excel', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftexcel.svg' }
+//           ],
+//         },
+//         {
+//           title: 'Data Visualization',
+//           desc: 'Dashboard & reporting tools',
+//           tools: [
+//             { name: 'Tableau', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tableau.svg' },
+//             { name: 'Power BI', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/powerbi.svg' },
+//             { name: 'Looker Studio', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/looker.svg' },
+//             { name: 'Metabase', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/metabase.svg' },
+//             { name: 'Google Colab', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecolab/googlecolab-original.svg' },
+//           ],
+//         },
+//         {
+//           title: 'Design & Creativity',
+//           desc: 'Visual communication & branding',
+//           tools: [
+//             { name: 'Canva', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/canva.svg' },
+//             { name: 'Figma', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
+//           ],
+//         },
+//         {
+//           title: 'Productivity Tools',
+//           desc: 'Daily workflow & collaboration',
+//           tools: [
+//             { name: 'Excel', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftexcel.svg' },
+//             { name: 'Word', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftword.svg' },
+//             { name: 'Access', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftaccess.svg' },
+//             { name: 'Google Sheets', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlesheets.svg' },
+//             { name: 'Google Docs', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googledocs.svg' },
+//           ],
+//         },
+//       ].map((group) => (
+//         <div
+//           key={group.title}
+//           className="rounded-[2rem] border border-[#eadbc8] bg-white/75 p-8 shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
+//         >
+//           <h3 className="font-serif text-3xl text-[#101b33]">
+//             {group.title}
+//           </h3>
+
+//           <p className="mt-2 text-mediumBrown">
+//             {group.desc}
+//           </p>
+
+//           <div className="mt-8 grid grid-cols-3 gap-5 sm:grid-cols-4">
+//             {group.tools.map((tool) => (
+//               <div
+//                 key={tool.name}
+//                 className="group flex flex-col items-center justify-center rounded-2xl bg-[#f8efe3] p-5 transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
+//               >
+//                 <img
+//                   src={tool.logo}
+//                   alt={tool.name}
+//                   className="h-10 w-10 object-contain opacity-80 transition group-hover:opacity-100"
+//                 />
+
+//                 <p className="mt-3 text-center text-xs font-semibold text-[#7b1e3a]">
+//                   {tool.name}
+//                 </p>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       ))}
+//     </div>
+//   </div>
+// </section>
+
+//         <section
+//   id="learning"
+//   className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
+// >
+//   <div className="mx-auto max-w-6xl">
+//     <motion.div {...fadeUp} className="mb-16 text-center">
+//       <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
+//         ✨ Continuous Learning
+//       </span>
+
+//       <h2 className="mt-6 font-serif text-5xl text-[#1f2a44]">
+//         Learning & Certifications
+//       </h2>
+
+//       <p className="mx-auto mt-5 max-w-2xl text-lg text-mediumBrown">
+//         A curated stack of certifications that support my growth in data,
+//         technology, and digital problem-solving.
+//       </p>
+//     </motion.div>
+
+//     <div className="grid items-center gap-10 lg:grid-cols-2">
+//       <div className="relative mx-auto h-[390px] w-full max-w-md">
+//         {certificates.map((cert, index) => {
+//           const position =
+//             (index - selectedProject + certificates.length) %
+//             certificates.length
+
+//           return (
+//             <motion.div
+//               key={cert.title}
+//               onClick={() => setSelectedProject(index)}
+//               className="absolute inset-0 cursor-pointer overflow-hidden rounded-[2rem] border border-[#d7c2b0] bg-white shadow-soft"
+//               animate={{
+//                 x: position * 18,
+//                 y: position * 16,
+//                 rotate: position * 3,
+//                 scale: position === 0 ? 1 : 0.94,
+//                 opacity: position === 0 ? 1 : 0.45,
+//                 zIndex: certificates.length - position,
+//               }}
+//               transition={{ duration: 0.3 }}
+//             >
+//               <img
+//                 src={cert.image}
+//                 alt={cert.title}
+//                 className="h-full w-full object-cover object-top"
+//               />
+
+//               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#101b33]/90 to-transparent p-6">
+//                 <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#7b1e3a]">
+//                   {cert.year}
+//                 </span>
+
+//                 <h3 className="mt-3 font-serif text-2xl text-white">
+//                   {cert.title}
+//                 </h3>
+
+//                 <p className="mt-1 text-sm font-semibold text-white/80">
+//                   {cert.issuer}
+//                 </p>
+//               </div>
+//             </motion.div>
+//           )
+//         })}
+//       </div>
+
+//       <div>
+//         <h3 className="font-serif text-4xl text-[#1f2a44]">
+//           {certificates[selectedProject]?.title}
+//         </h3>
+
+//         <p className="mt-3 text-xl font-semibold text-[#7b1e3a]">
+//           {certificates[selectedProject]?.issuer}
+//         </p>
+
+//         <p className="mt-5 leading-relaxed text-mediumBrown">
+//           This certification represents my continuous learning journey in data,
+//           technology, AI, and digital problem-solving.
+//         </p>
+
+//         <div className="mt-6 flex flex-wrap gap-2">
+//           {certificates[selectedProject]?.skills.map((skill) => (
+//             <span
+//               key={skill}
+//               className="rounded-full bg-white/70 px-4 py-2 text-sm text-[#7b1e3a]"
+//             >
+//               {skill}
+//             </span>
+//           ))}
+//         </div>
+
+//         <div className="mt-8 flex gap-3">
+//           <button
+//             type="button"
+//             onClick={() =>
+//               setSelectedProject((prev) =>
+//                 prev === 0 ? certificates.length - 1 : prev - 1
+//               )
+//             }
+//             className="rounded-full border border-[#7b1e3a]/30 bg-white px-5 py-3 text-sm font-semibold text-[#7b1e3a] transition hover:-translate-y-1"
+//           >
+//             ← Previous
+//           </button>
+
+//           <button
+//             type="button"
+//             onClick={() =>
+//               setSelectedProject((prev) => (prev + 1) % certificates.length)
+//             }
+//             className="rounded-full bg-[#1f2a44] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-1"
+//           >
+//             Next →
+//           </button>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </section>
+
+        
+//         <section id="contact" className="px-6 py-20 bg-darkBrown text-cream">
+//   <div className="mx-auto max-w-4xl text-center">
+//     <h2 className="font-serif text-4xl md:text-5xl">
+//       Let’s Build Meaningful Projects Together.
+//     </h2>
+
+//     <div className="mt-8 flex flex-wrap justify-center gap-5 text-sm">
+//       <a
+//         className="inline-flex items-center gap-2 hover:opacity-80"
+//         href="mailto:dianayufauziahh@gmail.com"
+//       >
+//         <Mail size={16} />
+//         dianayufauziahh@gmail.com
+//       </a>
+
+//       <a
+//         className="inline-flex items-center gap-2 hover:opacity-80"
+//         href="https://linkedin.com/in/dian-fauziah"
+//         target="_blank"
+//         rel="noopener noreferrer"
+//       >
+//         <Linkedin size={16} />
+//         linkedin.com/in/dian-fauziah
+//       </a>
+
+//       <a
+//         className="inline-flex items-center gap-2 hover:opacity-80"
+//         href="https://github.com/Dianayuww"
+//         target="_blank"
+//         rel="noopener noreferrer"
+//       >
+//         <Github size={16} />
+//         GitHub
+//       </a>
+
+//       <a
+//         className="inline-flex items-center gap-2 hover:opacity-80"
+//         href="#"
+//       >
+//         <Instagram size={16} />
+//         Instagram
+//       </a>
+//     </div>
+
+//     <div className="mt-4 text-sm text-cream/85">
+//       Phone: +62 85184665784
+//     </div>
+
+//     <a
+//       href="https://bit.ly/40t89Ta"
+//       className="mt-8 inline-block rounded-full bg-[#fffaf2] px-7 py-3 text-darkBrown shadow-soft transition hover:-translate-y-0.5"
+//     >
+//       Download CV
+//     </a>
+//   </div>
+// </section>
+//       </main>
+
+//       <footer className="bg-darkBrown/95 py-6 text-center text-xs text-cream/85">© 2026 Dian Ayu Fauziah — Multidisciplinary Portfolio</footer>
+//     </div>
+//   )
+// }  
+
 export default function App() {
   const [selectedProject, setSelectedProject] = useState(null)
   const [activeCertificate, setActiveCertificate] = useState(0)
@@ -309,1023 +1389,799 @@ export default function App() {
       </header>
 
       <main>
-        {/* <section
-  id="home"
-  className="relative min-h-[calc(100vh-4.5rem)] overflow-hidden px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
->
-  <div className="absolute left-10 top-24 h-64 w-64 rounded-full bg-[#7b1e3a]/10 blur-3xl" />
-  <div className="absolute bottom-10 right-10 h-72 w-72 rounded-full bg-[#1f2a44]/10 blur-3xl" />
-
-  <motion.div
-    {...fadeUp}
-    className="relative z-10 mx-auto flex min-h-[75vh] max-w-5xl flex-col items-center justify-center text-center"
-  >
-    <span className="inline-flex items-center gap-2 rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
-      ✨ Welcome to my portfolio
-    </span>
-
-    <h1 className="mt-8 max-w-4xl text-5xl font-bold tracking-tight text-[#1f2a44] md:text-7xl">
-      Dian Ayu Fauziah
-    </h1>
-
-    <p className="mt-6 max-w-3xl text-xl leading-relaxed text-mediumBrown md:text-2xl">
-      Data Analyst | Data Science Graduate
-    </p>
-
-    <p className="mt-5 text-base font-medium text-[#7b1e3a]">
-      Data Science • State University of Surabaya
-    </p>
-
-
-    <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-      <a
-        href="#data-projects"
-        className="rounded-full bg-[#1f2a44] px-8 py-3 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-1 hover:bg-[#283a5f]"
-      >
-        View Data Projects →
-      </a>
-
-      <a
-        href="#creative-pr"
-        className="rounded-full border border-[#7b1e3a]/40 bg-white/70 px-8 py-3 text-sm font-semibold text-[#7b1e3a] shadow-soft transition hover:-translate-y-1 hover:bg-white"
-      >
-        View Creative & PR Works →
-      </a>
-    </div>
-
-    <a
-      href="#about"
-      className="mt-12 flex h-10 w-6 items-start justify-center rounded-full border-2 border-[#7b1e3a]/30 p-1"
-      aria-label="Scroll to about section"
-    >
-      <span className="h-2 w-2 animate-bounce rounded-full bg-[#7b1e3a]" />
-    </a>
-  </motion.div>
-</section>  */}
+        {/* HERO SECTION */}
         <section
-  id="home"
-  className="relative min-h-screen overflow-hidden bg-[#fffaf7] px-6 pt-28 text-[#101b33]"
->
-  {/* decorative dots */}
-  <div className="absolute right-10 top-36 grid grid-cols-8 gap-3 opacity-50">
-    {Array.from({ length: 48 }).map((_, i) => (
-      <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
-    ))}
-  </div>
-
-  <span className="absolute left-[28%] top-[23%] text-4xl text-[#d6a778]">✦</span>
-
-  <div className="relative z-10 mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-10 md:grid-cols-2">
-    {/* Left text */}
-    <div>
-      <div className="mb-8 flex items-center gap-4">
-        <p className="text-sm font-semibold uppercase tracking-[0.45em]">
-          Hello, I’m
-        </p>
-        <span className="h-px w-32 bg-[#d6a778]" />
-      </div>
-
-      <h1 className="font-serif text-6xl leading-[0.95] tracking-tight md:text-8xl">
-        Dian Ayu <br />
-        <span className="text-[#7b1e3a]">Fauziah</span>
-      </h1>
-
-      <p className="mt-8 text-sm font-bold uppercase tracking-[0.22em] md:text-base">
-        Data Analyst
-        <span className="mx-3 text-[#d6a778]">|</span>
-        Data Science Graduate
-      </p>
-
-      <div className="mt-10 h-px w-24 bg-[#d6a778]" />
-
-      <div className="mt-10 flex flex-wrap gap-5">
-        <a
-          href="#data-projects"
-          className="inline-flex items-center gap-4 rounded-lg bg-[#7b1e3a] px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition hover:-translate-y-1 hover:bg-[#101b33]"
+          id="home"
+          className="relative min-h-screen overflow-hidden bg-[#fffaf7] px-6 pt-28 text-[#101b33]"
         >
-          View Data Projects <span>→</span>
-        </a>
-
-        <a
-          href="#creative-pr"
-          className="inline-flex items-center gap-4 rounded-lg border border-[#7b1e3a] px-8 py-4 text-sm font-bold uppercase tracking-widest text-[#7b1e3a] transition hover:-translate-y-1 hover:bg-[#7b1e3a] hover:text-white"
-        >
-          Creative Works <span>→</span>
-        </a>
-      </div>
-
-      <div className="mt-14 flex items-center gap-3 text-sm text-[#101b33]/70">
-        <div className="relative h-10 w-6 rounded-full border border-[#7b1e3a]">
-          <span className="absolute left-1/2 top-2 h-2 w-1 -translate-x-1/2 animate-bounce rounded-full bg-[#7b1e3a]" />
-        </div>
-        <span>Scroll to explore</span>
-      </div>
-    </div>
-
-    {/* Right visual */}
-    <div className="relative flex justify-center md:justify-end">
-      <div className="relative h-[620px] w-[560px]">
-        {/* soft pink blob */}
-        <div className="absolute bottom-[70px] right-[40px] h-[430px] w-[360px] rounded-t-full rounded-b-[45%] bg-[#e8cbc8]/85 shadow-[0_30px_80px_rgba(123,30,58,0.12)]" />
-
-        {/* gold circle */}
-        <div className="absolute bottom-[120px] right-[15px] h-[430px] w-[430px] rounded-full border border-[#d6a778]/80" />
-
-        {/* navy curve */}
-        <div className="absolute bottom-0 right-[-170px] h-[260px] w-[760px] rounded-tl-[100%] bg-[#101b33]" />
-
-        {/* photo */}
-        <img
-          src={aku2}
-          alt="Dian Ayu Fauziah"
-          className="absolute bottom-0 right-[70px] z-30 h-[590px] w-auto object-contain drop-shadow-2xl"
-        />
-
-        {/* stars */}
-        <span className="absolute right-[40px] top-[110px] z-20 text-5xl text-[#7b1e3a]">✦</span>
-        <span className="absolute right-[-10px] top-[160px] z-20 text-4xl text-[#7b1e3a]">✦</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-        <section
-  id="about"
-  className="relative overflow-hidden bg-[#fffaf7] px-6 py-24 text-[#101b33]"
->
-  <div className="absolute left-10 top-16 text-4xl text-[#d6a778]/80">✦</div>
-  <div className="absolute right-12 top-24 grid grid-cols-7 gap-3 opacity-40">
-    {Array.from({ length: 35 }).map((_, i) => (
-      <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
-    ))}
-  </div>
-
-  <div className="mx-auto max-w-7xl">
-    <div className="mb-14">
-      <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#7b1e3a]">
-        About Me
-      </p>
-
-      <h2 className="mt-4 font-serif text-4xl leading-tight text-[#101b33] md:text-6xl">
-        A data-driven thinker with a creative communication mindset.
-      </h2>
-    </div>
-
-    <div className="grid gap-8 lg:grid-cols-3">
-      <div className="rounded-[2rem] border border-[#eadbc8] bg-white/75 p-8 shadow-soft lg:col-span-2">
-        <p className="text-lg leading-relaxed text-[#3f4658]">
-          I am an undergraduate Data Science student at State University of
-          Surabaya with interests in data analytics, digital public service,
-          public relations, and creative problem-solving.
-        </p>
-
-        <p className="mt-5 text-lg leading-relaxed text-[#3f4658]">
-          My work combines analytical thinking and communication strategy to
-          turn data, ideas, and community-driven initiatives into meaningful
-          insights and impactful stories.
-        </p>
-
-        <div className="mt-8 grid gap-4 sm:grid-cols-3">
-          <div className="rounded-2xl bg-[#f8efe3] p-5">
-            <p className="text-3xl font-serif text-[#7b1e3a]">01</p>
-            <p className="mt-2 text-sm font-semibold uppercase tracking-widest">
-              Data
-            </p>
-          </div>
-
-          <div className="rounded-2xl bg-[#f8efe3] p-5">
-            <p className="text-3xl font-serif text-[#7b1e3a]">02</p>
-            <p className="mt-2 text-sm font-semibold uppercase tracking-widest">
-              Communication
-            </p>
-          </div>
-
-          <div className="rounded-2xl bg-[#f8efe3] p-5">
-            <p className="text-3xl font-serif text-[#7b1e3a]">03</p>
-            <p className="mt-2 text-sm font-semibold uppercase tracking-widest">
-              Creativity
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="rounded-[2rem] border border-[#eadbc8] bg-[#101b33] p-8 text-white shadow-soft">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#d6a778]">
-          Focus Areas
-        </p>
-
-        <div className="mt-8 space-y-4">
-          {[
-            'Data Analysis',
-            'Machine Learning',
-            'Public Relations',
-            'Creative Strategy',
-            'Digital Public Service',
-          ].map((item) => (
-            <div
-              key={item}
-              className="rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm"
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-        {/* <section
-  id="data-projects"
-  className="px-6 py-24 bg-[#f8f5f2]"
->
-  <div className="mx-auto max-w-7xl">
-    <div className="mb-16 text-center">
-      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-[#fff] px-4 py-2 text-sm font-medium text-[#7b1e3a]">
-        Technical Portfolio
-      </span>
-
-      <h2 className="mt-5 font-serif text-4xl md:text-5xl text-[#1f2a44]">
-        Data Science & Tech Projects
-      </h2>
-
-      <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
-        Exploring analytics, visualization, machine learning, and digital product development through meaningful projects.
-      </p>
-    </div>
-
-    <div className="grid gap-8 md:grid-cols-2">
-      {dataProjects.map((project) => (
-        <motion.article
-          {...fadeUp}
-          key={project.id}
-          className="group overflow-hidden rounded-3xl border border-[#eadbc8] bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
-        >
-          <div className="relative overflow-hidden">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
-            />
-
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-
-            {project.status && (
-              <div className="absolute right-4 top-4 rounded-full bg-[#7b1e3a] px-3 py-1 text-xs font-semibold text-white">
-                {project.status}
-              </div>
-            )}
-          </div>
-
-          <div className="p-7">
-            <span className="rounded-full border border-[#7b1e3a]/20 px-3 py-1 text-xs text-[#7b1e3a]">
-              {project.category}
-            </span>
-
-            <h3 className="mt-4 font-serif text-3xl text-[#1f2a44]">
-              {project.title}
-            </h3>
-
-            <p className="mt-4 leading-relaxed text-mediumBrown">
-              {project.description}
-            </p>
-
-            <div className="mt-6 flex flex-wrap gap-2">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full bg-[#f4e7d5] px-3 py-1 text-xs font-medium text-[#1f2a44]"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
-              <p className="text-sm italic text-mediumBrown">
-                {project.details}
-              </p>
-
-              {project.linkGithub && (
-                <div className="mt-4 flex gap-3">
-                  <a
-                    href={project.linkGithub}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full border border-[#1f2a44]/20 bg-white px-5 py-2 text-sm font-semibold text-[#1f2a44] transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
-                  >
-                    {project.buttonText || 'View Project'} ↗
-                  </a>
-                </div>
-              )}
-            </div>
-          </div>
-        </motion.article>
-      ))}
-    </div>
-  </div>
-</section> */}
-        
-        <section
-  id="data-projects"
-  className="px-6 py-24 bg-[#f8f5f2]"
->
-  <div className="mx-auto max-w-7xl">
-    <div className="mb-16 text-center">
-      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-[#fff] px-4 py-2 text-sm font-medium text-[#7b1e3a]">
-        Technical Portfolio
-      </span>
-
-      <h2 className="mt-5 font-serif text-4xl md:text-5xl text-[#1f2a44]">
-        Data Science & Tech Projects
-      </h2>
-
-      <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
-        Exploring analytics, visualization, machine learning, and digital product development through meaningful projects.
-      </p>
-    </div>
-
-    <div className="grid gap-8 md:grid-cols-2">
-      {dataProjects.map((project, index) => (
-        <motion.article
-          {...fadeUp}
-          key={project.id}
-          className="group overflow-hidden rounded-3xl border border-[#eadbc8] bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
-        >
-          <div className="relative overflow-hidden">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
-            />
-
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-
-            {project.status && (
-              <div className="absolute right-4 top-4 rounded-full bg-[#7b1e3a] px-3 py-1 text-xs font-semibold text-white">
-                {project.status}
-              </div>
-            )}
-          </div>
-
-          <div className="p-7">
-            <span className="rounded-full border border-[#7b1e3a]/20 px-3 py-1 text-xs text-[#7b1e3a]">
-              {project.category}
-            </span>
-
-            <h3 className="mt-4 font-serif text-3xl text-[#1f2a44]">
-              {project.title}
-            </h3>
-
-            <p className="mt-4 leading-relaxed text-mediumBrown">
-              {project.description}
-            </p>
-
-            <div className="mt-6 flex flex-wrap gap-2">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full bg-[#f4e7d5] px-3 py-1 text-xs font-medium text-[#1f2a44]"
-                >
-                  {tag}
-                </span>
-              ))}
-            {/* </div>
-            <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
-              <p className="text-sm italic text-mediumBrown">
-                {project.details}
-              </p>
-  
-              {project.linkGithub && (
-                <div className="mt-4 flex gap-3">
-                  <a
-                    href={project.linkGithub}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full border border-[#1f2a44]/20 bg-white px-5 py-2 text-sm font-semibold text-[#1f2a44] transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
-                  >
-                    {project.buttonText || 'View Project'} ↗
-                  </a>
-                </div>
-              )}
-            </div> */}
-
-            <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
-              <p className="text-sm italic text-mediumBrown">
-                {project.details}
-                  <div className="mt-6 flex gap-3">
- 
-
-  {project.linkGithub && (
-    <a
-      href={project.linkGithub}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="rounded-full border border-[#1f2a44]/20 bg-white px-5 py-2 text-sm font-semibold text-[#1f2a44] transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
-    >
-      View Project ↗
-    </a>
-  )}
-</div>  
-              </p>
-            </div>
-          </div>
-        </motion.article>
-      ))}
-    </div>
-  </div>
-</section>
-
-        {/* <section id="creative-pr" className="px-6 py-20 bg-[#fffaf2]">
-          <div className="mx-auto max-w-6xl"><h2 className="font-serif text-4xl mb-10">Creative & PR</h2><div className="grid gap-6 md:grid-cols-3">{organizationProjects.map((p) => <motion.article {...fadeUp} key={p.title} className="scrapbook-card bg-[#fff3e5] p-6"><h3 className="font-serif text-2xl mb-2">{p.title}</h3><p className="text-sm font-semibold text-accent mb-2">{p.role}</p><p className="text-mediumBrown leading-relaxed">{p.description}</p></motion.article>)}</div></div>
-        </section> */}
-
-        <section
-  className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
-  id="experience"
->
-  <div className="mx-auto max-w-7xl">
-    <div className="mb-14 text-center">
-      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/60 px-4 py-2 text-sm font-medium text-[#7b1e3a]">
-        Professional Journey
-      </span>
-
-      <h2 className="mt-5 font-serif text-4xl md:text-5xl text-[#1f2a44]">
-        What I’ve Been Building
-      </h2>
-
-      <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
-        Data, public service, and digital transformation experiences shaped through real projects.
-      </p>
-    </div>
-
-    <div className="space-y-8">
-      {experiences.map((exp) => (
-        <motion.article
-          {...fadeUp}
-          key={exp.id}
-          className="overflow-hidden rounded-3xl border border-[#eadbc8] bg-white/85 shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
-        >
-          <div className="grid gap-0 md:grid-cols-5">
-            <div className="flex flex-col items-center justify-center gap-6 bg-[#f8efe3] p-10 md:col-span-2">
-  <img
-    src={sealLogo}
-    alt="SEAL"
-    className="h-14 object-contain opacity-90 transition hover:opacity-100"
-  />
-
-  <span className="text-2xl text-[#7b1e3a]/40">×</span>
-
-  <img
-    src={kominfoLogo}
-    alt="Kominfo Jatim"
-    className="h-20 object-contain opacity-90 transition hover:opacity-100"
-  />
-
-  <span className="text-2xl text-[#7b1e3a]/40">×</span>
-
-  <img
-    src={majadigiLogo}
-    alt="MajaDigi"
-    className="h-16 object-contain opacity-90 transition hover:opacity-100"
-  />
-</div>
-
-            <div className="p-7 md:col-span-3 md:p-9">
-              <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
-                <div>
-                  <h3 className="font-serif text-2xl md:text-3xl text-[#1f2a44]">
-                    {exp.title}
-                  </h3>
-
-                  <p className="mt-2 font-semibold text-[#7b1e3a]">
-                    {exp.company}
-                  </p>
-                </div>
-
-                <span className="rounded-full border border-[#7b1e3a]/25 px-3 py-1 text-xs text-[#7b1e3a]">
-                  {exp.period}
-                </span>
-              </div>
-
-              <div className="mb-4 flex flex-wrap gap-4 text-sm text-mediumBrown">
-                <span className="inline-flex items-center gap-1">
-                  <MapPin size={14} />
-                  {exp.location}
-                </span>
-              </div>
-
-              <p className="mb-4 italic text-[#7b1e3a]">
-                “{exp.vibe}”
-              </p>
-
-              <p className="leading-relaxed text-mediumBrown">
-                {exp.description}
-              </p>
-
-              {exp.projectLink && (
-                <a
-                  href={exp.projectLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center rounded-full border border-[#7b1e3a]/20 px-4 py-2 text-sm text-[#7b1e3a] transition hover:bg-[#7b1e3a] hover:text-white"
-                >
-                  Visit Project ↗
-                </a>
-              )}
-
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                {exp.highlights.map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-2xl bg-[#f8efe3] px-4 py-3 text-sm font-medium text-[#1f2a44]"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </motion.article>
-      ))}
-    </div>
-  </div>
-</section>
-        
-        <section
-  id="creative-pr"
-  className="px-6 py-24 bg-gradient-to-b from-[#f8f5f2] to-[#efe4d1]"
->
-  <div className="mx-auto max-w-6xl">
-    <motion.div {...fadeUp} className="mb-20 text-center">
-      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
-        ✨ Creative Portfolio
-      </span>
-
-      <h2 className="mt-6 font-serif text-5xl text-[#1f2a44]">
-        Public Relations & Creative Work
-      </h2>
-
-      <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-mediumBrown">
-        Combining communication, leadership, creativity, and strategic thinking
-        through organizational and innovation-driven experiences.
-      </p>
-    </motion.div>
-
-    <div className="space-y-10">
-      {organizationProjects.map((work) => (
-        <motion.article
-          {...fadeUp}
-          key={work.id}
-          className={`group overflow-hidden rounded-[2rem] border border-[#d7c2b0] bg-white/70 shadow-soft backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl ${
-            work.highlight ? 'ring-2 ring-[#7b1e3a]/30' : ''
-          }`}
-        >
-          <div className="flex flex-col md:flex-row items-start">
-            <div className="relative overflow-hidden md:w-[380px] flex-shrink-0">
-              <img
-                src={work.image}
-                alt={work.title}
-                className="w-full rounded-l-[2rem] object-cover"
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-
-              {work.highlight && (
-                <div className="absolute left-4 top-4 rounded-full bg-[#7b1e3a] px-4 py-1 text-xs font-semibold text-white">
-                  Featured Project
-                </div>
-              )}
-            </div>
-
-            <div className="p-8 md:col-span-2 md:p-10">
-              <div className="flex flex-wrap items-start justify-between gap-4">
-                <div>
-                  <h3 className="font-serif text-4xl text-[#1f2a44] transition group-hover:text-[#7b1e3a]">
-                    {work.title}
-                  </h3>
-
-                  <p className="mt-3 text-lg font-semibold text-[#7b1e3a]">
-                    {work.organization}
-                  </p>
-                </div>
-
-                <span className="rounded-full border border-[#7b1e3a]/30 px-4 py-2 text-sm text-[#7b1e3a]">
-                  {work.period}
-                </span>
-              </div>
-
-              <p className="mt-8 text-lg leading-relaxed text-mediumBrown">
-                {work.description}
-              </p>
-
-<div className="mt-6 flex flex-wrap gap-3 text-sm">
-  {work.tags.map((tag, idx) => (
-    <span
-      key={idx}
-      className="rounded-full bg-[#f7edf0] px-4 py-2 text-[#7b1e3a]"
-    >
-      {tag}
-    </span>
-  ))}
-</div>
-{work.link && (
-  <a
-    href={work.link}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#7b1e3a] px-5 py-3 text-sm font-medium text-white transition hover:-translate-y-1 hover:bg-[#5e162d]"
-  >
-    <ShoppingBag size={18} />
-    Shop Product
-  </a>
-)}
-              {/* <div className="mt-8">
-                <h4 className="mb-4 text-lg font-semibold text-[#1f2a44]">
-                  Key Contributions
-                </h4>
-
-                <ul className="space-y-3 text-mediumBrown">
-                  {work.responsibilities.map((item) => (
-                    <li key={item}>• {item}</li>
-                  ))}
-                </ul>
-              </div> */}
-
-              {/* <div className="mt-8 flex flex-wrap gap-3">
-                {work.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full bg-[#f3e6e0] px-4 py-2 text-sm text-[#7b1e3a]"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div> */}
-            </div>
-          </div>
-        </motion.article>
-      ))}
-    </div>
-  </div>
-</section>
-
-      <section
-  id="communication"
-  className="bg-[#fffaf7] px-6 py-24"
->
-  <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
-
-    {/* LEFT TEXT */}
-    <div>
-      <p className="text-sm font-bold uppercase tracking-[0.45em] text-[#7b1e3a]">
-        Beyond The Numbers
-      </p>
-
-      <h2 className="mt-5 font-serif text-5xl leading-tight text-[#1f2a44] md:text-6xl">
-        Speaking, Leading,
-        <br />
-        & Connecting
-      </h2>
-
-      <p className="mt-6 max-w-xl leading-relaxed text-mediumBrown">
-        Through public speaking, moderating, event handling, and team
-        collaboration, I learned how to turn ideas into meaningful experiences
-        for people.
-      </p>
-
-      
-    </div>
-
-    {/* RIGHT PHOTOS */}
-    <div className="relative flex flex-wrap items-start justify-center gap-8 border-t-2 border-[#c8a27a] pt-14">
-
-      {/* PHOTO 1 */}
-      <div className="relative transition duration-300 hover:-translate-y-2 hover:rotate-0">
-        <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
-
-        <img
-          src={mcDuduk}
-          alt=""
-          className="h-[260px] w-[220px] rotate-[-4deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
-        />
-      </div>
-
-      {/* PHOTO 2 */}
-      <div className="relative mt-10 transition duration-300 hover:-translate-y-2 hover:rotate-0">
-        <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
-
-        <img
-          src={mcWmk}
-          alt=""
-          className="h-[300px] w-[240px] rotate-[5deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
-        />
-      </div>
-
-      {/* PHOTO 3 */}
-      <div className="relative transition duration-300 hover:-translate-y-2 hover:rotate-0">
-        <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
-
-        <img
-          src={mcDiskusi}
-          alt=""
-          className="h-[240px] w-[210px] rotate-[-3deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
-        />
-      </div>
-
-      {/* PHOTO 4 */}
-      <div className="relative mt-8 transition duration-300 hover:-translate-y-2 hover:rotate-0">
-        <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
-
-        <img
-          src={mcStage}
-          alt=""
-          className="h-[280px] w-[220px] rotate-[4deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
-        />
-      </div>
-    </div>
-  </div>
-</section>
-        
-        <section
-  id="skills"
-  className="relative overflow-hidden bg-[#fffaf7] px-6 py-24 text-[#101b33]"
->
-  <div className="absolute right-12 top-24 grid grid-cols-7 gap-3 opacity-40">
-    {Array.from({ length: 35 }).map((_, i) => (
-      <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
-    ))}
-  </div>
-
-  <div className="mx-auto max-w-7xl">
-    <div className="mb-14">
-      <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#7b1e3a]">
-        Skills
-      </p>
-
-      <h2 className="mt-4 font-serif text-4xl md:text-6xl">
-        Tools I use to turn ideas into meaningful work.
-      </h2>
-    </div>
-
-    <div className="grid gap-8 md:grid-cols-2">
-      {[
-        {
-          title: 'Data Analysis',
-          desc: 'Data processing & machine learning',
-          tools: [
-            { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-            { name: 'SQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
-            { name: 'R', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg' },
-            { name: 'Excel', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftexcel.svg' }
-          ],
-        },
-        {
-          title: 'Data Visualization',
-          desc: 'Dashboard & reporting tools',
-          tools: [
-            { name: 'Tableau', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tableau.svg' },
-            { name: 'Power BI', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/powerbi.svg' },
-            { name: 'Looker Studio', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/looker.svg' },
-            { name: 'Metabase', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/metabase.svg' },
-            { name: 'Google Colab', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecolab/googlecolab-original.svg' },
-          ],
-        },
-        {
-          title: 'Design & Creativity',
-          desc: 'Visual communication & branding',
-          tools: [
-            { name: 'Canva', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/canva.svg' },
-            { name: 'Figma', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
-          ],
-        },
-        {
-          title: 'Productivity Tools',
-          desc: 'Daily workflow & collaboration',
-          tools: [
-            { name: 'Excel', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftexcel.svg' },
-            { name: 'Word', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftword.svg' },
-            { name: 'Access', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftaccess.svg' },
-            { name: 'Google Sheets', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlesheets.svg' },
-            { name: 'Google Docs', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googledocs.svg' },
-          ],
-        },
-      ].map((group) => (
-        <div
-          key={group.title}
-          className="rounded-[2rem] border border-[#eadbc8] bg-white/75 p-8 shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
-        >
-          <h3 className="font-serif text-3xl text-[#101b33]">
-            {group.title}
-          </h3>
-
-          <p className="mt-2 text-mediumBrown">
-            {group.desc}
-          </p>
-
-          <div className="mt-8 grid grid-cols-3 gap-5 sm:grid-cols-4">
-            {group.tools.map((tool) => (
-              <div
-                key={tool.name}
-                className="group flex flex-col items-center justify-center rounded-2xl bg-[#f8efe3] p-5 transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
-              >
-                <img
-                  src={tool.logo}
-                  alt={tool.name}
-                  className="h-10 w-10 object-contain opacity-80 transition group-hover:opacity-100"
-                />
-
-                <p className="mt-3 text-center text-xs font-semibold text-[#7b1e3a]">
-                  {tool.name}
-                </p>
-              </div>
+          <div className="absolute right-10 top-36 grid grid-cols-8 gap-3 opacity-50">
+            {Array.from({ length: 48 }).map((_, i) => (
+              <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
             ))}
           </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
 
+          <span className="absolute left-[28%] top-[23%] text-4xl text-[#d6a778]">✦</span>
+
+          <div className="relative z-10 mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-10 md:grid-cols-2">
+            <div>
+              <div className="mb-8 flex items-center gap-4">
+                <p className="text-sm font-semibold uppercase tracking-[0.45em]">
+                  Hello, I’m
+                </p>
+                <span className="h-px w-32 bg-[#d6a778]" />
+              </div>
+
+              <h1 className="font-serif text-6xl leading-[0.95] tracking-tight md:text-8xl">
+                Dian Ayu <br />
+                <span className="text-[#7b1e3a]">Fauziah</span>
+              </h1>
+
+              <p className="mt-8 text-sm font-bold uppercase tracking-[0.22em] md:text-base">
+                Data Analyst
+                <span className="mx-3 text-[#d6a778]">|</span>
+                Data Science Graduate
+              </p>
+
+              <div className="mt-10 h-px w-24 bg-[#d6a778]" />
+
+              <div className="mt-10 flex flex-wrap gap-5">
+                <a
+                  href="#data-projects"
+                  className="inline-flex items-center gap-4 rounded-lg bg-[#7b1e3a] px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition hover:-translate-y-1 hover:bg-[#101b33]"
+                >
+                  View Data Projects <span>→</span>
+                </a>
+
+                <a
+                  href="#creative-pr"
+                  className="inline-flex items-center gap-4 rounded-lg border border-[#7b1e3a] px-8 py-4 text-sm font-bold uppercase tracking-widest text-[#7b1e3a] transition hover:-translate-y-1 hover:bg-[#7b1e3a] hover:text-white"
+                >
+                  Creative Works <span>→</span>
+                </a>
+              </div>
+
+              <div className="mt-14 flex items-center gap-3 text-sm text-[#101b33]/70">
+                <div className="relative h-10 w-6 rounded-full border border-[#7b1e3a]">
+                  <span className="absolute left-1/2 top-2 h-2 w-1 -translate-x-1/2 animate-bounce rounded-full bg-[#7b1e3a]" />
+                </div>
+                <span>Scroll to explore</span>
+              </div>
+            </div>
+
+            <div className="relative flex justify-center md:justify-end">
+              <div className="relative h-[620px] w-[560px]">
+                <div className="absolute bottom-[70px] right-[40px] h-[430px] w-[360px] rounded-t-full rounded-b-[45%] bg-[#e8cbc8]/85 shadow-[0_30px_80px_rgba(123,30,58,0.12)]" />
+                <div className="absolute bottom-[120px] right-[15px] h-[430px] w-[430px] rounded-full border border-[#d6a778]/80" />
+                <div className="absolute bottom-0 right-[-170px] h-[260px] w-[760px] rounded-tl-[100%] bg-[#101b33]" />
+
+                <img
+                  src={aku2}
+                  alt="Dian Ayu Fauziah"
+                  className="absolute bottom-0 right-[70px] z-30 h-[590px] w-auto object-contain drop-shadow-2xl"
+                />
+
+                <span className="absolute right-[40px] top-[110px] z-20 text-5xl text-[#7b1e3a]">✦</span>
+                <span className="absolute right-[-10px] top-[160px] z-20 text-4xl text-[#7b1e3a]">✦</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ABOUT SECTION */}
         <section
-  id="learning"
-  className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
->
-  <div className="mx-auto max-w-6xl">
-    <motion.div {...fadeUp} className="mb-16 text-center">
-      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
-        ✨ Continuous Learning
-      </span>
+          id="about"
+          className="relative overflow-hidden bg-[#fffaf7] px-6 py-24 text-[#101b33]"
+        >
+          <div className="absolute left-10 top-16 text-4xl text-[#d6a778]/80">✦</div>
+          <div className="absolute right-12 top-24 grid grid-cols-7 gap-3 opacity-40">
+            {Array.from({ length: 35 }).map((_, i) => (
+              <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
+            ))}
+          </div>
 
-      <h2 className="mt-6 font-serif text-5xl text-[#1f2a44]">
-        Learning & Certifications
-      </h2>
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-14">
+              <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#7b1e3a]">
+                About Me
+              </p>
 
-      <p className="mx-auto mt-5 max-w-2xl text-lg text-mediumBrown">
-        A curated stack of certifications that support my growth in data,
-        technology, and digital problem-solving.
-      </p>
-    </motion.div>
+              <h2 className="mt-4 font-serif text-4xl leading-tight text-[#101b33] md:text-6xl">
+                A data-driven thinker with a creative communication mindset.
+              </h2>
+            </div>
 
-    <div className="grid items-center gap-10 lg:grid-cols-2">
-      <div className="relative mx-auto h-[390px] w-full max-w-md">
-        {certificates.map((cert, index) => {
-          const position =
-            (index - selectedProject + certificates.length) %
-            certificates.length
+            <div className="grid gap-8 lg:grid-cols-3">
+              <div className="rounded-[2rem] border border-[#eadbc8] bg-white/75 p-8 shadow-soft lg:col-span-2">
+                <p className="text-lg leading-relaxed text-[#3f4658]">
+                  I am an undergraduate Data Science student at State University of
+                  Surabaya with interests in data analytics, digital public service,
+                  public relations, and creative problem-solving.
+                </p>
 
-          return (
-            <motion.div
-              key={cert.title}
-              onClick={() => setSelectedProject(index)}
-              className="absolute inset-0 cursor-pointer overflow-hidden rounded-[2rem] border border-[#d7c2b0] bg-white shadow-soft"
-              animate={{
-                x: position * 18,
-                y: position * 16,
-                rotate: position * 3,
-                scale: position === 0 ? 1 : 0.94,
-                opacity: position === 0 ? 1 : 0.45,
-                zIndex: certificates.length - position,
-              }}
-              transition={{ duration: 0.3 }}
-            >
-              <img
-                src={cert.image}
-                alt={cert.title}
-                className="h-full w-full object-cover object-top"
-              />
+                <p className="mt-5 text-lg leading-relaxed text-[#3f4658]">
+                  My work combines analytical thinking and communication strategy to
+                  turn data, ideas, and community-driven initiatives into meaningful
+                  insights and impactful stories.
+                </p>
 
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#101b33]/90 to-transparent p-6">
-                <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#7b1e3a]">
-                  {cert.year}
-                </span>
+                <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                  <div className="rounded-2xl bg-[#f8efe3] p-5">
+                    <p className="text-3xl font-serif text-[#7b1e3a]">01</p>
+                    <p className="mt-2 text-sm font-semibold uppercase tracking-widest">Data</p>
+                  </div>
 
-                <h3 className="mt-3 font-serif text-2xl text-white">
-                  {cert.title}
+                  <div className="rounded-2xl bg-[#f8efe3] p-5">
+                    <p className="text-3xl font-serif text-[#7b1e3a]">02</p>
+                    <p className="mt-2 text-sm font-semibold uppercase tracking-widest">Communication</p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f8efe3] p-5">
+                    <p className="text-3xl font-serif text-[#7b1e3a]">03</p>
+                    <p className="mt-2 text-sm font-semibold uppercase tracking-widest">Creativity</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-[2rem] border border-[#eadbc8] bg-[#101b33] p-8 text-white shadow-soft">
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#d6a778]">
+                  Focus Areas
+                </p>
+
+                <div className="mt-8 space-y-4">
+                  {[
+                    'Data Analysis',
+                    'Machine Learning',
+                    'Public Relations',
+                    'Creative Strategy',
+                    'Digital Public Service',
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className="rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* DATA PROJECTS SECTION */}
+        <section
+          id="data-projects"
+          className="px-6 py-24 bg-[#f8f5f2]"
+        >
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-16 text-center">
+              <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-[#fff] px-4 py-2 text-sm font-medium text-[#7b1e3a]">
+                Technical Portfolio
+              </span>
+
+              <h2 className="mt-5 font-serif text-4xl md:text-5xl text-[#1f2a44]">
+                Data Science & Tech Projects
+              </h2>
+
+              <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
+                Exploring analytics, visualization, machine learning, and digital product development through meaningful projects.
+              </p>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-2">
+              {dataProjects.map((project) => (
+                <motion.article
+                  {...fadeUp}
+                  key={project.id}
+                  className="group overflow-hidden rounded-3xl border border-[#eadbc8] bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                  </div>
+
+                  <div className="p-7">
+                    <span className="rounded-full border border-[#7b1e3a]/20 px-3 py-1 text-xs text-[#7b1e3a]">
+                      {project.category}
+                    </span>
+
+                    <h3 className="mt-4 font-serif text-3xl text-[#1f2a44]">
+                      {project.title}
+                    </h3>
+
+                    <p className="mt-4 leading-relaxed text-mediumBrown">
+                      {project.description}
+                    </p>
+
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full bg-[#f4e7d5] px-3 py-1 text-xs font-medium text-[#1f2a44]"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
+                      <p className="text-sm italic text-mediumBrown">
+                        {project.details}
+                      </p>
+
+                      {project.linkGithub && (
+                        <div className="mt-4 flex gap-3">
+                          <a
+                            href={project.linkGithub}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="rounded-full border border-[#1f2a44]/20 bg-white px-5 py-2 text-sm font-semibold text-[#1f2a44] transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
+                          >
+                            {project.buttonText || 'View Project'} ↗
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* EXPERIENCE SECTION */}
+        <section
+          className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
+          id="experience"
+        >
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-14 text-center">
+              <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/60 px-4 py-2 text-sm font-medium text-[#7b1e3a]">
+                Professional Journey
+              </span>
+
+              <h2 className="mt-5 font-serif text-4xl md:text-5xl text-[#1f2a44]">
+                What I’ve Been Building
+              </h2>
+
+              <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
+                Data, public service, and digital transformation experiences shaped through real projects.
+              </p>
+            </div>
+
+            <div className="space-y-8">
+              {experiences.map((exp) => (
+                <motion.article
+                  {...fadeUp}
+                  key={exp.id}
+                  className="overflow-hidden rounded-3xl border border-[#eadbc8] bg-white/85 shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <div className="grid gap-0 md:grid-cols-5">
+                    <div className="flex flex-col items-center justify-center gap-6 bg-[#f8efe3] p-10 md:col-span-2">
+                      <img
+                        src={sealLogo}
+                        alt="SEAL"
+                        className="h-14 object-contain opacity-90 transition hover:opacity-100"
+                      />
+                      <span className="text-2xl text-[#7b1e3a]/40">×</span>
+                      <img
+                        src={kominfoLogo}
+                        alt="Kominfo Jatim"
+                        className="h-20 object-contain opacity-90 transition hover:opacity-100"
+                      />
+                      <span className="text-2xl text-[#7b1e3a]/40">×</span>
+                      <img
+                        src={majadigiLogo}
+                        alt="MajaDigi"
+                        className="h-16 object-contain opacity-90 transition hover:opacity-100"
+                      />
+                    </div>
+
+                    <div className="p-7 md:col-span-3 md:p-9">
+                      <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
+                        <div>
+                          <h3 className="font-serif text-2xl md:text-3xl text-[#1f2a44]">
+                            {exp.title}
+                          </h3>
+                          <p className="mt-2 font-semibold text-[#7b1e3a]">
+                            {exp.company}
+                          </p>
+                        </div>
+
+                        <span className="rounded-full border border-[#7b1e3a]/25 px-3 py-1 text-xs text-[#7b1e3a]">
+                          {exp.period}
+                        </span>
+                      </div>
+
+                      <div className="mb-4 flex flex-wrap gap-4 text-sm text-mediumBrown">
+                        <span className="inline-flex items-center gap-1">
+                          <MapPin size={14} />
+                          {exp.location}
+                        </span>
+                      </div>
+
+                      <p className="mb-4 italic text-[#7b1e3a]">
+                        “{exp.vibe}”
+                      </p>
+
+                      <p className="leading-relaxed text-mediumBrown">
+                        {exp.description}
+                      </p>
+
+                      {exp.projectLink && (
+                        <a
+                          href={exp.projectLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-6 inline-flex items-center rounded-full border border-[#7b1e3a]/20 px-4 py-2 text-sm text-[#7b1e3a] transition hover:bg-[#7b1e3a] hover:text-white"
+                        >
+                          Visit Project ↗
+                        </a>
+                      )}
+
+                      <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                        {exp.highlights.map((item) => (
+                          <div
+                            key={item}
+                            className="rounded-2xl bg-[#f8efe3] px-4 py-3 text-sm font-medium text-[#1f2a44]"
+                          >
+                            {item}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CREATIVE & PR SECTION */}
+        <section
+          id="creative-pr"
+          className="px-6 py-24 bg-gradient-to-b from-[#f8f5f2] to-[#efe4d1]"
+        >
+          <div className="mx-auto max-w-6xl">
+            <motion.div {...fadeUp} className="mb-20 text-center">
+              <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
+                ✨ Creative Portfolio
+              </span>
+
+              <h2 className="mt-6 font-serif text-5xl text-[#1f2a44]">
+                Public Relations & Creative Work
+              </h2>
+
+              <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-mediumBrown">
+                Combining communication, leadership, creativity, and strategic thinking
+                through organizational and innovation-driven experiences.
+              </p>
+            </motion.div>
+
+            <div className="space-y-10">
+              {organizationProjects.map((work) => (
+                <motion.article
+                  {...fadeUp}
+                  key={work.id}
+                  className={`group overflow-hidden rounded-[2rem] border border-[#d7c2b0] bg-white/70 shadow-soft backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl ${
+                    work.highlight ? 'ring-2 ring-[#7b1e3a]/30' : ''
+                  }`}
+                >
+                  <div className="flex flex-col md:flex-row items-start">
+                    <div className="relative overflow-hidden md:w-[380px] flex-shrink-0">
+                      <img
+                        src={work.image}
+                        alt={work.title}
+                        className="w-full rounded-l-[2rem] object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                      {work.highlight && (
+                        <div className="absolute left-4 top-4 rounded-full bg-[#7b1e3a] px-4 py-1 text-xs font-semibold text-white">
+                          Featured Project
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="p-8 md:col-span-2 md:p-10">
+                      <div className="flex flex-wrap items-start justify-between gap-4">
+                        <div>
+                          <h3 className="font-serif text-4xl text-[#1f2a44] transition group-hover:text-[#7b1e3a]">
+                            {work.title}
+                          </h3>
+                          <p className="mt-3 text-lg font-semibold text-[#7b1e3a]">
+                            {work.organization}
+                          </p>
+                        </div>
+
+                        <span className="rounded-full border border-[#7b1e3a]/30 px-4 py-2 text-sm text-[#7b1e3a]">
+                          {work.period}
+                        </span>
+                      </div>
+
+                      <p className="mt-8 text-lg leading-relaxed text-mediumBrown">
+                        {work.description}
+                      </p>
+
+                      <div className="mt-6 flex flex-wrap gap-3 text-sm">
+                        {work.tags.map((tag, idx) => (
+                          <span
+                            key={idx}
+                            className="rounded-full bg-[#f7edf0] px-4 py-2 text-[#7b1e3a]"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      {work.link && (
+                        <a
+                          href={work.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#7b1e3a] px-5 py-3 text-sm font-medium text-white transition hover:-translate-y-1 hover:bg-[#5e162d]"
+                        >
+                          <ShoppingBag size={18} />
+                          Shop Product
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* BEYOND THE NUMBERS SECTION */}
+        <section
+          id="communication"
+          className="bg-[#fffaf7] px-6 py-24"
+        >
+          <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.45em] text-[#7b1e3a]">
+                Beyond The Numbers
+              </p>
+
+              <h2 className="mt-5 font-serif text-5xl leading-tight text-[#1f2a44] md:text-6xl">
+                Speaking, Leading,
+                <br />
+                & Connecting
+              </h2>
+
+              <p className="mt-6 max-w-xl leading-relaxed text-mediumBrown">
+                Through public speaking, moderating, event handling, and team
+                collaboration, I learned how to turn ideas into meaningful experiences
+                for people.
+              </p>
+            </div>
+
+            <div className="relative flex flex-wrap items-start justify-center gap-8 border-t-2 border-[#c8a27a] pt-14">
+              <div className="relative transition duration-300 hover:-translate-y-2 hover:rotate-0">
+                <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+                <img
+                  src={mcDuduk}
+                  alt=""
+                  className="h-[260px] w-[220px] rotate-[-4deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
+                />
+              </div>
+
+              <div className="relative mt-10 transition duration-300 hover:-translate-y-2 hover:rotate-0">
+                <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+                <img
+                  src={mcWmk}
+                  alt=""
+                  className="h-[300px] w-[240px] rotate-[5deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
+                />
+              </div>
+
+              <div className="relative transition duration-300 hover:-translate-y-2 hover:rotate-0">
+                <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+                <img
+                  src={mcDiskusi}
+                  alt=""
+                  className="h-[240px] w-[210px] rotate-[-3deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
+                />
+              </div>
+
+              <div className="relative mt-8 transition duration-300 hover:-translate-y-2 hover:rotate-0">
+                <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+                <img
+                  src={mcStage}
+                  alt=""
+                  className="h-[280px] w-[220px] rotate-[4deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SKILLS SECTION */}
+        <section
+          id="skills"
+          className="relative overflow-hidden bg-[#fffaf7] px-6 py-24 text-[#101b33]"
+        >
+          <div className="absolute right-12 top-24 grid grid-cols-7 gap-3 opacity-40">
+            {Array.from({ length: 35 }).map((_, i) => (
+              <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
+            ))}
+          </div>
+
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-14">
+              <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#7b1e3a]">
+                Skills
+              </p>
+
+              <h2 className="mt-4 font-serif text-4xl md:text-6xl">
+                Tools I use to turn ideas into meaningful work.
+              </h2>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-2">
+              {[
+                {
+                  title: 'Data Analysis',
+                  desc: 'Data processing & machine learning',
+                  tools: [
+                    { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+                    { name: 'SQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+                    { name: 'R', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg' },
+                    { name: 'Excel', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftexcel.svg' }
+                  ],
+                },
+                {
+                  title: 'Data Visualization',
+                  desc: 'Dashboard & reporting tools',
+                  tools: [
+                    { name: 'Tableau', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tableau.svg' },
+                    { name: 'Power BI', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/powerbi.svg' },
+                    { name: 'Looker Studio', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/looker.svg' },
+                    { name: 'Metabase', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/metabase.svg' },
+                    { name: 'Google Colab', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecolab/googlecolab-original.svg' },
+                  ],
+                },
+                {
+                  title: 'Design & Creativity',
+                  desc: 'Visual communication & branding',
+                  tools: [
+                    { name: 'Canva', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/canva.svg' },
+                    { name: 'Figma', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
+                  ],
+                },
+                {
+                  title: 'Productivity Tools',
+                  desc: 'Daily workflow & collaboration',
+                  tools: [
+                    { name: 'Excel', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftexcel.svg' },
+                    { name: 'Word', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftword.svg' },
+                    { name: 'Access', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftaccess.svg' },
+                    { name: 'Google Sheets', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlesheets.svg' },
+                    { name: 'Google Docs', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googledocs.svg' },
+                  ],
+                },
+              ].map((group) => (
+                <div
+                  key={group.title}
+                  className="rounded-[2rem] border border-[#eadbc8] bg-white/75 p-8 shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <h3 className="font-serif text-3xl text-[#101b33]">
+                    {group.title}
+                  </h3>
+
+                  <p className="mt-2 text-mediumBrown">
+                    {group.desc}
+                  </p>
+
+                  <div className="mt-8 grid grid-cols-3 gap-5 sm:grid-cols-4">
+                    {group.tools.map((tool) => (
+                      <div
+                        key={tool.name}
+                        className="group flex flex-col items-center justify-center rounded-2xl bg-[#f8efe3] p-5 transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
+                      >
+                        <img
+                          src={tool.logo}
+                          alt={tool.name}
+                          className="h-10 w-10 object-contain opacity-80 transition group-hover:opacity-100"
+                        />
+                        <p className="mt-3 text-center text-xs font-semibold text-[#7b1e3a]">
+                          {tool.name}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CERTIFICATIONS SECTION */}
+        <section
+          id="learning"
+          className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
+        >
+          <div className="mx-auto max-w-6xl">
+            <motion.div {...fadeUp} className="mb-16 text-center">
+              <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
+                ✨ Continuous Learning
+              </span>
+
+              <h2 className="mt-6 font-serif text-5xl text-[#1f2a44]">
+                Learning & Certifications
+              </h2>
+
+              <p className="mx-auto mt-5 max-w-2xl text-lg text-mediumBrown">
+                A curated stack of certifications that support my growth in data,
+                technology, and digital problem-solving.
+              </p>
+            </motion.div>
+
+            <div className="grid items-center gap-10 lg:grid-cols-2">
+              <div className="relative mx-auto h-[390px] w-full max-w-md">
+                {certificates.map((cert, index) => {
+                  const position =
+                    (index - selectedProject + certificates.length) %
+                    certificates.length
+
+                  return (
+                    <motion.div
+                      key={cert.title}
+                      onClick={() => setSelectedProject(index)}
+                      className="absolute inset-0 cursor-pointer overflow-hidden rounded-[2rem] border border-[#d7c2b0] bg-white shadow-soft"
+                      animate={{
+                        x: position * 18,
+                        y: position * 16,
+                        rotate: position * 3,
+                        scale: position === 0 ? 1 : 0.94,
+                        opacity: position === 0 ? 1 : 0.45,
+                        zIndex: certificates.length - position,
+                      }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <img
+                        src={cert.image}
+                        alt={cert.title}
+                        className="h-full w-full object-cover object-top"
+                      />
+
+                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#101b33]/90 to-transparent p-6">
+                        <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#7b1e3a]">
+                          {cert.year}
+                        </span>
+
+                        <h3 className="mt-3 font-serif text-2xl text-white">
+                          {cert.title}
+                        </h3>
+
+                        <p className="mt-1 text-sm font-semibold text-white/80">
+                          {cert.issuer}
+                        </p>
+                      </div>
+                    </motion.div>
+                  )
+                })}
+              </div>
+
+              <div>
+                <h3 className="font-serif text-4xl text-[#1f2a44]">
+                  {certificates[selectedProject]?.title}
                 </h3>
 
-                <p className="mt-1 text-sm font-semibold text-white/80">
-                  {cert.issuer}
+                <p className="mt-3 text-xl font-semibold text-[#7b1e3a]">
+                  {certificates[selectedProject]?.issuer}
                 </p>
+
+                <p className="mt-5 leading-relaxed text-mediumBrown">
+                  This certification represents my continuous learning journey in data,
+                  technology, AI, and digital problem-solving.
+                </p>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {certificates[selectedProject]?.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full bg-white/70 px-4 py-2 text-sm text-[#7b1e3a]"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-8 flex gap-3">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setSelectedProject((prev) =>
+                        prev === 0 ? certificates.length - 1 : prev - 1
+                      )
+                    }
+                    className="rounded-full border border-[#7b1e3a]/30 bg-white px-5 py-3 text-sm font-semibold text-[#7b1e3a] transition hover:-translate-y-1"
+                  >
+                    ← Previous
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setSelectedProject((prev) => (prev + 1) % certificates.length)
+                    }
+                    className="rounded-full bg-[#1f2a44] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-1"
+                  >
+                    Next →
+                  </button>
+                </div>
               </div>
-            </motion.div>
-          )
-        })}
-      </div>
+            </div>
+          </div>
+        </section>
 
-      <div>
-        <h3 className="font-serif text-4xl text-[#1f2a44]">
-          {certificates[selectedProject]?.title}
-        </h3>
-
-        <p className="mt-3 text-xl font-semibold text-[#7b1e3a]">
-          {certificates[selectedProject]?.issuer}
-        </p>
-
-        <p className="mt-5 leading-relaxed text-mediumBrown">
-          This certification represents my continuous learning journey in data,
-          technology, AI, and digital problem-solving.
-        </p>
-
-        <div className="mt-6 flex flex-wrap gap-2">
-          {certificates[selectedProject]?.skills.map((skill) => (
-            <span
-              key={skill}
-              className="rounded-full bg-white/70 px-4 py-2 text-sm text-[#7b1e3a]"
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
-
-        <div className="mt-8 flex gap-3">
-          <button
-            type="button"
-            onClick={() =>
-              setSelectedProject((prev) =>
-                prev === 0 ? certificates.length - 1 : prev - 1
-              )
-            }
-            className="rounded-full border border-[#7b1e3a]/30 bg-white px-5 py-3 text-sm font-semibold text-[#7b1e3a] transition hover:-translate-y-1"
-          >
-            ← Previous
-          </button>
-
-          <button
-            type="button"
-            onClick={() =>
-              setSelectedProject((prev) => (prev + 1) % certificates.length)
-            }
-            className="rounded-full bg-[#1f2a44] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-1"
-          >
-            Next →
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-        
+        {/* CONTACT SECTION */}
         <section id="contact" className="px-6 py-20 bg-darkBrown text-cream">
-  <div className="mx-auto max-w-4xl text-center">
-    <h2 className="font-serif text-4xl md:text-5xl">
-      Let’s Build Meaningful Projects Together.
-    </h2>
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="font-serif text-4xl md:text-5xl">
+              Let’s Build Meaningful Projects Together.
+            </h2>
 
-    <div className="mt-8 flex flex-wrap justify-center gap-5 text-sm">
-      <a
-        className="inline-flex items-center gap-2 hover:opacity-80"
-        href="mailto:dianayufauziahh@gmail.com"
-      >
-        <Mail size={16} />
-        dianayufauziahh@gmail.com
-      </a>
+            <div className="mt-8 flex flex-wrap justify-center gap-5 text-sm">
+              <a
+                className="inline-flex items-center gap-2 hover:opacity-80"
+                href="mailto:dianayufauziahh@gmail.com"
+              >
+                <Mail size={16} />
+                dianayufauziahh@gmail.com
+              </a>
 
-      <a
-        className="inline-flex items-center gap-2 hover:opacity-80"
-        href="https://linkedin.com/in/dian-fauziah"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Linkedin size={16} />
-        linkedin.com/in/dian-fauziah
-      </a>
+              <a
+                className="inline-flex items-center gap-2 hover:opacity-80"
+                href="https://linkedin.com/in/dian-fauziah"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin size={16} />
+                linkedin.com/in/dian-fauziah
+              </a>
 
-      <a
-        className="inline-flex items-center gap-2 hover:opacity-80"
-        href="https://github.com/Dianayuww"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Github size={16} />
-        GitHub
-      </a>
+              <a
+                className="inline-flex items-center gap-2 hover:opacity-80"
+                href="https://github.com/Dianayuww"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github size={16} />
+                GitHub
+              </a>
 
-      <a
-        className="inline-flex items-center gap-2 hover:opacity-80"
-        href="#"
-      >
-        <Instagram size={16} />
-        Instagram
-      </a>
-    </div>
+              <a
+                className="inline-flex items-center gap-2 hover:opacity-80"
+                href="#"
+              >
+                <Instagram size={16} />
+                Instagram
+              </a>
+            </div>
 
-    <div className="mt-4 text-sm text-cream/85">
-      Phone: +62 85184665784
-    </div>
+            <div className="mt-4 text-sm text-cream/85">
+              Phone: +62 85184665784
+            </div>
 
-    <a
-      href="https://bit.ly/40t89Ta"
-      className="mt-8 inline-block rounded-full bg-[#fffaf2] px-7 py-3 text-darkBrown shadow-soft transition hover:-translate-y-0.5"
-    >
-      Download CV
-    </a>
-  </div>
-</section>
+            <a
+              href="https://bit.ly/40t89Ta"
+              className="mt-8 inline-block rounded-full bg-[#fffaf2] px-7 py-3 text-darkBrown shadow-soft transition hover:-translate-y-0.5"
+            >
+              Download CV
+            </a>
+          </div>
+        </section>
       </main>
 
-      <footer className="bg-darkBrown/95 py-6 text-center text-xs text-cream/85">© 2026 Dian Ayu Fauziah — Multidisciplinary Portfolio</footer>
+      <footer className="bg-darkBrown/95 py-6 text-center text-xs text-cream/85">
+        © 2026 Dian Ayu Fauziah — Multidisciplinary Portfolio
+      </footer>
     </div>
   )
-}  
+}
