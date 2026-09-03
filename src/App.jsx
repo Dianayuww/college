@@ -42,7 +42,7 @@ const dataProjects = [
       'Focused on multiclass classification and behavioral pattern analysis using mental health and user activity indicators.',
   },
   {
-    id: 3,
+    id: 2,
     title: 'Sentiment Analysis through Twitter Data Collection on the Palestine-Israel Conflict',
     linkGithub: 'https://github.com/Dianayuww/israel-palestine-sentiment-analysis',
     category: 'Sentiment Analysis',
@@ -55,7 +55,7 @@ const dataProjects = [
       'Analyzed relationships between life expectancy, smoking rates, and unmet health needs.',
   },
   {
-    id: 4,
+    id: 3,
     title: 'Sentiment Analysis of Kartu Indonesia Pintar Kuliah (KIPK) Recipients from Tweets on Platform X',
     linkGithub: 'https://github.com/Dianayuww/Sentiment-Analysis-KIPK-Recipients-based-Tweets-from-X',
     category: 'Data Mining',
@@ -82,7 +82,7 @@ const dataProjects = [
   // },
 
   {
-    id: 5,
+    id: 4,
     title: 'Strategic Food Commodity Price Forecasting',
     linkGithub: 'https://github.com/Dianayuww/Sentiment-Analysis-KIPK-Recipients-based-Tweets-from-X',
     category: 'Data Mining',
@@ -95,7 +95,7 @@ const dataProjects = [
       'Evaluated model performance across commodity volatility levels, with LSTM achieving 0.09% MAPE on stable commodities (Rice) and GRU scoring 13.42% MAPE on volatile items (Red Chili).',
   },
   {
-    id: 6,
+    id: 5,
     title: 'PKM AMLI — Student Innovation & Sustainable Research',
     linkGithub: 'https://drive.google.com/your-google-drive-link-here', // Ganti dengan link PDF/Drive dokumen/poster PKM kamu
     buttonText: 'View Publication',
