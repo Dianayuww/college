@@ -47,7 +47,7 @@ const dataProjects = [
     {
     id: 2,
     title: 'PKM AMLI — Student Innovation & Sustainable Research',
-    Journal: 'https://journalmabis.org/mabis/article/view/864/452', // Ganti dengan link PDF/Drive dokumen/poster PKM kamu
+    linkGithub: 'https://journalmabis.org/mabis/article/view/864/452', // Ganti dengan link PDF/Drive dokumen/poster PKM kamu
     buttonText: 'View Publication',
     category: 'Academic Research',
     description:
