@@ -98,7 +98,7 @@ const dataProjects = [
   {
     id: 5,
     title: 'Strategic Food Commodity Price Forecasting',
-    linkGithub: 'https://github.com/Dianayuww/Sentiment-Analysis-KIPK-Recipients-based-Tweets-from-X',
+    linkGithub: 'https://drive.google.com/file/d/1jdHw_J1MOvLYOCz-cgBFzH1AHKUa-iUi/view?usp=sharing',
     category: 'Data Mining',
     description:
       'Applied deep learning (LSTM & GRU) and statistical models (Facebook Prophet) to forecast weekly prices of strategic food commodities (Rice, Red Chili, Garlic) in Surabaya using PIHPS BI data. Evaluated models using MAE, RMSE, and MAPE metrics.',
