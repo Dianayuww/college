@@ -98,6 +98,7 @@ const dataProjects = [
     id: 6,
     title: 'PKM AMLI — Student Innovation & Sustainable Research',
     linkGithub: 'https://drive.google.com/your-google-drive-link-here', // Ganti dengan link PDF/Drive dokumen/poster PKM kamu
+    buttonText: 'View Publication',
     category: 'Academic Research',
     description:
       'Developed an innovative and sustainable research project for the PKM AMLI initiative, integrating problem-solving methodologies, data-driven analysis, and strategic project implementation.',
