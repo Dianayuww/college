@@ -41,9 +41,21 @@ const dataProjects = [
     details:
       'Focused on multiclass classification and behavioral pattern analysis using mental health and user activity indicators.',
   },
-
   {
     id: 2,
+    title: 'Social Media Addiction Classification',
+    linkGithub: 'https://github.com/Dianayuww/social-media-addiction-comparative-analysis',
+    category: 'Machine Learning Research',
+    description:
+      'Classification model comparing Random Forest and XGBoost using three train-test split scenarios and 10-fold Cross Validation to predict social media addiction patterns.',
+    tags: ['Python', 'Machine Learning', 'Random Forest', 'XGBoost', 'Social Media', 'Addiction'],
+    image:
+      'https://media.istockphoto.com/id/1292258619/id/foto/pemuda-memiliki-mata-yang-sakit-dan-lelah-saat-menggunakan-smartphone-saat-berbaring-di-tempat.webp?a=1&b=1&s=612x612&w=0&k=20&c=YevtZ0y1KXkMdNDxq9Lkqk7ASdmOZ8dnMQp2B8gVoUM=',
+    details:
+      'Focused on multiclass classification and behavioral pattern analysis using mental health and user activity indicators.',
+  },
+  {
+    id: 3,
     title: 'Sentiment Analysis through Twitter Data Collection on the Palestine-Israel Conflict',
     linkGithub: 'https://github.com/Dianayuww/israel-palestine-sentiment-analysis',
     category: 'Sentiment Analysis',
@@ -70,7 +82,7 @@ const dataProjects = [
   // },
 
   {
-    id: 3,
+    id: 4,
     title: 'Sentiment Analysis of Kartu Indonesia Pintar Kuliah (KIPK) Recipients from Tweets on Platform X',
     linkGithub: 'https://github.com/Dianayuww/Sentiment-Analysis-KIPK-Recipients-based-Tweets-from-X',
     category: 'Data Mining',
@@ -178,8 +190,19 @@ const organizationProjects = [
 
     tags: ['Leadership', 'Communication', 'Event Management', 'Copywriting'],
   },
-  {
+    {
     id: 2,
+    title: 'Head of Public Relations Division',
+    organization: 'HMP Sains Data Unesa',
+    image: hmpImage,
+    period: 'Mar 2024 – Feb 2025',
+    description:
+      'Led public relations initiatives, managed organizational communication, created compelling copy, and coordinated publication needs for student association programs.',
+
+    tags: ['Leadership', 'Communication', 'Event Management', 'Copywriting'],
+  },
+  {
+    id: 3,
     title: 'Wirausaha Merdeka Batch 3',
     organization: 'Entrepreneurship Program',
     image: wmImage,
@@ -190,7 +213,7 @@ const organizationProjects = [
     tags: ['Entrepreneurship', 'Sustainability', 'Business Development', 'Innovation'],
   },
   {
-    id: 3,
+    id: 4,
     title: 'Banacle - Eco-Friendly Soap Innovation',
     link: 'https://id.shp.ee/mreSoTB3',
     organization: 'Sustainability Project',
