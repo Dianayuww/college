@@ -1486,14 +1486,14 @@ export default function App() {
               </p>
 
               <h2 className="mt-4 font-serif text-4xl leading-tight text-[#101b33] md:text-6xl">
-                A data-driven thinker with a creative communication mindset.
+                Data-backed analysis. Strategic execution.
               </h2>
             </div>
 
             <div className="grid gap-8 lg:grid-cols-3">
               <div className="rounded-[2rem] border border-[#eadbc8] bg-white/75 p-8 shadow-soft lg:col-span-2">
                 <p className="text-lg leading-relaxed text-[#3f4658]">
-                  I am an undergraduate Data Science student at State University of
+                  I am a Data Science graduate at State University of
                   Surabaya with interests in data analytics, digital public service,
                   public relations, and creative problem-solving.
                 </p>
@@ -1507,17 +1507,17 @@ export default function App() {
                 <div className="mt-8 grid gap-4 sm:grid-cols-3">
                   <div className="rounded-2xl bg-[#f8efe3] p-5">
                     <p className="text-3xl font-serif text-[#7b1e3a]">01</p>
-                    <p className="mt-2 text-sm font-semibold uppercase tracking-widest">Data</p>
+                    <p className="mt-2 text-sm font-semibold uppercase tracking-widest">Analyze</p>
                   </div>
 
                   <div className="rounded-2xl bg-[#f8efe3] p-5">
                     <p className="text-3xl font-serif text-[#7b1e3a]">02</p>
-                    <p className="mt-2 text-sm font-semibold uppercase tracking-widest">Communication</p>
+                    <p className="mt-2 text-sm font-semibold uppercase tracking-widest">Communicate</p>
                   </div>
 
                   <div className="rounded-2xl bg-[#f8efe3] p-5">
                     <p className="text-3xl font-serif text-[#7b1e3a]">03</p>
-                    <p className="mt-2 text-sm font-semibold uppercase tracking-widest">Creativity</p>
+                    <p className="mt-2 text-sm font-semibold uppercase tracking-widest">Execute</p>
                   </div>
                 </div>
               </div>
@@ -1529,11 +1529,11 @@ export default function App() {
 
                 <div className="mt-8 space-y-4">
                   {[
-                    'Data Analysis',
-                    'Machine Learning',
+                    'Data Analytics & Visualization',
+                    'Machine Learning & Modeling',
                     'Public Relations',
+                    'Digital Public Service Analytics',
                     'Creative Strategy',
-                    'Digital Public Service',
                   ].map((item) => (
                     <div
                       key={item}
