@@ -50,8 +50,7 @@ const dataProjects = [
     description:
       'Developed an innovative and sustainable research project for the PKM AMLI initiative, integrating problem-solving methodologies, data-driven analysis, and strategic project implementation.',
     tags: ['Research', 'Data Analysis', 'Project Management', 'Product Innovation', 'Sustainability'],
-    image:
-      'amli";', // Ganti dengan URL foto/dokumentasi PKM kamu
+    image: amli, // Ganti dengan URL foto/dokumentasi PKM kamu
     details:
       'Executed end-to-end project workflows, from initial ideation and feasibility analysis to final presentation and reporting.',
   },
