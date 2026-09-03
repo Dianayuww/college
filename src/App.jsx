@@ -34,7 +34,7 @@ const dataProjects = [
     id: 1,
     title: 'Social Media Addiction Classification',
     linkGithub: 'https://github.com/Dianayuww/social-media-addiction-comparative-analysis',
-    buttonText: 'Read on Medium',
+    linkMedium: 'https://medium.com/@username-kamu/link-artikel-kamu',
     category: 'Machine Learning Research',
     description:
       'Classification model comparing Random Forest and XGBoost using three train-test split scenarios and 10-fold Cross Validation to predict social media addiction patterns.',
@@ -47,7 +47,8 @@ const dataProjects = [
     {
     id: 2,
     title: 'PKM AMLI — Student Innovation & Sustainable Research',
-    linkGithub: 'https://journalmabis.org/mabis/article/view/864/452', // Ganti dengan link PDF/Drive dokumen/poster PKM kamu
+    Journal: 'https://journalmabis.org/mabis/article/view/864/452', // Ganti dengan link PDF/Drive dokumen/poster PKM kamu
+    buttonText: 'View Publication',
     category: 'Academic Research',
     description:
       'Developed an innovative and sustainable research project for the PKM AMLI initiative, integrating problem-solving methodologies, data-driven analysis, and strategic project implementation.',
@@ -1607,6 +1608,38 @@ export default function App() {
                     </div>
 
                     <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
+  <p className="text-sm italic text-mediumBrown">
+    {project.details}
+  </p>
+
+  <div className="mt-4 flex flex-wrap gap-3">
+    {/* Tombol Github / Utama */}
+    {project.linkGithub && (
+      <a
+        href={project.linkGithub}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-full border border-[#1f2a44]/20 bg-white px-5 py-2 text-sm font-semibold text-[#1f2a44] transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
+      >
+        {project.buttonText || 'View Project'} ↗
+      </a>
+    )}
+
+    {/* Tombol Medium (Khusus jika ada linkMedium) */}
+    {project.linkMedium && (
+      <a
+        href={project.linkMedium}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-full border border-[#7b1e3a]/30 bg-[#7b1e3a] px-5 py-2 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-[#5e162d]"
+      >
+        Read Article ↗
+      </a>
+    )}
+  </div>
+</div>
+
+                    {/* <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
                       <p className="text-sm italic text-mediumBrown">
                         {project.details}
                       </p>
@@ -1623,7 +1656,7 @@ export default function App() {
                           </a>
                         </div>
                       )}
-                    </div>
+                    </div> */}
                   </div>
                 </motion.article>
               ))}
