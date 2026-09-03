@@ -98,7 +98,6 @@ const dataProjects = [
     id: 5,
     title: 'PKM AMLI — Student Innovation & Sustainable Research',
     linkGithub: 'https://drive.google.com/your-google-drive-link-here', // Ganti dengan link PDF/Drive dokumen/poster PKM kamu
-    buttonText: 'View Publication',
     category: 'Academic Research',
     description:
       'Developed an innovative and sustainable research project for the PKM AMLI initiative, integrating problem-solving methodologies, data-driven analysis, and strategic project implementation.',
@@ -107,8 +106,8 @@ const dataProjects = [
       'https://your-image-url-or-banner-here.png', // Ganti dengan URL foto/dokumentasi PKM kamu
     details:
       'Executed end-to-end project workflows, from initial ideation and feasibility analysis to final presentation and reporting.',
-  }
-
+  },
+  ]
   // {
   //   id: 4,
   //   title: 'Hotel Management Database System',
@@ -121,7 +120,6 @@ const dataProjects = [
   //   details:
   //     'Developed conceptual and physical data models for operational efficiency and reservation management.',
   // },
-]
 
 
 //   {
