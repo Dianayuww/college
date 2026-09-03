@@ -603,23 +603,23 @@ export default function App() {
               ))}
             </div>
             <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
-  <p className="text-sm italic text-mediumBrown">
-    {project.details}
-  </p>
+              <p className="text-sm italic text-mediumBrown">
+                {project.details}
+              </p>
   
-  {project.linkGithub && (
-    <div className="mt-4 flex gap-3">
-      <a
-        href={project.linkGithub}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="rounded-full border border-[#1f2a44]/20 bg-white px-5 py-2 text-sm font-semibold text-[#1f2a44] transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
-      >
-        {project.buttonText || 'View Project'} ↗
-      </a>
-    </div>
-  )}
-</div>
+              {project.linkGithub && (
+                <div className="mt-4 flex gap-3">
+                  <a
+                    href={project.linkGithub}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full border border-[#1f2a44]/20 bg-white px-5 py-2 text-sm font-semibold text-[#1f2a44] transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
+                  >
+                    {project.buttonText || 'View Project'} ↗
+                  </a>
+                </div>
+              )}
+            </div>
 
             {/* <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
               <p className="text-sm italic text-mediumBrown">
@@ -637,7 +637,7 @@ export default function App() {
       View Project ↗
     </a>
   )}
-</div> */}
+</div>  */}
               </p>
             </div>
           </div>
