@@ -42,19 +42,6 @@ const dataProjects = [
       'Focused on multiclass classification and behavioral pattern analysis using mental health and user activity indicators.',
   },
   {
-    id: 2,
-    title: 'Social Media Addiction Classification',
-    linkGithub: 'https://github.com/Dianayuww/social-media-addiction-comparative-analysis',
-    category: 'Machine Learning Research',
-    description:
-      'Classification model comparing Random Forest and XGBoost using three train-test split scenarios and 10-fold Cross Validation to predict social media addiction patterns.',
-    tags: ['Python', 'Machine Learning', 'Random Forest', 'XGBoost', 'Social Media', 'Addiction'],
-    image:
-      'https://media.istockphoto.com/id/1292258619/id/foto/pemuda-memiliki-mata-yang-sakit-dan-lelah-saat-menggunakan-smartphone-saat-berbaring-di-tempat.webp?a=1&b=1&s=612x612&w=0&k=20&c=YevtZ0y1KXkMdNDxq9Lkqk7ASdmOZ8dnMQp2B8gVoUM=',
-    details:
-      'Focused on multiclass classification and behavioral pattern analysis using mental health and user activity indicators.',
-  },
-  {
     id: 3,
     title: 'Sentiment Analysis through Twitter Data Collection on the Palestine-Israel Conflict',
     linkGithub: 'https://github.com/Dianayuww/israel-palestine-sentiment-analysis',
@@ -66,6 +53,19 @@ const dataProjects = [
       'https://plus.unsplash.com/premium_photo-1708038152579-f7d74634faa5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHBhbGVzdGluZSUyMGlzcmFlbHxlbnwwfHwwfHx8MA%3D%3D',
     details:
       'Analyzed relationships between life expectancy, smoking rates, and unmet health needs.',
+  },
+  {
+    id: 4,
+    title: 'Sentiment Analysis of Kartu Indonesia Pintar Kuliah (KIPK) Recipients from Tweets on Platform X',
+    linkGithub: 'https://github.com/Dianayuww/Sentiment-Analysis-KIPK-Recipients-based-Tweets-from-X',
+    category: 'Data Mining',
+    description:
+      'Collected data from X platforms and used various sentiment analysis methods to gain deep insight into public opinion.',
+    tags: ['Sentiment analysis', 'NLP', 'Data Mining', 'KIPK'],
+    image:
+      'https://i.pinimg.com/736x/57/40/66/574066348ae0823312e3c7079d99fdc4.jpg',
+    details:
+      'The analysis process includes exploring positive, negative, and neutral sentiments, as well as identifying the main topic that are often discussed related to the program.',
   },
   
   // {
@@ -82,18 +82,31 @@ const dataProjects = [
   // },
 
   {
-    id: 4,
-    title: 'Sentiment Analysis of Kartu Indonesia Pintar Kuliah (KIPK) Recipients from Tweets on Platform X',
+    id: 5,
+    title: 'Strategic Food Commodity Price Forecasting',
     linkGithub: 'https://github.com/Dianayuww/Sentiment-Analysis-KIPK-Recipients-based-Tweets-from-X',
     category: 'Data Mining',
     description:
-      'Collected data from X platforms and used various sentiment analysis methods to gain deep insight into public opinion.',
-    tags: ['Sentiment analysis', 'NLP', 'Data Mining', 'KIPK'],
+      'Applied deep learning (LSTM & GRU) and statistical models (Facebook Prophet) to forecast weekly prices of strategic food commodities (Rice, Red Chili, Garlic) in Surabaya using PIHPS BI data. Evaluated models using MAE, RMSE, and MAPE metrics.',
+    tags: ['Time Series', 'Deep Learning', 'LSTM', 'GRU', 'Prophet', 'Python', 'Data Analysis'],
     image:
-      'https://i.pinimg.com/736x/57/40/66/574066348ae0823312e3c7079d99fdc4.jpg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHLjUlOZoJIQGN8_SadPADyjrdxJ9J2MFp1iYy39NEQA&s=10',
     details:
-      'The analysis process includes exploring positive, negative, and neutral sentiments, as well as identifying the main topic that are often discussed related to the program.',
+      'Evaluated model performance across commodity volatility levels, with LSTM achieving 0.09% MAPE on stable commodities (Rice) and GRU scoring 13.42% MAPE on volatile items (Red Chili).',
   },
+  {
+    id: 6,
+    title: 'PKM AMLI — Student Innovation & Sustainable Research',
+    linkGithub: 'https://drive.google.com/your-google-drive-link-here', // Ganti dengan link PDF/Drive dokumen/poster PKM kamu
+    category: 'Academic Research',
+    description:
+      'Developed an innovative and sustainable research project for the PKM AMLI initiative, integrating problem-solving methodologies, data-driven analysis, and strategic project implementation.',
+    tags: ['Research', 'Data Analysis', 'Project Management', 'Product Innovation', 'Sustainability'],
+    image:
+      'https://your-image-url-or-banner-here.png', // Ganti dengan URL foto/dokumentasi PKM kamu
+    details:
+      'Executed end-to-end project workflows, from initial ideation and feasibility analysis to final presentation and reporting.',
+  }
 
   // {
   //   id: 4,
@@ -146,16 +159,7 @@ const dataProjects = [
 //     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
 //     details: "Grouped customers based on shopping behavior patterns."
 //   },
-//   {
-//     id: 6,
-//     title: "Sentiment Analysis on Social Media",
-//     category: "Natural Language Processing",
-//     description: "Sentiment analysis using social media data collected from Twitter/X.",
-//     tags: ["Python", "NLP", "Sentiment Analysis", "Twitter/X"],
-//     image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
-//     details: "Analyzed public sentiment from social media text data."
-//   }
-// ]
+
 
 const experiences = [
   {
@@ -190,19 +194,9 @@ const organizationProjects = [
 
     tags: ['Leadership', 'Communication', 'Event Management', 'Copywriting'],
   },
-    {
-    id: 2,
-    title: 'Head of Public Relations Division',
-    organization: 'HMP Sains Data Unesa',
-    image: hmpImage,
-    period: 'Mar 2024 – Feb 2025',
-    description:
-      'Led public relations initiatives, managed organizational communication, created compelling copy, and coordinated publication needs for student association programs.',
 
-    tags: ['Leadership', 'Communication', 'Event Management', 'Copywriting'],
-  },
   {
-    id: 3,
+    id: 2,
     title: 'Wirausaha Merdeka Batch 3',
     organization: 'Entrepreneurship Program',
     image: wmImage,
@@ -213,7 +207,7 @@ const organizationProjects = [
     tags: ['Entrepreneurship', 'Sustainability', 'Business Development', 'Innovation'],
   },
   {
-    id: 4,
+    id: 3,
     title: 'Banacle - Eco-Friendly Soap Innovation',
     link: 'https://id.shp.ee/mreSoTB3',
     organization: 'Sustainability Project',
