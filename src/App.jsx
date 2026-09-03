@@ -537,7 +537,7 @@ export default function App() {
   </div>
 </section>
 
-        <section
+        {/* <section
   id="data-projects"
   className="px-6 py-24 bg-[#f8f5f2]"
 >
@@ -626,9 +626,9 @@ export default function App() {
       ))}
     </div>
   </div>
-</section>
+</section> */}
         
-        {/* <section
+        <section
   id="data-projects"
   className="px-6 py-24 bg-[#f8f5f2]"
 >
@@ -692,7 +692,7 @@ export default function App() {
                   {tag}
                 </span>
               ))}
-            </div>
+            {/* </div>
             <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
               <p className="text-sm italic text-mediumBrown">
                 {project.details}
@@ -710,9 +710,9 @@ export default function App() {
                   </a>
                 </div>
               )}
-            </div>
+            </div> */}
 
-            {/* <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
+            <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
               <p className="text-sm italic text-mediumBrown">
                 {project.details}
                   <div className="mt-6 flex gap-3">
@@ -728,7 +728,7 @@ export default function App() {
       View Project ↗
     </a>
   )}
-</div>  */}
+</div>  
               </p>
             </div>
           </div>
@@ -736,7 +736,7 @@ export default function App() {
       ))}
     </div>
   </div>
-</section> */}
+</section>
 
         {/* <section id="creative-pr" className="px-6 py-20 bg-[#fffaf2]">
           <div className="mx-auto max-w-6xl"><h2 className="font-serif text-4xl mb-10">Creative & PR</h2><div className="grid gap-6 md:grid-cols-3">{organizationProjects.map((p) => <motion.article {...fadeUp} key={p.title} className="scrapbook-card bg-[#fff3e5] p-6"><h3 className="font-serif text-2xl mb-2">{p.title}</h3><p className="text-sm font-semibold text-accent mb-2">{p.role}</p><p className="text-mediumBrown leading-relaxed">{p.description}</p></motion.article>)}</div></div>
