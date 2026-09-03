@@ -536,8 +536,99 @@ export default function App() {
     </div>
   </div>
 </section>
-        
+
         <section
+  id="data-projects"
+  className="px-6 py-24 bg-[#f8f5f2]"
+>
+  <div className="mx-auto max-w-7xl">
+    <div className="mb-16 text-center">
+      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-[#fff] px-4 py-2 text-sm font-medium text-[#7b1e3a]">
+        Technical Portfolio
+      </span>
+
+      <h2 className="mt-5 font-serif text-4xl md:text-5xl text-[#1f2a44]">
+        Data Science & Tech Projects
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
+        Exploring analytics, visualization, machine learning, and digital product development through meaningful projects.
+      </p>
+    </div>
+
+    <div className="grid gap-8 md:grid-cols-2">
+      {dataProjects.map((project) => (
+        <motion.article
+          {...fadeUp}
+          key={project.id}
+          className="group overflow-hidden rounded-3xl border border-[#eadbc8] bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div className="relative overflow-hidden">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+
+            {project.status && (
+              <div className="absolute right-4 top-4 rounded-full bg-[#7b1e3a] px-3 py-1 text-xs font-semibold text-white">
+                {project.status}
+              </div>
+            )}
+          </div>
+
+          <div className="p-7">
+            <span className="rounded-full border border-[#7b1e3a]/20 px-3 py-1 text-xs text-[#7b1e3a]">
+              {project.category}
+            </span>
+
+            <h3 className="mt-4 font-serif text-3xl text-[#1f2a44]">
+              {project.title}
+            </h3>
+
+            <p className="mt-4 leading-relaxed text-mediumBrown">
+              {project.description}
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full bg-[#f4e7d5] px-3 py-1 text-xs font-medium text-[#1f2a44]"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
+              <p className="text-sm italic text-mediumBrown">
+                {project.details}
+              </p>
+
+              {project.linkGithub && (
+                <div className="mt-4 flex gap-3">
+                  <a
+                    href={project.linkGithub}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full border border-[#1f2a44]/20 bg-white px-5 py-2 text-sm font-semibold text-[#1f2a44] transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
+                  >
+                    {project.buttonText || 'View Project'} ↗
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
+        </motion.article>
+      ))}
+    </div>
+  </div>
+</section>
+        
+        {/* <section
   id="data-projects"
   className="px-6 py-24 bg-[#f8f5f2]"
 >
@@ -645,7 +736,7 @@ export default function App() {
       ))}
     </div>
   </div>
-</section>
+</section> */}
 
         {/* <section id="creative-pr" className="px-6 py-20 bg-[#fffaf2]">
           <div className="mx-auto max-w-6xl"><h2 className="font-serif text-4xl mb-10">Creative & PR</h2><div className="grid gap-6 md:grid-cols-3">{organizationProjects.map((p) => <motion.article {...fadeUp} key={p.title} className="scrapbook-card bg-[#fff3e5] p-6"><h3 className="font-serif text-2xl mb-2">{p.title}</h3><p className="text-sm font-semibold text-accent mb-2">{p.role}</p><p className="text-mediumBrown leading-relaxed">{p.description}</p></motion.article>)}</div></div>
