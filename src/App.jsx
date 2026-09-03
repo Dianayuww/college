@@ -41,8 +41,21 @@ const dataProjects = [
     details:
       'Focused on multiclass classification and behavioral pattern analysis using mental health and user activity indicators.',
   },
-  {
+    {
     id: 2,
+    title: 'PKM AMLI — Student Innovation & Sustainable Research',
+    linkGithub: 'https://journalmabis.org/mabis/article/view/864/452', // Ganti dengan link PDF/Drive dokumen/poster PKM kamu
+    category: 'Academic Research',
+    description:
+      'Developed an innovative and sustainable research project for the PKM AMLI initiative, integrating problem-solving methodologies, data-driven analysis, and strategic project implementation.',
+    tags: ['Research', 'Data Analysis', 'Project Management', 'Product Innovation', 'Sustainability'],
+    image:
+      'https://your-image-url-or-banner-here.png', // Ganti dengan URL foto/dokumentasi PKM kamu
+    details:
+      'Executed end-to-end project workflows, from initial ideation and feasibility analysis to final presentation and reporting.',
+  },
+  {
+    id: 3,
     title: 'Sentiment Analysis through Twitter Data Collection on the Palestine-Israel Conflict',
     linkGithub: 'https://github.com/Dianayuww/israel-palestine-sentiment-analysis',
     category: 'Sentiment Analysis',
@@ -55,7 +68,7 @@ const dataProjects = [
       'Analyzed relationships between life expectancy, smoking rates, and unmet health needs.',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Sentiment Analysis of Kartu Indonesia Pintar Kuliah (KIPK) Recipients from Tweets on Platform X',
     linkGithub: 'https://github.com/Dianayuww/Sentiment-Analysis-KIPK-Recipients-based-Tweets-from-X',
     category: 'Data Mining',
@@ -82,7 +95,7 @@ const dataProjects = [
   // },
 
   {
-    id: 4,
+    id: 5,
     title: 'Strategic Food Commodity Price Forecasting',
     linkGithub: 'https://github.com/Dianayuww/Sentiment-Analysis-KIPK-Recipients-based-Tweets-from-X',
     category: 'Data Mining',
@@ -93,19 +106,6 @@ const dataProjects = [
       'https://id.pinterest.com/pin/339107046925335431/',
     details:
       'Evaluated model performance across commodity volatility levels, with LSTM achieving 0.09% MAPE on stable commodities (Rice) and GRU scoring 13.42% MAPE on volatile items (Red Chili).',
-  },
-  {
-    id: 5,
-    title: 'PKM AMLI — Student Innovation & Sustainable Research',
-    linkGithub: 'https://journalmabis.org/mabis/article/view/864/452', // Ganti dengan link PDF/Drive dokumen/poster PKM kamu
-    category: 'Academic Research',
-    description:
-      'Developed an innovative and sustainable research project for the PKM AMLI initiative, integrating problem-solving methodologies, data-driven analysis, and strategic project implementation.',
-    tags: ['Research', 'Data Analysis', 'Project Management', 'Product Innovation', 'Sustainability'],
-    image:
-      'https://your-image-url-or-banner-here.png', // Ganti dengan URL foto/dokumentasi PKM kamu
-    details:
-      'Executed end-to-end project workflows, from initial ideation and feasibility analysis to final presentation and reporting.',
   },
   ]
   // {
