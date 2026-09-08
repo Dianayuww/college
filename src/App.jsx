@@ -1495,15 +1495,13 @@ export default function App() {
             <div className="grid gap-8 lg:grid-cols-3">
               <div className="rounded-[2rem] border border-[#eadbc8] bg-white/75 p-8 shadow-soft lg:col-span-2">
                 <p className="text-lg leading-relaxed text-[#3f4658]">
-                  I am a Data Science graduate at State University of
-                  Surabaya with interests in data analytics, digital public service,
-                  public relations, and creative problem-solving.
+                  I am a Data Science graduate from State University of Surabaya with experience 
+                  in data analytics, machine learning, and data-driven problem-solving.
                 </p>
 
                 <p className="mt-5 text-lg leading-relaxed text-[#3f4658]">
-                  My work combines analytical thinking and communication strategy to
-                  turn data, ideas, and community-driven initiatives into meaningful
-                  insights and impactful stories.
+                  My work combines analytical thinking and technical execution to transform data 
+                  into meaningful insights, predictive models, and practical solutions.
                 </p>
 
                 <div className="mt-8 grid gap-4 sm:grid-cols-3">
@@ -1533,9 +1531,9 @@ export default function App() {
                   {[
                     'Data Analytics & Visualization',
                     'Machine Learning & Modeling',
-                    'Public Relations',
-                    'Digital Public Service Analytics',
-                    'Creative Strategy',
+                    'Data Processing & ETL',
+                    'SQL & Database Analysis',
+                    'Data-Driven Problem Solving',
                   ].map((item) => (
                     <div
                       key={item}
@@ -2209,13 +2207,6 @@ export default function App() {
             <div className="mt-4 text-sm text-cream/85">
               Phone: +62 85184665784
             </div>
-
-            <a
-              href="https://bit.ly/40t89Ta"
-              className="mt-8 inline-block rounded-full bg-[#fffaf2] px-7 py-3 text-darkBrown shadow-soft transition hover:-translate-y-0.5"
-            >
-              Download CV
-            </a>
           </div>
         </section>
       </main>
