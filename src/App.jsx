@@ -1122,7 +1122,7 @@ export default function App() {
 
               <a
                 className="inline-flex items-center gap-2 hover:opacity-80"
-                href="https://linkedin.com/in/dian-fauziah"
+                href="https://linkedin.com/in/dian-ayu-fauziah"
                 target="_blank"
                 rel="noopener noreferrer"
               >
