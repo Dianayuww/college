@@ -37,7 +37,7 @@ const dataProjects = [
   title: 'Social Media Addiction Classification',
   linkGithub: 'https://github.com/Dianayuww/social-media-addiction-comparative-analysis',
   linkMedium: 'https://died-iaryyy.medium.com/brain-rot-itu-nyata-aku-buktiin-lewat-data-705-mahasiswa-85ae60721a20',
-  linkJournal: 'https://link-jurnal-kamu.com', // Ganti dengan URL link jurnal publikasi kamu
+  linkJournal: 'https://ejournal.unesa.ac.id/index.php/rapids/article/view/80676', // Ganti dengan URL link jurnal publikasi kamu
   category: 'Machine Learning Research',
   description:
     'Classification model comparing Random Forest and XGBoost using three train-test split scenarios and 10-fold Cross Validation to predict social media addiction patterns.',
@@ -1122,12 +1122,12 @@ export default function App() {
 
               <a
                 className="inline-flex items-center gap-2 hover:opacity-80"
-                href="https://linkedin.com/in/dian-ayu-fauziah"
+                href="https://www.linkedin.com/in/dian-ayu-fauziah-986708311/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Linkedin size={16} />
-                linkedin.com/in/dian-fauziah
+                linkedin.com/in/dian-ayu-fauziah
               </a>
 
               <a
