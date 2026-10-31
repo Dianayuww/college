@@ -32,7 +32,7 @@ const navItems = [
 ]
 
 const dataProjects = [
-  {
+{
   id: 1,
   title: 'Social Media Addiction Classification',
   linkGithub: 'https://github.com/Dianayuww/social-media-addiction-comparative-analysis',
@@ -46,7 +46,7 @@ const dataProjects = [
     'https://media.istockphoto.com/id/1292258619/id/foto/pemuda-memiliki-mata-yang-sakit-dan-lelah-saat-menggunakan-smartphone-saat-berbaring-di-tempat.webp?a=1&b=1&s=612x612&w=0&k=20&c=YevtZ0y1KXkMdNDxq9Lkqk7ASdmOZ8dnMQp2B8gVoUM=',
   details:
     'Focused on multiclass classification and behavioral pattern analysis using mental health and user activity indicators.',
-},
+}
   {
     id: 2,
     title: 'PKM AMLI — Student Innovation & Sustainable Research',
