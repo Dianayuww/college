@@ -514,101 +514,109 @@ export default function App() {
         </section>
 
         {/* DATA PROJECTS SECTION */}
-        <section
-          id="data-projects"
-          className="px-6 py-24 bg-[#f8f5f2]"
+        {/* DATA PROJECTS SECTION (MINIMALIST DESIGN) */}
+<section
+  id="data-projects"
+  className="px-6 py-24 bg-[#f8f5f2]"
+>
+  <div className="mx-auto max-w-7xl">
+    <div className="mb-16 text-center">
+      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#7b1e3a] backdrop-blur-sm">
+        Technical Portfolio
+      </span>
+
+      <h2 className="mt-4 font-serif text-4xl md:text-5xl text-[#1f2a44]">
+        Data Science & Tech Projects
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
+        Exploring analytics, visualization, machine learning, and digital product development through meaningful projects.
+      </p>
+    </div>
+
+    <div className="grid gap-8 md:grid-cols-2">
+      {dataProjects.map((project) => (
+        <motion.article
+          {...fadeUp}
+          key={project.id}
+          className="group flex flex-col justify-between overflow-hidden rounded-3xl border border-[#eadbc8]/60 bg-white/90 p-5 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#7b1e3a]/30 hover:shadow-xl"
         >
-          <div className="mx-auto max-w-7xl">
-            <div className="mb-16 text-center">
-              <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white px-4 py-2 text-sm font-medium text-[#7b1e3a]">
-                Technical Portfolio
-              </span>
-
-              <h2 className="mt-5 font-serif text-4xl md:text-5xl text-[#1f2a44]">
-                Data Science & Tech Projects
-              </h2>
-
-              <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
-                Exploring analytics, visualization, machine learning, and digital product development through meaningful projects.
-              </p>
+          <div>
+            {/* Visual Header / Image Container (Minimalist Aspect Ratio) */}
+            <div className="relative h-52 w-full overflow-hidden rounded-2xl bg-[#f4e7d5]/50">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-80" />
+              
+              <div className="absolute left-4 top-4">
+                <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#7b1e3a] shadow-sm backdrop-blur-md">
+                  {project.category}
+                </span>
+              </div>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2">
-              {dataProjects.map((project) => (
-                <motion.article
-                  {...fadeUp}
-                  key={project.id}
-                  className="group overflow-hidden rounded-3xl border border-[#eadbc8] bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
-                >
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                  </div>
+            {/* Content Body */}
+            <div className="px-2 pt-6">
+              <h3 className="font-serif text-2xl font-bold text-[#1f2a44] transition-colors group-hover:text-[#7b1e3a]">
+                {project.title}
+              </h3>
 
-                  <div className="p-7">
-                    <span className="rounded-full border border-[#7b1e3a]/20 px-3 py-1 text-xs text-[#7b1e3a]">
-                      {project.category}
-                    </span>
+              <p className="mt-3 text-sm leading-relaxed text-mediumBrown">
+                {project.description}
+              </p>
 
-                    <h3 className="mt-4 font-serif text-3xl text-[#1f2a44]">
-                      {project.title}
-                    </h3>
-
-                    <p className="mt-4 leading-relaxed text-mediumBrown">
-                      {project.description}
-                    </p>
-
-                    <div className="mt-6 flex flex-wrap gap-2">
-                      {project.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-full bg-[#f4e7d5] px-3 py-1 text-xs font-medium text-[#1f2a44]"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
-                      <p className="text-sm italic text-mediumBrown">
-                        {project.details}
-                      </p>
-
-                      <div className="mt-4 flex flex-wrap gap-3">
-                        {project.linkGithub && (
-                          <a
-                            href={project.linkGithub}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="rounded-full border border-[#1f2a44]/20 bg-white px-5 py-2 text-sm font-semibold text-[#1f2a44] transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
-                          >
-                            {project.buttonText || 'View Project'} ↗
-                          </a>
-                        )}
-
-                        {project.linkMedium && (
-                          <a
-                            href={project.linkMedium}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="rounded-full border border-[#7b1e3a]/30 bg-[#7b1e3a] px-5 py-2 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-[#5e162d]"
-                          >
-                            Read Article ↗
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </motion.article>
-              ))}
+              {/* Minimalist Tags */}
+              <div className="mt-5 flex flex-wrap gap-1.5">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-lg bg-[#f8efe3]/80 px-2.5 py-1 text-xs font-medium text-[#1f2a44]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
-        </section>
 
+          {/* Details & Minimalist Links Footer */}
+          <div className="mt-6 px-2 pt-4 border-t border-[#eadbc8]/40">
+            <p className="text-xs italic leading-relaxed text-[#7b1e3a]/90">
+              {project.details}
+            </p>
+
+            <div className="mt-4 flex flex-wrap gap-2 pt-1">
+              {project.linkGithub && (
+                <a
+                  href={project.linkGithub}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-[#1f2a44]/15 bg-white px-4 py-1.5 text-xs font-semibold text-[#1f2a44] transition-all hover:bg-[#1f2a44] hover:text-white"
+                >
+                  {project.buttonText || 'View Project'} ↗
+                </a>
+              )}
+
+              {project.linkMedium && (
+                <a
+                  href={project.linkMedium}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-[#7b1e3a]/30 bg-[#7b1e3a] px-4 py-1.5 text-xs font-semibold text-white transition-all hover:bg-[#5e162d]"
+                >
+                  Read Article ↗
+                </a>
+              )}
+            </div>
+          </div>
+        </motion.article>
+      ))}
+    </div>
+  </div>
+</section>
         {/* EXPERIENCE SECTION */}
         <section
           className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
