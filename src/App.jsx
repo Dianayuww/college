@@ -292,84 +292,81 @@ export default function App() {
           </div>
         </section>
 
-        {/* ABOUT SECTION */}
-        <section
-          id="about"
-          className="relative overflow-hidden bg-[#fffaf7] px-6 py-24 text-[#101b33]"
-        >
-          <div className="absolute left-10 top-16 text-4xl text-[#d6a778]/80">✦</div>
-          <div className="absolute right-12 top-24 grid grid-cols-7 gap-3 opacity-40">
-            {Array.from({ length: 35 }).map((_, i) => (
-              <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
-            ))}
-          </div>
+        {/* ABOUT SECTION (FORMAT SESUAI GAMBAR) */}
+<section
+  id="about"
+  className="relative overflow-hidden bg-[#fffaf7] px-6 py-24 text-[#101b33]"
+>
+  {/* Element Dekoratif Latar Belakang */}
+  <div className="absolute left-10 top-16 text-4xl text-[#d6a778]/80">✦</div>
+  <div className="absolute right-12 top-16 grid grid-cols-7 gap-3 opacity-40">
+    {Array.from({ length: 35 }).map((_, i) => (
+      <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
+    ))}
+  </div>
 
-          <div className="mx-auto max-w-7xl">
-            <div className="mb-14">
-              <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#7b1e3a]">
-                About Me
-              </p>
+  <div className="mx-auto max-w-7xl">
+    {/* Header Area */}
+    <div className="mb-8">
+      <p className="text-sm font-bold uppercase tracking-[0.35em] text-[#7b1e3a]">
+        ABOUT ME
+      </p>
 
-              <h2 className="mt-4 font-serif text-4xl leading-tight text-[#101b33] md:text-6xl">
-                Data-backed analysis. Strategic execution.
-              </h2>
-            </div>
+      <h2 className="mt-3 font-serif text-5xl leading-tight text-[#101b33] md:text-6xl">
+        Data-backed analysis. Strategic execution.
+      </h2>
 
-            <div className="grid gap-8 lg:grid-cols-3">
-              <div className="rounded-[2rem] border border-[#eadbc8] bg-white/75 p-8 shadow-soft lg:col-span-2">
-                <p className="text-lg leading-relaxed text-[#3f4658]">
-                  I am a Data Science graduate from State University of Surabaya with experience 
-                  in data analytics, machine learning, and data-driven problem-solving.
-                </p>
+      <p className="mt-6 max-w-4xl text-lg leading-relaxed text-[#3f4658]">
+        I bridge the gap between technical data engineering and business strategy. With hands-on experience in public service dashboards and retail transactional analysis, I ensure data turns into meaningful operational insights.
+      </p>
+    </div>
 
-                <p className="mt-5 text-lg leading-relaxed text-[#3f4658]">
-                  My work combines analytical thinking and technical execution to transform data 
-                  into meaningful insights, predictive models, and practical solutions.
-                </p>
+    {/* 3 Cards Grid (Analyze, Communicate, Execute) */}
+    <div className="mt-12 grid gap-6 md:grid-cols-3">
+      {/* Card 01 - ANALYZE */}
+      <motion.div
+        {...fadeUp}
+        className="rounded-3xl border border-[#eadbc8]/80 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+      >
+        <p className="font-serif text-4xl font-bold text-[#7b1e3a]">01</p>
+        <h3 className="mt-4 font-bold uppercase tracking-wider text-[#101b33]">
+          ANALYZE
+        </h3>
+        <p className="mt-4 text-sm leading-relaxed text-[#5a6275]">
+          Cleaning messy datasets, verifying multi-source OPD/Kaggle data, running SQL queries, and discovering trends across sales, profit margin, and customer behavior.
+        </p>
+      </motion.div>
 
-                <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                  <div className="rounded-2xl bg-[#f8efe3] p-5">
-                    <p className="text-3xl font-serif text-[#7b1e3a]">01</p>
-                    <p className="mt-2 text-sm font-semibold uppercase tracking-widest">Analyze</p>
-                  </div>
+      {/* Card 02 - COMMUNICATE */}
+      <motion.div
+        {...fadeUp}
+        className="rounded-3xl border border-[#eadbc8]/80 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+      >
+        <p className="font-serif text-4xl font-bold text-[#7b1e3a]">02</p>
+        <h3 className="mt-4 font-bold uppercase tracking-wider text-[#101b33]">
+          COMMUNICATE
+        </h3>
+        <p className="mt-4 text-sm leading-relaxed text-[#5a6275]">
+          Designing intuitive Metabase and MS Excel PivotChart dashboards with key performance indicators (KPIs) customized for executive and operational decision-makers.
+        </p>
+      </motion.div>
 
-                  <div className="rounded-2xl bg-[#f8efe3] p-5">
-                    <p className="text-3xl font-serif text-[#7b1e3a]">02</p>
-                    <p className="mt-2 text-sm font-semibold uppercase tracking-widest">Communicate</p>
-                  </div>
-
-                  <div className="rounded-2xl bg-[#f8efe3] p-5">
-                    <p className="text-3xl font-serif text-[#7b1e3a]">03</p>
-                    <p className="mt-2 text-sm font-semibold uppercase tracking-widest">Execute</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-[2rem] border border-[#eadbc8] bg-[#101b33] p-8 text-white shadow-soft">
-                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#d6a778]">
-                  Focus Areas
-                </p>
-
-                <div className="mt-8 space-y-4">
-                  {[
-                    'Data Analytics & Visualization',
-                    'Machine Learning & Modeling',
-                    'Data Processing & ETL',
-                    'SQL & Database Analysis',
-                    'Data-Driven Problem Solving',
-                  ].map((item) => (
-                    <div
-                      key={item}
-                      className="rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm"
-                    >
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      {/* Card 03 - EXECUTE */}
+      <motion.div
+        {...fadeUp}
+        className="rounded-3xl border border-[#eadbc8]/80 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+      >
+        <p className="font-serif text-4xl font-bold text-[#7b1e3a]">03</p>
+        <h3 className="mt-4 font-bold uppercase tracking-wider text-[#101b33]">
+          EXECUTE
+        </h3>
+        <p className="mt-4 text-sm leading-relaxed text-[#5a6275]">
+          Translating insights into actionable business recommendations—such as pricing adjustments, inventory turnover optimization, and return rate mitigations.
+        </p>
+      </motion.div>
+    </div>
+  </div>
+</section>
 
         {/* 1. FEATURED RECENT PROJECT (EXCEL DASHBOARD - KODE PERSIS GAMBAR 1) */}
         <section id="featured-project" className="px-6 py-24 bg-[#fffaf7]">
