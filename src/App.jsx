@@ -814,68 +814,116 @@ export default function App() {
 </section>
 
         {/* BEYOND THE NUMBERS SECTION */}
-        <section
-          id="communication"
-          className="bg-[#fffaf7] px-6 py-24"
-        >
-          <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.45em] text-[#7b1e3a]">
-                Beyond The Numbers
-              </p>
+<section
+  id="communication"
+  className="bg-[#fffaf7] px-6 py-24 border-t border-[#eadbc8]/50"
+>
+  <div className="mx-auto max-w-7xl">
+    
+    {/* Upper Section: Narrative & Pill Badges */}
+    <div className="grid gap-10 lg:grid-cols-12 items-center mb-16">
+      <div className="lg:col-span-7">
+        <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#7b1e3a]">
+          BEYOND THE NUMBERS
+        </p>
 
-              <h2 className="mt-5 font-serif text-5xl leading-tight text-[#1f2a44] md:text-6xl">
-                Speaking, Leading,
-                <br />
-                & Connecting
-              </h2>
+        <h2 className="mt-4 font-serif text-4xl md:text-6xl leading-tight text-[#1f2a44]">
+          Speaking, Leading, <br /> & Connecting
+        </h2>
 
-              <p className="mt-6 max-w-xl leading-relaxed text-mediumBrown">
-                Through public speaking, moderating, event handling, and team
-                collaboration, I learned how to turn ideas into meaningful experiences
-                for people.
-              </p>
-            </div>
+        <p className="mt-5 text-base md:text-lg leading-relaxed text-[#5a6275] max-w-2xl">
+          Through public speaking, moderating, event handling, and cross-functional team collaboration, 
+          I bridge technical insights with human connection—turning data and ideas into meaningful experiences.
+        </p>
 
-            <div className="relative flex flex-wrap items-start justify-center gap-8 border-t-2 border-[#c8a27a] pt-14">
-              <div className="relative transition duration-300 hover:-translate-y-2 hover:rotate-0">
-                <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
-                <img
-                  src={mcDuduk}
-                  alt=""
-                  className="h-[260px] w-[220px] rotate-[-4deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
-                />
-              </div>
+        {/* 3 Skill Badges */}
+        <div className="mt-8 flex flex-wrap gap-3">
+          <span className="rounded-full border border-[#7b1e3a]/20 bg-[#f8efe3] px-4 py-2 text-xs font-semibold text-[#7b1e3a]">
+            🎙️ Public Speaking & MC
+          </span>
+          <span className="rounded-full border border-[#7b1e3a]/20 bg-[#f8efe3] px-4 py-2 text-xs font-semibold text-[#7b1e3a]">
+            🤝 Event Moderating
+          </span>
+          <span className="rounded-full border border-[#7b1e3a]/20 bg-[#f8efe3] px-4 py-2 text-xs font-semibold text-[#7b1e3a]">
+            👥 Team Leadership & PR
+          </span>
+        </div>
+      </div>
+    </div>
 
-              <div className="relative mt-10 transition duration-300 hover:-translate-y-2 hover:rotate-0">
-                <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
-                <img
-                  src={mcWmk}
-                  alt=""
-                  className="h-[300px] w-[240px] rotate-[5deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
-                />
-              </div>
-
-              <div className="relative transition duration-300 hover:-translate-y-2 hover:rotate-0">
-                <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
-                <img
-                  src={mcDiskusi}
-                  alt=""
-                  className="h-[240px] w-[210px] rotate-[-3deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
-                />
-              </div>
-
-              <div className="relative mt-8 transition duration-300 hover:-translate-y-2 hover:rotate-0">
-                <div className="absolute left-1/2 top-[-30px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
-                <img
-                  src={mcStage}
-                  alt=""
-                  className="h-[280px] w-[220px] rotate-[4deg] rounded-sm border-[12px] border-white object-cover shadow-2xl"
-                />
-              </div>
+    {/* Hanging Polaroid Gallery */}
+    <div className="relative border-t-2 border-[#c8a27a]/60 pt-16">
+      <div className="flex flex-wrap items-start justify-center gap-6 md:gap-10">
+        
+        {/* Photo 1 */}
+        <div className="group relative transition-all duration-300 hover:-translate-y-3 hover:rotate-0">
+          <div className="absolute left-1/2 top-[-40px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+          <div className="relative rounded-sm bg-white p-3 shadow-xl border border-[#eadbc8]/60 rotate-[-4deg]">
+            <img
+              src={mcDuduk}
+              alt="MC Duduk Session"
+              className="h-[250px] w-[200px] object-cover rounded-sm"
+            />
+            <div className="mt-3 text-center">
+              <p className="font-serif text-sm font-bold text-[#1f2a44]">Master of Ceremonies</p>
+              <p className="text-[11px] text-[#7b1e3a]">Formal Event Host</p>
             </div>
           </div>
-        </section>
+        </div>
+
+        {/* Photo 2 */}
+        <div className="group relative mt-8 transition-all duration-300 hover:-translate-y-3 hover:rotate-0">
+          <div className="absolute left-1/2 top-[-72px] h-18 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+          <div className="relative rounded-sm bg-white p-3 shadow-xl border border-[#eadbc8]/60 rotate-[5deg]">
+            <img
+              src={mcWmk}
+              alt="WMK Program"
+              className="h-[280px] w-[220px] object-cover rounded-sm"
+            />
+            <div className="mt-3 text-center">
+              <p className="font-serif text-sm font-bold text-[#1f2a44]">WMK Batch 3 Showcase</p>
+              <p className="text-[11px] text-[#7b1e3a]">Presentation & Pitching</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Photo 3 */}
+        <div className="group relative transition-all duration-300 hover:-translate-y-3 hover:rotate-0">
+          <div className="absolute left-1/2 top-[-40px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+          <div className="relative rounded-sm bg-white p-3 shadow-xl border border-[#eadbc8]/60 rotate-[-3deg]">
+            <img
+              src={mcDiskusi}
+              alt="Discussion Forum"
+              className="h-[240px] w-[200px] object-cover rounded-sm"
+            />
+            <div className="mt-3 text-center">
+              <p className="font-serif text-sm font-bold text-[#1f2a44]">Moderator & Speaker</p>
+              <p className="text-[11px] text-[#7b1e3a]">Public Discussion</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Photo 4 */}
+        <div className="group relative mt-6 transition-all duration-300 hover:-translate-y-3 hover:rotate-0">
+          <div className="absolute left-1/2 top-[-64px] h-16 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+          <div className="relative rounded-sm bg-white p-3 shadow-xl border border-[#eadbc8]/60 rotate-[4deg]">
+            <img
+              src={mcStage}
+              alt="Stage MC"
+              className="h-[270px] w-[210px] object-cover rounded-sm"
+            />
+            <div className="mt-3 text-center">
+              <p className="font-serif text-sm font-bold text-[#1f2a44]">Stage Director & MC</p>
+              <p className="text-[11px] text-[#7b1e3a]">Grand Event Handling</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
 
         {/* 2. TECHNICAL SKILLS & TOOLS (PERSIS LAYOUT GAMBAR 2 DENGAN TAMBAHAN LOGO LOGO) */}
         <section
