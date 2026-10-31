@@ -36,7 +36,7 @@ const dataProjects = [
   id: 1,
   title: 'Social Media Addiction Classification',
   linkGithub: 'https://github.com/Dianayuww/social-media-addiction-comparative-analysis',
-  linkMedium: 'https://medium.com/@username-kamu/link-artikel-kamu', // Isi dengan link Medium / Publikasi kamu
+  linkMedium: 'https://died-iaryyy.medium.com/brain-rot-itu-nyata-aku-buktiin-lewat-data-705-mahasiswa-85ae60721a20', // Isi dengan link Medium / Publikasi kamu
   buttonTextMedium: 'View Publication',
   category: 'Machine Learning Research',
   description:
