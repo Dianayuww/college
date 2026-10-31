@@ -165,43 +165,43 @@ const fadeUp = {
 export default function App() {
   // Sertifikasi versi baru (Grid Badges ala gambar 3 dengan Link Verifikasi)
   const certificationsBadges = [
-    {
-      title: 'Advanced SQL',
-      issuer: 'Kaggle',
-      year: '2026',
-      link: ' hshs '
-    },
-    {
-      title: 'Intro to SQL',
-      issuer: 'Kaggle',
-      year: '2026',
-      link: ' '
-    },
-    {
-      title: 'Data Analysis with Python',
-      issuer: 'freeCodeCamp',
-      year: '2025',
-      link: 'https://freecodecamp.org/certification/dianayuww/data-analysis-with-python-v7',
-    },
-    {
-      title: 'Belajar Dasar Data Science',
-      issuer: 'Dicoding Indonesia',
-      year: '2025',
-      link: 'https://www.dicoding.com/certificates/',
-    },
-    {
-      title: 'AWS Cloud Essentials Badge',
-      issuer: 'AWS Training & Certification',
-      year: '2024',
-      link: 'https://www.credly.com/',
-    },
-    {
-      title: 'Scientific Computing with Python',
-      issuer: 'freeCodeCamp',
-      year: '2025',
-      link: 'https://freecodecamp.org/certification/dianayuww/scientific-computing-with-python-v7',
-    },
-  ]
+  {
+    title: 'Data Classification and Summarization using IBM Granite',
+    issuer: 'IBM SkillsBuild',
+    year: '2026',
+    link: 'https://www.credly.com/', // Ganti dengan link sertifikat/badge IBM kamu
+  },
+  {
+    title: 'Machine Learning with Python',
+    issuer: 'freeCodeCamp / IBM',
+    year: '2025',
+    link: 'https://freecodecamp.org/certification/dianayuww/machine-learning-with-python-v7', // Ganti link kamu
+  },
+  {
+    title: 'Advanced SQL',
+    issuer: 'Kaggle',
+    year: '2026',
+    link: 'https://www.kaggle.com/learn/certification/dianayuw/advanced-sql',
+  },
+  {
+    title: 'Intro to SQL',
+    issuer: 'Kaggle',
+    year: '2026',
+    link: 'https://www.kaggle.com/learn/certification/dianayuw/intro-to-sql',
+  },
+  {
+    title: 'Data Analysis with Python',
+    issuer: 'freeCodeCamp',
+    year: '2025',
+    link: 'https://freecodecamp.org/certification/dianayuww/data-analysis-with-python-v7',
+  },
+  {
+    title: 'AWS Cloud Essentials Badge',
+    issuer: 'AWS Training & Certification',
+    year: '2024',
+    link: 'https://www.credly.com/', // Ganti link Credly AWS kamu
+  },
+]
   
   return (
     <div className="min-h-screen bg-background text-darkBrown font-sans">
