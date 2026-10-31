@@ -18,32 +18,20 @@ import hmpImage from './assets/humas2.jpeg'
 import wmImage from './assets/wmk all.jpeg'
 import banacleImage from './assets/banacle2.jpeg'
 import { motion } from 'framer-motion'
-import { ArrowDown, BookOpen, Lightbulb, Mail, Linkedin, Github, Instagram, Award, MapPin, Calendar, Sparkles, Users, ShoppingBag, ExternalLink } from 'lucide-react'
+import { ArrowDown, BookOpen, Lightbulb, Mail, Linkedin, Github, Instagram, Award, MapPin, Calendar, Sparkles, Users, ShoppingBag, ExternalLink, Database, PieChart, Server, Briefcase, CheckCircle2 } from 'lucide-react'
 import aku2 from './assets/aku8.png'
 
 const navItems = [
   { label: 'About', href: '#about' },
+  { label: 'Featured Project', href: '#featured-project' },
   { label: 'Data Projects', href: '#data-projects' },
   { label: 'Creative & PR', href: '#creative-pr' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Certifications', href: '#learning' },
   { label: 'Contact', href: '#contact' },
 ]
 
-// UPDATED: Diurutkan dengan Retail Sales Dashboard (Featured) di paling atas!
 const dataProjects = [
-  {
-    id: 0,
-    title: 'Retail Sales & Return Rate Analysis (MS Excel)',
-    linkGithub: 'https://github.com/Dianayuww/retail-sales-excel-dashboard',
-    category: 'Operational Data Analysis',
-    featured: true,
-    description:
-      'End-to-end Excel analytics project: cleaned 4,200+ raw transactional records, re-evaluated sales vs profit metrics, and delivered an interactive dashboard using PivotTables and Slicers.',
-    tags: ['MS Excel', 'Data Cleaning', 'PivotTable', 'PivotChart', 'Sales KPI', 'Retail Analytics'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop', // Bisa diganti gambar screenshot dashboard kamu
-    details:
-      'Key Findings: Total Delivered Sales IDR 153.5M with 18.7% overall margin. Electronics drives 58% of total sales but yields thin 11.9% margin, while Furniture delivers 39% of profit with a 28.4% margin. Identified Electronics as driving 62% of returned order value.',
-  },
   {
     id: 1,
     title: 'Social Media Addiction Classification',
@@ -174,82 +162,52 @@ const fadeUp = {
 }
 
 export default function App() {
-  const [selectedProject, setSelectedProject] = useState(0)
-
-  // UPDATED: Ditambahkan Kaggle Intro & Advanced SQL + Link Verifikasi Sertifikat
-  const certificates = [
+  // Sertifikasi versi baru (Grid Badges ala gambar 3 dengan Link Verifikasi)
+  const certificationsBadges = [
     {
       title: 'Advanced SQL',
       issuer: 'Kaggle',
       year: '2026',
-      image: 'https://storage.googleapis.com/kaggle-media/competitions/Kaggle/logo.png', // Atau ganti asset cert Kaggle
-      skills: ['Advanced SQL', 'Window Functions', 'CTEs', 'Query Optimization'],
       link: 'https://www.kaggle.com/learn/certification/dianayuw/advanced-sql',
     },
     {
       title: 'Intro to SQL',
       issuer: 'Kaggle',
       year: '2026',
-      image: 'https://storage.googleapis.com/kaggle-media/competitions/Kaggle/logo.png',
-      skills: ['SQL', 'Data Querying', 'GROUP BY', 'HAVING', 'Joins'],
       link: 'https://www.kaggle.com/learn/certification/dianayuw/intro-to-sql',
     },
     {
       title: 'Data Analysis with Python',
       issuer: 'freeCodeCamp',
       year: '2025',
-      image: certFreecodecampPython,
-      skills: ['Python', 'Pandas', 'NumPy', 'Data Cleaning', 'Matplotlib'],
       link: 'https://freecodecamp.org/certification/dianayuww/data-analysis-with-python-v7',
     },
     {
       title: 'Belajar Dasar Data Science',
-      issuer: 'Dicoding',
+      issuer: 'Dicoding Indonesia',
       year: '2025',
-      image: certDicodingDataScience,
-      skills: ['Data Science', 'Analytics', 'Exploratory Data Analysis'],
       link: 'https://www.dicoding.com/certificates/',
     },
     {
-      title: 'AWS Cloud Essentials',
+      title: 'AWS Cloud Essentials Badge',
       issuer: 'AWS Training & Certification',
       year: '2024',
-      image: 'https://images.credly.com/size/340x340/images/2784d9d8-327c-406f-971e-962e154bb690/image.png',
-      skills: ['AWS Cloud', 'ETL Pipeline', 'AWS Glue', 'Cloud Computing'],
       link: 'https://www.credly.com/',
     },
     {
-      title: 'AI Praktis untuk Produktivitas',
-      issuer: 'Dicoding × AVPN',
+      title: 'Scientific Computing with Python',
+      issuer: 'freeCodeCamp',
       year: '2025',
-      image: certAIProductivity,
-      skills: ['AI Tools', 'Productivity', 'Prompting'],
-      link: 'https://www.dicoding.com/certificates/',
-    },
-    {
-      title: 'Belajar Penggunaan Generative AI',
-      issuer: 'Dicoding × AVPN',
-      year: '2025',
-      image: certGenerativeAI,
-      skills: ['Generative AI', 'LLM', 'AI Ethics'],
-      link: 'https://www.dicoding.com/certificates/',
-    },
-    {
-      title: 'Career Essentials',
-      issuer: 'IBM SkillsBuild',
-      year: '2025',
-      image: certIBMSkillsBuild,
-      skills: ['Professional Skills', 'Career Readiness'],
-      link: 'https://skillsbuild.org/',
+      link: 'https://freecodecamp.org/certification/dianayuww/scientific-computing-with-python-v7',
     },
   ]
   
   return (
-    <div className="min-h-screen bg-background text-darkBrown">
+    <div className="min-h-screen bg-background text-darkBrown font-sans">
       <header className="sticky top-0 z-50 border-b border-[#d9c4a6]/50 bg-[#fffaf2cc] backdrop-blur-md">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <p className="font-serif text-lg md:text-xl">Dian Ayu Fauziah</p>
-          <ul className="hidden md:flex gap-6 text-sm text-mediumBrown">
+          <p className="font-serif text-lg md:text-xl font-bold text-[#7b1e3a]">Dian Ayu Fauziah</p>
+          <ul className="hidden md:flex gap-6 text-sm text-mediumBrown font-medium">
             {navItems.map((item) => <li key={item.label}><a href={item.href} className="hover:text-darkBrown transition">{item.label}</a></li>)}
           </ul>
         </nav>
@@ -293,10 +251,10 @@ export default function App() {
 
               <div className="mt-10 flex flex-wrap gap-5">
                 <a
-                  href="#data-projects"
+                  href="#featured-project"
                   className="inline-flex items-center gap-4 rounded-lg bg-[#7b1e3a] px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition hover:-translate-y-1 hover:bg-[#101b33]"
                 >
-                  View Data Projects <span>→</span>
+                  View Featured Project <span>→</span>
                 </a>
 
                 <a
@@ -413,7 +371,149 @@ export default function App() {
           </div>
         </section>
 
-        {/* DATA PROJECTS SECTION (WITH FEATURED RETAIL SALES DASHBOARD) */}
+        {/* 1. FEATURED RECENT PROJECT (EXCEL DASHBOARD - KODE PERSIS GAMBAR 1) */}
+        <section id="featured-project" className="px-6 py-24 bg-[#fffaf7]">
+          <div className="mx-auto max-w-7xl">
+            <motion.div {...fadeUp} className="mb-12">
+              <span className="text-sm font-bold uppercase tracking-[0.35em] text-[#7b1e3a]">
+                FEATURED RECENT PROJECT
+              </span>
+              <h2 className="mt-3 font-serif text-4xl md:text-5xl text-[#101b33]">
+                Retail Sales & Return Rate Analysis (MS Excel)
+              </h2>
+            </motion.div>
+
+            <motion.div
+              {...fadeUp}
+              className="overflow-hidden rounded-[2.5rem] border border-[#eadbc8] bg-white p-6 shadow-xl md:p-10"
+            >
+              <div className="grid gap-10 lg:grid-cols-12 items-start">
+                
+                {/* Left Side: Business Narrative & KPIs */}
+                <div className="lg:col-span-7 space-y-6">
+                  <p className="text-lg leading-relaxed text-[#3f4658]">
+                    End-to-end Excel analytical project: Cleaned a messy raw dataset of <strong>4,310 rows (2020–2024)</strong> down to 4,200 valid records using nested formulas and Text to Columns. Built dynamic PivotTables and an interactive dashboard to isolate Delivered orders and diagnose profit bottlenecks.
+                  </p>
+
+                  {/* 4 Metric Cards */}
+                  <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 pt-2">
+                    <div className="rounded-2xl border border-[#eadbc8]/80 bg-[#fbf6f0] p-4 text-center">
+                      <p className="text-xs font-semibold uppercase tracking-wider text-mediumBrown">DELIVERED ORDERS</p>
+                      <p className="mt-2 font-serif text-2xl font-bold text-[#101b33]">2,725</p>
+                      <p className="mt-1 text-[11px] text-gray-500">8 invalid flagged</p>
+                    </div>
+
+                    <div className="rounded-2xl border border-[#eadbc8]/80 bg-[#fbf6f0] p-4 text-center">
+                      <p className="text-xs font-semibold uppercase tracking-wider text-mediumBrown">TOTAL SALES</p>
+                      <p className="mt-2 font-serif text-2xl font-bold text-[#7b1e3a]">153.5M</p>
+                      <p className="mt-1 text-[11px] text-gray-500">Filtered delivered</p>
+                    </div>
+
+                    <div className="rounded-2xl border border-[#eadbc8]/80 bg-[#fbf6f0] p-4 text-center">
+                      <p className="text-xs font-semibold uppercase tracking-wider text-mediumBrown">PROFIT MARGIN</p>
+                      <p className="mt-2 font-serif text-2xl font-bold text-[#1e6f5c]">18.7%</p>
+                      <p className="mt-1 text-[11px] text-gray-500">Total 28.7M Profit</p>
+                    </div>
+
+                    <div className="rounded-2xl border border-[#eadbc8]/80 bg-[#fbf6f0] p-4 text-center">
+                      <p className="text-xs font-semibold uppercase tracking-wider text-mediumBrown">RETURN RATE</p>
+                      <p className="mt-2 font-serif text-2xl font-bold text-[#b83b5e]">18.3%</p>
+                      <p className="mt-1 text-[11px] text-gray-500">32.4M total value</p>
+                    </div>
+                  </div>
+
+                  {/* Key Findings List */}
+                  <div className="pt-4 space-y-3">
+                    <p className="text-sm font-bold uppercase tracking-widest text-[#101b33]">
+                      ↳ KEY BUSINESS FINDINGS & RECOMMENDATIONS
+                    </p>
+                    <ul className="space-y-3 text-sm text-[#3f4658]">
+                      <li className="flex items-start gap-2">
+                        <span className="text-[#7b1e3a] font-bold">•</span>
+                        <span><strong>High Sales ≠ High Profit:</strong> Electronics accounts for 58% of revenue but only 37% of profit (11.9% margin). Furniture earns 39% of total profit on only 26% of sales (28.4% margin).</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-[#7b1e3a] font-bold">•</span>
+                        <span><strong>Category Margin Disparity:</strong> Beauty has the highest margin (45.0%), while Groceries has the lowest (7.9%).</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-[#7b1e3a] font-bold">•</span>
+                        <span><strong>Sports 2024 Downturn:</strong> Sports sales dropped 40.6% (from 3.83M to 2.27M) due to declining order volume, not returns or cancellations.</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-[#7b1e3a] font-bold">•</span>
+                        <span><strong>Concentrated Return Losses:</strong> While return rate is uniform across categories (~18%), returned orders lost ~32.4M in value, with Electronics making up 62% due to high ticket size.</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Feature Tags & Links */}
+                  <div className="pt-4 flex flex-wrap gap-2 items-center">
+                    {['Microsoft Excel', 'PivotTables & PivotCharts', 'Data Cleaning & Audit Log', 'Interactive Slicers'].map(tag => (
+                      <span key={tag} className="rounded-full bg-[#f4e7d5] px-4 py-1.5 text-xs font-semibold text-[#101b33]">
+                        {tag}
+                      </span>
+                    ))}
+                    
+                    <a
+                      href="https://github.com/Dianayuww/retail-sales-excel-dashboard"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-auto inline-flex items-center gap-2 rounded-full bg-[#7b1e3a] px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-[#101b33]"
+                    >
+                      <Github size={14} /> Repository GitHub ↗
+                    </a>
+                  </div>
+                </div>
+
+                {/* Right Side: Mockup Excel Preview Container */}
+                <div className="lg:col-span-5 rounded-3xl bg-[#101b33] p-6 text-white shadow-2xl space-y-6">
+                  <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                    <span className="inline-flex items-center gap-2 text-xs font-medium text-[#d6a778]">
+                      <Briefcase size={14} /> Excel Workbook Preview
+                    </span>
+                    <span className="rounded-full bg-emerald-500/20 px-3 py-1 text-[11px] font-bold text-emerald-400">
+                      4,200 Rows Cleaned
+                    </span>
+                  </div>
+
+                  {/* Data Cleaning Log Summary Box */}
+                  <div className="rounded-2xl bg-white/5 p-4 border border-white/10 space-y-2 text-xs">
+                    <p className="font-semibold text-gray-300">Data Cleaning Log Summary</p>
+                    <ul className="space-y-1.5 text-gray-400">
+                      <li>• 30 fully blank rows → <span className="text-red-400 font-semibold">Removed</span></li>
+                      <li>• 80 duplicate order_ids → <span className="text-red-400 font-semibold">Removed</span></li>
+                      <li>• 11 Gender spellings → <span className="text-emerald-400 font-semibold">Standardized</span></li>
+                      <li>• Quantity = 999 outlier → <span className="text-amber-400 font-semibold">Flagged & Excluded</span></li>
+                    </ul>
+                  </div>
+
+                  {/* Dashboard Structure Component */}
+                  <div className="space-y-3">
+                    <p className="text-xs font-semibold text-gray-300">Dashboard Structure</p>
+                    <div className="grid grid-cols-2 gap-3 text-xs">
+                      <div className="rounded-xl bg-white/5 p-3 border border-white/10">
+                        <p className="text-gray-400">KPI Cards Section</p>
+                        <p className="mt-1 font-semibold text-emerald-400">Delivered & Margin</p>
+                      </div>
+                      <div className="rounded-xl bg-white/5 p-3 border border-white/10">
+                        <p className="text-gray-400">Sales Trend (2020-2024)</p>
+                        <p className="mt-1 font-semibold text-amber-400">PivotChart</p>
+                      </div>
+                      <div className="rounded-xl bg-white/5 p-3 border border-white/10 col-span-2">
+                        <p className="text-gray-400">Category Profit Matrix</p>
+                        <p className="mt-1 font-semibold text-sky-400">Margin Breakdown</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* DATA PROJECTS SECTION */}
         <section
           id="data-projects"
           className="px-6 py-24 bg-[#f8f5f2]"
@@ -438,30 +538,23 @@ export default function App() {
                 <motion.article
                   {...fadeUp}
                   key={project.id}
-                  className={`group overflow-hidden rounded-3xl border border-[#eadbc8] bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-xl ${
-                    project.featured ? 'ring-2 ring-[#7b1e3a]/40 md:col-span-2 bg-[#fffdfa]' : ''
-                  }`}
+                  className="group overflow-hidden rounded-3xl border border-[#eadbc8] bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
                 >
                   <div className="relative overflow-hidden">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className={`${project.featured ? 'h-80' : 'h-64'} w-full object-cover transition duration-500 group-hover:scale-105`}
+                      className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                    {project.featured && (
-                      <div className="absolute left-6 top-6 rounded-full bg-[#7b1e3a] px-4 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-md">
-                        ★ Featured Recent Project
-                      </div>
-                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                   </div>
 
-                  <div className="p-7 md:p-8">
-                    <span className="rounded-full border border-[#7b1e3a]/20 px-3 py-1 text-xs text-[#7b1e3a] font-medium">
+                  <div className="p-7">
+                    <span className="rounded-full border border-[#7b1e3a]/20 px-3 py-1 text-xs text-[#7b1e3a]">
                       {project.category}
                     </span>
 
-                    <h3 className={`mt-4 font-serif text-[#1f2a44] ${project.featured ? 'text-3xl md:text-4xl' : 'text-3xl'}`}>
+                    <h3 className="mt-4 font-serif text-3xl text-[#1f2a44]">
                       {project.title}
                     </h3>
 
@@ -480,20 +573,19 @@ export default function App() {
                       ))}
                     </div>
 
-                    <div className="mt-6 rounded-2xl bg-[#f8efe3] p-5">
-                      <p className="text-sm italic text-mediumBrown leading-relaxed">
+                    <div className="mt-6 rounded-2xl bg-[#f8efe3] p-4">
+                      <p className="text-sm italic text-mediumBrown">
                         {project.details}
                       </p>
 
-                      <div className="mt-5 flex flex-wrap gap-3">
+                      <div className="mt-4 flex flex-wrap gap-3">
                         {project.linkGithub && (
                           <a
                             href={project.linkGithub}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 rounded-full border border-[#1f2a44]/20 bg-white px-5 py-2.5 text-sm font-semibold text-[#1f2a44] transition hover:-translate-y-0.5 hover:bg-[#f3e6e0]"
+                            className="rounded-full border border-[#1f2a44]/20 bg-white px-5 py-2 text-sm font-semibold text-[#1f2a44] transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
                           >
-                            <Github size={16} />
                             {project.buttonText || 'View Project'} ↗
                           </a>
                         )}
@@ -503,9 +595,8 @@ export default function App() {
                             href={project.linkMedium}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 rounded-full border border-[#7b1e3a]/30 bg-[#7b1e3a] px-5 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#5e162d]"
+                            className="rounded-full border border-[#7b1e3a]/30 bg-[#7b1e3a] px-5 py-2 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-[#5e162d]"
                           >
-                            <BookOpen size={16} />
                             Read Article ↗
                           </a>
                         )}
@@ -785,234 +876,179 @@ export default function App() {
           </div>
         </section>
 
-        {/* SKILLS SECTION (WITH LOGOS) */}
+        {/* 2. TECHNICAL SKILLS & TOOLS (PERSIS LAYOUT GAMBAR 2 DENGAN TAMBAHAN LOGO LOGO) */}
         <section
           id="skills"
           className="relative overflow-hidden bg-[#fffaf7] px-6 py-24 text-[#101b33]"
         >
-          <div className="absolute right-12 top-24 grid grid-cols-7 gap-3 opacity-40">
-            {Array.from({ length: 35 }).map((_, i) => (
-              <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
-            ))}
-          </div>
-
           <div className="mx-auto max-w-7xl">
-            <div className="mb-14">
-              <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#7b1e3a]">
-                Skills
+            <motion.div {...fadeUp} className="mb-14">
+              <p className="text-sm font-bold uppercase tracking-[0.4em] text-[#7b1e3a]">
+                CAPABILITIES
               </p>
-
-              <h2 className="mt-4 font-serif text-4xl md:text-6xl">
-                Tools I use to turn ideas into meaningful work.
+              <h2 className="mt-3 font-serif text-4xl md:text-6xl">
+                Technical Skills & Tools
               </h2>
-            </div>
+            </motion.div>
 
-            <div className="grid gap-8 md:grid-cols-2">
-              {[
-                {
-                  title: 'Data Analysis',
-                  desc: 'Data processing, statistical analysis & machine learning',
-                  tools: [
-                    { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-                    { name: 'SQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
-                    { name: 'R', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg' },
-                    { name: 'Excel', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftexcel.svg' }
-                  ],
-                },
-                {
-                  title: 'Data Visualization',
-                  desc: 'Dashboard, reporting & BI tools',
-                  tools: [
-                    { name: 'Metabase', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/metabase.svg' },
-                    { name: 'Tableau', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tableau.svg' },
-                    { name: 'Looker Studio', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/looker.svg' },
-                    { name: 'Power BI', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/powerbi.svg' },
-                    { name: 'Google Colab', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecolab/googlecolab-original.svg' },
-                  ],
-                },
-                {
-                  title: 'Design & Creativity',
-                  desc: 'Visual communication & branding',
-                  tools: [
-                    { name: 'Canva', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/canva.svg' },
-                    { name: 'Figma', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
-                  ],
-                },
-                {
-                  title: 'Productivity & Database',
-                  desc: 'Daily workflow, database client & API integration',
-                  tools: [
-                    { name: 'Excel', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftexcel.svg' },
-                    { name: 'PostgreSQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
-                    { name: 'Postman', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/postman.svg' },
-                    { name: 'Google Sheets', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlesheets.svg' },
-                    { name: 'Google Docs', logo: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googledocs.svg' },
-                  ],
-                },
-              ].map((group) => (
-                <div
-                  key={group.title}
-                  className="rounded-[2rem] border border-[#eadbc8] bg-white/75 p-8 shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
-                >
-                  <h3 className="font-serif text-3xl text-[#101b33]">
-                    {group.title}
-                  </h3>
-
-                  <p className="mt-2 text-mediumBrown">
-                    {group.desc}
-                  </p>
-
-                  <div className="mt-8 grid grid-cols-3 gap-5 sm:grid-cols-4">
-                    {group.tools.map((tool) => (
-                      <div
-                        key={tool.name}
-                        className="group flex flex-col items-center justify-center rounded-2xl bg-[#f8efe3] p-5 transition hover:-translate-y-1 hover:bg-[#f3e6e0]"
-                      >
-                        <img
-                          src={tool.logo}
-                          alt={tool.name}
-                          className="h-10 w-10 object-contain opacity-80 transition group-hover:opacity-100"
-                        />
-                        <p className="mt-3 text-center text-xs font-semibold text-[#7b1e3a]">
-                          {tool.name}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
+            {/* 4 Equal Cards Grid ala Gambar 2 */}
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              
+              {/* Card 1: Data Analysis & SQL */}
+              <div className="rounded-3xl border border-[#eadbc8] bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-xl">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f8efe3] text-[#7b1e3a]">
+                  <Database size={24} />
                 </div>
-              ))}
+                <h3 className="font-serif text-2xl font-bold text-[#101b33] mb-4">
+                  Data Analysis & SQL
+                </h3>
+                <ul className="space-y-3 text-sm text-[#3f4658]">
+                  <li className="flex items-center gap-2">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" className="h-4 w-4" alt="SQL" />
+                    <span>Advanced SQL (Kaggle Certified)</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" className="h-4 w-4" alt="Python" />
+                    <span>Python (Pandas, NumPy)</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftexcel.svg" className="h-4 w-4" alt="Excel" />
+                    <span>MS Excel (Pivot, VLOOKUP)</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-[#7b1e3a]" />
+                    <span>Data Cleaning & Validation</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Card 2: Data Visualization */}
+              <div className="rounded-3xl border border-[#eadbc8] bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-xl">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f8efe3] text-[#7b1e3a]">
+                  <PieChart size={24} />
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-[#101b33] mb-4">
+                  Data Visualization
+                </h3>
+                <ul className="space-y-3 text-sm text-[#3f4658]">
+                  <li className="flex items-center gap-2">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/metabase.svg" className="h-4 w-4" alt="Metabase" />
+                    <span>Metabase Public Dashboards</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftexcel.svg" className="h-4 w-4" alt="Excel" />
+                    <span>MS Excel Interactive Dashboards</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tableau.svg" className="h-4 w-4" alt="Tableau" />
+                    <span>Tableau & Looker Studio</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-[#7b1e3a]" />
+                    <span>Executive Reporting</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Card 3: Database & Pipeline */}
+              <div className="rounded-3xl border border-[#eadbc8] bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-xl">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f8efe3] text-[#7b1e3a]">
+                  <Server size={24} />
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-[#101b33] mb-4">
+                  Database & Pipeline
+                </h3>
+                <ul className="space-y-3 text-sm text-[#3f4658]">
+                  <li className="flex items-center gap-2">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" className="h-4 w-4" alt="PostgreSQL" />
+                    <span>DBeaver & PostgreSQL</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/postman.svg" className="h-4 w-4" alt="Postman" />
+                    <span>Postman API Endpoint Testing</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-[#7b1e3a]" />
+                    <span>AWS Glue ETL Concepts</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" className="h-4 w-4" alt="Git" />
+                    <span>Jupyter & Git / GitHub</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Card 4: Business & Soft Skills */}
+              <div className="rounded-3xl border border-[#eadbc8] bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-xl">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f8efe3] text-[#7b1e3a]">
+                  <Briefcase size={24} />
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-[#101b33] mb-4">
+                  Business & Soft Skills
+                </h3>
+                <ul className="space-y-3 text-sm text-[#3f4658]">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-[#7b1e3a]" />
+                    <span>COGS & Pricing Analysis</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-[#7b1e3a]" />
+                    <span>Retail Inventory & Return KPI</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-[#7b1e3a]" />
+                    <span>Public Relations Lead (HMP)</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-[#7b1e3a]" />
+                    <span>Stakeholder Presentation</span>
+                  </li>
+                </ul>
+              </div>
+
             </div>
           </div>
         </section>
 
-        {/* CERTIFICATIONS SECTION (WITH VERIFICATION LINKS) */}
+        {/* 3. CERTIFICATIONS & PROFESSIONAL BADGES (PERSIS GAMBAR 3 DENGAN LINK SERTIFIKAT) */}
         <section
           id="learning"
-          className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
+          className="px-6 py-24 bg-[#f8f5f2]"
         >
           <div className="mx-auto max-w-6xl">
-            <motion.div {...fadeUp} className="mb-16 text-center">
-              <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-white/70 px-5 py-2 text-sm font-medium text-[#7b1e3a] shadow-soft">
-                ✨ Continuous Learning
+            <motion.div {...fadeUp} className="mb-14">
+              <span className="text-sm font-bold uppercase tracking-[0.35em] text-[#7b1e3a]">
+                CONTINUOUS LEARNING
               </span>
-
-              <h2 className="mt-6 font-serif text-5xl text-[#1f2a44]">
-                Learning & Certifications
+              <h2 className="mt-3 font-serif text-4xl md:text-5xl text-[#101b33]">
+                Certifications & Professional Badges
               </h2>
-
-              <p className="mx-auto mt-5 max-w-2xl text-lg text-mediumBrown">
-                A curated stack of certifications that support my growth in data,
-                technology, and digital problem-solving.
-              </p>
             </motion.div>
 
-            <div className="grid items-center gap-10 lg:grid-cols-2">
-              <div className="relative mx-auto h-[390px] w-full max-w-md">
-                {certificates.map((cert, index) => {
-                  const position =
-                    (index - selectedProject + certificates.length) %
-                    certificates.length
-
-                  return (
-                    <motion.div
-                      key={cert.title}
-                      onClick={() => setSelectedProject(index)}
-                      className="absolute inset-0 cursor-pointer overflow-hidden rounded-[2rem] border border-[#d7c2b0] bg-white shadow-soft"
-                      animate={{
-                        x: position * 18,
-                        y: position * 16,
-                        rotate: position * 3,
-                        scale: position === 0 ? 1 : 0.94,
-                        opacity: position === 0 ? 1 : 0.45,
-                        zIndex: certificates.length - position,
-                      }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <img
-                        src={cert.image}
-                        alt={cert.title}
-                        className="h-full w-full object-cover object-top"
-                      />
-
-                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#101b33]/90 to-transparent p-6">
-                        <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#7b1e3a]">
-                          {cert.year}
-                        </span>
-
-                        <h3 className="mt-3 font-serif text-2xl text-white">
-                          {cert.title}
-                        </h3>
-
-                        <p className="mt-1 text-sm font-semibold text-white/80">
-                          {cert.issuer}
-                        </p>
-                      </div>
-                    </motion.div>
-                  )
-                })}
-              </div>
-
-              <div>
-                <h3 className="font-serif text-4xl text-[#1f2a44]">
-                  {certificates[selectedProject]?.title}
-                </h3>
-
-                <p className="mt-3 text-xl font-semibold text-[#7b1e3a]">
-                  {certificates[selectedProject]?.issuer}
-                </p>
-
-                <p className="mt-5 leading-relaxed text-mediumBrown">
-                  This certification represents my continuous learning journey in data,
-                  technology, AI, and digital problem-solving.
-                </p>
-
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {certificates[selectedProject]?.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full bg-white/70 px-4 py-2 text-sm text-[#7b1e3a]"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="mt-8 flex items-center gap-4">
-                  <button
-                    type="button"
-                    onClick={() =>
-                      setSelectedProject((prev) =>
-                        prev === 0 ? certificates.length - 1 : prev - 1
-                      )
-                    }
-                    className="rounded-full border border-[#7b1e3a]/30 bg-white px-5 py-3 text-sm font-semibold text-[#7b1e3a] transition hover:-translate-y-1"
-                  >
-                    ← Previous
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() =>
-                      setSelectedProject((prev) => (prev + 1) % certificates.length)
-                    }
-                    className="rounded-full bg-[#1f2a44] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-1"
-                  >
-                    Next →
-                  </button>
-
-                  {/* LINK SERTIFIKAT VERIFIKASI */}
-                  {certificates[selectedProject]?.link && (
-                    <a
-                      href={certificates[selectedProject].link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full border border-[#7b1e3a] px-5 py-3 text-sm font-semibold text-[#7b1e3a] transition hover:bg-[#7b1e3a] hover:text-white"
-                    >
-                      <ExternalLink size={16} /> Verify ↗
-                    </a>
-                  )}
-                </div>
-              </div>
+            {/* Grid 6 Cards Badges Minimalis ala Gambar 3 */}
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {certificationsBadges.map((cert) => (
+                <motion.a
+                  key={cert.title}
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  {...fadeUp}
+                  className="group flex items-center gap-4 rounded-2xl border border-[#eadbc8] bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-[#7b1e3a] hover:shadow-md"
+                >
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-[#f8efe3] text-[#7b1e3a] transition group-hover:bg-[#7b1e3a] group-hover:text-white">
+                    <Award size={22} />
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-lg font-bold text-[#101b33] group-hover:text-[#7b1e3a] transition">
+                      {cert.title}
+                    </h3>
+                    <p className="mt-1 text-xs text-mediumBrown">
+                      {cert.issuer} ({cert.year})
+                    </p>
+                  </div>
+                </motion.a>
+              ))}
             </div>
           </div>
         </section>
