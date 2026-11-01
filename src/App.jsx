@@ -168,8 +168,20 @@ export default function App() {
   {
     title: 'Data Classification and Summarization using IBM Granite',
     issuer: 'IBM SkillsBuild',
-    year: '2026',
+    year: '2025',
     link: 'https://www.credly.com/badges/e3016e96-930a-42f0-8497-26adc940d143', // Ganti dengan link sertifikat/badge IBM kamu
+  },
+  {
+    title: 'The Basics of Google Cloud Compute',
+    issuer: 'Google Cloud',
+    year: '2025',
+    link: 'https://www.credly.com/badges/dcee461e-681d-4206-bf82-f84625ef378b', // Ganti dengan link sertifikat/badge IBM kamu
+  },
+  {
+    title: 'Deploy and Manage Applications on Google App Engine',
+    issuer: 'Google Cloud',
+    year: '2025',
+    link: 'https://www.credly.com/badges/428852ea-ce34-4265-94a2-360aa5675243', // Ganti dengan link sertifikat/badge IBM kamu
   },
   {
     title: 'Intro to SQL',
