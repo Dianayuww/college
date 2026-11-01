@@ -1080,47 +1080,81 @@ export default function App() {
         </section>
 
         {/* 3. CERTIFICATIONS & PROFESSIONAL BADGES (PERSIS GAMBAR 3 DENGAN LINK SERTIFIKAT) */}
-        <section
-          id="learning"
-          className="px-6 py-24 bg-[#f8f5f2]"
-        >
-          <div className="mx-auto max-w-6xl">
-            <motion.div {...fadeUp} className="mb-14">
-              <span className="text-sm font-bold uppercase tracking-[0.35em] text-[#7b1e3a]">
-                CONTINUOUS LEARNING
-              </span>
-              <h2 className="mt-3 font-serif text-4xl md:text-5xl text-[#101b33]">
-                Certifications & Professional Badges
-              </h2>
-            </motion.div>
+        {/* CERTIFICATIONS SECTION (LINKEDIN STYLE) */}
+<section id="certifications" className="bg-[#fffaf7] px-6 py-24">
+  <div className="mx-auto max-w-4xl">
+    
+    {/* Header */}
+    <div className="mb-12 border-b border-[#eadbc8]/60 pb-6">
+      <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#7b1e3a]">
+        LICENSES & CERTIFICATIONS
+      </p>
+      <h2 className="mt-2 font-serif text-3xl font-bold text-[#1f2a44] md:text-4xl">
+        Certifications & Professional Credentials
+      </h2>
+    </div>
 
-            {/* Grid 6 Cards Badges Minimalis ala Gambar 3 */}
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {certificationsBadges.map((cert) => (
-                <motion.a
-                  key={cert.title}
-                  href={cert.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  {...fadeUp}
-                  className="group flex items-center gap-4 rounded-2xl border border-[#eadbc8] bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-[#7b1e3a] hover:shadow-md"
-                >
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-[#f8efe3] text-[#7b1e3a] transition group-hover:bg-[#7b1e3a] group-hover:text-white">
-                    <Award size={22} />
-                  </div>
-                  <div>
-                    <h3 className="font-serif text-lg font-bold text-[#101b33] group-hover:text-[#7b1e3a] transition">
-                      {cert.title}
-                    </h3>
-                    <p className="mt-1 text-xs text-mediumBrown">
-                      {cert.issuer} ({cert.year})
-                    </p>
-                  </div>
-                </motion.a>
-              ))}
-            </div>
+    {/* LinkedIn Style List */}
+    <div className="divide-y divide-[#eadbc8]/50 rounded-3xl border border-[#eadbc8]/80 bg-white p-6 shadow-sm">
+      {certificationsBadges.map((cert) => (
+        <div
+          key={cert.title}
+          className="flex flex-col sm:flex-row items-start gap-4 py-6 first:pt-2 last:pb-2 transition hover:bg-[#fffaf7]/50 rounded-2xl px-3"
+        >
+          {/* Logo Platform */}
+          <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl border border-[#eadbc8]/60 bg-[#fffaf7] p-2.5 shadow-xs">
+            <img
+              src={cert.logo}
+              alt={cert.issuer}
+              className="h-full w-full object-contain"
+            />
           </div>
-        </section>
+
+          {/* Details */}
+          <div className="flex-1">
+            <h3 className="font-serif text-lg font-bold leading-snug text-[#1f2a44]">
+              {cert.title}
+            </h3>
+            
+            <p className="mt-0.5 text-sm font-semibold text-[#3f4658]">
+              {cert.issuer}
+            </p>
+
+            <div className="mt-1 flex flex-wrap items-center gap-x-3 text-xs text-[#5a6275]">
+              <span>{cert.issueDate}</span>
+              {cert.credentialId && (
+                <>
+                  <span>•</span>
+                  <span>Credential ID {cert.credentialId}</span>
+                </>
+              )}
+            </div>
+
+            {/* Show Credential Button */}
+            <div className="mt-3">
+              <a
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-full border border-[#1f2a44]/30 bg-white px-4 py-1 text-xs font-bold text-[#1f2a44] transition hover:border-[#7b1e3a] hover:bg-[#7b1e3a] hover:text-white"
+              >
+                Show credential ↗
+              </a>
+            </div>
+
+            {/* Skills Tag */}
+            {cert.skills && (
+              <p className="mt-3 text-xs text-[#5a6275]">
+                <strong className="font-semibold text-[#1f2a44]">Skills:</strong> {cert.skills}
+              </p>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
 
         {/* CONTACT SECTION */}
         <section id="contact" className="px-6 py-20 bg-darkBrown text-cream">
