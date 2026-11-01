@@ -32,25 +32,26 @@ const navItems = [
 ]
 
 const dataProjects = [
-{
-  id: 1,
-  title: 'Social Media Addiction Classification',
-  linkGithub: 'https://github.com/Dianayuww/social-media-addiction-comparative-analysis',
-  linkMedium: 'https://died-iaryyy.medium.com/brain-rot-itu-nyata-aku-buktiin-lewat-data-705-mahasiswa-85ae60721a20',
-  linkJournal: 'https://ejournal.unesa.ac.id/index.php/rapids/article/view/80676', // Ganti dengan URL link jurnal publikasi kamu
-  category: 'Machine Learning Research',
-  description:
-    'Classification model comparing Random Forest and XGBoost using three train-test split scenarios and 10-fold Cross Validation to predict social media addiction patterns.',
-  tags: ['Python', 'Machine Learning', 'Random Forest', 'XGBoost', 'Social Media', 'Addiction'],
-  image:
-    'https://media.istockphoto.com/id/1292258619/id/foto/pemuda-memiliki-mata-yang-sakit-dan-lelah-saat-menggunakan-smartphone-saat-berbaring-di-tempat.webp?a=1&b=1&s=612x612&w=0&k=20&c=YevtZ0y1KXkMdNDxq9Lkqk7ASdmOZ8dnMQp2B8gVoUM=',
-  details:
-    'Focused on multiclass classification and behavioral pattern analysis using mental health and user activity indicators.',
-},
+  {
+    id: 1,
+    title: 'Social Media Addiction Classification',
+    linkGithub: 'https://github.com/Dianayuww/social-media-addiction-comparative-analysis',
+    linkMedium: 'https://died-iaryyy.medium.com/brain-rot-itu-nyata-aku-buktiin-lewat-data-705-mahasiswa-85ae60721a20',
+    linkJournal: 'https://ejournal.unesa.ac.id/index.php/rapids/article/view/80676',
+    category: 'Machine Learning Research',
+    description:
+      'Classification model comparing Random Forest and XGBoost using three train-test split scenarios and 10-fold Cross Validation to predict social media addiction patterns.',
+    tags: ['Python', 'Machine Learning', 'Random Forest', 'XGBoost', 'Social Media', 'Addiction'],
+    image:
+      'https://media.istockphoto.com/id/1292258619/id/foto/pemuda-memiliki-mata-yang-sakit-dan-lelah-saat-menggunakan-smartphone-saat-berbaring-di-tempat.webp?a=1&b=1&s=612x612&w=0&k=20&c=YevtZ0y1KXkMdNDxq9Lkqk7ASdmOZ8dnMQp2B8gVoUM=',
+    details:
+      'Focused on multiclass classification and behavioral pattern analysis using mental health and user activity indicators.',
+  },
   {
     id: 2,
     title: 'PKM AMLI — Student Innovation & Sustainable Research',
-    linkGithub: 'https://journalmabis.org/mabis/article/view/864/452',
+    // 💡 Diperbarui: link ke jurnal publikasi dengan label View Publication
+    linkPublication: 'https://journalmabis.org/mabis/article/view/864/452',
     buttonText: 'View Publication',
     category: 'Academic Research',
     description:
@@ -64,6 +65,7 @@ const dataProjects = [
     id: 3,
     title: 'Sentiment Analysis through Twitter Data Collection on the Palestine-Israel Conflict',
     linkGithub: 'https://github.com/Dianayuww/israel-palestine-sentiment-analysis',
+    buttonText: 'View Repository',
     category: 'Sentiment Analysis',
     description:
       'Sentiment analysis surrounding the Palestine-Israel conflict by leveraging the Support Vector Machine (SVM) algorithm',
@@ -77,6 +79,7 @@ const dataProjects = [
     id: 4,
     title: 'Sentiment Analysis of Kartu Indonesia Pintar Kuliah (KIPK) Recipients from Tweets on Platform X',
     linkGithub: 'https://github.com/Dianayuww/Sentiment-Analysis-KIPK-Recipients-based-Tweets-from-X',
+    buttonText: 'View Repository',
     category: 'Data Mining',
     description:
       'Collected data from X platforms and used various sentiment analysis methods to gain deep insight into public opinion.',
@@ -89,7 +92,9 @@ const dataProjects = [
   {
     id: 5,
     title: 'Strategic Food Commodity Price Forecasting',
-    linkGithub: 'https://drive.google.com/file/d/1jdHw_J1MOvLYOCz-cgBFzH1AHKUa-iUi/view?usp=sharing',
+    // 💡 Diperbarui: link Google Drive laporan PDF dengan label View Full Report
+    linkReport: 'https://drive.google.com/file/d/1jdHw_J1MOvLYOCz-cgBFzH1AHKUa-iUi/view?usp=sharing',
+    buttonText: 'View Full Report',
     category: 'Data Mining',
     description:
       'Applied deep learning (LSTM & GRU) and statistical models (Facebook Prophet) to forecast weekly prices of strategic food commodities (Rice, Red Chili, Garlic) in Surabaya using PIHPS BI data. Evaluated models using MAE, RMSE, and MAPE metrics.',
@@ -98,8 +103,55 @@ const dataProjects = [
     details:
       'Evaluated model performance across commodity volatility levels, with LSTM achieving 0.09% MAPE on stable commodities (Rice) and GRU scoring 13.42% MAPE on volatile items (Red Chili).',
   },
-]
+];
 
+return (
+    <section className="py-12 bg-white">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-2xl font-bold mb-6">Featured Projects</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* 💡 .map() dipanggil di sini untuk menampilkan tiap kartu */}
+          {dataProjects.map((project) => {
+            // Tentukan URL & Label secara dinamis
+            const targetLink = project.linkPublication || project.linkReport || project.linkGithub;
+            const buttonLabel = project.buttonText || 'View Repository';
+
+            return (
+              <div key={project.id} className="p-6 border rounded-2xl shadow-sm bg-white">
+                <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">
+                  {project.category}
+                </span>
+                
+                <h3 className="mt-3 text-xl font-bold text-slate-900">
+                  {project.title}
+                </h3>
+                
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  {project.description}
+                </p>
+
+                {/* Tombol CTA Dinamis */}
+                {targetLink && (
+                  <div className="mt-6 pt-4 border-t border-slate-100">
+                    <a
+                      href={targetLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium border rounded-full text-slate-800 border-slate-200 hover:bg-slate-50 transition-colors"
+                    >
+                      {buttonLabel} ↗
+                    </a>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
 const experiences = [
   {
     id: 1,
