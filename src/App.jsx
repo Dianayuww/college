@@ -690,27 +690,26 @@ export default function App() {
                 </a>
               </div>
 
-              {/* BUSINESS IMPACT METRICS BAR */}
-              <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div className="rounded-xl border border-[#eadbc8]/70 bg-[#fffaf7] p-3 text-center">
-                  <p className="text-[11px] font-semibold uppercase tracking-wider text-mediumBrown">OWNERSHIP SCOPE</p>
-                  <p className="mt-0.5 font-serif text-lg font-bold text-[#7b1e3a]">PIC 6 Sektor Utama</p>
-                  <p className="text-[10px] text-gray-500">Kesehatan, Keuangan, Agro, dll.</p>
-                </div>
+              {/* BUSINESS IMPACT METRICS BAR (FULL ENGLISH VERSION) */}
+<div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+  <div className="rounded-xl border border-[#eadbc8]/70 bg-[#fffaf7] p-3 text-center">
+    <p className="text-[11px] font-semibold uppercase tracking-wider text-mediumBrown">OWNERSHIP SCOPE</p>
+    <p className="mt-0.5 font-serif text-lg font-bold text-[#7b1e3a]">PIC 6 Key Sectors</p>
+    <p className="text-[10px] text-gray-500">Health, Finance, Agro, etc.</p>
+  </div>
 
-                <div className="rounded-xl border border-[#eadbc8]/70 bg-[#fffaf7] p-3 text-center">
-                  <p className="text-[11px] font-semibold uppercase tracking-wider text-mediumBrown">DATA PIPELINE</p>
-                  <p className="mt-0.5 font-serif text-lg font-bold text-[#1f2a44]">Multi-OPD & BPS</p>
-                  <p className="text-[10px] text-gray-500">SQL Queries & Python Cleaning</p>
-                </div>
+  <div className="rounded-xl border border-[#eadbc8]/70 bg-[#fffaf7] p-3 text-center">
+    <p className="text-[11px] font-semibold uppercase tracking-wider text-mediumBrown">DATA PIPELINE</p>
+    <p className="mt-0.5 font-serif text-lg font-bold text-[#1f2a44]">Multi-OPD & BPS</p>
+    <p className="text-[10px] text-gray-500">SQL Queries & Python Cleaning</p>
+  </div>
 
-                <div className="rounded-xl border border-[#eadbc8]/70 bg-[#fffaf7] p-3 text-center">
-                  <p className="text-[11px] font-semibold uppercase tracking-wider text-mediumBrown">EXECUTIVE INITIATIVE</p>
-                  <p className="mt-0.5 font-serif text-lg font-bold text-[#1e6f5c]">Program 99 Hari Kerja</p>
-                  <p className="text-[10px] text-gray-500">Gubernur Jawa Timur</p>
-                </div>
-              </div>
-
+  <div className="rounded-xl border border-[#eadbc8]/70 bg-[#fffaf7] p-3 text-center">
+    <p className="text-[11px] font-semibold uppercase tracking-wider text-mediumBrown">EXECUTIVE INITIATIVE</p>
+    <p className="mt-0.5 font-serif text-lg font-bold text-[#1e6f5c]">99-Day Governor Program</p>
+    <p className="text-[10px] text-gray-500">East Java Provincial Government</p>
+  </div>
+</div>
               {/* BULLET POINTS HIGH-IMPACT (FULL ENGLISH VERSION) */}
 <div className="mt-6 space-y-2.5 text-sm leading-relaxed text-[#3f4658]">
   <div className="flex items-start gap-2.5">
