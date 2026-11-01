@@ -169,19 +169,7 @@ export default function App() {
     title: 'Data Classification and Summarization using IBM Granite',
     issuer: 'IBM SkillsBuild',
     year: '2026',
-    link: 'https://www.credly.com/', // Ganti dengan link sertifikat/badge IBM kamu
-  },
-  {
-    title: 'Machine Learning with Python',
-    issuer: 'freeCodeCamp / IBM',
-    year: '2025',
-    link: 'https://freecodecamp.org/certification/dianayuww/machine-learning-with-python-v7', // Ganti link kamu
-  },
-  {
-    title: 'Advanced SQL',
-    issuer: 'Kaggle',
-    year: '2026',
-    link: 'https://drive.google.com/file/d/152TlWq6u4fa8_qFLOTefebq2G1aczlGw/view?usp=sharing',
+    link: 'https://www.credly.com/badges/e3016e96-930a-42f0-8497-26adc940d143', // Ganti dengan link sertifikat/badge IBM kamu
   },
   {
     title: 'Intro to SQL',
@@ -190,16 +178,34 @@ export default function App() {
     link: 'https://drive.google.com/file/d/1bue_BsLQlxrEfwhZ4m8eSmlnQRCTZWcE/view?usp=sharing',
   },
   {
+    title: 'Advanced SQL',
+    issuer: 'Kaggle',
+    year: '2026',
+    link: 'https://drive.google.com/file/d/152TlWq6u4fa8_qFLOTefebq2G1aczlGw/view?usp=sharing',
+  },
+  {
     title: 'Data Analysis with Python',
     issuer: 'freeCodeCamp',
     year: '2025',
     link: 'https://freecodecamp.org/certification/dianayuww/data-analysis-with-python-v7',
   },
   {
+    title: 'Machine Learning with Python',
+    issuer: 'freeCodeCamp',
+    year: '2025',
+    link: 'https://freecodecamp.org/certification/dianayuww/machine-learning-with-python-v7', // Ganti link kamu
+  },
+  {
+    title: 'Scientific Computing with Python',
+    issuer: 'freeCodeCamp',
+    year: '2025',
+    link: 'https://www.freecodecamp.org/certification/dianayuww/scientific-computing-with-python-v7', // Ganti link kamu
+  },
+  {
     title: 'AWS Cloud Essentials Badge',
     issuer: 'AWS Training & Certification',
     year: '2024',
-    link: 'https://www.credly.com/', // Ganti link Credly AWS kamu
+    link: 'https://www.credly.com/badges/19e1ac4c-20ba-4bbc-983c-830b0632ee86/public_url', // Ganti link Credly AWS kamu
   },
 ]
   
