@@ -169,55 +169,64 @@ export default function App() {
     title: 'Data Classification and Summarization using IBM Granite',
     issuer: 'IBM SkillsBuild',
     year: '2025',
-    link: 'https://www.credly.com/badges/e3016e96-930a-42f0-8497-26adc940d143', // Ganti dengan link sertifikat/badge IBM kamu
+    link: 'https://www.credly.com/badges/e3016e96-930a-42f0-8497-26adc940d143',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ibm/ibm-original.svg',
   },
   {
     title: 'The Basics of Google Cloud Compute',
     issuer: 'Google Cloud',
     year: '2025',
-    link: 'https://www.credly.com/badges/dcee461e-681d-4206-bf82-f84625ef378b', // Ganti dengan link sertifikat/badge IBM kamu
+    link: 'https://www.credly.com/badges/dcee461e-681d-4206-bf82-f84625ef378b',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg',
   },
   {
     title: 'Deploy and Manage Applications on Google App Engine',
     issuer: 'Google Cloud',
     year: '2025',
-    link: 'https://www.credly.com/badges/428852ea-ce34-4265-94a2-360aa5675243', // Ganti dengan link sertifikat/badge IBM kamu
+    link: 'https://www.credly.com/badges/428852ea-ce34-4265-94a2-360aa5675243',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg',
   },
   {
     title: 'Intro to SQL',
     issuer: 'Kaggle',
     year: '2026',
     link: 'https://drive.google.com/file/d/1bue_BsLQlxrEfwhZ4m8eSmlnQRCTZWcE/view?usp=sharing',
+    logo: 'https://www.vectorlogo.zone/logos/kaggle/kaggle-icon.svg',
   },
   {
     title: 'Advanced SQL',
     issuer: 'Kaggle',
     year: '2026',
     link: 'https://drive.google.com/file/d/152TlWq6u4fa8_qFLOTefebq2G1aczlGw/view?usp=sharing',
+    logo: 'https://www.vectorlogo.zone/logos/kaggle/kaggle-icon.svg',
   },
   {
     title: 'Data Analysis with Python',
     issuer: 'freeCodeCamp',
     year: '2025',
     link: 'https://freecodecamp.org/certification/dianayuww/data-analysis-with-python-v7',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/freecodecamp/freecodecamp-original.svg',
   },
   {
     title: 'Machine Learning with Python',
     issuer: 'freeCodeCamp',
     year: '2025',
-    link: 'https://freecodecamp.org/certification/dianayuww/machine-learning-with-python-v7', // Ganti link kamu
+    link: 'https://freecodecamp.org/certification/dianayuww/machine-learning-with-python-v7',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/freecodecamp/freecodecamp-original.svg',
   },
   {
     title: 'Scientific Computing with Python',
     issuer: 'freeCodeCamp',
     year: '2025',
-    link: 'https://www.freecodecamp.org/certification/dianayuww/scientific-computing-with-python-v7', // Ganti link kamu
+    link: 'https://www.freecodecamp.org/certification/dianayuww/scientific-computing-with-python-v7',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/freecodecamp/freecodecamp-original.svg',
   },
   {
     title: 'AWS Cloud Essentials Badge',
     issuer: 'AWS Training & Certification',
     year: '2024',
-    link: 'https://www.credly.com/badges/19e1ac4c-20ba-4bbc-983c-830b0632ee86/public_url', // Ganti link Credly AWS kamu
+    link: 'https://www.credly.com/badges/19e1ac4c-20ba-4bbc-983c-830b0632ee86/public_url',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg',
   },
 ]
   
@@ -1080,76 +1089,65 @@ export default function App() {
         </section>
 
         {/* 3. CERTIFICATIONS & PROFESSIONAL BADGES (PERSIS GAMBAR 3 DENGAN LINK SERTIFIKAT) */}
-        {/* CERTIFICATIONS SECTION (LINKEDIN STYLE) */}
+        {/* CERTIFICATIONS SECTION (GRID UTAMA DENGAN LOGO PLATFORM) */}
 <section id="certifications" className="bg-[#fffaf7] px-6 py-24">
-  <div className="mx-auto max-w-4xl">
+  <div className="mx-auto max-w-7xl">
     
-    {/* Header */}
-    <div className="mb-12 border-b border-[#eadbc8]/60 pb-6">
+    {/* Header Section */}
+    <div className="mb-14 text-center">
       <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#7b1e3a]">
-        LICENSES & CERTIFICATIONS
+        CONTINUOUS LEARNING
       </p>
-      <h2 className="mt-2 font-serif text-3xl font-bold text-[#1f2a44] md:text-4xl">
-        Certifications & Professional Credentials
+      <h2 className="mt-3 font-serif text-4xl text-[#1f2a44] md:text-5xl">
+        Certifications & Professional Badges
       </h2>
     </div>
 
-    {/* LinkedIn Style List */}
-    <div className="divide-y divide-[#eadbc8]/50 rounded-3xl border border-[#eadbc8]/80 bg-white p-6 shadow-sm">
+    {/* Grid 3 Kolom x 3 Baris (9 Kartu) */}
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {certificationsBadges.map((cert) => (
-        <div
+        <motion.a
           key={cert.title}
-          className="flex flex-col sm:flex-row items-start gap-4 py-6 first:pt-2 last:pb-2 transition hover:bg-[#fffaf7]/50 rounded-2xl px-3"
+          href={cert.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          {...fadeUp}
+          className="group flex flex-col justify-between rounded-2xl border border-[#eadbc8]/80 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#7b1e3a]/40 hover:shadow-md"
         >
-          {/* Logo Platform */}
-          <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl border border-[#eadbc8]/60 bg-[#fffaf7] p-2.5 shadow-xs">
-            <img
-              src={cert.logo}
-              alt={cert.issuer}
-              className="h-full w-full object-contain"
-            />
-          </div>
+          <div>
+            <div className="flex items-center justify-between">
+              {/* Logo Platform */}
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#fffaf7] p-2 border border-[#eadbc8]/50 shadow-xs">
+                <img
+                  src={cert.logo}
+                  alt={cert.issuer}
+                  className="h-full w-full object-contain"
+                />
+              </div>
 
-          {/* Details */}
-          <div className="flex-1">
-            <h3 className="font-serif text-lg font-bold leading-snug text-[#1f2a44]">
-              {cert.title}
-            </h3>
-            
-            <p className="mt-0.5 text-sm font-semibold text-[#3f4658]">
-              {cert.issuer}
-            </p>
-
-            <div className="mt-1 flex flex-wrap items-center gap-x-3 text-xs text-[#5a6275]">
-              <span>{cert.issueDate}</span>
-              {cert.credentialId && (
-                <>
-                  <span>•</span>
-                  <span>Credential ID {cert.credentialId}</span>
-                </>
-              )}
+              {/* Tag Tahun */}
+              <span className="rounded-full bg-[#f8efe3] px-3 py-1 text-xs font-semibold text-[#7b1e3a]">
+                {cert.year}
+              </span>
             </div>
 
-            {/* Show Credential Button */}
-            <div className="mt-3">
-              <a
-                href={cert.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-full border border-[#1f2a44]/30 bg-white px-4 py-1 text-xs font-bold text-[#1f2a44] transition hover:border-[#7b1e3a] hover:bg-[#7b1e3a] hover:text-white"
-              >
-                Show credential ↗
-              </a>
-            </div>
-
-            {/* Skills Tag */}
-            {cert.skills && (
-              <p className="mt-3 text-xs text-[#5a6275]">
-                <strong className="font-semibold text-[#1f2a44]">Skills:</strong> {cert.skills}
+            {/* Judul & Issuer */}
+            <div className="mt-5">
+              <h3 className="font-serif text-base font-bold leading-snug text-[#1f2a44] transition-colors group-hover:text-[#7b1e3a]">
+                {cert.title}
+              </h3>
+              <p className="mt-2 text-xs font-medium text-mediumBrown">
+                {cert.issuer}
               </p>
-            )}
+            </div>
           </div>
-        </div>
+
+          {/* Action Link Footer */}
+          <div className="mt-6 border-t border-[#eadbc8]/40 pt-3 flex items-center justify-between text-xs font-semibold text-[#7b1e3a]">
+            <span>Show Credential</span>
+            <span className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
+          </div>
+        </motion.a>
       ))}
     </div>
 
