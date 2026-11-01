@@ -181,13 +181,13 @@ export default function App() {
     title: 'Advanced SQL',
     issuer: 'Kaggle',
     year: '2026',
-    link: 'https://www.kaggle.com/learn/certification/dianayuw/advanced-sql',
+    link: 'https://drive.google.com/file/d/152TlWq6u4fa8_qFLOTefebq2G1aczlGw/view?usp=sharing',
   },
   {
     title: 'Intro to SQL',
     issuer: 'Kaggle',
     year: '2026',
-    link: 'https://www.kaggle.com/learn/certification/dianayuw/intro-to-sql',
+    link: 'https://drive.google.com/file/d/1bue_BsLQlxrEfwhZ4m8eSmlnQRCTZWcE/view?usp=sharing',
   },
   {
     title: 'Data Analysis with Python',
