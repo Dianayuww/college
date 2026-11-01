@@ -169,7 +169,7 @@ export default function App() {
     issuer: 'IBM SkillsBuild',
     year: '2025',
     link: 'https://www.credly.com/badges/e3016e96-930a-42f0-8497-26adc940d143',
-    logo: 'https://cdn.simpleicons.org/ibm/052FAD',
+    logo: 'https://cdn.simpleicons.org/ibm/1F70C6', // Fix: Biru IBM terang
   },
   {
     title: 'The Basics of Google Cloud Compute',
@@ -225,7 +225,7 @@ export default function App() {
     issuer: 'AWS Training & Certification',
     year: '2024',
     link: 'https://www.credly.com/badges/19e1ac4c-20ba-4bbc-983c-830b0632ee86/public_url',
-    logo: 'https://cdn.simpleicons.org/amazonwebservices/FF9900',
+    logo: 'https://cdn.simpleicons.org/amazonaws/FF9900', // Fix: Slug amazonaws resmi
   },
 ]
   
@@ -1119,10 +1119,6 @@ export default function App() {
                 src={cert.logo}
                 alt={cert.issuer}
                 className="h-full w-full object-contain"
-                onError={(e) => {
-                  // Fallback jika gambar gagal muat
-                  e.currentTarget.style.display = 'none';
-                }}
               />
             </div>
 
