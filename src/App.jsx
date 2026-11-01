@@ -20,44 +20,53 @@ import banacleImage from './assets/banacle2.jpeg'
 import { motion } from 'framer-motion'
 import { ArrowDown, BookOpen, Lightbulb, Mail, Linkedin, Github, Instagram, Award, MapPin, Calendar, Sparkles, Users, ShoppingBag, ExternalLink, Database, PieChart, Server, Briefcase, CheckCircle2 } from 'lucide-react'
 import aku2 from './assets/aku8.png'
-// 1. Logika Logo Platform
+// Helper Logo Platform (Gambar SVG Jelas, Tajam & Presisi)
 const PlatformLogo = ({ provider }) => {
   switch (provider) {
     case 'IBM SkillsBuild':
       return (
-        <svg viewBox="0 0 24 24" className="h-5 w-5 fill-[#052FAD]">
-          <path d="M0 4.5h8v1.5H0zm10 0h14v1.5H10zm0 3.5h14V9.5H10zM0 8h8v1.5H0zm0 3.5h8V13H0zm10 0h14V13H10zm0 3.5h14V18H10zM0 15h8v1.5H0zm0 3.5h8V20H0zm10 0h14V20H10z" />
-        </svg>
-      )
+        <img
+          src="https://api.iconify.design/logos:ibm.svg"
+          alt="IBM"
+          className="h-5 w-auto object-contain"
+        />
+      );
     case 'Google Cloud':
       return (
-        <svg viewBox="0 0 24 24" className="h-5 w-5 fill-[#4285F4]">
-          <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z" />
-        </svg>
-      )
+        <img
+          src="https://api.iconify.design/logos:google-cloud.svg"
+          alt="Google Cloud"
+          className="h-5 w-auto object-contain"
+        />
+      );
     case 'Kaggle':
       return (
-        <svg viewBox="0 0 24 24" className="h-5 w-5 fill-[#20BEFF]">
-          <path d="M18.825 23.859h-3.84l-4.59-6.78-2.04 2.01v4.77H4.95V.141h3.405v13.56l5.7-6.24h4.14l-5.775 6.09 6.405 10.268z" />
-        </svg>
-      )
+        <img
+          src="https://api.iconify.design/logos:kaggle-icon.svg"
+          alt="Kaggle"
+          className="h-5 w-auto object-contain"
+        />
+      );
     case 'freeCodeCamp':
       return (
-        <svg viewBox="0 0 24 24" className="h-5 w-5 fill-[#0A0A23]">
-          <path d="M17.425 10.42a15.7 15.7 0 01-1.636 4.97c-.98 1.95-2.22 3.73-3.79 5.25a.8.8 0 01-1.12.01 19.3 19.3 0 01-4.7-6.42A16.7 16.7 0 015 8.02c.07-.63.26-1.24.57-1.8.3-.54.72-1.01 1.22-1.37.94-.67 2.1-1.02 3.26-1 1.4.03 2.76.54 3.8 1.45a6.4 6.4 0 012.01 3.12c.16.63.24 1.28.23 1.94-.03.7-.17 1.39-.42 2.06zm-5.4-8.9c-2.3.06-4.5.96-6.17 2.52A10.1 10.1 0 002.5 10.5c.02 2.7.97 5.3 2.7 7.37 1.7 2.05 4.05 3.4 6.67 3.8a9.9 9.9 0 007.43-1.8 10.8 10.8 0 003.88-5.96c.67-2.6.4-5.35-.77-7.75a10.4 10.4 0 00-4.48-4.73 10.2 10.2 0 00-5.9-1.31z" />
-        </svg>
-      )
+        <img
+          src="https://api.iconify.design/simple-icons:freecodecamp.svg?color=%230a0a23"
+          alt="freeCodeCamp"
+          className="h-5 w-auto object-contain"
+        />
+      );
     case 'AWS Training & Certification':
       return (
-        <svg viewBox="0 0 24 24" className="h-5 w-5 fill-[#FF9900]">
-          <path d="M6.763 10.035c0 .285.021.498.064.64.043.141.114.285.214.43.1.144.242.277.427.4.185.122.428.235.727.34.427.143.868.272 1.325.385.456.115.904.228 1.346.342.44.114.84.257 1.197.428.356.17.65.378.883.626.234.248.406.54.513.876.107.334.16.726.16 1.175 0 .64-.15.1.21-.45.556-.3.344-.69.605-1.168.784-.478.18-1.04.27-1.682.27-.698 0-1.36-.107-1.982-.32a5.4 5.4 0 01-1.646-.892 4.1 4.1 0 01-1.126-1.368 4.6 4.6 0 01-.406-1.76l1.982-.242c.043.513.207.948.492 1.304.285.356.705.534 1.26.534.398 0 .712-.09.94-.27.228-.18.342-.42.342-.72 0-.27-.064-.485-.192-.647a2.5 2.5 0 00-.492-.45c-.2-.136-.46-.25-.783-.342a12.8 12.8 0 00-1.026-.264c-.456-.1-.904-.22-1.346-.356a5.5 5.5 0 01-1.226-.492 3.2 3.2 0 01-.912-.762 2.7 2.7 0 01-.527-1.097 5.2 5.2 0 01-.17-1.383c0-.627.142-1.183.427-1.667.285-.484.67-.876 1.154-1.176.484-.3 1.047-.513 1.688-.64 1.21-.243 2.54-.15 3.73.27.64.228 1.197.584 1.668 1.068.47.485.748 1.11.833 1.88l-1.94.193c-.056-.47-.213-.84-.47-1.112-.256-.27-.64-.406-1.153-.406-.37 0-.67.085-.898.256-.228.17-.342.392-.342.662z" />
-        </svg>
-      )
+        <img
+          src="https://api.iconify.design/logos:aws.svg"
+          alt="AWS"
+          className="h-5 w-auto object-contain"
+        />
+      );
     default:
-      return <Award size={18} className="text-[#7b1e3a]" />
+      return <Award size={18} className="text-[#7b1e3a]" />;
   }
-}
-
+};
 
 const navItems = [
   { label: 'About', href: '#about' },
@@ -1119,8 +1128,7 @@ const certificationsBadges = [
         </section>
 
         {/* 3. CERTIFICATIONS & PROFESSIONAL BADGES (PERSIS GAMBAR 3 DENGAN LINK SERTIFIKAT) */}
-        {/* CERTIFICATIONS SECTION (ULTRA-MINIMALIST GRID) */}
-<section id="certifications" className="bg-[#fffaf7] px-6 py-16">
+        <section id="certifications" className="bg-[#fffaf7] px-6 py-16">
   <div className="mx-auto max-w-7xl">
     
     <div className="mb-8">
@@ -1132,6 +1140,7 @@ const certificationsBadges = [
       </h2>
     </div>
 
+    {/* Grid Kartu Ultra-Clean */}
     <div className="grid gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
       {certificationsBadges.map((cert) => (
         <a
@@ -1142,7 +1151,8 @@ const certificationsBadges = [
           className="group flex items-center justify-between rounded-2xl border border-[#eadbc8]/70 bg-white p-3.5 shadow-xs transition-all duration-200 hover:-translate-y-0.5 hover:border-[#7b1e3a]/40 hover:shadow-md"
         >
           <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-[#fffaf7] p-1.5 border border-[#eadbc8]/50">
+            {/* Wadah Logo Bersih & Terang */}
+            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white p-2 border border-[#eadbc8]/60 shadow-2xs">
               <PlatformLogo provider={cert.issuer} />
             </div>
 
