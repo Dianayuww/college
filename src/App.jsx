@@ -20,53 +20,6 @@ import banacleImage from './assets/banacle2.jpeg'
 import { motion } from 'framer-motion'
 import { ArrowDown, BookOpen, Lightbulb, Mail, Linkedin, Github, Instagram, Award, MapPin, Calendar, Sparkles, Users, ShoppingBag, ExternalLink, Database, PieChart, Server, Briefcase, CheckCircle2 } from 'lucide-react'
 import aku2 from './assets/aku8.png'
-// Helper Logo Platform (Gambar SVG Jelas, Tajam & Presisi)
-const PlatformLogo = ({ provider }) => {
-  switch (provider) {
-    case 'IBM SkillsBuild':
-      return (
-        <img
-          src="https://api.iconify.design/logos:ibm.svg"
-          alt="IBM"
-          className="h-5 w-auto object-contain"
-        />
-      );
-    case 'Google Cloud':
-      return (
-        <img
-          src="https://api.iconify.design/logos:google-cloud.svg"
-          alt="Google Cloud"
-          className="h-5 w-auto object-contain"
-        />
-      );
-    case 'Kaggle':
-      return (
-        <img
-          src="https://api.iconify.design/logos:kaggle-icon.svg"
-          alt="Kaggle"
-          className="h-5 w-auto object-contain"
-        />
-      );
-    case 'freeCodeCamp':
-      return (
-        <img
-          src="https://api.iconify.design/simple-icons:freecodecamp.svg?color=%230a0a23"
-          alt="freeCodeCamp"
-          className="h-5 w-auto object-contain"
-        />
-      );
-    case 'AWS Training & Certification':
-      return (
-        <img
-          src="https://api.iconify.design/logos:aws.svg"
-          alt="AWS"
-          className="h-5 w-auto object-contain"
-        />
-      );
-    default:
-      return <Award size={18} className="text-[#7b1e3a]" />;
-  }
-};
 
 const navItems = [
   { label: 'About', href: '#about' },
@@ -217,57 +170,65 @@ const certificationsBadges = [
     issuer: 'IBM SkillsBuild',
     year: '2025',
     link: 'https://www.credly.com/badges/e3016e96-930a-42f0-8497-26adc940d143',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ibm/ibm-original.svg',
   },
   {
     title: 'The Basics of Google Cloud Compute',
     issuer: 'Google Cloud',
     year: '2025',
     link: 'https://www.credly.com/badges/dcee461e-681d-4206-bf82-f84625ef378b',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg',
   },
   {
     title: 'Deploy and Manage Applications on Google App Engine',
     issuer: 'Google Cloud',
     year: '2025',
     link: 'https://www.credly.com/badges/428852ea-ce34-4265-94a2-360aa5675243',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg',
   },
   {
     title: 'Intro to SQL',
     issuer: 'Kaggle',
     year: '2026',
     link: 'https://drive.google.com/file/d/1bue_BsLQlxrEfwhZ4m8eSmlnQRCTZWcE/view?usp=sharing',
+    logo: 'https://www.vectorlogo.zone/logos/kaggle/kaggle-icon.svg',
   },
   {
     title: 'Advanced SQL',
     issuer: 'Kaggle',
     year: '2026',
     link: 'https://drive.google.com/file/d/152TlWq6u4fa8_qFLOTefebq2G1aczlGw/view?usp=sharing',
+    logo: 'https://www.vectorlogo.zone/logos/kaggle/kaggle-icon.svg',
   },
   {
     title: 'Data Analysis with Python',
     issuer: 'freeCodeCamp',
     year: '2025',
     link: 'https://freecodecamp.org/certification/dianayuww/data-analysis-with-python-v7',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/freecodecamp/freecodecamp-original.svg',
   },
   {
     title: 'Machine Learning with Python',
     issuer: 'freeCodeCamp',
     year: '2025',
     link: 'https://freecodecamp.org/certification/dianayuww/machine-learning-with-python-v7',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/freecodecamp/freecodecamp-original.svg',
   },
   {
     title: 'Scientific Computing with Python',
     issuer: 'freeCodeCamp',
     year: '2025',
     link: 'https://www.freecodecamp.org/certification/dianayuww/scientific-computing-with-python-v7',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/freecodecamp/freecodecamp-original.svg',
   },
   {
     title: 'AWS Cloud Essentials Badge',
     issuer: 'AWS Training & Certification',
     year: '2024',
     link: 'https://www.credly.com/badges/19e1ac4c-20ba-4bbc-983c-830b0632ee86/public_url',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg',
   },
 ]
-
   
   return (
     <div className="min-h-screen bg-background text-darkBrown font-sans">
@@ -1128,54 +1089,70 @@ const certificationsBadges = [
         </section>
 
         {/* 3. CERTIFICATIONS & PROFESSIONAL BADGES (PERSIS GAMBAR 3 DENGAN LINK SERTIFIKAT) */}
-        <section id="certifications" className="bg-[#fffaf7] px-6 py-16">
+        {/* CERTIFICATIONS SECTION (GRID UTAMA DENGAN LOGO PLATFORM) */}
+<section id="certifications" className="bg-[#fffaf7] px-6 py-24">
   <div className="mx-auto max-w-7xl">
     
-    <div className="mb-8">
+    {/* Header Section */}
+    <div className="mb-14 text-center">
       <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#7b1e3a]">
         CONTINUOUS LEARNING
       </p>
-      <h2 className="mt-1.5 font-serif text-3xl font-bold text-[#1f2a44] md:text-4xl">
-        Certifications & Badges
+      <h2 className="mt-3 font-serif text-4xl text-[#1f2a44] md:text-5xl">
+        Certifications & Professional Badges
       </h2>
     </div>
 
-    {/* Grid Kartu Ultra-Clean */}
-    <div className="grid gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
+    {/* Grid 3 Kolom x 3 Baris (9 Kartu) */}
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {certificationsBadges.map((cert) => (
-        <a
+        <motion.a
           key={cert.title}
           href={cert.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex items-center justify-between rounded-2xl border border-[#eadbc8]/70 bg-white p-3.5 shadow-xs transition-all duration-200 hover:-translate-y-0.5 hover:border-[#7b1e3a]/40 hover:shadow-md"
+          {...fadeUp}
+          className="group flex flex-col justify-between rounded-2xl border border-[#eadbc8]/80 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#7b1e3a]/40 hover:shadow-md"
         >
-          <div className="flex items-center gap-3">
-            {/* Wadah Logo Bersih & Terang */}
-            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white p-2 border border-[#eadbc8]/60 shadow-2xs">
-              <PlatformLogo provider={cert.issuer} />
+          <div>
+            <div className="flex items-center justify-between">
+              {/* Logo Platform */}
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#fffaf7] p-2 border border-[#eadbc8]/50 shadow-xs">
+                <img
+                  src={cert.logo}
+                  alt={cert.issuer}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+
+              {/* Tag Tahun */}
+              <span className="rounded-full bg-[#f8efe3] px-3 py-1 text-xs font-semibold text-[#7b1e3a]">
+                {cert.year}
+              </span>
             </div>
 
-            <div className="pr-1">
-              <h3 className="font-serif text-xs font-bold text-[#1f2a44] transition-colors group-hover:text-[#7b1e3a] line-clamp-1">
+            {/* Judul & Issuer */}
+            <div className="mt-5">
+              <h3 className="font-serif text-base font-bold leading-snug text-[#1f2a44] transition-colors group-hover:text-[#7b1e3a]">
                 {cert.title}
               </h3>
-              <p className="mt-0.5 text-[11px] text-[#5a6275]">
-                {cert.issuer} • <span className="font-semibold text-[#7b1e3a]">{cert.year}</span>
+              <p className="mt-2 text-xs font-medium text-mediumBrown">
+                {cert.issuer}
               </p>
             </div>
           </div>
 
-          <span className="text-xs font-bold text-[#7b1e3a]/60 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-[#7b1e3a]">
-            ↗
-          </span>
-        </a>
+          {/* Action Link Footer */}
+          <div className="mt-6 border-t border-[#eadbc8]/40 pt-3 flex items-center justify-between text-xs font-semibold text-[#7b1e3a]">
+            <span>Show Credential</span>
+            <span className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
+          </div>
+        </motion.a>
       ))}
     </div>
 
   </div>
 </section>
-
         {/* CONTACT SECTION */}
         <section id="contact" className="px-6 py-20 bg-darkBrown text-cream">
           <div className="mx-auto max-w-4xl text-center">
