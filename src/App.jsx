@@ -27,7 +27,7 @@ const navItems = [
   { label: 'Data Projects', href: '#data-projects' },
   { label: 'Creative & PR', href: '#creative-pr' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Certifications', href: '#learning' },
+  { label: 'Certifications', href: '#certifications' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -50,7 +50,6 @@ const dataProjects = [
   {
     id: 2,
     title: 'PKM AMLI — Student Innovation & Sustainable Research',
-    // 💡 Diperbarui: link ke jurnal publikasi dengan label View Publication
     linkPublication: 'https://journalmabis.org/mabis/article/view/864/452',
     buttonText: 'View Publication',
     category: 'Academic Research',
@@ -92,7 +91,6 @@ const dataProjects = [
   {
     id: 5,
     title: 'Strategic Food Commodity Price Forecasting',
-    // 💡 Diperbarui: link Google Drive laporan PDF dengan label View Full Report
     linkReport: 'https://drive.google.com/file/d/1jdHw_J1MOvLYOCz-cgBFzH1AHKUa-iUi/view?usp=sharing',
     buttonText: 'View Full Report',
     category: 'Data Mining',
@@ -105,53 +103,6 @@ const dataProjects = [
   },
 ];
 
-return (
-    <section className="py-12 bg-white">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-6">Featured Projects</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* 💡 .map() dipanggil di sini untuk menampilkan tiap kartu */}
-          {dataProjects.map((project) => {
-            // Tentukan URL & Label secara dinamis
-            const targetLink = project.linkPublication || project.linkReport || project.linkGithub;
-            const buttonLabel = project.buttonText || 'View Repository';
-
-            return (
-              <div key={project.id} className="p-6 border rounded-2xl shadow-sm bg-white">
-                <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">
-                  {project.category}
-                </span>
-                
-                <h3 className="mt-3 text-xl font-bold text-slate-900">
-                  {project.title}
-                </h3>
-                
-                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                  {project.description}
-                </p>
-
-                {/* Tombol CTA Dinamis */}
-                {targetLink && (
-                  <div className="mt-6 pt-4 border-t border-slate-100">
-                    <a
-                      href={targetLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium border rounded-full text-slate-800 border-slate-200 hover:bg-slate-50 transition-colors"
-                    >
-                      {buttonLabel} ↗
-                    </a>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
-}
 const experiences = [
   {
     id: 1,
@@ -170,7 +121,7 @@ const experiences = [
       'Data Cleaning'
     ],
   }
-]
+];
 
 const organizationProjects = [
   {
@@ -205,89 +156,95 @@ const organizationProjects = [
     tags: ['Sustainability', 'Product Innovation', 'Branding', 'Eco-Friendly'],
     highlight: true,
   },
-]
+];
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, amount: 0.2 },
   transition: { duration: 0.55 },
-}
+};
 
 export default function App() {
   const certificationsBadges = [
-  {
-    title: 'Data Classification and Summarization using IBM Granite',
-    issuer: 'IBM SkillsBuild',
-    year: '2025',
-    link: 'https://www.credly.com/badges/e3016e96-930a-42f0-8497-26adc940d143',
-    logo: 'https://api.iconify.design/logos/ibm.svg',
-  },
-  {
-    title: 'The Basics of Google Cloud Compute',
-    issuer: 'Google Cloud',
-    year: '2025',
-    link: 'https://www.credly.com/badges/dcee461e-681d-4206-bf82-f84625ef378b',
-    logo: 'https://cdn.simpleicons.org/googlecloud/4285F4',
-  },
-  {
-    title: 'Deploy and Manage Applications on Google App Engine',
-    issuer: 'Google Cloud',
-    year: '2025',
-    link: 'https://www.credly.com/badges/428852ea-ce34-4265-94a2-360aa5675243',
-    logo: 'https://cdn.simpleicons.org/googlecloud/4285F4',
-  },
-  {
-    title: 'Intro to SQL',
-    issuer: 'Kaggle',
-    year: '2026',
-    link: 'https://drive.google.com/file/d/1bue_BsLQlxrEfwhZ4m8eSmlnQRCTZWcE/view?usp=sharing',
-    logo: 'https://cdn.simpleicons.org/kaggle/20BEFF',
-  },
-  {
-    title: 'Advanced SQL',
-    issuer: 'Kaggle',
-    year: '2026',
-    link: 'https://drive.google.com/file/d/152TlWq6u4fa8_qFLOTefebq2G1aczlGw/view?usp=sharing',
-    logo: 'https://cdn.simpleicons.org/kaggle/20BEFF',
-  },
-  {
-    title: 'Data Analysis with Python',
-    issuer: 'freeCodeCamp',
-    year: '2025',
-    link: 'https://freecodecamp.org/certification/dianayuww/data-analysis-with-python-v7',
-    logo: 'https://cdn.simpleicons.org/freecodecamp/0A0A23',
-  },
-  {
-    title: 'Machine Learning with Python',
-    issuer: 'freeCodeCamp',
-    year: '2025',
-    link: 'https://freecodecamp.org/certification/dianayuww/machine-learning-with-python-v7',
-    logo: 'https://cdn.simpleicons.org/freecodecamp/0A0A23',
-  },
-  {
-    title: 'Scientific Computing with Python',
-    issuer: 'freeCodeCamp',
-    year: '2025',
-    link: 'https://www.freecodecamp.org/certification/dianayuww/scientific-computing-with-python-v7',
-    logo: 'https://cdn.simpleicons.org/freecodecamp/0A0A23',
-  },
-  {
-    title: 'AWS Cloud Essentials Badge',
-    issuer: 'AWS Training & Certification',
-    year: '2024',
-    link: 'https://www.credly.com/badges/19e1ac4c-20ba-4bbc-983c-830b0632ee86/public_url',
-    logo: 'https://api.iconify.design/logos/aws.svg',
-  },
-]
-  
+    {
+      title: 'Data Classification and Summarization using IBM Granite',
+      issuer: 'IBM SkillsBuild',
+      year: '2025',
+      link: 'https://www.credly.com/badges/e3016e96-930a-42f0-8497-26adc940d143',
+      logo: 'https://api.iconify.design/logos/ibm.svg',
+    },
+    {
+      title: 'The Basics of Google Cloud Compute',
+      issuer: 'Google Cloud',
+      year: '2025',
+      link: 'https://www.credly.com/badges/dcee461e-681d-4206-bf82-f84625ef378b',
+      logo: 'https://cdn.simpleicons.org/googlecloud/4285F4',
+    },
+    {
+      title: 'Deploy and Manage Applications on Google App Engine',
+      issuer: 'Google Cloud',
+      year: '2025',
+      link: 'https://www.credly.com/badges/428852ea-ce34-4265-94a2-360aa5675243',
+      logo: 'https://cdn.simpleicons.org/googlecloud/4285F4',
+    },
+    {
+      title: 'Intro to SQL',
+      issuer: 'Kaggle',
+      year: '2026',
+      link: 'https://drive.google.com/file/d/1bue_BsLQlxrEfwhZ4m8eSmlnQRCTZWcE/view?usp=sharing',
+      logo: 'https://cdn.simpleicons.org/kaggle/20BEFF',
+    },
+    {
+      title: 'Advanced SQL',
+      issuer: 'Kaggle',
+      year: '2026',
+      link: 'https://drive.google.com/file/d/152TlWq6u4fa8_qFLOTefebq2G1aczlGw/view?usp=sharing',
+      logo: 'https://cdn.simpleicons.org/kaggle/20BEFF',
+    },
+    {
+      title: 'Data Analysis with Python',
+      issuer: 'freeCodeCamp',
+      year: '2025',
+      link: 'https://freecodecamp.org/certification/dianayuww/data-analysis-with-python-v7',
+      logo: 'https://cdn.simpleicons.org/freecodecamp/0A0A23',
+    },
+    {
+      title: 'Machine Learning with Python',
+      issuer: 'freeCodeCamp',
+      year: '2025',
+      link: 'https://freecodecamp.org/certification/dianayuww/machine-learning-with-python-v7',
+      logo: 'https://cdn.simpleicons.org/freecodecamp/0A0A23',
+    },
+    {
+      title: 'Scientific Computing with Python',
+      issuer: 'freeCodeCamp',
+      year: '2025',
+      link: 'https://www.freecodecamp.org/certification/dianayuww/scientific-computing-with-python-v7',
+      logo: 'https://cdn.simpleicons.org/freecodecamp/0A0A23',
+    },
+    {
+      title: 'AWS Cloud Essentials Badge',
+      issuer: 'AWS Training & Certification',
+      year: '2024',
+      link: 'https://www.credly.com/badges/19e1ac4c-20ba-4bbc-983c-830b0632ee86/public_url',
+      logo: 'https://api.iconify.design/logos/aws.svg',
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background text-darkBrown font-sans">
       <header className="sticky top-0 z-50 border-b border-[#d9c4a6]/50 bg-[#fffaf2cc] backdrop-blur-md">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <p className="font-serif text-lg md:text-xl font-bold text-[#7b1e3a]">Dian Ayu Fauziah</p>
           <ul className="hidden md:flex gap-6 text-sm text-mediumBrown font-medium">
-            {navItems.map((item) => <li key={item.label}><a href={item.href} className="hover:text-darkBrown transition">{item.label}</a></li>)}
+            {navItems.map((item) => (
+              <li key={item.label}>
+                <a href={item.href} className="hover:text-darkBrown transition">
+                  {item.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
@@ -371,83 +328,77 @@ export default function App() {
           </div>
         </section>
 
-        {/* ABOUT SECTION (FORMAT SESUAI GAMBAR) */}
-<section
-  id="about"
-  className="relative overflow-hidden bg-[#fffaf7] px-6 py-24 text-[#101b33]"
->
-  {/* Element Dekoratif Latar Belakang */}
-  <div className="absolute left-10 top-16 text-4xl text-[#d6a778]/80">✦</div>
-  <div className="absolute right-12 top-16 grid grid-cols-7 gap-3 opacity-40">
-    {Array.from({ length: 35 }).map((_, i) => (
-      <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
-    ))}
-  </div>
+        {/* ABOUT SECTION */}
+        <section
+          id="about"
+          className="relative overflow-hidden bg-[#fffaf7] px-6 py-24 text-[#101b33]"
+        >
+          <div className="absolute left-10 top-16 text-4xl text-[#d6a778]/80">✦</div>
+          <div className="absolute right-12 top-16 grid grid-cols-7 gap-3 opacity-40">
+            {Array.from({ length: 35 }).map((_, i) => (
+              <span key={i} className="h-1 w-1 rounded-full bg-[#d6a778]" />
+            ))}
+          </div>
 
-  <div className="mx-auto max-w-7xl">
-    {/* Header Area */}
-    <div className="mb-8">
-      <p className="text-sm font-bold uppercase tracking-[0.35em] text-[#7b1e3a]">
-        ABOUT ME
-      </p>
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-8">
+              <p className="text-sm font-bold uppercase tracking-[0.35em] text-[#7b1e3a]">
+                ABOUT ME
+              </p>
 
-      <h2 className="mt-3 font-serif text-5xl leading-tight text-[#101b33] md:text-6xl">
-        Data-backed analysis. Strategic execution.
-      </h2>
+              <h2 className="mt-3 font-serif text-5xl leading-tight text-[#101b33] md:text-6xl">
+                Data-backed analysis. Strategic execution.
+              </h2>
 
-      <p className="mt-6 max-w-4xl text-lg leading-relaxed text-[#3f4658]">
-        I bridge the gap between technical data engineering and business strategy. With hands-on experience in public service dashboards and retail transactional analysis, I ensure data turns into meaningful operational insights.
-      </p>
-    </div>
+              <p className="mt-6 max-w-4xl text-lg leading-relaxed text-[#3f4658]">
+                I bridge the gap between technical data engineering and business strategy. With hands-on experience in public service dashboards and retail transactional analysis, I ensure data turns into meaningful operational insights.
+              </p>
+            </div>
 
-    {/* 3 Cards Grid (Analyze, Communicate, Execute) */}
-    <div className="mt-12 grid gap-6 md:grid-cols-3">
-      {/* Card 01 - ANALYZE */}
-      <motion.div
-        {...fadeUp}
-        className="rounded-3xl border border-[#eadbc8]/80 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-      >
-        <p className="font-serif text-4xl font-bold text-[#7b1e3a]">01</p>
-        <h3 className="mt-4 font-bold uppercase tracking-wider text-[#101b33]">
-          ANALYZE
-        </h3>
-        <p className="mt-4 text-sm leading-relaxed text-[#5a6275]">
-          Cleaning messy datasets, verifying multi-source OPD/Kaggle data, running SQL queries, and discovering trends across sales, profit margin, and customer behavior.
-        </p>
-      </motion.div>
+            <div className="mt-12 grid gap-6 md:grid-cols-3">
+              <motion.div
+                {...fadeUp}
+                className="rounded-3xl border border-[#eadbc8]/80 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+              >
+                <p className="font-serif text-4xl font-bold text-[#7b1e3a]">01</p>
+                <h3 className="mt-4 font-bold uppercase tracking-wider text-[#101b33]">
+                  ANALYZE
+                </h3>
+                <p className="mt-4 text-sm leading-relaxed text-[#5a6275]">
+                  Cleaning messy datasets, verifying multi-source OPD/Kaggle data, running SQL queries, and discovering trends across sales, profit margin, and customer behavior.
+                </p>
+              </motion.div>
 
-      {/* Card 02 - COMMUNICATE */}
-      <motion.div
-        {...fadeUp}
-        className="rounded-3xl border border-[#eadbc8]/80 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-      >
-        <p className="font-serif text-4xl font-bold text-[#7b1e3a]">02</p>
-        <h3 className="mt-4 font-bold uppercase tracking-wider text-[#101b33]">
-          COMMUNICATE
-        </h3>
-        <p className="mt-4 text-sm leading-relaxed text-[#5a6275]">
-          Designing intuitive Metabase and MS Excel PivotChart dashboards with key performance indicators (KPIs) customized for executive and operational decision-makers.
-        </p>
-      </motion.div>
+              <motion.div
+                {...fadeUp}
+                className="rounded-3xl border border-[#eadbc8]/80 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+              >
+                <p className="font-serif text-4xl font-bold text-[#7b1e3a]">02</p>
+                <h3 className="mt-4 font-bold uppercase tracking-wider text-[#101b33]">
+                  COMMUNICATE
+                </h3>
+                <p className="mt-4 text-sm leading-relaxed text-[#5a6275]">
+                  Designing intuitive Metabase and MS Excel PivotChart dashboards with key performance indicators (KPIs) customized for executive and operational decision-makers.
+                </p>
+              </motion.div>
 
-      {/* Card 03 - EXECUTE */}
-      <motion.div
-        {...fadeUp}
-        className="rounded-3xl border border-[#eadbc8]/80 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-      >
-        <p className="font-serif text-4xl font-bold text-[#7b1e3a]">03</p>
-        <h3 className="mt-4 font-bold uppercase tracking-wider text-[#101b33]">
-          EXECUTE
-        </h3>
-        <p className="mt-4 text-sm leading-relaxed text-[#5a6275]">
-          Translating insights into actionable business recommendations—such as pricing adjustments, inventory turnover optimization, and return rate mitigations.
-        </p>
-      </motion.div>
-    </div>
-  </div>
-</section>
+              <motion.div
+                {...fadeUp}
+                className="rounded-3xl border border-[#eadbc8]/80 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+              >
+                <p className="font-serif text-4xl font-bold text-[#7b1e3a]">03</p>
+                <h3 className="mt-4 font-bold uppercase tracking-wider text-[#101b33]">
+                  EXECUTE
+                </h3>
+                <p className="mt-4 text-sm leading-relaxed text-[#5a6275]">
+                  Translating insights into actionable business recommendations—such as pricing adjustments, inventory turnover optimization, and return rate mitigations.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
 
-        {/* 1. FEATURED RECENT PROJECT (EXCEL DASHBOARD - KODE PERSIS GAMBAR 1) */}
+        {/* FEATURED RECENT PROJECT */}
         <section id="featured-project" className="px-6 py-24 bg-[#fffaf7]">
           <div className="mx-auto max-w-7xl">
             <motion.div {...fadeUp} className="mb-12">
@@ -464,14 +415,11 @@ export default function App() {
               className="overflow-hidden rounded-[2.5rem] border border-[#eadbc8] bg-white p-6 shadow-xl md:p-10"
             >
               <div className="grid gap-10 lg:grid-cols-12 items-start">
-                
-                {/* Left Side: Business Narrative & KPIs */}
                 <div className="lg:col-span-7 space-y-6">
                   <p className="text-lg leading-relaxed text-[#3f4658]">
                     End-to-end Excel analytical project: Cleaned a messy raw dataset of <strong>4,310 rows (2020–2024)</strong> down to 4,200 valid records using nested formulas and Text to Columns. Built dynamic PivotTables and an interactive dashboard to isolate Delivered orders and diagnose profit bottlenecks.
                   </p>
 
-                  {/* 4 Metric Cards */}
                   <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 pt-2">
                     <div className="rounded-2xl border border-[#eadbc8]/80 bg-[#fbf6f0] p-4 text-center">
                       <p className="text-xs font-semibold uppercase tracking-wider text-mediumBrown">DELIVERED ORDERS</p>
@@ -498,7 +446,6 @@ export default function App() {
                     </div>
                   </div>
 
-                  {/* Key Findings List */}
                   <div className="pt-4 space-y-3">
                     <p className="text-sm font-bold uppercase tracking-widest text-[#101b33]">
                       ↳ KEY BUSINESS FINDINGS & RECOMMENDATIONS
@@ -523,7 +470,6 @@ export default function App() {
                     </ul>
                   </div>
 
-                  {/* Feature Tags & Links */}
                   <div className="pt-4 flex flex-wrap gap-2 items-center">
                     {['Microsoft Excel', 'PivotTables & PivotCharts', 'Data Cleaning & Audit Log', 'Interactive Slicers'].map(tag => (
                       <span key={tag} className="rounded-full bg-[#f4e7d5] px-4 py-1.5 text-xs font-semibold text-[#101b33]">
@@ -542,7 +488,6 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Right Side: Mockup Excel Preview Container */}
                 <div className="lg:col-span-5 rounded-3xl bg-[#101b33] p-6 text-white shadow-2xl space-y-6">
                   <div className="flex items-center justify-between border-b border-white/10 pb-4">
                     <span className="inline-flex items-center gap-2 text-xs font-medium text-[#d6a778]">
@@ -553,7 +498,6 @@ export default function App() {
                     </span>
                   </div>
 
-                  {/* Data Cleaning Log Summary Box */}
                   <div className="rounded-2xl bg-white/5 p-4 border border-white/10 space-y-2 text-xs">
                     <p className="font-semibold text-gray-300">Data Cleaning Log Summary</p>
                     <ul className="space-y-1.5 text-gray-400">
@@ -564,7 +508,6 @@ export default function App() {
                     </ul>
                   </div>
 
-                  {/* Dashboard Structure Component */}
                   <div className="space-y-3">
                     <p className="text-xs font-semibold text-gray-300">Dashboard Structure</p>
                     <div className="grid grid-cols-2 gap-3 text-xs">
@@ -583,117 +526,118 @@ export default function App() {
                     </div>
                   </div>
                 </div>
-
               </div>
             </motion.div>
           </div>
         </section>
 
         {/* DATA PROJECTS SECTION */}
-        {/* DATA PROJECTS SECTION (MINIMALIST DESIGN) */}
-{/* DATA PROJECTS SECTION */}
-<section id="data-projects" className="px-6 py-24 bg-[#f8f5f2]">
-  <div className="mx-auto max-w-7xl">
-    {/* ... header section ... */}
-
-    <div className="grid gap-8 md:grid-cols-2">
-      {dataProjects.map((project) => (
-        <motion.article
-          {...fadeUp}
-          key={project.id}
-          className="group flex flex-col justify-between overflow-hidden rounded-3xl border border-[#eadbc8]/60 bg-white/90 p-5 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#7b1e3a]/30 hover:shadow-xl"
-        >
-          <div>
-            {/* 1. Container Gambar */}
-            <div className="relative h-52 w-full overflow-hidden rounded-2xl bg-[#f4e7d5]/50">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-80" />
-              <div className="absolute left-4 top-4">
-                <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#7b1e3a] shadow-sm backdrop-blur-md">
-                  {project.category}
-                </span>
-              </div>
+        <section id="data-projects" className="px-6 py-24 bg-[#f8f5f2]">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-12">
+              <span className="text-sm font-bold uppercase tracking-[0.35em] text-[#7b1e3a]">
+                PORTFOLIO PROJECTS
+              </span>
+              <h2 className="mt-3 font-serif text-4xl md:text-5xl text-[#101b33]">
+                Data Science & Analytics Projects
+              </h2>
             </div>
 
-            {/* 2. Judul, Deskripsi & Tags */}
-            <div className="px-2 pt-6">
-              <h3 className="font-serif text-2xl font-bold text-[#1f2a44] transition-colors group-hover:text-[#7b1e3a]">
-                {project.title}
-              </h3>
+            <div className="grid gap-8 md:grid-cols-2">
+              {dataProjects.map((project) => {
+                const targetLink = project.linkPublication || project.linkReport || project.linkGithub;
+                const buttonLabel = project.buttonText || 'View Repository';
 
-              <p className="mt-3 text-sm leading-relaxed text-mediumBrown">
-                {project.description}
-              </p>
-
-              <div className="mt-5 flex flex-wrap gap-1.5">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-lg bg-[#f8efe3]/80 px-2.5 py-1 text-xs font-medium text-[#1f2a44]"
+                return (
+                  <motion.article
+                    {...fadeUp}
+                    key={project.id}
+                    className="group flex flex-col justify-between overflow-hidden rounded-3xl border border-[#eadbc8]/60 bg-white/90 p-5 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#7b1e3a]/30 hover:shadow-xl"
                   >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+                    <div>
+                      <div className="relative h-52 w-full overflow-hidden rounded-2xl bg-[#f4e7d5]/50">
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-80" />
+                        <div className="absolute left-4 top-4">
+                          <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#7b1e3a] shadow-sm backdrop-blur-md">
+                            {project.category}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="px-2 pt-6">
+                        <h3 className="font-serif text-2xl font-bold text-[#1f2a44] transition-colors group-hover:text-[#7b1e3a]">
+                          {project.title}
+                        </h3>
+
+                        <p className="mt-3 text-sm leading-relaxed text-mediumBrown">
+                          {project.description}
+                        </p>
+
+                        <div className="mt-5 flex flex-wrap gap-1.5">
+                          {project.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="rounded-lg bg-[#f8efe3]/80 px-2.5 py-1 text-xs font-medium text-[#1f2a44]"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-6 px-2 pt-4 border-t border-[#eadbc8]/40">
+                      <p className="text-xs italic leading-relaxed text-[#7b1e3a]/90">
+                        {project.details}
+                      </p>
+
+                      <div className="mt-4 flex flex-wrap gap-2 pt-1">
+                        {targetLink && (
+                          <a
+                            href={targetLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 rounded-full border border-[#1f2a44]/15 bg-white px-4 py-1.5 text-xs font-semibold text-[#1f2a44] transition-all hover:bg-[#1f2a44] hover:text-white"
+                          >
+                            <ExternalLink size={14} /> {buttonLabel} ↗
+                          </a>
+                        )}
+
+                        {project.linkMedium && (
+                          <a
+                            href={project.linkMedium}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 rounded-full border border-[#7b1e3a]/30 bg-[#7b1e3a] px-4 py-1.5 text-xs font-semibold text-white transition-all hover:bg-[#5e162d]"
+                          >
+                            <BookOpen size={14} /> Read Article ↗
+                          </a>
+                        )}
+
+                        {project.linkJournal && (
+                          <a
+                            href={project.linkJournal}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 rounded-full border border-[#7b1e3a]/40 bg-[#f8efe3] px-4 py-1.5 text-xs font-semibold text-[#7b1e3a] transition-all hover:bg-[#7b1e3a] hover:text-white"
+                          >
+                            <ExternalLink size={14} /> View Publication ↗
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </motion.article>
+                );
+              })}
             </div>
           </div>
+        </section>
 
-          {/* 3. Detail Catatan & POSISI KODE RENDER TOMBOL ADA DI SINI */}
-          <div className="mt-6 px-2 pt-4 border-t border-[#eadbc8]/40">
-            <p className="text-xs italic leading-relaxed text-[#7b1e3a]/90">
-              {project.details}
-            </p>
-
-            {/* 👇 KODE RENDER TOMBOL DITARUH DI SINI 👇 */}
-            <div className="mt-4 flex flex-wrap gap-2 pt-1">
-              {/* Tombol GitHub */}
-              {project.linkGithub && (
-                <a
-                  href={project.linkGithub}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-full border border-[#1f2a44]/15 bg-white px-4 py-1.5 text-xs font-semibold text-[#1f2a44] transition-all hover:bg-[#1f2a44] hover:text-white"
-                >
-                  <Github size={14} /> Repository ↗
-                </a>
-              )}
-
-              {/* Tombol Medium / Artikel */}
-              {project.linkMedium && (
-                <a
-                  href={project.linkMedium}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-full border border-[#7b1e3a]/30 bg-[#7b1e3a] px-4 py-1.5 text-xs font-semibold text-white transition-all hover:bg-[#5e162d]"
-                >
-                  <BookOpen size={14} /> Read Article ↗
-                </a>
-              )}
-
-              {/* Tombol Jurnal Publikasi */}
-              {project.linkJournal && (
-                <a
-                  href={project.linkJournal}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-full border border-[#7b1e3a]/40 bg-[#f8efe3] px-4 py-1.5 text-xs font-semibold text-[#7b1e3a] transition-all hover:bg-[#7b1e3a] hover:text-white"
-                >
-                  <ExternalLink size={14} /> View Publication ↗
-                </a>
-              )}
-            </div>
-            {/* 👆 AKHIR DARI KODE RENDER TOMBOL 👆 */}
-
-          </div>
-        </motion.article>
-      ))}
-    </div>
-  </div>
-</section>
         {/* EXPERIENCE SECTION */}
         <section
           className="px-6 py-24 bg-gradient-to-br from-[#f8f5f2] via-[#f3e6e0] to-[#efe4d1]"
@@ -802,210 +746,192 @@ export default function App() {
           </div>
         </section>
 
-        {/* CREATIVE & PR SECTION (MINIMALIST 3-COLUMN GRID) */}
-<section id="creative-pr" className="px-6 py-24 bg-[#fffaf7]">
-  <div className="mx-auto max-w-7xl">
-    
-    {/* Section Header */}
-    <div className="mb-16 text-center">
-      <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-[#7b1e3a]/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#7b1e3a]">
-        ✨ Creative & PR Portfolio
-      </span>
-      <h2 className="mt-4 font-serif text-4xl md:text-5xl text-[#101b33]">
-        Strategic Communication & Innovation
-      </h2>
-      <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
-        Combining leadership, public relations, copy strategy, and sustainable product innovation.
-      </p>
-    </div>
+        {/* CREATIVE & PR SECTION */}
+        <section id="creative-pr" className="px-6 py-24 bg-[#fffaf7]">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-16 text-center">
+              <span className="inline-flex rounded-full border border-[#7b1e3a]/20 bg-[#7b1e3a]/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#7b1e3a]">
+                ✨ Creative & PR Portfolio
+              </span>
+              <h2 className="mt-4 font-serif text-4xl md:text-5xl text-[#101b33]">
+                Strategic Communication & Innovation
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-mediumBrown">
+                Combining leadership, public relations, copy strategy, and sustainable product innovation.
+              </p>
+            </div>
 
-    {/* 3 Columns Card Grid */}
-    <div className="grid gap-8 md:grid-cols-3">
-      {organizationProjects.map((work) => (
-        <motion.article
-          {...fadeUp}
-          key={work.id}
-          className={`group flex flex-col justify-between overflow-hidden rounded-3xl border border-[#eadbc8]/80 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#7b1e3a]/30 hover:shadow-xl ${
-            work.highlight ? 'ring-2 ring-[#7b1e3a]/30' : ''
-          }`}
+            <div className="grid gap-8 md:grid-cols-3">
+              {organizationProjects.map((work) => (
+                <motion.article
+                  {...fadeUp}
+                  key={work.id}
+                  className={`group flex flex-col justify-between overflow-hidden rounded-3xl border border-[#eadbc8]/80 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#7b1e3a]/30 hover:shadow-xl ${
+                    work.highlight ? 'ring-2 ring-[#7b1e3a]/30' : ''
+                  }`}
+                >
+                  <div>
+                    <div className="relative h-52 w-full overflow-hidden rounded-2xl bg-[#f8efe3]">
+                      <img
+                        src={work.image}
+                        alt={work.title}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-80" />
+                      
+                      <div className="absolute left-3 top-3 flex flex-wrap gap-2">
+                        <span className="rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold text-[#7b1e3a] backdrop-blur-md shadow-sm">
+                          {work.period}
+                        </span>
+                        {work.highlight && (
+                          <span className="rounded-full bg-[#7b1e3a] px-3 py-1 text-[11px] font-semibold text-white shadow-sm">
+                            Featured
+                          </span>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="pt-5 px-1">
+                      <span className="text-xs font-bold uppercase tracking-wider text-[#7b1e3a]">
+                        {work.organization}
+                      </span>
+                      <h3 className="mt-1 font-serif text-2xl font-bold text-[#101b33] transition-colors group-hover:text-[#7b1e3a]">
+                        {work.title}
+                      </h3>
+                      <p className="mt-3 text-sm leading-relaxed text-[#5a6275]">
+                        {work.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 pt-4 border-t border-[#eadbc8]/50 flex flex-col gap-3">
+                    <div className="flex flex-wrap gap-1.5">
+                      {work.tags.map((tag) => (
+                        <span key={tag} className="rounded-md bg-[#f8efe3] px-2.5 py-1 text-xs font-medium text-[#101b33]">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    {work.link && (
+                      <a
+                        href={work.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 rounded-full bg-[#7b1e3a] px-4 py-2 text-xs font-bold text-white transition-all hover:bg-[#101b33]"
+                      >
+                        <ShoppingBag size={14} /> Shop Banacle ↗
+                      </a>
+                    )}
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* BEYOND THE NUMBERS SECTION */}
+        <section
+          id="communication"
+          className="bg-[#fffaf7] px-6 py-24 border-t border-[#eadbc8]/50"
         >
-          <div>
-            {/* Image Header with Badge */}
-            <div className="relative h-52 w-full overflow-hidden rounded-2xl bg-[#f8efe3]">
-              <img
-                src={work.image}
-                alt={work.title}
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-80" />
-              
-              <div className="absolute left-3 top-3 flex flex-wrap gap-2">
-                <span className="rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold text-[#7b1e3a] backdrop-blur-md shadow-sm">
-                  {work.period}
-                </span>
-                {work.highlight && (
-                  <span className="rounded-full bg-[#7b1e3a] px-3 py-1 text-[11px] font-semibold text-white shadow-sm">
-                    Featured
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-10 lg:grid-cols-12 items-center mb-16">
+              <div className="lg:col-span-7">
+                <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#7b1e3a]">
+                  BEYOND THE NUMBERS
+                </p>
+
+                <h2 className="mt-4 font-serif text-4xl md:text-6xl leading-tight text-[#1f2a44]">
+                  Speaking, Leading, <br /> & Connecting
+                </h2>
+
+                <p className="mt-5 text-base md:text-lg leading-relaxed text-[#5a6275] max-w-2xl">
+                  Through public speaking, moderating, event handling, and cross-functional team collaboration, 
+                  I bridge technical insights with human connection—turning data and ideas into meaningful experiences.
+                </p>
+
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <span className="rounded-full border border-[#7b1e3a]/20 bg-[#f8efe3] px-4 py-2 text-xs font-semibold text-[#7b1e3a]">
+                    🎙️ Public Speaking & MC
                   </span>
-                )}
+                  <span className="rounded-full border border-[#7b1e3a]/20 bg-[#f8efe3] px-4 py-2 text-xs font-semibold text-[#7b1e3a]">
+                    🤝 Event Moderating
+                  </span>
+                  <span className="rounded-full border border-[#7b1e3a]/20 bg-[#f8efe3] px-4 py-2 text-xs font-semibold text-[#7b1e3a]">
+                    👥 Team Leadership & PR
+                  </span>
+                </div>
               </div>
             </div>
 
-            {/* Content Body */}
-            <div className="pt-5 px-1">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#7b1e3a]">
-                {work.organization}
-              </span>
-              <h3 className="mt-1 font-serif text-2xl font-bold text-[#101b33] transition-colors group-hover:text-[#7b1e3a]">
-                {work.title}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-[#5a6275]">
-                {work.description}
-              </p>
+            <div className="relative border-t-2 border-[#c8a27a]/60 pt-16">
+              <div className="flex flex-wrap items-start justify-center gap-6 md:gap-10">
+                <div className="group relative transition-all duration-300 hover:-translate-y-3 hover:rotate-0">
+                  <div className="absolute left-1/2 top-[-40px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+                  <div className="relative rounded-sm bg-white p-3 shadow-xl border border-[#eadbc8]/60 rotate-[-4deg]">
+                    <img
+                      src={mcDuduk}
+                      alt="MC Duduk Session"
+                      className="h-[250px] w-[200px] object-cover rounded-sm"
+                    />
+                    <div className="mt-3 text-center">
+                      <p className="font-serif text-sm font-bold text-[#1f2a44]">Master of Ceremonies</p>
+                      <p className="text-[11px] text-[#7b1e3a]">Formal Event Host</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="group relative mt-8 transition-all duration-300 hover:-translate-y-3 hover:rotate-0">
+                  <div className="absolute left-1/2 top-[-72px] h-18 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+                  <div className="relative rounded-sm bg-white p-3 shadow-xl border border-[#eadbc8]/60 rotate-[5deg]">
+                    <img
+                      src={mcWmk}
+                      alt="WMK Program"
+                      className="h-[280px] w-[220px] object-cover rounded-sm"
+                    />
+                    <div className="mt-3 text-center">
+                      <p className="font-serif text-sm font-bold text-[#1f2a44]">WMK Batch 3 Showcase</p>
+                      <p className="text-[11px] text-[#7b1e3a]">Presentation & Pitching</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="group relative transition-all duration-300 hover:-translate-y-3 hover:rotate-0">
+                  <div className="absolute left-1/2 top-[-40px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+                  <div className="relative rounded-sm bg-white p-3 shadow-xl border border-[#eadbc8]/60 rotate-[-3deg]">
+                    <img
+                      src={mcDiskusi}
+                      alt="Discussion Forum"
+                      className="h-[240px] w-[200px] object-cover rounded-sm"
+                    />
+                    <div className="mt-3 text-center">
+                      <p className="font-serif text-sm font-bold text-[#1f2a44]">Moderator & Speaker</p>
+                      <p className="text-[11px] text-[#7b1e3a]">Public Discussion</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="group relative mt-6 transition-all duration-300 hover:-translate-y-3 hover:rotate-0">
+                  <div className="absolute left-1/2 top-[-64px] h-16 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
+                  <div className="relative rounded-sm bg-white p-3 shadow-xl border border-[#eadbc8]/60 rotate-[4deg]">
+                    <img
+                      src={mcStage}
+                      alt="Stage MC"
+                      className="h-[270px] w-[210px] object-cover rounded-sm"
+                    />
+                    <div className="mt-3 text-center">
+                      <p className="font-serif text-sm font-bold text-[#1f2a44]">Stage Director & MC</p>
+                      <p className="text-[11px] text-[#7b1e3a]">Grand Event Handling</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </section>
 
-          {/* Tags & Action Link */}
-          <div className="mt-6 pt-4 border-t border-[#eadbc8]/50 flex flex-col gap-3">
-            <div className="flex flex-wrap gap-1.5">
-              {work.tags.map((tag) => (
-                <span key={tag} className="rounded-md bg-[#f8efe3] px-2.5 py-1 text-xs font-medium text-[#101b33]">
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            {work.link && (
-              <a
-                href={work.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#7b1e3a] px-4 py-2 text-xs font-bold text-white transition-all hover:bg-[#101b33]"
-              >
-                <ShoppingBag size={14} /> Shop Banacle ↗
-              </a>
-            )}
-          </div>
-        </motion.article>
-      ))}
-    </div>
-
-  </div>
-</section>
-
-        {/* BEYOND THE NUMBERS SECTION */}
-<section
-  id="communication"
-  className="bg-[#fffaf7] px-6 py-24 border-t border-[#eadbc8]/50"
->
-  <div className="mx-auto max-w-7xl">
-    
-    {/* Upper Section: Narrative & Pill Badges */}
-    <div className="grid gap-10 lg:grid-cols-12 items-center mb-16">
-      <div className="lg:col-span-7">
-        <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#7b1e3a]">
-          BEYOND THE NUMBERS
-        </p>
-
-        <h2 className="mt-4 font-serif text-4xl md:text-6xl leading-tight text-[#1f2a44]">
-          Speaking, Leading, <br /> & Connecting
-        </h2>
-
-        <p className="mt-5 text-base md:text-lg leading-relaxed text-[#5a6275] max-w-2xl">
-          Through public speaking, moderating, event handling, and cross-functional team collaboration, 
-          I bridge technical insights with human connection—turning data and ideas into meaningful experiences.
-        </p>
-
-        {/* 3 Skill Badges */}
-        <div className="mt-8 flex flex-wrap gap-3">
-          <span className="rounded-full border border-[#7b1e3a]/20 bg-[#f8efe3] px-4 py-2 text-xs font-semibold text-[#7b1e3a]">
-            🎙️ Public Speaking & MC
-          </span>
-          <span className="rounded-full border border-[#7b1e3a]/20 bg-[#f8efe3] px-4 py-2 text-xs font-semibold text-[#7b1e3a]">
-            🤝 Event Moderating
-          </span>
-          <span className="rounded-full border border-[#7b1e3a]/20 bg-[#f8efe3] px-4 py-2 text-xs font-semibold text-[#7b1e3a]">
-            👥 Team Leadership & PR
-          </span>
-        </div>
-      </div>
-    </div>
-
-    {/* Hanging Polaroid Gallery */}
-    <div className="relative border-t-2 border-[#c8a27a]/60 pt-16">
-      <div className="flex flex-wrap items-start justify-center gap-6 md:gap-10">
-        
-        {/* Photo 1 */}
-        <div className="group relative transition-all duration-300 hover:-translate-y-3 hover:rotate-0">
-          <div className="absolute left-1/2 top-[-40px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
-          <div className="relative rounded-sm bg-white p-3 shadow-xl border border-[#eadbc8]/60 rotate-[-4deg]">
-            <img
-              src={mcDuduk}
-              alt="MC Duduk Session"
-              className="h-[250px] w-[200px] object-cover rounded-sm"
-            />
-            <div className="mt-3 text-center">
-              <p className="font-serif text-sm font-bold text-[#1f2a44]">Master of Ceremonies</p>
-              <p className="text-[11px] text-[#7b1e3a]">Formal Event Host</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Photo 2 */}
-        <div className="group relative mt-8 transition-all duration-300 hover:-translate-y-3 hover:rotate-0">
-          <div className="absolute left-1/2 top-[-72px] h-18 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
-          <div className="relative rounded-sm bg-white p-3 shadow-xl border border-[#eadbc8]/60 rotate-[5deg]">
-            <img
-              src={mcWmk}
-              alt="WMK Program"
-              className="h-[280px] w-[220px] object-cover rounded-sm"
-            />
-            <div className="mt-3 text-center">
-              <p className="font-serif text-sm font-bold text-[#1f2a44]">WMK Batch 3 Showcase</p>
-              <p className="text-[11px] text-[#7b1e3a]">Presentation & Pitching</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Photo 3 */}
-        <div className="group relative transition-all duration-300 hover:-translate-y-3 hover:rotate-0">
-          <div className="absolute left-1/2 top-[-40px] h-10 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
-          <div className="relative rounded-sm bg-white p-3 shadow-xl border border-[#eadbc8]/60 rotate-[-3deg]">
-            <img
-              src={mcDiskusi}
-              alt="Discussion Forum"
-              className="h-[240px] w-[200px] object-cover rounded-sm"
-            />
-            <div className="mt-3 text-center">
-              <p className="font-serif text-sm font-bold text-[#1f2a44]">Moderator & Speaker</p>
-              <p className="text-[11px] text-[#7b1e3a]">Public Discussion</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Photo 4 */}
-        <div className="group relative mt-6 transition-all duration-300 hover:-translate-y-3 hover:rotate-0">
-          <div className="absolute left-1/2 top-[-64px] h-16 w-[2px] -translate-x-1/2 bg-[#c8a27a]" />
-          <div className="relative rounded-sm bg-white p-3 shadow-xl border border-[#eadbc8]/60 rotate-[4deg]">
-            <img
-              src={mcStage}
-              alt="Stage MC"
-              className="h-[270px] w-[210px] object-cover rounded-sm"
-            />
-            <div className="mt-3 text-center">
-              <p className="font-serif text-sm font-bold text-[#1f2a44]">Stage Director & MC</p>
-              <p className="text-[11px] text-[#7b1e3a]">Grand Event Handling</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
-        {/* 2. TECHNICAL SKILLS & TOOLS (PERSIS LAYOUT GAMBAR 2 DENGAN TAMBAHAN LOGO LOGO) */}
+        {/* TECHNICAL SKILLS & TOOLS */}
         <section
           id="skills"
           className="relative overflow-hidden bg-[#fffaf7] px-6 py-24 text-[#101b33]"
@@ -1020,10 +946,7 @@ export default function App() {
               </h2>
             </motion.div>
 
-            {/* 4 Equal Cards Grid ala Gambar 2 */}
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              
-              {/* Card 1: Data Analysis & SQL */}
               <div className="rounded-3xl border border-[#eadbc8] bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-xl">
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f8efe3] text-[#7b1e3a]">
                   <Database size={24} />
@@ -1051,7 +974,6 @@ export default function App() {
                 </ul>
               </div>
 
-              {/* Card 2: Data Visualization */}
               <div className="rounded-3xl border border-[#eadbc8] bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-xl">
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f8efe3] text-[#7b1e3a]">
                   <PieChart size={24} />
@@ -1079,7 +1001,6 @@ export default function App() {
                 </ul>
               </div>
 
-              {/* Card 3: Database & Pipeline */}
               <div className="rounded-3xl border border-[#eadbc8] bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-xl">
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f8efe3] text-[#7b1e3a]">
                   <Server size={24} />
@@ -1107,7 +1028,6 @@ export default function App() {
                 </ul>
               </div>
 
-              {/* Card 4: Business & Soft Skills */}
               <div className="rounded-3xl border border-[#eadbc8] bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-xl">
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f8efe3] text-[#7b1e3a]">
                   <Briefcase size={24} />
@@ -1134,67 +1054,59 @@ export default function App() {
                   </li>
                 </ul>
               </div>
-
             </div>
           </div>
         </section>
 
-        {/* 3. CERTIFICATIONS & PROFESSIONAL BADGES (PERSIS GAMBAR 3 DENGAN LINK SERTIFIKAT) */}
-        {/* CERTIFICATIONS SECTION (ULTRA-MINIMALIST GRID) */}
-<section id="certifications" className="bg-[#fffaf7] px-6 py-20">
-  <div className="mx-auto max-w-7xl">
-    
-    {/* Header Ringkas */}
-    <div className="mb-10">
-      <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#7b1e3a]">
-        CONTINUOUS LEARNING
-      </p>
-      <h2 className="mt-2 font-serif text-3xl font-bold text-[#1f2a44] md:text-4xl">
-        Certifications & Badges
-      </h2>
-    </div>
-
-    {/* Grid Compact (3 Kolom x 3 Baris - Height Lebih Tipis) */}
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {certificationsBadges.map((cert) => (
-        <a
-          key={cert.title}
-          href={cert.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group flex items-center justify-between rounded-2xl border border-[#eadbc8]/70 bg-white p-4 shadow-xs transition-all duration-200 hover:-translate-y-0.5 hover:border-[#7b1e3a]/40 hover:shadow-md"
-        >
-          <div className="flex items-center gap-3.5">
-            {/* Logo Box Minimalis */}
-            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-[#fffaf7] p-2 border border-[#eadbc8]/50">
-              <img
-                src={cert.logo}
-                alt={cert.issuer}
-                className="h-full w-full object-contain"
-              />
+        {/* CERTIFICATIONS SECTION */}
+        <section id="certifications" className="bg-[#fffaf7] px-6 py-20">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-10">
+              <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#7b1e3a]">
+                CONTINUOUS LEARNING
+              </p>
+              <h2 className="mt-2 font-serif text-3xl font-bold text-[#1f2a44] md:text-4xl">
+                Certifications & Badges
+              </h2>
             </div>
 
-            {/* Title & Issuer Info */}
-            <div className="pr-2">
-              <h3 className="font-serif text-sm font-bold text-[#1f2a44] transition-colors group-hover:text-[#7b1e3a] line-clamp-1">
-                {cert.title}
-              </h3>
-              <p className="text-[11px] font-medium text-mediumBrown">
-                {cert.issuer} • <span className="text-[#7b1e3a]">{cert.year}</span>
-              </p>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {certificationsBadges.map((cert) => (
+                <a
+                  key={cert.title}
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between rounded-2xl border border-[#eadbc8]/70 bg-white p-4 shadow-xs transition-all duration-200 hover:-translate-y-0.5 hover:border-[#7b1e3a]/40 hover:shadow-md"
+                >
+                  <div className="flex items-center gap-3.5">
+                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-[#fffaf7] p-2 border border-[#eadbc8]/50">
+                      <img
+                        src={cert.logo}
+                        alt={cert.issuer}
+                        className="h-full w-full object-contain"
+                      />
+                    </div>
+
+                    <div className="pr-2">
+                      <h3 className="font-serif text-sm font-bold text-[#1f2a44] transition-colors group-hover:text-[#7b1e3a] line-clamp-1">
+                        {cert.title}
+                      </h3>
+                      <p className="text-[11px] font-medium text-mediumBrown">
+                        {cert.issuer} • <span className="text-[#7b1e3a]">{cert.year}</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <span className="text-xs font-bold text-[#7b1e3a]/70 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-[#7b1e3a]">
+                    ↗
+                  </span>
+                </a>
+              ))}
             </div>
           </div>
+        </section>
 
-          {/* Icon Panah Minimalis */}
-          <span className="text-xs font-bold text-[#7b1e3a]/70 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-[#7b1e3a]">
-            ↗
-          </span>
-        </a>
-      ))}
-    </div>
-
-  </div>
-</section>
         {/* CONTACT SECTION */}
         <section id="contact" className="px-6 py-20 bg-darkBrown text-cream">
           <div className="mx-auto max-w-4xl text-center">
