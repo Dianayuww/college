@@ -711,30 +711,29 @@ export default function App() {
                 </div>
               </div>
 
-              {/* BULLET POINTS HIGH-IMPACT */}
-              <div className="mt-6 space-y-2.5 text-sm leading-relaxed text-[#3f4658]">
-                <div className="flex items-start gap-2.5">
-                  <CheckCircle2 size={16} className="mt-0.5 flex-shrink-0 text-[#7b1e3a]" />
-                  <span>
-                    <strong>PIC Public Dashboard 6 Sektor:</strong> Memimpin perancangan dan pembuatan visualisasi data publik interaktif di Metabase untuk 6 sektor strategis (Kesehatan, Keuangan, Agro, Pendidikan, Infrastruktur, dan Industri).
-                  </span>
-                </div>
+              {/* BULLET POINTS HIGH-IMPACT (FULL ENGLISH VERSION) */}
+<div className="mt-6 space-y-2.5 text-sm leading-relaxed text-[#3f4658]">
+  <div className="flex items-start gap-2.5">
+    <CheckCircle2 size={16} className="mt-0.5 flex-shrink-0 text-[#7b1e3a]" />
+    <span>
+      <strong>PIC Public Dashboard (6 Key Sectors):</strong> Spearheaded the design and deployment of interactive public dashboards in Metabase across 6 strategic domains (Healthcare, Finance, Agriculture, Education, Infrastructure, and Industry).
+    </span>
+  </div>
 
-                <div className="flex items-start gap-2.5">
-                  <CheckCircle2 size={16} className="mt-0.5 flex-shrink-0 text-[#7b1e3a]" />
-                  <span>
-                    <strong>Data Processing & Integration:</strong> Mengakses database multi-OPD menggunakan SQL (DBeaver/Navicat), membersihkan data mentah via Python, serta membantu tim Data Scientist melakukan penarikan REST API di Postman.
-                  </span>
-                </div>
+  <div className="flex items-start gap-2.5">
+    <CheckCircle2 size={16} className="mt-0.5 flex-shrink-0 text-[#7b1e3a]" />
+    <span>
+      <strong>Data Processing & Integration:</strong> Queried multi-agency OPD databases using SQL (DBeaver/Navicat), performed data cleaning and pipeline validation via Python, and collaborated with Data Scientists to ingest REST APIs via Postman.
+    </span>
+  </div>
 
-                <div className="flex items-start gap-2.5">
-                  <CheckCircle2 size={16} className="mt-0.5 flex-shrink-0 text-[#7b1e3a]" />
-                  <span>
-                    <strong>Monitoring KPI Operasional Daerah:</strong> Memvalidasi dan menyajikan tren data inflasi, ketersediaan faskes, dan kinerja perekonomian untuk membantu analisis <em>stakeholder</em> publik.
-                  </span>
-                </div>
-              </div>
-
+  <div className="flex items-start gap-2.5">
+    <CheckCircle2 size={16} className="mt-0.5 flex-shrink-0 text-[#7b1e3a]" />
+    <span>
+      <strong>Operational KPI Monitoring:</strong> Validated and visualized public regional trends—including inflation rates, healthcare facility access, and economic performance—to empower data-driven public governance.
+    </span>
+  </div>
+</div>
               {/* TECH STACK BADGES */}
               <div className="mt-6 flex flex-wrap gap-1.5 pt-4 border-t border-[#eadbc8]/40">
                 {['SQL (Navicat/DBeaver)', 'Python (Pandas)', 'Metabase', 'Postman API', 'Excel PivotTable', 'Public Data Validation'].map((tech) => (
